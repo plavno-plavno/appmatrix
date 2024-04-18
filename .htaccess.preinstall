@@ -1,0 +1,12 @@
+RewriteEngine On
+
+# Deutsch
+RewriteCond %{HTTP:Accept-Language} ^((?!en).)*de.*$ [NC]
+RewriteRule ^$ http://%{HTTP_HOST}/de/ [QSA,L]
+
+# English
+RewriteCond %{HTTP:Accept-Language} ^((?!de).)*en.*$ [NC]
+RewriteRule ^$ http://%{HTTP_HOST}/en/ [QSA,L]
+
+# Default Language (de)
+RewriteCond %{HTTP:Accept-Language} !^.*(de|en).*$ [NC]

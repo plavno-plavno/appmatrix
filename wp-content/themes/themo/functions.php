@@ -34,7 +34,7 @@ class FotonMikadoClassFramework {
 	public $mkdTaxonomyOptions;
 	public $mkdUserOptions;
 	private $skin;
-	
+
 	private function __construct() {
 		$this->mkdOptions         = FotonMikadoClassOptions::get_instance();
 		$this->mkdMetaBoxes       = FotonMikadoClassMetaBoxes::get_instance();
@@ -42,20 +42,20 @@ class FotonMikadoClassFramework {
 		$this->mkdUserOptions     = FotonMikadoClassUserOptions::get_instance();
 		$this->mkdDashboardOptions = FotonMikadoClassDashboardOptions::get_instance();
 	}
-	
+
 	public static function get_instance() {
-		
+
 		if ( null == self::$instance ) {
 			self::$instance = new self;
 		}
-		
+
 		return self::$instance;
 	}
-	
+
 	public function getSkin() {
 		return $this->skin;
 	}
-	
+
 	public function setSkin( FotonMikadoClassSkinAbstract $skinObject ) {
 		$this->skin = $skinObject;
 	}
@@ -72,14 +72,14 @@ class FotonMikadoClassSkinManager {
 	 * @var this will be an instance of skin
 	 */
 	private $skin;
-	
+
 	/**
 	 * @see FotonMikadoClassSkinManager::setSkin()
 	 */
 	public function __construct() {
 		$this->setSkin();
 	}
-	
+
 	/**
 	 * Loads wanted skin, instantiates skin class and stores it in $skin attribute
 	 *
@@ -89,16 +89,16 @@ class FotonMikadoClassSkinManager {
 		if ( $skinName !== '' ) {
 			if ( file_exists( get_template_directory() . '/framework/admin/skins/' . $skinName . '/skin.php' ) ) {
 				require_once get_template_directory() . '/framework/admin/skins/' . $skinName . '/skin.php';
-				
+
 				$skinName = ucfirst( $skinName ) . esc_html__( 'Skin', 'foton' );
-				
+
 				$this->skin = new $skinName();
 			}
 		} else {
 			$this->skin = false;
 		}
 	}
-	
+
 	/**
 	 * Returns current skin object. It $skin attribute isn't set it calls setSkin method
 	 *
@@ -110,7 +110,7 @@ class FotonMikadoClassSkinManager {
 		if ( empty( $this->skin ) ) {
 			$this->setSkin();
 		}
-		
+
 		return $this->skin;
 	}
 }
@@ -141,7 +141,7 @@ abstract class FotonMikadoClassSkinAbstract {
 	 * @var array of menu items positions of each menu item that theme is adding
 	 */
 	protected $itemPosition;
-	
+
 	/**
 	 * Returns skin name attribute whenever skin is used in concatenation
 	 * @return mixed
@@ -149,14 +149,14 @@ abstract class FotonMikadoClassSkinAbstract {
 	public function __toString() {
 		return $this->skinName;
 	}
-	
+
 	/**
 	 * @return mixed
 	 */
 	public function getSkinName() {
 		return $this->skinName;
 	}
-	
+
 	/**
 	 * Loads template part with params. Uses locate_template function which is child theme friendly
 	 *
@@ -167,12 +167,12 @@ abstract class FotonMikadoClassSkinAbstract {
 		if ( is_array( $params ) && count( $params ) ) {
 			extract( $params );
 		}
-		
+
 		if ( $template !== '' ) {
 			include( foton_mikado_find_template_path( 'framework/admin/skins/' . $this->skinName . '/templates/' . $template . '.php' ) );
 		}
 	}
-	
+
 	/**
 	 * Goes through each added scripts and enqueus it
 	 */
@@ -183,7 +183,7 @@ abstract class FotonMikadoClassSkinAbstract {
 			}
 		}
 	}
-	
+
 	/**
 	 * Goes through each added styles and enqueus it
 	 */
@@ -194,7 +194,7 @@ abstract class FotonMikadoClassSkinAbstract {
 			}
 		}
 	}
-	
+
 	/**
 	 * Echoes script tag that generates global variable that will be used in TinyMCE
 	 */
@@ -204,7 +204,7 @@ abstract class FotonMikadoClassSkinAbstract {
 			window.mkdSCLabel = '<?php echo esc_html( ucfirst( $this->skinName ) ); ?> <?php esc_html_e( 'Shortcodes', 'foton' ) ?>';
 		</script>
 	<?php }
-	
+
 	/**
 	 * Formates skin name so it can be used in concatenation
 	 * @return string
@@ -212,7 +212,7 @@ abstract class FotonMikadoClassSkinAbstract {
 	public function getSkinLabel() {
 		return ucfirst( $this->skinName );
 	}
-	
+
 	/**
 	 * Returns URI to skin folder
 	 * @return string
@@ -220,31 +220,31 @@ abstract class FotonMikadoClassSkinAbstract {
 	public function getSkinURI() {
 		return get_template_directory_uri() . '/framework/admin/skins/' . $this->skinName;
 	}
-	
+
 	/**
 	 * Here options page content will be generated
 	 * @return mixed
 	 */
 	public abstract function renderOptions();
-	
+
 	/**
 	 * Here backup options page will be generated
 	 * @return mixed
 	 */
 	public abstract function renderBackupOptions();
-	
+
 	/**
 	 * Here import page will be generated
 	 * @return mixed
 	 */
 	public abstract function renderImport();
-	
+
 	/**
 	 * Here all scripts will be registered
 	 * @return mixed
 	 */
 	public abstract function registerScripts();
-	
+
 	/**
 	 * Here all styles will be registered
 	 * @return mixed
@@ -261,79 +261,79 @@ class FotonMikadoClassOptions {
 	public $adminPages;
 	public $options;
 	public $optionsByType;
-	
+
 	private function __construct() {
 		$this->adminPages    = array();
 		$this->options       = array();
 		$this->optionsByType = array();
 	}
-	
+
 	public static function get_instance() {
-		
+
 		if ( null == self::$instance ) {
 			self::$instance = new self;
 		}
-		
+
 		return self::$instance;
 	}
-	
+
 	public function addAdminPage( $key, $page ) {
 		$this->adminPages[ $key ] = $page;
 	}
-	
+
 	public function getAdminPage( $key ) {
 		return $this->adminPages[ $key ];
 	}
-	
+
 	public function adminPageExists( $key ) {
 		return array_key_exists( $key, $this->adminPages );
 	}
-	
+
 	public function getAdminPageFromSlug( $slug ) {
 		foreach ( $this->adminPages as $key => $page ) {
 			if ( $page->slug == $slug ) {
 				return $page;
 			}
 		}
-		
+
 		return;
 	}
-	
+
 	public function addOption( $key, $value, $type = '' ) {
 		$this->options[ $key ] = $value;
-		
+
 		$this->addOptionByType( $type, $key );
 	}
-	
+
 	public function getOption( $key ) {
 		if ( isset( $this->options[ $key ] ) ) {
 			return $this->options[ $key ];
 		}
-		
+
 		return;
 	}
-	
+
 	public function addOptionByType( $type, $key ) {
 		$this->optionsByType[ $type ][] = $key;
 	}
-	
+
 	public function getOptionsByType( $type ) {
 		if ( array_key_exists( $type, $this->optionsByType ) ) {
 			return $this->optionsByType[ $type ];
 		}
-		
+
 		return false;
 	}
-	
+
 	public function getOptionValue( $key ) {
 		global $foton_mikado_global_options;
-		
+
 		if ( array_key_exists( $key, $foton_mikado_global_options ) ) {
 			return $foton_mikado_global_options[ $key ];
 		} elseif ( array_key_exists( $key, $this->options ) ) {
 			return $this->getOption( $key );
 		}
-		
+
 		return false;
 	}
 }
@@ -348,7 +348,7 @@ class FotonMikadoClassAdminPage implements iFotonMikadoInterfaceLayoutNode {
 	public $slug;
 	public $title;
 	public $icon;
-	
+
 	function __construct( $slug = "", $title = "", $icon = "" ) {
 		$this->layout  = array();
 		$this->factory = new FotonMikadoClassFieldFactory();
@@ -356,25 +356,25 @@ class FotonMikadoClassAdminPage implements iFotonMikadoInterfaceLayoutNode {
 		$this->title   = $title;
 		$this->icon    = $icon;
 	}
-	
+
 	public function hasChidren() {
 		return ( count( $this->layout ) > 0 ) ? true : false;
 	}
-	
+
 	public function getChild( $key ) {
 		return $this->layout[ $key ];
 	}
-	
+
 	public function addChild( $key, $value ) {
 		$this->layout[ $key ] = $value;
 	}
-	
+
 	function render() {
 		foreach ( $this->layout as $child ) {
 			$this->renderChild( $child );
 		}
 	}
-	
+
 	public function renderChild( iFotonMikadoInterfaceRender $child ) {
 		$child->render( $this->factory );
 	}
@@ -389,40 +389,40 @@ class FotonMikadoClassMetaBoxes {
 	public $metaBoxes;
 	public $options;
 	public $optionsByType;
-	
+
 	private function __construct() {
 		$this->metaBoxes = array();
 		$this->options   = array();
 		$this->optionsByType = array();
 	}
-	
+
 	public static function get_instance() {
-		
+
 		if ( null == self::$instance ) {
 			self::$instance = new self;
 		}
-		
+
 		return self::$instance;
 	}
-	
+
 	public function addMetaBox( $key, $box ) {
 		$this->metaBoxes[ $key ] = $box;
 	}
-	
+
 	public function getMetaBox( $key ) {
 		return $this->metaBoxes[ $key ];
 	}
-	
+
 	public function addOption( $key, $value, $type = '' ) {
 		$this->options[ $key ] = $value;
 		$this->addOptionByType($type, $key);
 	}
-	
+
 	public function getOption( $key ) {
 		if ( isset( $this->options[ $key ] ) ) {
 			return $this->options[ $key ];
 		}
-		
+
 		return;
 	}
 
@@ -441,7 +441,7 @@ class FotonMikadoClassMetaBoxes {
 
 	public function getMetaBoxesByScope( $scope ) {
 		$boxes = array();
-		
+
 		if ( is_array( $this->metaBoxes ) && count( $this->metaBoxes ) ) {
 			foreach ( $this->metaBoxes as $metabox ) {
 				if ( is_array( $metabox->scope ) && in_array( $scope, $metabox->scope ) ) {
@@ -451,7 +451,7 @@ class FotonMikadoClassMetaBoxes {
 				}
 			}
 		}
-		
+
 		return $boxes;
 	}
 }
@@ -468,7 +468,7 @@ class FotonMikadoClassMetaBox implements iFotonMikadoInterfaceLayoutNode {
 	public $hidden_property;
 	public $hidden_values = array();
 	public $name;
-	
+
 	function __construct( $scope = "", $title = "", $hidden_property = "", $hidden_values = array(), $name = '' ) {
 		$this->layout          = array();
 		$this->factory         = new FotonMikadoClassFieldFactory();
@@ -478,32 +478,32 @@ class FotonMikadoClassMetaBox implements iFotonMikadoInterfaceLayoutNode {
 		$this->hidden_values   = $hidden_values;
 		$this->name            = $name;
 	}
-	
+
 	public function hasChidren() {
 		return ( count( $this->layout ) > 0 ) ? true : false;
 	}
-	
+
 	public function getChild( $key ) {
 		return $this->layout[ $key ];
 	}
-	
+
 	public function addChild( $key, $value ) {
 		$this->layout[ $key ] = $value;
 	}
-	
+
 	function render() {
 		foreach ( $this->layout as $child ) {
 			$this->renderChild( $child );
 		}
 	}
-	
+
 	public function renderChild( iFotonMikadoInterfaceRender $child ) {
 		$child->render( $this->factory );
 	}
-	
+
 	public function setTitle( $label ) {
 		global $foton_mikado_global_Framework;
-		
+
 		return $foton_mikado_global_Framework->getSkin()->getSkinLabel() . ' ' . $label;
 	}
 }
@@ -515,24 +515,24 @@ class FotonMikadoClassMetaBox implements iFotonMikadoInterfaceLayoutNode {
 class FotonMikadoClassTaxonomyOptions {
 	private static $instance;
 	public $taxonomyOptions;
-	
+
 	private function __construct() {
 		$this->taxonomyOptions = array();
 	}
-	
+
 	public static function get_instance() {
-		
+
 		if ( null == self::$instance ) {
 			self::$instance = new self;
 		}
-		
+
 		return self::$instance;
 	}
-	
+
 	public function addTaxonomyOptions( $key, $options ) {
 		$this->taxonomyOptions[ $key ] = $options;
 	}
-	
+
 	public function getTaxonomyOptions( $key ) {
 		return $this->taxonomyOptions[ $key ];
 	}
@@ -546,31 +546,31 @@ class FotonMikadoClassTaxonomyOption implements iFotonMikadoInterfaceLayoutNode 
 	public $layout;
 	private $factory;
 	public $scope;
-	
+
 	function __construct( $scope = "" ) {
 		$this->layout  = array();
 		$this->factory = new FotonMikadoClassTaxonomyFieldFactory();
 		$this->scope   = $scope;
 	}
-	
+
 	public function hasChidren() {
 		return ( count( $this->layout ) > 0 ) ? true : false;
 	}
-	
+
 	public function getChild( $key ) {
 		return $this->layout[ $key ];
 	}
-	
+
 	public function addChild( $key, $value ) {
 		$this->layout[ $key ] = $value;
 	}
-	
+
 	function render() {
 		foreach ( $this->layout as $child ) {
 			$this->renderChild( $child );
 		}
 	}
-	
+
 	public function renderChild( iFotonMikadoInterfaceRender $child ) {
 		$child->render( $this->factory );
 	}
@@ -583,24 +583,24 @@ class FotonMikadoClassTaxonomyOption implements iFotonMikadoInterfaceLayoutNode 
 class FotonMikadoClassUserOptions {
 	private static $instance;
 	public $userOptions;
-	
+
 	private function __construct() {
 		$this->userOptions = array();
 	}
-	
+
 	public static function get_instance() {
-		
+
 		if ( null == self::$instance ) {
 			self::$instance = new self;
 		}
-		
+
 		return self::$instance;
 	}
-	
+
 	public function addUserOptions( $key, $options ) {
 		$this->userOptions[ $key ] = $options;
 	}
-	
+
 	public function getUserOptions( $key ) {
 		return $this->userOptions[ $key ];
 	}
@@ -614,31 +614,31 @@ class FotonMikadoClassUserOption implements iFotonMikadoInterfaceLayoutNode {
 	public $layout;
 	private $factory;
 	public $scope;
-	
+
 	function __construct( $scope = "" ) {
 		$this->layout  = array();
 		$this->factory = new FotonMikadoClassUserFieldFactory();
 		$this->scope   = $scope;
 	}
-	
+
 	public function hasChidren() {
 		return ( count( $this->layout ) > 0 ) ? true : false;
 	}
-	
+
 	public function getChild( $key ) {
 		return $this->layout[ $key ];
 	}
-	
+
 	public function addChild( $key, $value ) {
 		$this->layout[ $key ] = $value;
 	}
-	
+
 	function render() {
 		foreach ( $this->layout as $child ) {
 			$this->renderChild( $child );
 		}
 	}
-	
+
 	public function renderChild( iFotonMikadoInterfaceRender $child ) {
 		$child->render( $this->factory );
 	}
@@ -651,24 +651,24 @@ class FotonMikadoClassUserOption implements iFotonMikadoInterfaceLayoutNode {
 class FotonMikadoClassDashboardOptions {
 	private static $instance;
 	public $dashboardOptions;
-	
+
 	private function __construct() {
 		$this->dashboardOptions = array();
 	}
-	
+
 	public static function get_instance() {
-		
+
 		if ( null == self::$instance ) {
 			self::$instance = new self;
 		}
-		
+
 		return self::$instance;
 	}
-	
+
 	public function addDashboardOptions( $key, $options ) {
 		$this->dashboardOptions[ $key ] = $options;
 	}
-	
+
 	public function getDashboardOptions( $key ) {
 		return $this->dashboardOptions[ $key ];
 	}
@@ -681,30 +681,30 @@ class FotonMikadoClassDashboardOptions {
 class FotonMikadoClassDashboardOption implements iFotonMikadoInterfaceLayoutNode {
 	public $layout;
 	private $factory;
-	
+
 	function __construct() {
 		$this->layout        = array();
 		$this->factory       = new FotonMikadoClassDashboardFieldFactory();
 	}
-	
+
 	public function hasChidren() {
 		return ( count( $this->layout ) > 0 ) ? true : false;
 	}
-	
+
 	public function getChild( $key ) {
 		return $this->layout[ $key ];
 	}
-	
+
 	public function addChild( $key, $value ) {
 		$this->layout[ $key ] = $value;
 	}
-	
-	function render() { 
+
+	function render() {
 		foreach ( $this->layout as $child ) {
 			$this->renderChild( $child );
 		}
 	}
-	
+
 	public function renderChild( iFotonMikadoInterfaceRender $child ) {
 		$child->render( $this->factory );
 	}
@@ -713,12 +713,12 @@ class FotonMikadoClassDashboardOption implements iFotonMikadoInterfaceLayoutNode
 if ( ! function_exists( 'foton_mikado_init_framework_variable' ) ) {
 	function foton_mikado_init_framework_variable() {
 		global $foton_mikado_global_Framework;
-		
+
 		$foton_mikado_global_Framework = FotonMikadoClassFramework::get_instance();
 		$mkdSkinManager                 = new FotonMikadoClassSkinManager();
 		$foton_mikado_global_Framework->setSkin( $mkdSkinManager->getSkin() );
 	}
-	
+
 	add_action( 'foton_mikado_action_before_options_map', 'foton_mikado_init_framework_variable' );
 }
 
@@ -728,17 +728,17 @@ class FotonMikadoClassIconCollections {
     public $iconCollections;
     public $VCParamsArray;
     public $iconPackParamName;
-    
+
 	private $iconPackCollections;
 	private $iconPackOptions;
 	private $iconPackSocialOptions;
-	
+
 	private function __construct() {
 		$this->iconPackParamName     = 'icon_pack';
 		$this->iconPackCollections   = foton_mikado_get_icon_pack_collections( true );
 		$this->iconPackOptions       = foton_mikado_get_icon_pack_options();
 		$this->iconPackSocialOptions = foton_mikado_get_icon_pack_social_options();
-		
+
 		$this->initIconCollections();
 	}
 
@@ -755,14 +755,14 @@ class FotonMikadoClassIconCollections {
      */
 	private function initIconCollections() {
 		$collections = $this->getIconPackCollections();
-		
+
 		if ( ! empty( $collections ) ) {
 			foreach ( $collections as $key => $value ) {
 				$this->addIconCollection( $key, $value );
 			}
 		}
 	}
-	
+
 	public function getIconsMetaBoxOrOption( $attributes ) {
 		$scope            = '';
 		$label            = '';
@@ -772,16 +772,16 @@ class FotonMikadoClassIconCollections {
 		$default_icon     = '';
 		$type             = '';
 		$field_type       = '';
-		
+
 		extract( $attributes );
-		
+
 		$icon_collections = $this->getCollectionsWithSocialIcons();
 		$options          = $this->getIconPackSocialOptions();
-		
+
 		if ( $scope == 'regular' ) {
 			$options = $this->getIconPackOptions();
 		}
-		
+
 		if ( $type == 'meta-box' ) {
 			foton_mikado_create_meta_box_field(
 				array(
@@ -805,21 +805,21 @@ class FotonMikadoClassIconCollections {
 				)
 			);
 		}
-		
+
 		foreach ( $icon_collections as $collection_key => $collection_object ) {
 			if ( $scope == 'regular' ) {
 				$icons_array = $collection_object->getIconsArray();
 			} else {
 				$icons_array = $collection_object->getSocialIconsArray();
 			}
-			
+
 			$icon_collections_keys = array_keys( $icon_collections );
-			
+
 			unset( $icon_collections_keys[ array_search( $collection_key, $icon_collections_keys ) ] );
-			
+
 			$icon_hide_values = $icon_collections_keys;
 			array_push( $icon_hide_values, '' ); //add empty value for icon switcher
-			
+
 			$icon_pack_container = foton_mikado_add_admin_container(
 				array(
 					'parent'     => $parent,
@@ -832,7 +832,7 @@ class FotonMikadoClassIconCollections {
 					)
 				)
 			);
-			
+
 			if ( $type == 'meta-box' ) {
 				foton_mikado_create_meta_box_field(
 					array(
@@ -858,14 +858,14 @@ class FotonMikadoClassIconCollections {
 			}
 		}
 	}
-	
+
 	public function getVCParamsArray( $iconPackDependency = array(), $iconCollectionPrefix = "", $emptyIconPack = false ) {
 		if ( $emptyIconPack ) {
 			$iconCollectionsVC = $this->getIconCollectionsVCEmpty();
 		} else {
 			$iconCollectionsVC = $this->getIconCollectionsVC();
 		}
-		
+
 		$iconPackParams = array(
 			'type'        => 'dropdown',
 			'heading'     => esc_html__( 'Icon Pack', 'foton' ),
@@ -873,13 +873,13 @@ class FotonMikadoClassIconCollections {
 			'value'       => $iconCollectionsVC,
 			'save_always' => true
 		);
-		
+
 		if ( $iconPackDependency !== "" ) {
 			$iconPackParams["dependency"] = $iconPackDependency;
 		}
-		
+
 		$iconPackParams = array( $iconPackParams );
-		
+
 		$iconSetParams = array();
 		if ( is_array( $this->iconCollections ) && count( $this->iconCollections ) ) {
 			foreach ( $this->iconCollections as $key => $collection ) {
@@ -893,17 +893,17 @@ class FotonMikadoClassIconCollections {
 				);
 			}
 		}
-		
+
 		return array_merge( $iconPackParams, $iconSetParams );
 	}
-	
+
 	public function getSocialVCParamsArray( $iconPackDependency = array(), $iconCollectionPrefix = "", $emptyIconPack = false ) {
 		if ( $emptyIconPack ) {
 			$iconCollectionsVC = $this->getSocialIconCollectionsVCEmpty();
 		} else {
 			$iconCollectionsVC = $this->getSocialIconCollectionsVC();
 		}
-		
+
 		$iconPackParams = array(
 			'type'        => 'dropdown',
 			'heading'     => esc_html__( 'Icon Pack', 'foton' ),
@@ -911,11 +911,11 @@ class FotonMikadoClassIconCollections {
 			'value'       => $iconCollectionsVC,
 			'save_always' => true
 		);
-		
+
 		if ( $iconPackDependency !== "" ) {
 			$iconPackParams["dependency"] = $iconPackDependency;
 		}
-		
+
 		$iconPackParams = array( $iconPackParams );
 
         $iconSetParams = array();
@@ -934,10 +934,10 @@ class FotonMikadoClassIconCollections {
                 }
             }
         }
-		
+
 		return array_merge( $iconPackParams, $iconSetParams );
 	}
-	
+
 	public function getIconWidgetParamsArray() {
 		$iconPackParams[] = array(
 			'type'    => 'dropdown',
@@ -945,7 +945,7 @@ class FotonMikadoClassIconCollections {
 			'title'   => esc_html__( 'Icon Pack', 'foton' ),
 			'options' => $this->getIconPackOptions()
 		);
-		
+
 		$iconSetParams = array();
 		if ( is_array( $this->iconCollections ) && count( $this->iconCollections ) ) {
 			foreach ( $this->iconCollections as $key => $collection ) {
@@ -957,21 +957,21 @@ class FotonMikadoClassIconCollections {
 				);
 			}
 		}
-		
+
 		return array_merge( $iconPackParams, $iconSetParams );
 	}
-	
+
 	public function getSocialIconWidgetMultipleParamsArray( $count ) {
 		$iconOps           = array();
 		$iconCollectionsVC = $this->getCollectionsWithSocialIcons();
-		
+
 		$iconPackParams[] = array(
 			'type'    => 'dropdown',
 			'name'    => 'icon_pack',
 			'title'   => esc_html__( 'Icon Pack', 'foton' ),
 			'options' => $this->getIconPackSocialOptions()
 		);
-		
+
 		for ( $n = 1; $n <= $count; $n ++ ) {
 			if ( is_array( $iconCollectionsVC ) && count( $iconCollectionsVC ) ) {
 				foreach ( $iconCollectionsVC as $key => $collection ) {
@@ -983,13 +983,13 @@ class FotonMikadoClassIconCollections {
 					);
 				}
 			}
-			
+
 			$iconOps[] = array(
 				'type'  => 'textfield',
 				'name'  => 'link_' . $n,
 				'title' => sprintf( esc_html__( 'Link %s', 'foton' ), $n )
 			);
-			
+
 			$iconOps[] = array(
 				'type'    => 'dropdown',
 				'name'    => 'target_' . $n,
@@ -997,20 +997,20 @@ class FotonMikadoClassIconCollections {
 				'options' => foton_mikado_get_link_target_array()
 			);
 		}
-		
+
 		return array_merge( $iconPackParams, $iconOps );
 	}
-	
+
 	public function getSocialIconWidgetParamsArray() {
 		$iconCollectionsVC = $this->getCollectionsWithSocialIcons();
-		
+
 		$iconPackParams[] = array(
 			'type'    => 'dropdown',
 			'title'   => esc_html__( 'Icon Pack', 'foton' ),
 			'name'    => 'icon_pack',
 			'options' => $this->getIconPackSocialOptions()
 		);
-		
+
 		$iconSetParams = array();
 		if ( is_array( $iconCollectionsVC ) && count( $iconCollectionsVC ) ) {
 			foreach ( $iconCollectionsVC as $key => $collection ) {
@@ -1022,32 +1022,32 @@ class FotonMikadoClassIconCollections {
 				);
 			}
 		}
-		
+
 		return array_merge( $iconPackParams, $iconSetParams );
 	}
-	
+
 	public function getCollectionsWithIcons() {
 		$collectionsWithIcons = array();
-		
+
 		foreach ( $this->iconCollections as $key => $collection ) {
 			$collectionsWithIcons[ $key ] = $collection;
 		}
-		
+
 		return $collectionsWithIcons;
 	}
-	
+
 	public function getCollectionsWithSocialIcons() {
 		$collectionsWithSocial = array();
-		
+
 		foreach ( $this->iconCollections as $key => $collection ) {
 			if ( $collection->hasSocialIcons() ) {
 				$collectionsWithSocial[ $key ] = $collection;
 			}
 		}
-		
+
 		return $collectionsWithSocial;
 	}
-	
+
 	public function getIconSizesArray() {
 		return array(
 			esc_html__( 'Tiny', 'foton' )       => 'fa-lg',
@@ -1057,7 +1057,7 @@ class FotonMikadoClassIconCollections {
 			esc_html__( 'Very Large', 'foton' ) => 'fa-5x'
 		);
 	}
-	
+
 	public function getIconSizeClass( $iconSize ) {
 		switch ( $iconSize ) {
 			case "fa-lg":
@@ -1078,31 +1078,31 @@ class FotonMikadoClassIconCollections {
 			default:
 				$iconSize = "mkdf-small-icon";
 		}
-		
+
 		return $iconSize;
 	}
-	
+
 	/**
 	 * @return array
 	 */
 	public function getIconPackCollections() {
 		return $this->iconPackCollections;
 	}
-	
+
 	/**
 	 * @return array
 	 */
 	public function getIconPackOptions() {
 		return $this->iconPackOptions;
 	}
-	
+
 	/**
 	 * @return array
 	 */
 	public function getIconPackSocialOptions() {
 		return $this->iconPackSocialOptions;
 	}
-	
+
 	/**
 	 * @param $key
 	 *
@@ -1110,45 +1110,45 @@ class FotonMikadoClassIconCollections {
 	 */
 	public function getIconCollectionParamNameByKey( $key ) {
 		$collection = $this->getIconCollection( $key );
-		
+
 		if ( $collection ) {
 			return $collection->param;
 		}
-		
+
 		return false;
 	}
-	
+
 	public function getShortcodeParams( $iconCollectionPrefix = "" ) {
 		$iconCollectionsParam = array();
 		foreach ( $this->iconCollections as $key => $collection ) {
 			$iconCollectionsParam[ $iconCollectionPrefix . $collection->param ] = '';
 		}
-		
+
 		return array_merge( array( $this->iconPackParamName => '', ), $iconCollectionsParam );
 	}
-	
+
 	public function addIconCollection( $key, $value ) {
 		$this->iconCollections[ $key ] = $value;
 	}
-	
+
 	public function getIconCollection( $key ) {
 		if ( array_key_exists( $key, $this->iconCollections ) ) {
 			return $this->iconCollections[ $key ];
 		}
-		
+
 		return false;
 	}
-	
+
 	public function getIconCollectionIcons( iFotonMikadoInterfaceIconCollection $collection ) {
 		return $collection->getIconsArray();
 	}
-	
+
 	public function getIconCollectionsVC() {
 		$vc_array = array();
 		foreach ( $this->iconCollections as $key => $collection ) {
 			$vc_array[ $collection->title ] = $key;
 		}
-		
+
 		return $vc_array;
 	}
 
@@ -1162,30 +1162,30 @@ class FotonMikadoClassIconCollections {
 
         return $vc_array;
     }
-	
+
 	public function getIconCollectionsVCExclude( $exclude ) {
 		$array = $this->getIconCollectionsVC();
-		
+
 		if ( is_array( $exclude ) && count( $exclude ) ) {
 			foreach ( $exclude as $key ) {
 				if ( ( $x = array_search( $key, $array ) ) !== false ) {
 					unset( $array[ $x ] );
 				}
 			}
-			
+
 		} else {
 			if ( ( $x = array_search( $exclude, $array ) ) !== false ) {
 				unset( $array[ $x ] );
 			}
 		}
-		
+
 		return $array;
 	}
-	
+
 	public function getIconCollectionsKeys() {
-		return array_keys( $this->iconCollections );
+		return is_array($this->iconCollections) ? array_keys( $this->iconCollections ) : [];
 	}
-	
+
 	/**
 	 * Method that returns an array of 'param' attribute of each icon collection
 	 * @return array array of param attributes
@@ -1197,55 +1197,55 @@ class FotonMikadoClassIconCollections {
 				$paramArray[] = $obj->param;
 			}
 		}
-		
+
 		return $paramArray;
 	}
-	
+
 	/**
 	 * Method that returns an array of 'param' attribute of each icon collection with social icons
 	 * @return array array of param attributes
 	 */
 	public function getSocialIconCollectionsParams() {
 		$paramArray = array();
-		
+
 		if ( is_array( $this->getCollectionsWithSocialIcons() ) && count( $this->getCollectionsWithSocialIcons() ) ) {
 			foreach ( $this->getCollectionsWithSocialIcons() as $key => $obj ) {
 				$paramArray[] = $obj->param;
 			}
 		}
-		
+
 		return $paramArray;
 	}
-	
+
 	public function getIconCollections() {
 		$array = array();
-		
+
 		foreach ( $this->iconCollections as $key => $collection ) {
 			$array[ $key ] = $collection->title;
 		}
-		
+
 		return $array;
 	}
-	
+
 	public function getIconCollectionsEmpty( $no_empty_key = "" ) {
 		$array                  = array();
 		$array[ $no_empty_key ] = esc_html__( 'No Icon', 'foton' );
-		
+
 		foreach ( $this->iconCollections as $key => $collection ) {
 			$array[ $key ] = $collection->title;
 		}
-		
+
 		return $array;
 	}
-	
+
 	public function getIconCollectionsVCEmpty() {
 		$vc_array                                           = array();
 		$vc_array[ esc_html__( 'No Icon', 'foton' ) ] = '';
-		
+
 		foreach ( $this->iconCollections as $key => $collection ) {
 			$vc_array[ $collection->title ] = $key;
 		}
-		
+
 		return $vc_array;
 	}
 
@@ -1261,20 +1261,20 @@ class FotonMikadoClassIconCollections {
 
         return $vc_array;
     }
-	
+
 	public function getIconCollectionsVCEmptyExclude( $key ) {
 		$array = $this->getIconCollectionsVCEmpty();
-		
+
 		if ( ( $x = array_search( $key, $array ) ) !== false ) {
 			unset( $array[ $x ] );
 		}
-		
+
 		return $array;
 	}
-	
+
 	public function getIconCollectionsExclude( $exclude ) {
 		$array = $this->getIconCollections();
-		
+
 		if ( is_array( $exclude ) && count( $exclude ) ) {
 			foreach ( $exclude as $exclude_key ) {
 				if ( array_key_exists( $exclude_key, $array ) ) {
@@ -1286,14 +1286,14 @@ class FotonMikadoClassIconCollections {
 				unset( $array[ $exclude ] );
 			}
 		}
-		
+
 		return $array;
 	}
-	
+
 	public function hasIconCollection( $key ) {
 		return array_key_exists( $key, $this->iconCollections );
 	}
-	
+
 	/**
 	 * Method that renders icon for given icon pack
 	 *
@@ -1306,11 +1306,11 @@ class FotonMikadoClassIconCollections {
 	public function renderIcon( $icon, $iconPack, $params = array() ) {
 		if ( $this->hasIconCollection( $iconPack ) ) {
 			$iconObject = $this->getIconCollection( $iconPack );
-			
+
 			return $iconObject->render( $icon, $params );
 		}
 	}
-	
+
 	public function enqueueStyles() {
 		if ( is_array( $this->iconCollections ) && count( $this->iconCollections ) ) {
 			foreach ( $this->iconCollections as $collection_key => $collection_obj ) {
@@ -1318,13 +1318,13 @@ class FotonMikadoClassIconCollections {
 			}
 		}
 	}
-	
+
 	# HEADER AND SIDE MENU ICONS
 	public function getSearchIcon( $iconPack, $return ) {
 		if ( $this->hasIconCollection( $iconPack ) ) {
 			$iconsObject = $this->getIconCollection( $iconPack );
 			$iconHTML    = $iconsObject->getSearchIcon();
-			
+
 			if ( $return ) {
 				return $iconHTML;
 			} else {
@@ -1332,12 +1332,12 @@ class FotonMikadoClassIconCollections {
 			}
 		}
 	}
-	
+
 	public function getSearchClose( $iconPack, $return ) {
 		if ( $this->hasIconCollection( $iconPack ) ) {
 			$iconsObject = $this->getIconCollection( $iconPack );
 			$iconHTML    = $iconsObject->getSearchClose();
-			
+
 			if ( $return ) {
 				return $iconHTML;
 			} else {
@@ -1345,48 +1345,48 @@ class FotonMikadoClassIconCollections {
 			}
 		}
 	}
-	
+
 	public function getDropdownCartIcon( $iconPack ) {
 		if ( $this->hasIconCollection( $iconPack ) ) {
 			$iconsObject = $this->getIconCollection( $iconPack );
 			$iconHTML    = $iconsObject->getDropdownCartIcon();
-			
+
 			echo wp_kses_post( $iconHTML );
 		}
 	}
-	
+
 	public function getMenuIcon( $iconPack ) {
 		if ( $this->hasIconCollection( $iconPack ) ) {
 			$iconsObject = $this->getIconCollection( $iconPack );
 			$iconHTML    = $iconsObject->getMenuIcon();
-			
+
 			echo wp_kses_post( $iconHTML );
 		}
 	}
-	
+
 	public function getMenuCloseIcon( $iconPack ) {
 		if ( $this->hasIconCollection( $iconPack ) ) {
 			$iconsObject = $this->getIconCollection( $iconPack );
 			$iconHTML    = $iconsObject->getMenuCloseIcon();
-			
+
 			echo wp_kses_post( $iconHTML );
 		}
 	}
-	
+
 	public function getBackToTopIcon( $iconPack ) {
 		if ( $this->hasIconCollection( $iconPack ) ) {
 			$iconsObject = $this->getIconCollection( $iconPack );
 			$iconHTML    = $iconsObject->getBackToTopIcon();
-			
+
 			echo wp_kses_post( $iconHTML );
 		}
 	}
-	
+
 	public function getMobileMenuIcon( $iconPack, $return = false ) {
 		if ( $this->hasIconCollection( $iconPack ) ) {
 			$iconsObject = $this->getIconCollection( $iconPack );
 			$iconHTML    = $iconsObject->getMobileMenuIcon();
-			
+
 			if ( $return ) {
 				return $iconHTML;
 			} else {
@@ -1394,12 +1394,12 @@ class FotonMikadoClassIconCollections {
 			}
 		}
 	}
-	
+
 	public function getQuoteIcon( $iconPack, $return = false ) {
 		if ( $this->hasIconCollection( $iconPack ) ) {
 			$iconsObject = $this->getIconCollection( $iconPack );
 			$iconHTML    = $iconsObject->getQuoteIcon();
-			
+
 			if ( $return ) {
 				return $iconHTML;
 			} else {
@@ -1407,60 +1407,60 @@ class FotonMikadoClassIconCollections {
 			}
 		}
 	}
-	
+
 	# SOCIAL SIDEBAR ICONS
 	public function getFacebookIcon( $iconPack ) {
 		if ( $this->hasIconCollection( $iconPack ) ) {
 			$iconsObject = $this->getIconCollection( $iconPack );
-			
+
 			return $iconsObject->getFacebookIcon();
 		}
 	}
-	
+
 	public function getTwitterIcon( $iconPack ) {
 		if ( $this->hasIconCollection( $iconPack ) ) {
 			$iconsObject = $this->getIconCollection( $iconPack );
-			
+
 			return $iconsObject->getTwitterIcon();
 		}
 	}
-	
+
 	public function getGooglePlusIcon( $iconPack ) {
 		if ( $this->hasIconCollection( $iconPack ) ) {
 			$iconsObject = $this->getIconCollection( $iconPack );
-			
+
 			return $iconsObject->getGooglePlusIcon();
 		}
 	}
-	
+
 	public function getLinkedInIcon( $iconPack ) {
 		if ( $this->hasIconCollection( $iconPack ) ) {
 			$iconsObject = $this->getIconCollection( $iconPack );
-			
+
 			return $iconsObject->getLinkedInIcon();
 		}
 	}
-	
+
 	public function getTumblrIcon( $iconPack ) {
 		if ( $this->hasIconCollection( $iconPack ) ) {
 			$iconsObject = $this->getIconCollection( $iconPack );
-			
+
 			return $iconsObject->getTumblrIcon();
 		}
 	}
-	
+
 	public function getPinterestIcon( $iconPack ) {
 		if ( $this->hasIconCollection( $iconPack ) ) {
 			$iconsObject = $this->getIconCollection( $iconPack );
-			
+
 			return $iconsObject->getPinterestIcon();
 		}
 	}
-	
+
 	public function getVKIcon( $iconPack ) {
 		if ( $this->hasIconCollection( $iconPack ) ) {
 			$iconsObject = $this->getIconCollection( $iconPack );
-			
+
 			return $iconsObject->getVKIcon();
 		}
 	}
@@ -1474,7 +1474,7 @@ function modify_jquery() {
 //add_action('init', 'modify_jquery');
 
 //add_action("wp_enqueue_scripts", "jquery");
-function jquery() { 
+function jquery() {
 	if (!is_admin()) {
 		wp_deregister_script('jquery');
 		wp_register_script('jquery', '//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js', false, null);
@@ -1503,7 +1503,7 @@ function ideothemo_setup()
     load_theme_textdomain('themo', get_template_directory() . '/languages');
 
     add_theme_support('post-thumbnails');
-    add_theme_support('title-tag');    
+    add_theme_support('title-tag');
     add_theme_support( 'custom-header');
     add_theme_support( 'custom-background');
     add_theme_support( 'automatic-feed-links' );
@@ -1701,11 +1701,11 @@ function ideothemo_body_class_filter($classes, $class)
     $classes[] = 'header-' . (!ideothemo_header_is_enabled() ? 'off' : 'on');
     //This one is risky, is necessary for archive.php for working height
     $classes[] = ideothemo_is_nopo_template() ? 'page' : '';
-    
+
     if ( !defined('IDEOTHEMO_CORE_VERSION') && is_singular('post') && ideothemo_get_page_title_local_setting('pagetitle.page_title_settings.page_title_area') == null ){
-        $classes[] = 'pagetitle-off'; 
-    }else{        
-        $classes[] = 'pagetitle-' . (ideothemo_page_title_area_enabled() ? 'on' : 'off'); 
+        $classes[] = 'pagetitle-off';
+    }else{
+        $classes[] = 'pagetitle-' . (ideothemo_page_title_area_enabled() ? 'on' : 'off');
     }
     $classes[] = 'sidebar-' . (ideothemo_is_sidebar_enabled() ? 'on' : 'off');
     $classes[] = 'sidebar-' . (ideothemo_get_sidebar_position() == 'left_sidebar' ? 'left' : (ideothemo_get_sidebar_position() == 'right_sidebar' ? 'right' : 'none'));
@@ -1718,7 +1718,7 @@ function ideothemo_body_class_filter($classes, $class)
     if ($is_safari) {
         $classes[] = 'browser-safari';
     }
-    if(!defined('IDEOTHEMO_CORE_VERSION')){   
+    if(!defined('IDEOTHEMO_CORE_VERSION')){
         $classes[] = 'no-ideothemo-core';
     }
 
@@ -1771,15 +1771,15 @@ function ideothemo_switch()
     $path_cache = IDEOTHEMO_CACHE_DIR;
     $access_type = get_filesystem_method();
 
-    if($access_type == 'ftpsockets'){      
+    if($access_type == 'ftpsockets'){
         //If path FTP and WP_CONTENT_DIR is different
         $subpath = explode($wp_filesystem->wp_content_dir(), IDEOTHEMO_GENERATED_DIR );
         if(count($subpath) == 2){
-            $path_gen = $wp_filesystem->wp_content_dir() . $subpath[1];            
-        }       
+            $path_gen = $wp_filesystem->wp_content_dir() . $subpath[1];
+        }
         $subpath = explode($wp_filesystem->wp_content_dir(), IDEOTHEMO_CACHE_DIR );
         if(count($subpath) == 2){
-            $path_cache = $wp_filesystem->wp_content_dir() . $subpath[1];            
+            $path_cache = $wp_filesystem->wp_content_dir() . $subpath[1];
         }
     }
 
@@ -1791,10 +1791,10 @@ function ideothemo_switch()
             wp_mkdir_p($path_cache);
         }
 
-        foreach($filelist as $file=>$data){ 
+        foreach($filelist as $file=>$data){
             $wp_filesystem->copy($path_gen . $file, $path_cache . $file, false);
-        }       
-    }    
+        }
+    }
 
     // Generate new styles
     wp_remote_request(esc_url(admin_url('admin-ajax.php') . '?action=generate_all_css'), array(
@@ -1860,22 +1860,22 @@ if ( ! function_exists( 'foton_mikado_get_title_tag' ) ) {
 	 */
 	function foton_mikado_get_title_tag( $first_empty = false, $additional_elements = array() ) {
 		$title_tag = array();
-		
+
 		if ( $first_empty ) {
 			$title_tag[''] = esc_html__( 'Default', 'foton' );
 		}
-		
+
 		$title_tag['h1'] = 'h1';
 		$title_tag['h2'] = 'h2';
 		$title_tag['h3'] = 'h3';
 		$title_tag['h4'] = 'h4';
 		$title_tag['h5'] = 'h5';
 		$title_tag['h6'] = 'h6';
-		
+
 		if ( ! empty( $additional_elements ) ) {
 			$title_tag = array_merge( $title_tag, $additional_elements );
 		}
-		
+
 		return $title_tag;
 	}
 }
@@ -1890,14 +1890,14 @@ if ( ! function_exists( 'foton_mikado_get_link_target_array' ) ) {
 	 */
 	function foton_mikado_get_link_target_array( $first_empty = false ) {
 		$order = array();
-		
+
 		if ( $first_empty ) {
 			$order[''] = esc_html__( 'Default', 'foton' );
 		}
-		
+
 		$order['_self']  = esc_html__( 'Same Window', 'foton' );
 		$order['_blank'] = esc_html__( 'New Window', 'foton' );
-		
+
 		return $order;
 	}
 }
@@ -1917,10 +1917,10 @@ if (!function_exists('foton_mikado_icon_collections')) {
 if ( ! function_exists( 'foton_mikado_get_icon_pack_collections' ) ) {
 	function foton_mikado_get_icon_pack_collections() {
 		$options = apply_filters( 'foton_mikado_filter_add_icon_pack_into_collection', $options = array() );
-		
+
 		return $options;
 	}
-	
+
 	add_action( 'after_setup_theme', 'foton_mikado_get_icon_pack_collections' );
 }
 
@@ -1928,20 +1928,20 @@ if ( ! function_exists( 'foton_mikado_get_icon_pack_collections' ) ) {
 if ( ! function_exists( 'foton_mikado_get_icon_pack_options' ) ) {
 	function foton_mikado_get_icon_pack_options() {
 		$options = apply_filters( 'foton_mikado_filter_add_icon_pack_into_options', $options = array() );
-		
+
 		return $options;
 	}
-	
+
 	add_action( 'after_setup_theme', 'foton_mikado_get_icon_pack_options' );
 }
 
 if ( ! function_exists( 'foton_mikado_get_icon_pack_social_options' ) ) {
 	function foton_mikado_get_icon_pack_social_options() {
 		$options = apply_filters( 'foton_mikado_filter_add_icon_pack_into_social_options', $options = array() );
-		
+
 		return $options;
 	}
-	
+
 	add_action( 'after_setup_theme', 'foton_mikado_get_icon_pack_social_options' );
 }
 
@@ -1953,20 +1953,20 @@ if ( ! function_exists( 'foton_mikado_get_title' ) ) {
 		$page_id              = foton_mikado_get_page_id();
 		$show_title_area_meta = foton_mikado_get_meta_field_intersect( 'show_title_area', $page_id ) == 'yes' ? true : false;
 		$show_title_area      = apply_filters( 'foton_mikado_filter_show_title_area', $show_title_area_meta );
-		
+
 		if ( $show_title_area ) {
 			$type_meta     = foton_mikado_get_meta_field_intersect( 'title_area_type', $page_id );
 			$type          = ! empty( $type_meta ) ? $type_meta : 'standard';
 			$template_path = apply_filters( 'foton_mikado_filter_title_template_path', $template_path = 'types/' . $type . '/templates/' . $type . '-title' );
 			$module        = apply_filters( 'foton_mikado_filter_title_module', $module = 'title' );
 			$layout        = apply_filters( 'foton_mikado_filter_title_layout', $layout = '' );
-			
+
 			$title_tag_meta = foton_mikado_get_meta_field_intersect( 'title_area_title_tag', $page_id );
 			$title_tag      = ! empty( $title_tag_meta ) ? $title_tag_meta : 'h1';
-			
+
 			$subtitle_tag_meta = foton_mikado_get_meta_field_intersect( 'title_area_subtitle_tag', $page_id );
 			$subtitle_tag      = ! empty( $subtitle_tag_meta ) ? $subtitle_tag_meta : 'h6';
-			
+
 			$parameters = array(
 				'holder_classes'  => foton_mikado_get_title_holder_classes(),
 				'holder_styles'   => foton_mikado_get_title_holder_styles(),
@@ -1981,7 +1981,7 @@ if ( ! function_exists( 'foton_mikado_get_title' ) ) {
 				'subtitle_styles' => foton_mikado_get_subtitle_styles(),
 			);
 			$parameters = apply_filters( 'foton_mikado_filter_title_area_params', $parameters );
-			
+
 			foton_mikado_get_module_template_part( $template_path, $module, $layout, $parameters );
 		}
 	}
@@ -2012,7 +2012,7 @@ if ( ! function_exists( 'foton_mikado_get_content_sidebar_class' ) ) {
 	function foton_mikado_get_content_sidebar_class() {
 		$sidebar_layout = foton_mikado_sidebar_layout();
 		$content_class  = array( 'mkdf-page-content-holder' );
-		
+
 		switch ( $sidebar_layout ) {
 			case 'sidebar-33-right':
 				$content_class[] = 'mkdf-grid-col-8';
@@ -2039,7 +2039,7 @@ if ( ! function_exists( 'foton_mikado_get_content_sidebar_class' ) ) {
 				$content_class[] = 'mkdf-grid-col-12';
 				break;
 		}
-		
+
 		return foton_mikado_get_class_attribute( $content_class );
 	}
 }
@@ -2081,11 +2081,11 @@ if ( ! function_exists( 'foton_mikado_get_font_weight_array' ) ) {
 	 */
 	function foton_mikado_get_font_weight_array( $first_empty = false ) {
 		$font_weights = array();
-		
+
 		if ( $first_empty ) {
 			$font_weights[''] = esc_html__( 'Default', 'foton' );
 		}
-		
+
 		$font_weights['100'] = esc_html__( '100 Thin', 'foton' );
 		$font_weights['200'] = esc_html__( '200 Thin-Light', 'foton' );
 		$font_weights['300'] = esc_html__( '300 Light', 'foton' );
@@ -2095,7 +2095,7 @@ if ( ! function_exists( 'foton_mikado_get_font_weight_array' ) ) {
 		$font_weights['700'] = esc_html__( '700 Bold', 'foton' );
 		$font_weights['800'] = esc_html__( '800 Extra-Bold', 'foton' );
 		$font_weights['900'] = esc_html__( '900 Ultra-Bold', 'foton' );
-		
+
 		return $font_weights;
 	}
 }
@@ -2110,18 +2110,18 @@ if ( ! function_exists( 'foton_mikado_get_text_transform_array' ) ) {
 	 */
 	function foton_mikado_get_text_transform_array( $first_empty = false ) {
 		$text_transforms = array();
-		
+
 		if ( $first_empty ) {
 			$text_transforms[''] = esc_html__( 'Default', 'foton' );
 		}
-		
+
 		$text_transforms['none']       = esc_html__( 'None', 'foton' );
 		$text_transforms['capitalize'] = esc_html__( 'Capitalize', 'foton' );
 		$text_transforms['uppercase']  = esc_html__( 'Uppercase', 'foton' );
 		$text_transforms['lowercase']  = esc_html__( 'Lowercase', 'foton' );
 		$text_transforms['initial']    = esc_html__( 'Initial', 'foton' );
 		$text_transforms['inherit']    = esc_html__( 'Inherit', 'foton' );
-		
+
 		return $text_transforms;
 	}
 }
@@ -2133,11 +2133,11 @@ if ( ! function_exists( 'foton_mikado_get_yes_no_select_array' ) ) {
 	 */
 	function foton_mikado_get_yes_no_select_array( $enable_default = true, $set_yes_to_be_first = false ) {
 		$select_options = array();
-		
+
 		if ( $enable_default ) {
 			$select_options[''] = esc_html__( 'Default', 'foton' );
 		}
-		
+
 		if ( $set_yes_to_be_first ) {
 			$select_options['yes'] = esc_html__( 'Yes', 'foton' );
 			$select_options['no']  = esc_html__( 'No', 'foton' );
@@ -2145,7 +2145,7 @@ if ( ! function_exists( 'foton_mikado_get_yes_no_select_array' ) ) {
 			$select_options['no']  = esc_html__( 'No', 'foton' );
 			$select_options['yes'] = esc_html__( 'Yes', 'foton' );
 		}
-		
+
 		return $select_options;
 	}
 }
@@ -2161,24 +2161,24 @@ if ( ! function_exists( 'foton_mikado_get_number_of_columns_array' ) ) {
 	 */
 	function foton_mikado_get_number_of_columns_array( $first_empty = false, $removed_items = array() ) {
 		$options = array();
-		
+
 		if ( $first_empty ) {
 			$options[''] = esc_html__( 'Default', 'foton' );
 		}
-		
+
 		$options['one']   = esc_html__( 'One', 'foton' );
 		$options['two']   = esc_html__( 'Two', 'foton' );
 		$options['three'] = esc_html__( 'Three', 'foton' );
 		$options['four']  = esc_html__( 'Four', 'foton' );
 		$options['five']  = esc_html__( 'Five', 'foton' );
 		$options['six']   = esc_html__( 'Six', 'foton' );
-		
+
 		if ( ! empty( $removed_items ) ) {
 			foreach ( $removed_items as $removed_item ) {
 				unset( $options[ $removed_item ] );
 			}
 		}
-		
+
 		return $options;
 	}
 }
@@ -2195,11 +2195,11 @@ if ( ! function_exists( 'foton_mikado_get_space_between_items_array' ) ) {
 	 */
 	function foton_mikado_get_space_between_items_array( $first_empty = false, $disable_by_keys = array() ) {
 		$options = array();
-		
+
 		if ( $first_empty ) {
 			$options[''] = esc_html__( 'Default', 'foton' );
 		}
-		
+
 		$options['huge']   = esc_html__( 'Huge', 'foton' );
 		$options['large']  = esc_html__( 'Large', 'foton' );
 		$options['medium'] = esc_html__( 'Medium', 'foton' );
@@ -2207,7 +2207,7 @@ if ( ! function_exists( 'foton_mikado_get_space_between_items_array' ) ) {
 		$options['small']  = esc_html__( 'Small', 'foton' );
 		$options['tiny']   = esc_html__( 'Tiny', 'foton' );
 		$options['no']     = esc_html__( 'No', 'foton' );
-		
+
 		if ( ! empty( $disable_by_keys ) ) {
 			foreach ( $disable_by_keys as $key ) {
 				if ( array_key_exists( $key, $options ) ) {
@@ -2215,7 +2215,7 @@ if ( ! function_exists( 'foton_mikado_get_space_between_items_array' ) ) {
 				}
 			}
 		}
-		
+
 		return $options;
 	}
 }
@@ -2230,17 +2230,17 @@ if ( ! function_exists( 'foton_mikado_get_font_style_array' ) ) {
 	 */
 	function foton_mikado_get_font_style_array( $first_empty = false ) {
 		$font_styles = array();
-		
+
 		if ( $first_empty ) {
 			$font_styles[''] = esc_html__( 'Default', 'foton' );
 		}
-		
+
 		$font_styles['normal']  = esc_html__( 'Normal', 'foton' );
 		$font_styles['italic']  = esc_html__( 'Italic', 'foton' );
 		$font_styles['oblique'] = esc_html__( 'Oblique', 'foton' );
 		$font_styles['initial'] = esc_html__( 'Initial', 'foton' );
 		$font_styles['inherit'] = esc_html__( 'Inherit', 'foton' );
-		
+
 		return $font_styles;
 	}
 }
@@ -2255,18 +2255,18 @@ if ( ! function_exists( 'foton_mikado_get_text_transform_array' ) ) {
 	 */
 	function foton_mikado_get_text_transform_array( $first_empty = false ) {
 		$text_transforms = array();
-		
+
 		if ( $first_empty ) {
 			$text_transforms[''] = esc_html__( 'Default', 'foton' );
 		}
-		
+
 		$text_transforms['none']       = esc_html__( 'None', 'foton' );
 		$text_transforms['capitalize'] = esc_html__( 'Capitalize', 'foton' );
 		$text_transforms['uppercase']  = esc_html__( 'Uppercase', 'foton' );
 		$text_transforms['lowercase']  = esc_html__( 'Lowercase', 'foton' );
 		$text_transforms['initial']    = esc_html__( 'Initial', 'foton' );
 		$text_transforms['inherit']    = esc_html__( 'Inherit', 'foton' );
-		
+
 		return $text_transforms;
 	}
 }
@@ -2281,18 +2281,18 @@ if ( ! function_exists( 'foton_mikado_get_text_decorations' ) ) {
 	 */
 	function foton_mikado_get_text_decorations( $first_empty = false ) {
 		$text_decorations = array();
-		
+
 		if ( $first_empty ) {
 			$text_decorations[''] = esc_html__( 'Default', 'foton' );
 		}
-		
+
 		$text_decorations['none']         = esc_html__( 'None', 'foton' );
 		$text_decorations['underline']    = esc_html__( 'Underline', 'foton' );
 		$text_decorations['overline']     = esc_html__( 'Overline', 'foton' );
 		$text_decorations['line-through'] = esc_html__( 'Line-Through', 'foton' );
 		$text_decorations['initial']      = esc_html__( 'Initial', 'foton' );
 		$text_decorations['inherit']      = esc_html__( 'Inherit', 'foton' );
-		
+
 		return $text_decorations;
 	}
 }
@@ -2320,7 +2320,7 @@ if ( ! function_exists( 'foton_mikado_get_font_option_val' ) ) {
 	 */
 	function foton_mikado_get_font_option_val( $option_val ) {
 		$option_val = str_replace( '+', ' ', $option_val );
-		
+
 		return $option_val;
 	}
 }
@@ -2336,18 +2336,18 @@ if ( ! function_exists( 'foton_mikado_get_icon_sources_array' ) ) {
 	 */
 	function foton_mikado_get_icon_sources_array( $first_empty = false, $enable_predefined = true ) {
 		$icon_sources = array();
-		
+
 		if ( $first_empty ) {
 			$icon_sources[''] = esc_html__( 'Default', 'foton' );
 		}
-		
+
 		$icon_sources['icon_pack']	= esc_html__( 'Icon Pack', 'foton' );
 		$icon_sources['svg_path']	= esc_html__( 'SVG Path', 'foton' );
-		
+
 		if ( $enable_predefined ) {
 			$icon_sources['predefined']	= esc_html__( 'Predefined', 'foton' );
 		}
-		
+
 		return $icon_sources;
 	}
 }
@@ -2363,10 +2363,10 @@ if ( ! function_exists( 'foton_mikado_get_icon_sources_class' ) ) {
 	 */
 	function foton_mikado_get_icon_sources_class( $option_name = '', $class_prefix = '' ) {
 		$class = '';
-		
+
 		if ( ! empty( $option_name ) && ! empty( $class_prefix ) ) {
 			$icon_source 	= foton_mikado_options()->getOptionValue( $option_name . '_icon_source' );
-			
+
 			if ( $icon_source === 'icon_pack' ) {
 				$class = $class_prefix . '-icon-pack';
 			} else if ( $icon_source === 'svg_path' ) {
@@ -2375,7 +2375,7 @@ if ( ! function_exists( 'foton_mikado_get_icon_sources_class' ) ) {
 				$class = $class_prefix . '-predefined';
 			}
 		}
-		
+
 		return $class;
 	}
 }
@@ -2392,7 +2392,7 @@ if ( ! function_exists( 'foton_mikado_get_icon_sources_html' ) ) {
 	 */
 	function foton_mikado_get_icon_sources_html( $option_name = '', $is_close_icon = false, $args = array() ) {
 		$html = '';
-		
+
 		if ( ! empty( $option_name ) ) {
 			$icon_source         = foton_mikado_options()->getOptionValue( $option_name . '_icon_source' );
 			$icon_pack           = foton_mikado_options()->getOptionValue( $option_name . '_icon_pack' );
@@ -2400,17 +2400,17 @@ if ( ! function_exists( 'foton_mikado_get_icon_sources_html' ) ) {
 			$close_icon_svg_path = foton_mikado_options()->getOptionValue( $option_name . '_close_icon_svg_path' );
 			$is_search_icon      = isset( $args['search'] ) && $args['search'] === 'yes';
 			$is_dropdown_cart    = isset( $args['dropdown_cart'] ) && $args['dropdown_cart'] === 'yes';
-			
+
 			if ( $icon_source === 'icon_pack' && isset( $icon_pack ) ) {
-				
+
 				if ( $is_search_icon ) {
-					
+
 					if ( $is_close_icon ) {
 						$html .= foton_mikado_icon_collections()->getSearchClose( $icon_pack, true );
 					} else {
 						$html .= foton_mikado_icon_collections()->getSearchIcon( $icon_pack, true );
 					}
-					
+
 				} else if ( $is_dropdown_cart ) {
 					$html .= foton_mikado_icon_collections()->getDropdownCartIcon( $icon_pack );
 				} else if ( $is_close_icon ) {
@@ -2418,17 +2418,17 @@ if ( ! function_exists( 'foton_mikado_get_icon_sources_html' ) ) {
 				} else {
 					$html .= foton_mikado_icon_collections()->getMenuIcon( $icon_pack );
 				}
-				
+
 			} else if ( ( isset( $icon_svg_path ) && ! empty( $icon_svg_path ) ) || ( isset( $close_icon_svg_path ) && ! empty( $close_icon_svg_path ) ) ) {
-				
+
 				if ( $is_close_icon ) {
 					$html .= $close_icon_svg_path;
 				} else {
 					$html .= $icon_svg_path;
 				}
-				
+
 			} else if ( $icon_source === 'predefined' ) {
-				
+
 				if ( $is_close_icon ) {
 					$html .= foton_mikado_icon_collections()->getMenuCloseIcon( 'font_elegant' );
 				} else {
@@ -2440,7 +2440,7 @@ if ( ! function_exists( 'foton_mikado_get_icon_sources_html' ) ) {
 				}
 			}
 		}
-		
+
 		return $html;
 	}
 }
@@ -2467,19 +2467,19 @@ if ( ! function_exists( 'foton_mikado_add_repeater_field' ) ) {
 		$parent      = '';
 		$button_text = '';
 		$table_layout = false;
-		
+
 		extract( $attributes );
-		
+
 		if ( ! empty( $parent ) && ! empty( $name ) ) {
 			$field = new FotonMikadoClassRepeater( $fields, $name, $label, $description, $button_text, $table_layout );
-			
+
 			if ( is_object( $parent ) ) {
 				$parent->addChild( $name, $field );
-				
+
 				return $field;
 			}
 		}
-		
+
 		return false;
 	}
 }
@@ -2498,16 +2498,16 @@ if ( ! function_exists( 'foton_mikado_add_taxonomy_fields' ) ) {
 	function foton_mikado_add_taxonomy_fields( $attributes ) {
 		$scope = array();
 		$name  = '';
-		
+
 		extract( $attributes );
-		
+
 		if ( ! empty( $scope ) ) {
 			$tax_obj = new FotonMikadoClassTaxonomyOption( $scope );
 			foton_mikado_framework()->mkdTaxonomyOptions->addTaxonomyOptions( $name, $tax_obj );
-			
+
 			return $tax_obj;
 		}
-		
+
 		return false;
 	}
 }
@@ -2536,18 +2536,18 @@ if ( ! function_exists( 'foton_mikado_add_taxonomy_field' ) ) {
 		$options     = array();
 		$args        = array();
 		$parent      = '';
-		
+
 		extract( $attributes );
-		
+
 		if ( ! empty( $parent ) && ! empty( $name ) ) {
 			$field = new FotonMikadoClassTaxonomyField( $type, $name, $label, $description, $options, $args);
 			if ( is_object( $parent ) ) {
 				$parent->addChild( $name, $field );
-				
+
 				return $field;
 			}
 		}
-		
+
 		return false;
 	}
 }
@@ -2566,16 +2566,16 @@ if ( ! function_exists( 'foton_mikado_add_user_fields' ) ) {
 	function foton_mikado_add_user_fields( $attributes ) {
 		$scope = array();
 		$name  = '';
-		
+
 		extract( $attributes );
-		
+
 		if ( ! empty( $scope ) ) {
 			$user_obj = new FotonMikadoClassUserOption( $scope );
 			foton_mikado_framework()->mkdUserOptions->addUserOptions( $name, $user_obj );
-			
+
 			return $user_obj;
 		}
-		
+
 		return false;
 	}
 }
@@ -2604,18 +2604,18 @@ if ( ! function_exists( 'foton_mikado_add_user_field' ) ) {
 		$options     = array();
 		$args        = array();
 		$parent      = '';
-		
+
 		extract( $attributes );
-		
+
 		if ( ! empty( $parent ) && ! empty( $name ) ) {
 			$field = new FotonMikadoClassUserField( $type, $name, $label, $description, $options, $args );
 			if ( is_object( $parent ) ) {
 				$parent->addChild( $name, $field );
-				
+
 				return $field;
 			}
 		}
-		
+
 		return false;
 	}
 }
@@ -2638,16 +2638,16 @@ if ( ! function_exists( 'foton_mikado_add_user_group' ) ) {
 		$title       = '';
 		$description = '';
 		$parent      = '';
-		
+
 		extract( $attributes );
-		
+
 		if ( ! empty( $name ) && ! empty( $title ) && is_object( $parent ) ) {
 			$group = new FotonMikadoClassUserGroup( $title, $description );
 			$parent->addChild( $name, $group );
-			
+
 			return $group;
 		}
-		
+
 		return false;
 	}
 }
@@ -2665,16 +2665,16 @@ if ( ! function_exists( 'foton_mikado_add_dashboard_fields' ) ) {
 	 */
 	function foton_mikado_add_dashboard_fields( $attributes ) {
 		$name = '';
-		
+
 		extract( $attributes );
-		
+
 		if ( $name !== '') {
 			$dash_obj = new FotonMikadoClassDashboardOption();
 			foton_mikado_framework()->mkdDashboardOptions->addDashboardOptions( $name, $dash_obj );
-			
+
 			return $dash_obj;
 		}
-		
+
 		return false;
 	}
 }
@@ -2703,16 +2703,16 @@ if ( ! function_exists( 'foton_mikado_add_dashboard_form' ) ) {
 		$button_label		= esc_html__('SUMBIT','foton');
 		$button_args		= array();
 		$parent				= '';
-		
+
 		extract( $attributes );
-		
+
 		if ( ! empty( $name ) && is_object( $parent ) && $form_id !== '') {
 			$container = new FotonMikadoClassDashboardForm( $name, $form_id, $form_method, $form_action, $form_nonce_action, $form_nonce_name, $button_label, $button_args);
 			$parent->addChild( $name, $container );
-			
+
 			return $container;
 		}
-		
+
 		return false;
 	}
 }
@@ -2733,16 +2733,16 @@ if ( ! function_exists( 'foton_mikado_add_dashboard_group' ) ) {
 		$title 		 = '';
 		$description = '';
 		$parent		 = '';
-		
+
 		extract( $attributes );
-		
+
 		if ( ! empty( $name ) && is_object( $parent ) ) {
 			$container = new FotonMikadoClassDashboardGroup( $name, $title, $description );
 			$parent->addChild( $name, $container );
-			
+
 			return $container;
 		}
-		
+
 		return false;
 	}
 }
@@ -2763,16 +2763,16 @@ if ( ! function_exists( 'foton_mikado_add_dashboard_section_title' ) ) {
 		$parent = '';
 		$name   = '';
 		$title  = '';
-		
+
 		extract( $attributes );
-		
+
 		if ( is_object( $parent ) && ! empty( $title ) && ! empty( $name ) ) {
 			$section_title = new FotonMikadoClassDashboardTitle( $name, $title );
 			$parent->addChild( $name, $section_title );
-			
+
 			return $section_title;
 		}
-		
+
 		return false;
 	}
 }
@@ -2800,19 +2800,19 @@ if ( ! function_exists( 'foton_mikado_add_dashboard_repeater_field' ) ) {
 		$button_text = '';
 		$table_layout = false;
 		$value = array();
-		
+
 		extract( $attributes );
-		
+
 		if ( ! empty( $parent ) && ! empty( $name ) ) {
 			$field = new FotonMikadoClassDashboardRepeater( $fields, $name, $label, $description, $button_text, $table_layout, $value);
-			
+
 			if ( is_object( $parent ) ) {
 				$parent->addChild( $name, $field );
-				
+
 				return $field;
 			}
 		}
-		
+
 		return false;
 	}
 }
@@ -2845,18 +2845,18 @@ if ( ! function_exists( 'foton_mikado_add_dashboard_field' ) ) {
 		$value       = '';
 		$parent      = '';
 		$repeat      = array();
-		
+
 		extract( $attributes );
-		
+
 		if ( ! empty( $parent ) && ! empty( $name ) ) {
 			$field = new FotonMikadoClassDashboardField( $type, $name, $label, $description, $options, $args, $value, $repeat);
 			if ( is_object( $parent ) ) {
 				$parent->addChild( $name, $field );
-				
+
 				return $field;
 			}
 		}
-		
+
 		return false;
 	}
 }
@@ -3067,7 +3067,7 @@ function foton_mikado_option_get_value($name)
     global $foton_mikado_global_options;
     global $foton_mikado_global_Framework;
 
-    if (array_key_exists($name, $foton_mikado_global_Framework->mkdOptions->options)) {
+    if (is_array($foton_mikado_global_Framework->mkdOptions->options) && array_key_exists($name, $foton_mikado_global_Framework->mkdOptions->options)) {
         if (isset($foton_mikado_global_options[$name]) && $foton_mikado_global_options[$name] !== '') {
             return $foton_mikado_global_options[$name];
         } else {
@@ -3109,19 +3109,19 @@ if ( ! function_exists( 'foton_mikado_sidebar_layout' ) ) {
 		$archive_sidebar_layout = foton_mikado_options()->getOptionValue( 'archive_sidebar_layout' );
 		$search_sidebar_layout  = foton_mikado_options()->getOptionValue( 'search_page_sidebar_layout' );
 		$single_sidebar_layout  = foton_mikado_get_meta_field_intersect( 'blog_single_sidebar_layout' );
-		
+
 		if ( ! empty( $sidebar_layout_meta ) ) {
 			$sidebar_layout = $sidebar_layout_meta;
 		}
-		
+
 		if ( is_singular( 'post' ) && ! empty( $single_sidebar_layout ) ) {
 			$sidebar_layout = $single_sidebar_layout;
 		}
-		
+
 		if ( is_search() && ! foton_mikado_is_woocommerce_shop() && ! empty( $search_sidebar_layout ) ) {
 			$sidebar_layout = $search_sidebar_layout;
 		}
-		
+
 		if ( ( is_archive() || ( is_home() && is_front_page() ) ) && ! foton_mikado_is_woocommerce_page() && ! empty( $archive_sidebar_layout ) ) {
 			$sidebar_layout = $archive_sidebar_layout;
 		}
@@ -3129,7 +3129,7 @@ if ( ! function_exists( 'foton_mikado_sidebar_layout' ) ) {
         if ( ! empty( $sidebar_layout ) && ! is_active_sidebar( foton_mikado_get_sidebar() ) ) {
             $sidebar_layout = '';
         }
-		
+
 		return apply_filters( 'foton_mikado_filter_sidebar_layout', $sidebar_layout );
 	}
 }

@@ -145,7 +145,7 @@ if (!function_exists('ideothemo_get_header_style')) {
         }
 
         $value = $useLocal ? ideothemo_get_page_option_setting('header.' . $setting, false, get_the_ID()) : str_replace('_','-',ideothemo_get_header_setting($setting));
-        
+
         if (empty($value)) {
             $value = ideothemo_get_default_header_style($real_type);
         }
@@ -241,7 +241,7 @@ if (!function_exists('ideothemo_setting_class')) {
 if (!function_exists('ideothemo_get_logo_header')) {
     function ideothemo_get_logo_header($header_type, $alt = '')
     {
-        
+
         $logo_type = ideothemo_get_header_setting($header_type . '.logo.type');
         $src = ideothemo_get_header_setting('logo.' . $logo_type);
 
@@ -259,7 +259,7 @@ if (!function_exists('ideothemo_get_logo_header')) {
 if (!function_exists('ideothemo_get_offcanvas_bar_logo')) {
     function ideothemo_get_offcanvas_bar_logo($bar, $alt = '')
     {
-        
+
         $logo_topbar_type = ideothemo_get_header_setting('side.offcanvas.topbar.logo.type');
         $logo_stickybar_type = ideothemo_get_header_setting('side.offcanvas.stickybar.logo.type');
         $src_topbar = ideothemo_get_header_setting('logo.' . $logo_topbar_type);
@@ -322,9 +322,9 @@ if (!function_exists('ideothemo_header_is_enabled')) {
     /*
      * Check if header (menu) is enabled
      * This option can be set only in Page Options
-     * 
+     *
      * @return boolean
-     * 
+     *
      */
 
     function ideothemo_header_is_enabled()
@@ -335,9 +335,9 @@ if (!function_exists('ideothemo_header_is_enabled')) {
 //        }
 
         if(ideothemo_get_custom_post_meta('header.overwrite_global_header')){
-            return ideothemo_blog_is_switch_enabled(ideothemo_get_custom_post_meta('header.overwrite_global_header'));            
+            return ideothemo_blog_is_switch_enabled(ideothemo_get_custom_post_meta('header.overwrite_global_header'));
         }
-        
+
         return true;
     }
 }

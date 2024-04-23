@@ -13,6 +13,10 @@ if (!function_exists('ideothemo_array_replace_recursive')) {
         if (!function_exists('ideothemo_recurse')) {
             function ideothemo_recurse($array, $array1)
             {
+                if (!is_array($array))
+                {
+                    return $array;
+                }
                 foreach ($array1 as $key => $value) {
 
                     if (!isset($array[$key])) {

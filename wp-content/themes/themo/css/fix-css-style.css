@@ -521,18 +521,18 @@ div#header-navbar nav.navbar-standard > div {
     }
 }
 
-/*#header.transparent-light #header-navbar > .navbar-standard .navbar-nav > li > a, #header.transparent-light #header-navbar > .navbar-sticky .navbar-nav > li > a {*/
-/*    font-size: 18px;*/
-/*    color: #111324;*/
-/*    text-transform: capitalize;*/
-/*    font-weight: 400;*/
-/*}*/
+#header.transparent-light #header-navbar > .navbar-standard .navbar-nav > li > a, #header.transparent-light #header-navbar > .navbar-sticky .navbar-nav > li > a {
+    font-size: 18px;
+    color: #111324;
+    text-transform: capitalize;
+    font-weight: 400;
+}
 
-/*@media (min-width: 992px) {*/
-/*    #header.transparent-light #header-navbar > .navbar-standard .navbar-nav > li > a, #header.transparent-light #header-navbar > .navbar-sticky .navbar-nav > li > a {*/
-/*        color: #111324 !important;*/
-/*    }*/
-/*}*/
+@media (min-width: 992px) {
+    #header.transparent-light #header-navbar > .navbar-standard .navbar-nav > li > a, #header.transparent-light #header-navbar > .navbar-sticky .navbar-nav > li > a {
+        color: #111324 !important;
+    }
+}
 
 @media (min-width: 992px) {
     header #header-navbar nav.navbar-standard > div {

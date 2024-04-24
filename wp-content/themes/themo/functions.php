@@ -3201,3 +3201,11 @@ function my_myme_types($mime_types){
     return $mime_types;
 }
 add_filter('upload_mimes', 'my_myme_types', 1, 1);
+
+
+function add_theme_scripts() {
+    wp_enqueue_style( 'slider', get_template_directory_uri() . '/css/global-qatsol.css');
+    wp_enqueue_script( 'script', get_template_directory_uri() . '/js/global-qatsol.js');
+}
+
+add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );

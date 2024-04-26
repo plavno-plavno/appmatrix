@@ -210,7 +210,7 @@ $image = $img_size = $el_image_align = $el_image_style = $el_hover = $el_lightbo
 
 function ideothemo_single_image_func($atts, $content = "")
 {
-    
+
     extract(shortcode_atts(array(
         'image' => '',
         'img_size' => 'full',
@@ -233,12 +233,12 @@ function ideothemo_single_image_func($atts, $content = "")
         'el_animation_offset' => '95',
         'el_uid' => ideothemo_shortcode_uid()
     ), $atts));
-    
+
     if($el_uid == '') $el_uid = ideothemo_shortcode_uid();
 
     $html = '';
     $data = '';
-    $imageData = '';
+    $imageData = [];
     $link = '';
 
     if ($image) {
@@ -329,7 +329,7 @@ function ideothemo_single_image_func($atts, $content = "")
     $html .= '</div>';
     $html .= '</div>';
 
-    
+
 
     return $html;
 }

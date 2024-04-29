@@ -63,6 +63,14 @@ body.open-menu {
     }
 }
 
+#header-navbar ul.navbar-menu > li > a {
+    font-size: 18px;
+    color: var(--mainColor);
+    text-transform: capitalize;
+    font-weight: 400;
+    font-family: var(--familyRegular);
+}
+
 .vc_column_container, .vc_column_container {
     padding: 0 !important;
 }
@@ -322,7 +330,7 @@ body header #header-navbar.mobile .navbar-toggle > .navbar-toggle-placeholder {
 }
 
 #heroBlock .wpb_wrapper {
-   .hero-img-wrapper .ideo-single-image {
+    .hero-img-wrapper .ideo-single-image {
         border-radius: 40px;
         overflow: hidden;
     }
@@ -387,6 +395,10 @@ body header #header-navbar.mobile .navbar-toggle > .navbar-toggle-placeholder {
     #heroBlock .hero-left-column-dark .ideo-box-inner {
         padding: 48px 72px 48px 72px;
     }
+
+    .hero-left-column-dark .ideo-wow-title {
+        margin-bottom: 82px;
+    }
 }
 
 
@@ -395,6 +407,12 @@ h1.title {
     font-size: clamp(40px, 3vw + 3vh, 88px) !important;
     font-weight: 700;
     letter-spacing: clamp(-1.6px, 3vw + 3vh, -3.52px);
+    color: var(--colorLight);
+}
+
+
+.transparent-dark.ideo-wow-title .title {
+    color: var(--colorLight);
 }
 
 .primary-text {
@@ -420,13 +438,20 @@ body.vc-on.wrap-wide .vc_page_section {
     body.page.header-on.sticky-slide-hide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
     body.single-portfolio.header-on.sticky-slide-hide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
     body.single-team.header-on.sticky-slide-hide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
-    body #content .diver-padding{
-        padding-top: 212px;
+    body.page.header-on.sticky-slide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content.portfolio-2 .vc_page_section:first-child {
+        padding-top: 212px !important;
     }
 }
 
 .hero-wrapper .hero-left-column-dark {
     margin: 0 !important;
+
+    .ideo-box-inner {
+        background-color: #111324;
+        padding: 24px 24px 24px 24px;
+        margin: 0px;
+        border-radius: 40px;
+    }
 }
 
 @media (min-width: 992px) {
@@ -550,6 +575,8 @@ body.vc-on.wrap-wide .vc_page_section {
 
 .footer-logo {
     left: 0 !important;
+    display: flex;
+    justify-content: center;
 
     img {
         width: 100%;
@@ -558,6 +585,9 @@ body.vc-on.wrap-wide .vc_page_section {
 }
 
 @media (min-width: 992px) {
+    .footer-logo {
+        justify-content: flex-end;
+    }
     .footer-logo .ideo-single-image {
         text-align: right;
         margin-left: auto !important;
@@ -769,12 +799,12 @@ footer, .common-padding {
 
 @media screen and (min-width: 1280px) {
     #content .common-padding:not(.hero-section ) {
-        padding-top: 88px !important;
-        padding-bottom: 88px !important;
+        padding-top: 65px !important;
+        padding-bottom: 65px !important;
     }
 
     #content .common-padding.hero-section {
-        padding-bottom: 64px !important;
+        padding-bottom: 65px !important;
     }
 }
 
@@ -923,6 +953,7 @@ div#page-container {
     position: relative;
     z-index: 2;
     line-height: 1.4;
+    color: #f4f4f8;
 }
 
 @media (min-width: 992px) {
@@ -991,7 +1022,7 @@ div#page-container {
 }
 
 #contactUsForm .form-btn {
-    margin-top:32px;
+    margin-top: 32px;
     position: relative;
     width: max-content;
 
@@ -1008,7 +1039,8 @@ div#page-container {
         margin-bottom: 0;
         width: 100%;
         height: 57px;
-        &:hover .primary-btn-form::after,    &:hover p {
+
+        &:hover .primary-btn-form::after, &:hover p {
             color: #111324;
             box-shadow: -2px 9px 25.1px 0px rgba(208, 172, 88, 0.36);
         }
@@ -1055,14 +1087,23 @@ div#page-container {
     }
 }
 
+
+.ideo-box-inner, .ideo-box-content, .hero-slider, .hero-slider, .slick-list, .slick-track, .slick-track .ideo-single-image-wrap, .slick-track .ideo-single-image {
+    height: 100%;
+}
+#heroBlock .ult-item-wrap {
+    padding: 0 16px;
+}
+
+#heroBlock .hero-slider  .ideo-single-image img {
+    aspect-ratio: 316 / 223;
+}
+
 @media (min-width: 992px) {
 
     #heroBlock .hero-sliders-wrapper {
         height: 100%;
-
-        .ideo-box-inner, .ideo-box-content, .hero-slider, .hero-slider, .slick-list, .slick-track, .slick-track .ideo-single-image-wrap, .slick-track .ideo-single-image {
-            height: 100%;
-        }
+        padding: 0 16px;
 
         .ideo-box-inner {
             padding-top: 98px;
@@ -1153,6 +1194,7 @@ div#page-container {
 
 @media (min-width: 992px) {
     #content .ideo-box-content .tag-h2-white {
+        margin-bottom: 40px;
         p {
             font-size: clamp(16px, 1.5vw + 1vh, 32px);
         }
@@ -1206,14 +1248,16 @@ div#page-container {
 
         .icon {
             position: static;
-            display: block;
-            width: 156px;
+            width: 100%;
             height: 156px;
             margin-bottom: 40px;
 
+            display: flex;
+            justify-content: center;
+
             i {
                 position: static;
-                width: 100%;
+                width: 156px;
                 height: 100%;
                 margin: 0;
             }
@@ -1412,6 +1456,7 @@ div#page-container {
         img {
             aspect-ratio: 512 / 320;
         }
+
         .ideo-single-image {
             border-radius: 40px;
             overflow: hidden;
@@ -1558,7 +1603,7 @@ body.page #content.kontakt {
 
     #content .sticky-left-card .sticky-left-text {
         .column-text {
-            margin-bottom: 3.3vw;
+            margin-bottom: 40px;
         }
 
         .column-text p {
@@ -1591,7 +1636,10 @@ body.page #content.kontakt {
 @media (min-width: 992px) {
 
     #content .title-h4 {
-        margin-bottom: 13vw;
+        margin-bottom: 40px;
+    }
+    #content .sticky-left-card {
+        margin-bottom: 40px;
     }
 
     #content .title-h4 h4.title {
@@ -1602,18 +1650,17 @@ body.page #content.kontakt {
 #content .full-sticky-left-info .wpb_wrapper {
     display: flex;
     flex-direction: column;
-    height: 100%;
-    justify-content: space-between;
 }
 
 .sticky-left-card .sticky-left-text {
     .column-text p {
         margin: 0;
+        font-family: var(--familyRegular);
     }
 }
 
 .sticky-left-img-wrapper {
-    .wpb_wrapper, .sticky-left-img, .ideo-single-image {
+    .wpb_wrapper, .sticky-left-img {
         height: 100%;
     }
 
@@ -1629,6 +1676,12 @@ body.page #content.kontakt {
 
 
 @media (min-width: 992px) {
+
+    .sticky-left-img-wrapper {
+        .wpb_wrapper, .sticky-left-img, .ideo-single-image {
+            height: 100%;
+        }
+    }
 
     #content .sticky-left-card .ideo-box-inner {
         padding: 48px;
@@ -1728,6 +1781,7 @@ body.page #content.kontakt {
 
         p {
             font-size: clamp(16px, 1.5vw, 32px);
+            font-family: var(--familyRegular);
         }
     }
 }
@@ -1803,6 +1857,9 @@ body.page #content.kontakt {
 
 .ult-carousel-wrapper.ult_horizontal {
     padding: 0;
+}
+.ult-carousel-wrapper:nth-child(1) {
+    padding-bottom: 24px;
 }
 
 
@@ -2038,19 +2095,22 @@ body.page #content.kontakt {
     #header.colored-light #header-navbar.hover-style3 .navbar-menu > li.active:hover > a:after {
         background-color: var(--mainColor);
     }
+
     #contactUsForm {
         .input-label p, input, input::placeholder, textarea, textarea::placeholder, .checkbox-row .wpcf7-list-item {
             font-size: 18px;
         }
 
-       .mkdf-grid-small-gutter .mkdf-grid-col-6 {
+        .mkdf-grid-small-gutter .mkdf-grid-col-6 {
             &:nth-child(2) {
                 padding-right: 16px !important;
             }
-           &:nth-child(3) {
-               padding-left: 16px !important;
-           }
+
+            &:nth-child(3) {
+                padding-left: 16px !important;
+            }
         }
+
         .checkbox-row {
             .add-info {
                 margin-top: 32px;
@@ -2062,4 +2122,40 @@ body.page #content.kontakt {
 .card-inner a, .profile-card a, .btn-show-more a, .sticky-left-card a,
 .footer-marketing a, .footer-software a, .menu-footer-company-container li:nth-child(1) {
     pointer-events: none;
+}
+
+
+/*portfolio*/
+#gridPortfolio {
+    .tg-filter {
+        .tg-filter-name {
+            color: var(--mainColor);
+            font-family: var(--familySemiBold);
+            font-size: 16px;
+            line-height: 1.4;
+        }
+
+        &:hover, &:hover .tg-filter-name.tg-nav-color {
+            color: var(--primary) !important;
+            transition: all 0.5s ease-in-out;
+        }
+    }
+
+    .tg-filter.tg-filter-active {
+        .tg-filter-name {
+            color: var(--primary);
+        }
+    }
+
+    .tg-item-overlay {
+        border-radius: 10px;
+    }
+
+    .tg-link-button:hover, .tg-link-button:hover .tg-icon-add::before {
+        color: var(--primary)
+    }
+
+    .tg-item-title a, .tg-link-button {
+        font-family: var(--familySemiBold);
+    }
 }

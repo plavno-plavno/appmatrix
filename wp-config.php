@@ -28,19 +28,20 @@
 ini_set('display_errors','Off');
 ini_set('error_reporting', E_ALL );
 define('WP_DEBUG_DISPLAY', false);
-
+define( 'WP_HOME', 'https://qatsol.bi' );
+define( 'WP_SITEURL', 'https://qatsol.bi');
 
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 define('WP_CACHE', true);
 define( 'WPCACHEHOME', 'C:\OSPanel\domains\qatsol.bi\wp-content\plugins\wp-super-cache/' );
-define( 'DB_NAME', 'qatsol' );
+define( 'DB_NAME', 'kmnyyrla0' );
 
 /** Database username */
-define( 'DB_USER', 'root' );
+define( 'DB_USER', '0wkntye0lw' );
 
 /** Database password */
-define( 'DB_PASSWORD', '' );
+define( 'DB_PASSWORD', 'v8WWb3U6T@6seTY&' );
 
 /** Database hostname */
 define( 'DB_HOST', 'localhost' );

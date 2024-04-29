@@ -322,7 +322,7 @@ body header #header-navbar.mobile .navbar-toggle > .navbar-toggle-placeholder {
 }
 
 #heroBlock .wpb_wrapper {
-    .ideo-single-image {
+   .hero-img-wrapper .ideo-single-image {
         border-radius: 40px;
         overflow: hidden;
     }
@@ -1388,6 +1388,10 @@ div#page-container {
     margin-bottom: 44px !important;
 
     .img-card-grid {
+
+        img {
+            aspect-ratio: 512 / 320;
+        }
         .ideo-single-image {
             border-radius: 40px;
             overflow: hidden;
@@ -1487,6 +1491,7 @@ div#page-container {
 @media (min-width: 992px) {
     .vc_page_section .vc_row.profile-cards {
         gap: 32px;
+        row-gap: 50px;
 
         .wpb_column {
             width: calc(100% / 3 - 22px);

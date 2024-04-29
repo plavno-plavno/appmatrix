@@ -968,26 +968,50 @@ div#page-container {
     }
 }
 
+#contactUsForm .vc_col-sm-7 {
+    width: 100%;
+}
+
+@media (min-width: 992px) {
+    #contactUsForm .vc_col-sm-7 {
+        width: 58.33333333%;
+    }
+}
+
 #contactUsForm .form-btn {
-    margin-top:16px;
+    margin-top:32px;
+    position: relative;
+    width: max-content;
+
+    & > p {
+        position: absolute;
+        top: 0;
+        opacity: 0;
+    }
 
     input {
         display: block;
-        border-radius: 50px !important;
-        padding: 0 32px;
-        font-family: var(--familySemiBold);
-        font-size: 16px;
-        line-height: 1.1;
-        text-transform: uppercase;
-        letter-spacing: 0.64px;
-        background-color: var(--primary) !important;
-        height: 56px;
-        color: var(--mainColor);
         margin-bottom: 0;
+    }
 
-        &:hover {
-            color: #111324;
-            box-shadow: -2px 9px 25.1px 0px rgba(208, 172, 88, 0.36);
+    .primary-btn-form {
+        display: flex;
+        align-items: center;
+        p {
+            height: 56px;
+            border-radius: 50px !important;
+            padding: 19px 32px;
+            font-family: var(--familySemiBold);
+            font-size: 16px;
+            line-height: 1.1;
+            text-transform: uppercase;
+            letter-spacing: 0.64px;
+            background-color: var(--primary) !important;
+            color: var(--mainColor);
+        }
+        &:hover::after,    &:hover p {
+                color: #111324;
+                box-shadow: -2px 9px 25.1px 0px rgba(208, 172, 88, 0.36);
         }
 
         &::after {
@@ -1004,11 +1028,6 @@ div#page-container {
     }
 }
 
-@media (min-width: 992px) {
-    #contactUsForm .form-btn {
-        margin-top: 32px;
-    }
-}
 
 .hero-sliders-wrapper {
     .ult-carousel-wrapper {

@@ -82,7 +82,7 @@ h3 {
 
 #header-navbar nav.navbar-standard-width-custom, #header-navbar nav.navbar-standard-width-full .page-width,
 .entry-content .container, .page-width,
-.footer-navigator-bar .container{
+.footer-navigator-bar .container {
     max-width: 1600px;
     width: 100%;
     margin: 0 auto;
@@ -1269,7 +1269,7 @@ h4 {
     }
 
     &.column-text-styled h4 {
-        color: var(--mainColor) ;
+        color: var(--mainColor);
     }
 }
 
@@ -1300,7 +1300,7 @@ h4 {
     }
 }
 
-p, .column-text p, ul, ul li,.wpb_wrapper .column-text-styled.portfolio-info-card p{
+p, .column-text p, ul, ul li, .wpb_wrapper .column-text-styled.portfolio-info-card p {
     font-family: var(--familyRegular);
     font-size: clamp(16px, 1.5vw, 18px) !important;
     line-height: 1.4;
@@ -2309,6 +2309,7 @@ body.skin-light .footer-navigator-bar {
                 color: var(--primary);
 
             }
+
             label {
                 color: var(--primary)
             }
@@ -2319,8 +2320,9 @@ body.skin-light .footer-navigator-bar {
 
             &:hover {
                 i, label {
-                    color: var(--primary) ;
+                    color: var(--primary);
                 }
+
                 h4 {
                     color: var(--colorLight);
                 }
@@ -2332,10 +2334,21 @@ body.skin-light .footer-navigator-bar {
 
 @media (max-width: 767px) {
     .footer-navigator-bar .portfolio-footer-nav-container {
-       .next a,  .previous a{
+        .next a, .previous a {
             display: flex;
             align-items: center;
         }
     }
 }
 
+@media (min-width: 768px) {
+    .portfolio-info-cards-column {
+        width: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    .portfolio-info-cards-column {
+        width: 33.33333333%;
+    }
+}

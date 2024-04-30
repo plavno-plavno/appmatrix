@@ -80,7 +80,9 @@ h3 {
     padding: 0 !important;
 }
 
-#header-navbar nav.navbar-standard-width-custom, #header-navbar nav.navbar-standard-width-full .page-width, .entry-content .container, .page-width {
+#header-navbar nav.navbar-standard-width-custom, #header-navbar nav.navbar-standard-width-full .page-width,
+.entry-content .container, .page-width,
+.footer-navigator-bar .container{
     max-width: 1600px;
     width: 100%;
     margin: 0 auto;
@@ -2324,6 +2326,15 @@ body.skin-light .footer-navigator-bar {
                 }
 
             }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .footer-navigator-bar .portfolio-footer-nav-container {
+       .next a,  .previous a{
+            display: flex;
+            align-items: center;
         }
     }
 }

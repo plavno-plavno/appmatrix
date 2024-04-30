@@ -843,6 +843,7 @@ footer, .common-padding {
 
 #footer .privacy-menu .menu {
     display: flex;
+    justify-content: space-between;
     gap: 32px;
 
 
@@ -899,6 +900,7 @@ footer, .common-padding {
     color: var(--greyText);
     text-transform: capitalize;
     margin: 0;
+    text-align: center;
 }
 
 body.skin-light #header {
@@ -918,8 +920,15 @@ body.home {
 }
 
 @media (min-width: 992px) {
+
+    #footer .privacy-menu .menu {
+        justify-content: flex-start;
+    }
     #footer .ca-footer {
         margin-bottom: 0;
+    }
+    .footer-copyright p {
+        text-align: right;
     }
 }
 
@@ -1145,16 +1154,18 @@ div#page-container {
         flex-direction: row;
         gap: 0;
     }
+
+    .hero-left-info {
+        .wpb_wrapper, .hero-left-column-dark {
+            height: 100%;
+        }
+    }
 }
 
 @media (max-width: 991px) {
 
     .hero-left-info {
         margin-bottom: 16px;
-    }
-
-    #heroBlock .hero-left-info, #heroBlock .hero-sliders {
-        width: 100%
     }
 }
 
@@ -1545,7 +1556,7 @@ div#page-container {
     .vc_page_section .vc_row.profile-cards {
         gap: 16px;
         flex-direction: row;
-        margin-bottom: 56px !important;
+        margin-bottom: 0 !important;
 
         .wpb_column {
             width: calc(100% / 2 - 16px);
@@ -1556,7 +1567,7 @@ div#page-container {
 @media (min-width: 992px) {
     .vc_page_section .vc_row.profile-cards {
         gap: 32px;
-        row-gap: 50px;
+        row-gap: 30px;
 
         .wpb_column {
             width: calc(100% / 3 - 22px);

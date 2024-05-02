@@ -1152,7 +1152,11 @@ div#page-container {
 #heroBlock .vc_page_section .row, .vc_page_section .vc_row {
     display: flex;
     flex-direction: column;
-    gap: 16px
+    gap: 16px;
+
+    &::after, &::before {
+        content: none;
+    }
 }
 
 @media (min-width: 992px) {
@@ -1225,6 +1229,7 @@ div#page-container {
 
 .title-h2 h2.title {
     font-family: var(--familyBold);
+    letter-spacing: -1.12px !important;
 
     .title-bg {
         padding: 0;
@@ -1234,6 +1239,7 @@ div#page-container {
 h3, .portfolio-column .column-text {
     margin-top: 0 !important;
 }
+
 
 .portfolio-column {
     margin-bottom: 40px;
@@ -1273,7 +1279,7 @@ h4 {
 @media (min-width: 992px) {
     .title-h2 h2.title, h3 {
         font-family: var(--familyBold);
-        font-size: clamp(24px, 2vw + 3vh, 56px) !important;
+        font-size: clamp(24px, 2vw + 2vh, 56px) !important;
     }
 
     h3 {
@@ -2224,12 +2230,6 @@ body.page #content.kontakt {
     }
 }
 
-.card-inner a, .profile-card a, .btn-show-more a, .sticky-left-card a,
-.footer-marketing a, .footer-software a, .menu-footer-company-container li:nth-child(1) {
-    pointer-events: none;
-}
-
-
 /*portfolio*/
 #gridPortfolio {
     .tg-filter {
@@ -2262,6 +2262,12 @@ body.page #content.kontakt {
 
     .tg-item-title a, .tg-link-button {
         font-family: var(--familySemiBold);
+        text-transform: capitalize;
+    }
+
+
+    .sofia .tg-item-title, .sofia .tg-item-title a {
+        text-transform: capitalize;
     }
 }
 
@@ -2551,6 +2557,10 @@ body .vc_page_section .vc_row.vc_inner.cta-section {
 
     .text-column {
         width: 100%;
+
+        & .wpb_wrapper .column-text > div:nth-child(1) p {
+            margin-top: 0;
+        }
     }
 
     &.cta-left {
@@ -2569,7 +2579,6 @@ body .vc_page_section .vc_row.vc_inner.cta-section {
         }
 
         .img-column {
-            margin-bottom: 32px;
             order: 2;
         }
     }
@@ -2618,7 +2627,6 @@ body .vc_page_section .vc_row.vc_inner.cta-section.cta-dark {
 
             .img-column {
                 order: 0;
-                margin-bottom: 0;
             }
         }
 
@@ -2683,4 +2691,33 @@ body.page.wrap-wide.vc-on.sidebar-off #content, body.single-portfolio.wrap-wide.
     .footer-copyright p {
         text-align: right;
     }
+}
+
+.transparent-dark.column-text p > a {
+    color: var(--primary);
+    position: relative;
+
+    &::before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        width: 0;
+        height: 1px;
+        background: var(--primary);
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &:hover {
+        color: var(--primary);
+        &::before {
+            width: 100%;
+            transition: all .3s ease-in-out;
+        }
+    }
+}
+
+.tg-item.sofia .tg-item-media-inner, .tg-item.sofia  .tg-item-content-inner, .tg-item.sofia .tg-item-overlay {
+    border-radius: 40px !important;
 }

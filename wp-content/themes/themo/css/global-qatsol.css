@@ -742,7 +742,7 @@ body.skin-light #footer-container {
     font-family: var(--familySemiBold);
     font-size: 14px;
     line-height: 1.2;
-    color: rgba(17, 19, 36, 0.64);
+    color: var(--mainColor);
     letter-spacing: 0.56px;
     text-transform: uppercase;
     margin: 0;
@@ -909,15 +909,7 @@ footer, .common-padding {
     letter-spacing: 0;
 }
 
-.footer-copyright p {
-    font-family: var(--familyRegular);
-    font-size: 14px;
-    line-height: 1.4;
-    color: var(--greyText);
-    text-transform: capitalize;
-    margin: 0;
-    text-align: center;
-}
+
 
 body.skin-light #header {
     background: var(--mainbg);
@@ -935,20 +927,7 @@ body.home {
     margin-bottom: 47px;
 }
 
-@media (min-width: 992px) {
 
-    #footer .privacy-menu .menu {
-        justify-content: flex-start;
-    }
-
-    #footer .ca-footer {
-        margin-bottom: 0;
-    }
-
-    .footer-copyright p {
-        text-align: right;
-    }
-}
 
 #footer-container.sticky {
     position: static;
@@ -1329,6 +1308,9 @@ li::marker {
 }
 
 @media (min-width: 992px) {
+    #content .section-title .title-h2{
+        max-width: 90%;
+    }
     #content .section-title .subtitle-h2 {
         margin-bottom: 64px;
     }
@@ -1370,7 +1352,8 @@ li::marker {
             line-height: 1.1;
             padding: 0;
             margin-bottom: 16px;
-            border-bottom: none
+            border-bottom: none;
+            color: var(--mainColor);
         }
 
         p {
@@ -1479,6 +1462,10 @@ li::marker {
     }
 }
 
+#content .about-card .ideo-single-image-wrap.card-inner {
+    padding: 16px;
+}
+
 @media (min-width: 992px) {
     #content .about-card {
         .ideo-iconbox.card-inner {
@@ -1489,7 +1476,7 @@ li::marker {
         }
     }
 
-    #content .about-card .ideo-iconbox.card-inner {
+    #content .about-card .ideo-iconbox.card-inner, #content .about-card .ideo-single-image-wrap.card-inner {
         padding: 48px;
         height: 100%;
     }
@@ -2602,7 +2589,7 @@ body .vc_page_section .vc_row.vc_inner.cta-section.cta-dark {
 
     body .vc_page_section .vc_row.vc_inner.cta-section {
         .vc_column_container .ideo-single-image, .text-column .wpb_wrapper {
-            width: 95% !important;
+            width: 96% !important;
             max-width: 640px;
         }
 
@@ -2671,5 +2658,29 @@ body.page.wrap-wide.vc-on.sidebar-off #content, body.single-portfolio.wrap-wide.
         .about-card {
             width: calc(100% / 4 - 30px);
         }
+    }
+}
+.footer-copyright p {
+    font-family: var(--familyRegular);
+    font-size: 14px !important;
+    line-height: 1.4;
+    color: var(--greyText);
+    text-transform: capitalize;
+    margin: 0;
+    text-align: center;
+}
+
+@media (min-width: 992px) {
+
+    #footer .privacy-menu .menu {
+        justify-content: flex-start;
+    }
+
+    #footer .ca-footer {
+        margin-bottom: 0;
+    }
+
+    .footer-copyright p {
+        text-align: right;
     }
 }

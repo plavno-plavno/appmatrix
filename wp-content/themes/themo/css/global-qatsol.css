@@ -1236,12 +1236,6 @@ div#page-container {
         padding: 0;
     }
 }
-
-h3, .portfolio-column .column-text {
-    margin-top: 0 !important;
-}
-
-
 .portfolio-column {
     margin-bottom: 40px;
 }
@@ -1324,7 +1318,7 @@ li::marker {
 }
 
 @media (min-width: 992px) {
-    #content .section-title .title-h2{
+    #content .section-title .title-h2:not(.h2-cta){
         max-width: 90%;
     }
     #content .section-title .subtitle-h2 {

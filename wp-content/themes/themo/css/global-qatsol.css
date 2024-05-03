@@ -692,7 +692,7 @@ body.skin-light #footer-container {
     margin: 0 0 24px 0;
     color: var(--mainColor);
     font-family: var(--familyBold);
-    font-size: 24px;
+    font-size: 24px !important;
     letter-spacing: -0.48px;
     line-height: 1.1;
 
@@ -729,7 +729,7 @@ body.skin-light #footer-container {
 
 @media (min-width: 768px) {
     #footer-container .footer-ca {
-        font-size: clamp(24px, 2vw + 2vh, 56px);
+        font-size: clamp(24px, 2vw + 2vh, 56px) !important;
         letter-spacing: -1.12px;
     }
 
@@ -1305,9 +1305,14 @@ h4 {
 
 p, .column-text p, ul, ul li, .wpb_wrapper .column-text-styled.portfolio-info-card p {
     font-family: var(--familyRegular);
-    font-size: clamp(16px, 1.5vw, 18px) !important;
+    font-size: clamp(16px, 1.5vw, 18px);
     line-height: 1.4;
     color: var(--secondColor);
+}
+
+.portfolio-info .column-text p, ul, ul li {
+    font-size: clamp(16px, 1.5vw, 18px) !important;
+    line-height: 1.4;
 }
 
 li::marker {
@@ -1433,9 +1438,9 @@ li::marker {
                 }
             }
 
-            p {
-                margin-bottom: 38px;
-            }
+            /*p {*/
+            /*    margin-bottom: 38px;*/
+            /*}*/
         }
 
         .button-wrap {
@@ -1488,9 +1493,9 @@ li::marker {
         height: 100%;
     }
 
-    #content .about-card:not(.contact-card) .ideo-iconbox.card-inner .icon + p {
-        margin-bottom: 68px;
-    }
+    /*#content .about-card:not(.contact-card) .ideo-iconbox.card-inner .icon + p {*/
+    /*    margin-bottom: 68px;*/
+    /*}*/
 
     #content .about-card .ideo-iconbox.card-inner.dark-card-inner {
         .icon {
@@ -1656,6 +1661,11 @@ li::marker {
         .wpb_column {
             width: calc(100% / 2 - 16px);
         }
+        & .card-link-title {
+            &.button {
+                span {
+                    font-size: 18px;
+                }}}
     }
 }
 
@@ -1772,7 +1782,7 @@ body.page #content.kontakt {
     }
 
     .full-sticky-img {
-        aspect-ratio: 590 / 550;
+        aspect-ratio: 590 / 387;
     }
 
     .ideo-single-image {
@@ -1909,8 +1919,8 @@ body.page #content.kontakt {
         max-width: 648px;
 
         p {
-            font-size: clamp(16px, 1.5vw, 32px);
             font-family: var(--familyRegular);
+            font-size: clamp(16px, 1.5vw, 18px);
         }
     }
 }
@@ -2282,6 +2292,8 @@ body.page #content.kontakt {
     .tg-item-title a, .tg-link-button {
         font-family: var(--familySemiBold);
         text-transform: capitalize;
+        font-size: 18px;
+        letter-spacing: 0;
     }
 
 
@@ -2739,4 +2751,7 @@ body.page.wrap-wide.vc-on.sidebar-off #content, body.single-portfolio.wrap-wide.
 
 .tg-item.sofia .tg-item-media-inner, .tg-item.sofia  .tg-item-content-inner, .tg-item.sofia .tg-item-overlay {
     border-radius: 40px !important;
+}
+.mkdf-section-title-holder .mkdf-st-text {
+    color: var(--secondColor);
 }

@@ -313,6 +313,7 @@ body header #header-navbar.mobile .navbar-toggle > .navbar-toggle-placeholder {
         padding: 6px 10px;
         font-family: var(--familyMedium);
         font-weight: 500;
+        color: var(--colorLight);
         width: max-content;
         border-radius: 137px;
         margin: 0;
@@ -1816,6 +1817,24 @@ body.page #content.kontakt {
 
 #content .cta-block {
     overflow: hidden;
+
+    & > .wpb_wrapper {
+        position: static;
+
+        .bg-wave {
+            position: absolute;
+            top: auto;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+
+            .ideo-single-image {
+                height: 100%;
+            }
+        }
+    }
 
     .section-title .wpb_wrapper {
         max-width: 585px;

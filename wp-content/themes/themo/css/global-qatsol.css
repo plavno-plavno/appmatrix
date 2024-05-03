@@ -313,6 +313,7 @@ body header #header-navbar.mobile .navbar-toggle > .navbar-toggle-placeholder {
         padding: 6px 10px;
         font-family: var(--familyMedium);
         font-weight: 500;
+        color: var(--colorLight);
         width: max-content;
         border-radius: 137px;
         margin: 0;
@@ -691,7 +692,7 @@ body.skin-light #footer-container {
     margin: 0 0 24px 0;
     color: var(--mainColor);
     font-family: var(--familyBold);
-    font-size: 24px;
+    font-size: 24px !important;
     letter-spacing: -0.48px;
     line-height: 1.1;
 
@@ -728,7 +729,7 @@ body.skin-light #footer-container {
 
 @media (min-width: 768px) {
     #footer-container .footer-ca {
-        font-size: clamp(24px, 2vw + 2vh, 56px);
+        font-size: clamp(24px, 2vw + 2vh, 56px) !important;
         letter-spacing: -1.12px;
     }
 
@@ -1152,7 +1153,11 @@ div#page-container {
 #heroBlock .vc_page_section .row, .vc_page_section .vc_row {
     display: flex;
     flex-direction: column;
-    gap: 16px
+    gap: 16px;
+
+    &::after, &::before {
+        content: none;
+    }
 }
 
 @media (min-width: 992px) {
@@ -1225,6 +1230,7 @@ div#page-container {
 
 .title-h2 h2.title {
     font-family: var(--familyBold);
+    letter-spacing: -1.12px !important;
 
     .title-bg {
         padding: 0;
@@ -1234,6 +1240,7 @@ div#page-container {
 h3, .portfolio-column .column-text {
     margin-top: 0 !important;
 }
+
 
 .portfolio-column {
     margin-bottom: 40px;
@@ -1273,7 +1280,7 @@ h4 {
 @media (min-width: 992px) {
     .title-h2 h2.title, h3 {
         font-family: var(--familyBold);
-        font-size: clamp(24px, 2vw + 3vh, 56px) !important;
+        font-size: clamp(24px, 2vw + 2vh, 56px) !important;
     }
 
     h3 {
@@ -1298,9 +1305,14 @@ h4 {
 
 p, .column-text p, ul, ul li, .wpb_wrapper .column-text-styled.portfolio-info-card p {
     font-family: var(--familyRegular);
-    font-size: clamp(16px, 1.5vw, 18px) !important;
+    font-size: clamp(16px, 1.5vw, 18px);
     line-height: 1.4;
     color: var(--secondColor);
+}
+
+.portfolio-info .column-text p, ul, ul li {
+    font-size: clamp(16px, 1.5vw, 18px) !important;
+    line-height: 1.4;
 }
 
 li::marker {
@@ -1426,9 +1438,9 @@ li::marker {
                 }
             }
 
-            p {
-                margin-bottom: 38px;
-            }
+            /*p {*/
+            /*    margin-bottom: 38px;*/
+            /*}*/
         }
 
         .button-wrap {
@@ -1481,9 +1493,9 @@ li::marker {
         height: 100%;
     }
 
-    #content .about-card:not(.contact-card) .ideo-iconbox.card-inner .icon + p {
-        margin-bottom: 68px;
-    }
+    /*#content .about-card:not(.contact-card) .ideo-iconbox.card-inner .icon + p {*/
+    /*    margin-bottom: 68px;*/
+    /*}*/
 
     #content .about-card .ideo-iconbox.card-inner.dark-card-inner {
         .icon {
@@ -1649,6 +1661,11 @@ li::marker {
         .wpb_column {
             width: calc(100% / 2 - 16px);
         }
+        & .card-link-title {
+            &.button {
+                span {
+                    font-size: 18px;
+                }}}
     }
 }
 
@@ -1765,7 +1782,7 @@ body.page #content.kontakt {
     }
 
     .full-sticky-img {
-        aspect-ratio: 590 / 550;
+        aspect-ratio: 590 / 387;
     }
 
     .ideo-single-image {
@@ -1810,6 +1827,24 @@ body.page #content.kontakt {
 
 #content .cta-block {
     overflow: hidden;
+
+    & > .wpb_wrapper {
+        position: static;
+
+        .bg-wave {
+            position: absolute;
+            top: auto;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+
+            .ideo-single-image {
+                height: 100%;
+            }
+        }
+    }
 
     .section-title .wpb_wrapper {
         max-width: 585px;
@@ -1884,8 +1919,8 @@ body.page #content.kontakt {
         max-width: 648px;
 
         p {
-            font-size: clamp(16px, 1.5vw, 32px);
             font-family: var(--familyRegular);
+            font-size: clamp(16px, 1.5vw, 18px);
         }
     }
 }
@@ -2224,12 +2259,6 @@ body.page #content.kontakt {
     }
 }
 
-.card-inner a, .profile-card a, .btn-show-more a, .sticky-left-card a,
-.footer-marketing a, .footer-software a, .menu-footer-company-container li:nth-child(1) {
-    pointer-events: none;
-}
-
-
 /*portfolio*/
 #gridPortfolio {
     .tg-filter {
@@ -2262,6 +2291,14 @@ body.page #content.kontakt {
 
     .tg-item-title a, .tg-link-button {
         font-family: var(--familySemiBold);
+        text-transform: capitalize;
+        font-size: 18px;
+        letter-spacing: 0;
+    }
+
+
+    .sofia .tg-item-title, .sofia .tg-item-title a {
+        text-transform: capitalize;
     }
 }
 
@@ -2551,6 +2588,10 @@ body .vc_page_section .vc_row.vc_inner.cta-section {
 
     .text-column {
         width: 100%;
+
+        & .wpb_wrapper .column-text > div:nth-child(1) p {
+            margin-top: 0;
+        }
     }
 
     &.cta-left {
@@ -2569,7 +2610,6 @@ body .vc_page_section .vc_row.vc_inner.cta-section {
         }
 
         .img-column {
-            margin-bottom: 32px;
             order: 2;
         }
     }
@@ -2618,7 +2658,6 @@ body .vc_page_section .vc_row.vc_inner.cta-section.cta-dark {
 
             .img-column {
                 order: 0;
-                margin-bottom: 0;
             }
         }
 
@@ -2683,4 +2722,36 @@ body.page.wrap-wide.vc-on.sidebar-off #content, body.single-portfolio.wrap-wide.
     .footer-copyright p {
         text-align: right;
     }
+}
+
+.transparent-dark.column-text p > a {
+    color: var(--primary);
+    position: relative;
+
+    &::before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        width: 0;
+        height: 1px;
+        background: var(--primary);
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &:hover {
+        color: var(--primary);
+        &::before {
+            width: 100%;
+            transition: all .3s ease-in-out;
+        }
+    }
+}
+
+.tg-item.sofia .tg-item-media-inner, .tg-item.sofia  .tg-item-content-inner, .tg-item.sofia .tg-item-overlay {
+    border-radius: 40px !important;
+}
+.mkdf-section-title-holder .mkdf-st-text {
+    color: var(--secondColor);
 }

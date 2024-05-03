@@ -1262,6 +1262,10 @@ h4 {
     letter-spacing: -0.64px;
 }
 
+h5, h6 {
+    font-family: var(--familyBold);
+}
+
 .portfolio-info-card {
     background-color: var(--colorLight);
     border-radius: 40px;
@@ -1467,6 +1471,7 @@ li::marker {
         line-height: 1.3;
         margin: 0 0 16px 0;
         padding: 0;
+        color: var(--colorLight);
 
         & + p {
             color: var(--colorLight);

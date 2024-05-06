@@ -198,7 +198,7 @@ body #header-navbar.mobile .navbar-header button {
 }
 
 header #header-navbar nav.navbar-standard {
-    position: relative;
+    position: relative !important;
     height: 98px;
     border: none !important;
 }
@@ -432,6 +432,12 @@ h1.title {
 body.vc-on.wrap-wide .vc_page_section {
     padding: 0;
     margin: 0;
+}
+
+@media (max-width: 991px) {
+    body.page.header-on.standard-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child, body.single-portfolio.header-on.standard-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child, body.single-team.header-on.standard-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child, body.page.header-on.sticky-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child, body.single-portfolio.header-on.sticky-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child, body.single-team.header-on.sticky-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child, body.page.header-on.sticky-slide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child, body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child, body.single-team.header-on.sticky-slide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child, body.page.header-on.sticky-slide-hide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child, body.single-portfolio.header-on.sticky-slide-hide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child, body.single-team.header-on.sticky-slide-hide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child {
+        padding-top: 50px;
+    }
 }
 
 @media (min-width: 992px) {
@@ -773,7 +779,7 @@ body.skin-light #footer-container {
     transition: color 0.3s ease-in-out;
 }
 
-#footer .footer-nav-section .menu-item a :hover {
+#footer .footer-nav-section .menu-item a:hover {
     color: var(--mainColor);
     transition: color 0.3s ease-in-out;
 }
@@ -2635,7 +2641,7 @@ body.page.wrap-wide.vc-on.sidebar-off #content, body.single-portfolio.wrap-wide.
 
 @media (min-width: 768px) {
     .vc_page_section .vc_row.services-cards .about-card {
-            width: calc(100% / 3 - 15px);
+        width: calc(100% / 3 - 15px);
     }
 }
 

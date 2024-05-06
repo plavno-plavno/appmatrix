@@ -773,7 +773,7 @@ body.skin-light #footer-container {
     transition: color 0.3s ease-in-out;
 }
 
-#footer .footer-nav-section .menu-item a :hover {
+#footer .footer-nav-section .menu-item a:hover {
     color: var(--mainColor);
     transition: color 0.3s ease-in-out;
 }

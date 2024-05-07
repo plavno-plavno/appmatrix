@@ -435,7 +435,19 @@ body.vc-on.wrap-wide .vc_page_section {
 }
 
 @media (max-width: 991px) {
-    body.page.header-on.standard-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child, body.single-portfolio.header-on.standard-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child, body.single-team.header-on.standard-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child, body.page.header-on.sticky-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child, body.single-portfolio.header-on.sticky-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child, body.single-team.header-on.sticky-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child, body.page.header-on.sticky-slide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child, body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child, body.single-team.header-on.sticky-slide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child, body.page.header-on.sticky-slide-hide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child, body.single-portfolio.header-on.sticky-slide-hide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child, body.single-team.header-on.sticky-slide-hide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child {
+    body.page.header-on.standard-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
+    body.single-portfolio.header-on.standard-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
+    body.single-team.header-on.standard-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
+    body.page.header-on.sticky-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
+    body.single-portfolio.header-on.sticky-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
+    body.single-team.header-on.sticky-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
+    body.page.header-on.sticky-slide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
+    body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
+    body.single-team.header-on.sticky-slide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
+    body.page.header-on.sticky-slide-hide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
+    body.single-portfolio.header-on.sticky-slide-hide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
+    body.single-team.header-on.sticky-slide-hide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
+    body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child {
         padding-top: 50px;
     }
 }
@@ -452,7 +464,8 @@ body.vc-on.wrap-wide .vc_page_section {
     body.page.header-on.sticky-slide-hide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
     body.single-portfolio.header-on.sticky-slide-hide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
     body.single-team.header-on.sticky-slide-hide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
-    body.page.header-on.sticky-slide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content.portfolio .vc_page_section:first-child {
+    body.page.header-on.sticky-slide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content.portfolio .vc_page_section:first-child,
+    body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child{
         padding-top: 212px !important;
     }
 }
@@ -792,7 +805,7 @@ body.skin-light #footer-container {
     #footer .footer-nav-section .menu-item:last-child {
         margin-bottom: 0;
     }
-
+    /*hello tatyana*/
     #footer .footer-nav-section .menu-item a {
         font-size: clamp(16px, 2vw + 2vh, 18px);
     }
@@ -1492,6 +1505,14 @@ li::marker {
 .vc_page_section .vc_row.cards-wrapper, .vc_page_section .vc_row.dark-cards-wrapper, .single-portfolio .vc_page_section:nth-child(2) .vc_row {
     display: grid;
     gap: 16px;
+}
+
+.vc_page_section .vc_row.dark-cards-wrapper {
+    align-items: center;
+}
+
+.vc_page_section .vc_row.dark-cards-wrapper, .vc_page_section .vc_row.dark-cards-wrapper .wpb_column, .vc_page_section .vc_row.dark-cards-wrapper .wpb_wrapper {
+    height: 100%;
 }
 
 .vc_page_section .vc_row.cards-wrapper .about-card, .vc_page_section .vc_row.dark-cards-wrapper .about-card, .single-portfolio .vc_page_section:nth-child(2) .vc_row .about-card {

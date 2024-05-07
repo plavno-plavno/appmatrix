@@ -2766,3 +2766,12 @@ html {
     scroll-behavior: smooth;
     scroll-padding-top: 40px;
 }
+
+.ideo-box .ideo-box-inner {
+    transition: none !important;
+}
+
+.colored-light.column-text-styled {
+    background-color: #111324;
+    color: #d0ac58;
+}

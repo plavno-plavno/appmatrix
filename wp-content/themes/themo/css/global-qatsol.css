@@ -703,6 +703,8 @@ body.skin-light #footer-container {
     #header.colored-light #header-navbar > .navbar-sticky {
         padding-top: 8px;
         padding-bottom: 8px;
+        background-color: var(--mainbg);
+        color: var(--mainColor);
     }
 }
 
@@ -2794,3 +2796,4 @@ html {
         margin-bottom: 32px;
     }
 }
+

@@ -29,10 +29,8 @@ ini_set('display_errors','Off');
 ini_set('error_reporting', E_ALL );
 define('WP_DEBUG_DISPLAY', false);
 
-
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('WP_CACHE', true);      // enable the cache
 define('ENABLE_CACHE', true);  // enable the cache
 define('CACHE_EXPIRATION_TIME', 2592000);  // in seconds
 define( 'DB_NAME', 'kmnyyrla0' );

@@ -477,7 +477,7 @@ body.vc-on.wrap-wide .vc_page_section {
     body.single-portfolio.header-on.sticky-slide-hide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
     body.single-team.header-on.sticky-slide-hide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
     body.page.header-on.sticky-slide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content.portfolio .vc_page_section:first-child,
-    body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child{
+    body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child {
         padding-top: 212px !important;
     }
 }
@@ -693,7 +693,7 @@ body.skin-light #footer-container {
 }
 
 @media (min-width: 992px) {
-    #header.colored-light #header-navbar > .navbar-standard,  #header-navbar.sticky_slide_header > nav.navbar-standard {
+    #header.colored-light #header-navbar > .navbar-standard, #header-navbar.sticky_slide_header > nav.navbar-standard {
         background-color: var(--mainbg);
         color: var(--mainColor);
         padding-top: 24px;
@@ -829,6 +829,7 @@ body.skin-light #footer-container {
     #footer .footer-nav-section .menu-item:last-child {
         margin-bottom: 0;
     }
+
     /*hello tatyana*/
     #footer .footer-nav-section .menu-item a {
         font-size: clamp(16px, 2vw + 2vh, 18px);
@@ -1020,6 +1021,8 @@ div#page-container {
     width: max-content;
     padding: 0;
     background-color: transparent !important;
+    position: relative;
+    z-index: 3;
 }
 
 .primary-btn.button::after {
@@ -1032,6 +1035,19 @@ div#page-container {
     background-size: contain;
     background-repeat: no-repeat;
     border-radius: 50%;
+    z-index: 3;
+}
+
+.primary-btn.button::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 56px;
+    height: 56px;
+    right: 0;
+    background: var(--primary);
+    border-radius: 50%;
+    z-index: 0;
 }
 
 .primary-btn.button span {
@@ -1048,6 +1064,7 @@ div#page-container {
 }
 
 .primary-btn.button:hover {
+    cursor: pointer;
     background-color: transparent;
 }
 
@@ -1168,6 +1185,7 @@ div#page-container {
     #heroBlock .hero-sliders-wrapper .ult-carousel-wrapper:nth-child(1) {
         padding-bottom: 16px;
     }
+
     #heroBlock .hero-sliders-wrapper .ult-carousel-wrapper:nth-child(3) {
         padding-top: 16px;
     }
@@ -1725,6 +1743,7 @@ li::marker {
     transition: color 0.5s ease-in-out;
     text-align: left;
 }
+
 .vc_page_section .vc_row.profile-cards .card-link-title.button:hover span {
     color: var(--mainColor);
     transition: color 0.5s ease-in-out;
@@ -1893,7 +1912,7 @@ body.page #content.kontakt {
 
 #content .cta-block {
     overflow: hidden;
-    padding: 40px 24px;
+    padding: 40px 24px !important;
 }
 
 #content .cta-block > .wpb_wrapper {
@@ -2783,8 +2802,9 @@ html {
     background-color: #111324;
     color: #d0ac58;
 }
+
 @media screen and (min-width: 1280px) {
-    body.wrap-wide .vc_page_section .vc_row.vc_inner.inner-padding,body.wrap-wide .vc_page_section.inner-padding,
+    body.wrap-wide .vc_page_section .vc_row.vc_inner.inner-padding, body.wrap-wide .vc_page_section.inner-padding,
     .inner-block-custom .container,
     .inner-padding,
     #footer .inner-padding {
@@ -2797,3 +2817,22 @@ html {
     }
 }
 
+
+@media (max-width: 991px) {
+    #header-navbar.sticky_slide_header.navbar-overflow > nav.navbar-standard:after, #header-navbar.sticky_slide_header.navbar-overflow > nav.navbar-sticky:after, #header-navbar.sticky_slide_header.navbar-overflow > nav.navbar-standard .navbar-header .navbar-brand, #header-navbar.sticky_slide_header.navbar-overflow > nav.navbar-sticky .navbar-header .navbar-brand, #header-navbar.sticky_slide_header.navbar-overflow > nav.navbar-standard .navbar-content, #header-navbar.sticky_slide_header.navbar-overflow > nav.navbar-sticky .navbar-content, #header-navbar.sticky_slide_header.navbar-overflow > nav.navbar-standard .navbar-collapse, #header-navbar.sticky_slide_header.navbar-overflow > nav.navbar-sticky .navbar-collapse {
+        transition: none;
+    }
+    body #header-navbar.mobile .navbar-brand {
+        left: 0;
+    }
+}
+
+#content .process-wrapper.dark-block.inner-padding {
+    padding:  40px 24px !important;
+}
+
+@media (min-width: 1280px) {
+    #content .process-wrapper.dark-block.inner-padding {
+        padding:  64px 48px !important;
+    }
+}

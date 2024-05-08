@@ -32,8 +32,9 @@ define('WP_DEBUG_DISPLAY', false);
 
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('WP_CACHE', true);
-define( 'WPCACHEHOME', 'C:\OSPanel\domains\qatsol.bi\wp-content\plugins\wp-super-cache/' );
+define('WP_CACHE', true);      // enable the cache
+define('ENABLE_CACHE', true);  // enable the cache
+define('CACHE_EXPIRATION_TIME', 2592000);  // in seconds
 define( 'DB_NAME', 'kmnyyrla0' );
 
 /** Database username */
@@ -50,7 +51,6 @@ define( 'DB_CHARSET', 'utf8' );
 
 /** The database collate type. Don't change this if in doubt. */
 define( 'DB_COLLATE', '' );
-
 
 /**#@+
  * Authentication unique keys and salts.

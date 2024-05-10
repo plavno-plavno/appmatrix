@@ -2934,4 +2934,7 @@ html {
 
 .slick-list, .slick-track { touch-action:pan-y; }
 
-
+.wpcf7 form.invalid .wpcf7-response-output, .wpcf7 form.unaccepted .wpcf7-response-output, .wpcf7 form.payment-required .wpcf7-response-output {
+    border: none;
+    color: #dc3232;
+}

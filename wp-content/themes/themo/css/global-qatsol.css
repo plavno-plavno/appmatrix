@@ -916,6 +916,7 @@ footer, .common-padding {
 
 #footer .privacy-menu .menu li {
     margin: 0;
+    white-space: nowrap;
 }
 
 #footer .privacy-menu .menu li a {
@@ -1120,7 +1121,7 @@ div#page-container {
 
 }
 
-#contactUsForm .form-btn input:hover .primary-btn-form::after, #contactUsForm .form-btn input:hover p {
+#contactUsForm .form-btn input:hover .primary-btn-form::after, #contactUsForm .form-btn:hover .primary-btn-form  p, #contactUsForm .form-btn:hover::after{
     color: #111324;
     box-shadow: -2px 9px 25.1px 0px rgba(208, 172, 88, 0.36);
 }
@@ -1144,6 +1145,10 @@ div#page-container {
     letter-spacing: 0.64px;
     background-color: var(--primary) !important;
     color: var(--mainColor);
+}
+
+#contactUsForm .form-btn .primary-btn-form:hover {
+    box-shadow: -2px 9px 25.1px 0px rgba(208, 172, 88, 0.36);
 }
 
 #contactUsForm .form-btn .primary-btn-form::after {
@@ -1521,7 +1526,7 @@ li::marker {
 }
 
 #content .about-card .ideo-iconbox.card-inner.dark-card-inner .icon {
-    width: 80px;
+    width: 93px;
     height: 80px;
     margin-bottom: 24px;
 }
@@ -2360,6 +2365,10 @@ body.page #content.kontakt {
     text-transform: capitalize;
     font-size: 18px;
     letter-spacing: 0;
+}
+
+#contactUsForm .checkbox-row .wpcf7-not-valid-tip{
+    top: 46px;
 }
 
 

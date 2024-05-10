@@ -1430,8 +1430,8 @@ li::marker {
 #content .about-card .ideo-iconbox.card-inner .icon i {
     position: static;
     max-width: 156px;
-    width: 100%;
-    height: 100%;
+    width: 156px;
+    height: 156px;
     margin: 0;
     background-repeat: no-repeat;
     background-position: center;

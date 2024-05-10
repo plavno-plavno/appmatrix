@@ -347,7 +347,7 @@ body header #header-navbar.mobile .navbar-toggle > .navbar-toggle-placeholder {
     }
 }
 
-#heroBlock .wpb_wrapper .ideo-single-image {
+.single-portfolio #heroBlock .wpb_wrapper .ideo-single-image {
     width: 100%;
     border-radius: 40px;
     overflow: hidden;
@@ -484,7 +484,7 @@ body.vc-on.wrap-wide .vc_page_section {
     body.single-team.header-on.sticky-slide-hide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
     body.page.header-on.sticky-slide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content.portfolio .vc_page_section:first-child,
     body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child {
-        padding-top: 212px !important;
+        padding-top: 170px !important;
     }
 }
 
@@ -2705,13 +2705,25 @@ body .vc_page_section .vc_row.vc_inner.cta-section.cta-dark #wow_title_663108ea3
         padding: 0 48px;
     }
 
-    body .vc_page_section .vc_row.vc_inner.cta-section .vc_column_container .ideo-single-image, .text-column .wpb_wrapper {
-        width: 96% !important;
-        max-width: 640px;
+    body .vc_page_section .vc_row.vc_inner.cta-section .img-column {
+        max-width: 688px;
+        flex-shrink: 0;
     }
 
+    body .vc_page_section .vc_row.vc_inner.cta-section {
+        gap: 80px;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+
+
+    /*body .vc_page_section .vc_row.vc_inner.cta-section .text-column .wpb_wrapper {*/
+    /*    width: 96% !important;*/
+    /*    max-width: 688px;*/
+    /*}*/
+
     body .vc_page_section .vc_row.vc_inner.cta-section .text-column {
-        width: 50%;
+        width: auto;
     }
 
     body .vc_page_section .vc_row.vc_inner.cta-section.cta-left .text-column .wpb_wrapper {

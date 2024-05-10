@@ -76,7 +76,7 @@ var google_fonts = [];
 
                     if (typeof value.value != 'undefined' && typeof value.value != 'object') {
                         if (isFreezEnabled && prop == 'top' && index > 0 && index < animation.length - 1) {
-                            //skip top                        
+                            //skip top
                         } else {
                             keyAnimation = calcValue(el, key, prop, layer, isFreezEnabled);
                         }
@@ -1197,7 +1197,7 @@ var google_fonts = [];
             setFontsLink();
             if ($('.vc-layer.parallax').length) $('.vc-layer.parallax').vcAnimation();
             if ($('.pc-layer.multi').length) $('.pc-layer.multi').multiImagesAnimation();
-            if ($('.pc-clone .wpcf7').length) {               
+            if ($('.pc-clone .wpcf7').length) {
                 initContactForm();
             }
             audioAnimation(audioLayers);
@@ -1549,9 +1549,9 @@ if ((!smoothScrollEnable || smoothScrollEnable === 'scroll4websites') && isEnabl
             mediumtail: {
 
                 // Scrolling Core
-                frameRate: 60, // [Hz] 
-                animationTime: 1200, // [ms] 
-                stepSize: 100, // [px] 
+                frameRate: 60, // [Hz]
+                animationTime: 1200, // [ms]
+                stepSize: 100, // [px]
 
                 // Pulse (less tweakable)
                 // ratio of "tail" to "acceleration"
@@ -1559,7 +1559,7 @@ if ((!smoothScrollEnable || smoothScrollEnable === 'scroll4websites') && isEnabl
                 pulseScale: 4,
                 pulseNormalize: 1,
 
-                // Acceleration     
+                // Acceleration
                 accelerationDelta: 20,
                 accelerationMax: 1,
 
@@ -1575,9 +1575,9 @@ if ((!smoothScrollEnable || smoothScrollEnable === 'scroll4websites') && isEnabl
             longtail: {
 
                 // Scrolling Core
-                frameRate: 60, // [Hz] 
-                animationTime: 2000, // [ms]  
-                stepSize: 120, // [px] 
+                frameRate: 60, // [Hz]
+                animationTime: 2000, // [ms]
+                stepSize: 120, // [px]
 
                 // Pulse (less tweakable)
                 // ratio of "tail" to "acceleration"
@@ -1585,7 +1585,7 @@ if ((!smoothScrollEnable || smoothScrollEnable === 'scroll4websites') && isEnabl
                 pulseScale: 5,
                 pulseNormalize: 1,
 
-                // Acceleration     
+                // Acceleration
                 accelerationDelta: 20,
                 accelerationMax: 2,
 
@@ -1872,8 +1872,8 @@ if ((!smoothScrollEnable || smoothScrollEnable === 'scroll4websites') && isEnabl
 
             var target = event.target;
 
-            // leave early if default action is prevented   
-            // or it's a zooming event with CTRL 
+            // leave early if default action is prevented
+            // or it's a zooming event with CTRL
             if (event.defaultPrevented || event.ctrlKey) {
                 return true;
             }
@@ -1913,7 +1913,7 @@ if ((!smoothScrollEnable || smoothScrollEnable === 'scroll4websites') && isEnabl
 
             // nothing to do if there's no element that's scrollable
             if (!overflowing) {
-                // except Chrome iframes seem to eat wheel events, which we need to 
+                // except Chrome iframes seem to eat wheel events, which we need to
                 // propagate up, if the iframe has nothing overflowing to scroll
                 if (isFrame && isChrome) {
                     // change target to iframe element itself for the parent frame
@@ -2415,15 +2415,15 @@ if (smoothScrollEnable === 'ideosmooth' || !isEnabledForBrowser) {
         }
 
         function cleanup() {
-            window.removeEventListener(wheelEvent, customScroll, window.supportsPassive() ? {
-                passive: true
-            } : false);
+            // window.removeEventListener(wheelEvent, customScroll, window.supportsPassive() ? {
+            //     passive: true
+            // } : false);
         }
         if (smoothScrollEnable && !isMobile.any) {
             cleanup();
-            window.addEventListener(wheelEvent, customScroll, window.supportsPassive() ? {
-                passive: true
-            } : false);
+            // window.addEventListener(wheelEvent, customScroll, window.supportsPassive() ? {
+            //     passive: true
+            // } : false);
         }
 
     })(jQuery);

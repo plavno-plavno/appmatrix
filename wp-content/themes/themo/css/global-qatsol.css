@@ -2905,8 +2905,12 @@ html {
     }
 }
 
-.slick-slider div { transition: none; }
+/*.slick-slider div { transition: none; }*/
 
 .single-portfolio #heroBlock .ult-item-wrap {
     padding: 0;
 }
+
+.slick-list, .slick-track { touch-action:pan-y; }
+
+

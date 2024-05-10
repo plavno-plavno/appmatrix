@@ -45,7 +45,7 @@ extract(shortcode_atts(array(
     'el_custom_css' => '',
     'el_animation' => '',
     'el_animation_type' => 'fadeIn',
-    'el_animation_delay' => '500',    
+    'el_animation_delay' => '500',
     'el_animation_duration' => '1000',
     'el_animation_offset' => '95',
     'el_animation_column_name' => '',
@@ -106,8 +106,8 @@ if (isset($matches[0][0])) {
     $less .= '&' . preg_replace('/\!important/i', '', $matches[0][0]) . ';';
 }
 
-if ($el_background_motion) $data .= ' data-motion="' . esc_attr($el_background_motion) . '"';
-if ($el_background_motion_speed) $data .= ' data-motion-speed="' . esc_attr($el_background_motion_speed) . '"';
+//if ($el_background_motion) $data .= ' data-motion="' . esc_attr($el_background_motion) . '"';
+//if ($el_background_motion_speed) $data .= ' data-motion-speed="' . esc_attr($el_background_motion_speed) . '"';
 
 if ($el_animation_type && $el_animation == 'viewport') $data .= ' data-animation-type="' . esc_attr($el_animation_type) . '"';
 if ($el_animation_delay && $el_animation == 'viewport') $data .= ' data-animation-delay="' . esc_attr($el_animation_delay) . '"';

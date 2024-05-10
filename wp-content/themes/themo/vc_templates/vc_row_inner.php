@@ -35,7 +35,7 @@ extract(shortcode_atts(array(
     'el_animation' => '',
     'el_animation_row_name' => '',
     'el_animation_type' => 'fadeIn',
-    'el_animation_delay' => '500',    
+    'el_animation_delay' => '500',
     'el_animation_duration' => '1000',
     'el_animation_offset' => '95',
     'el_background_motion' => '',
@@ -89,8 +89,8 @@ if (isset($matches[0][0])) {
     $less .= '&' . $matches[0][0] . ';';
 }
 
-if ($el_background_motion) $data .= ' data-motion="' . $el_background_motion . '"';
-if ($el_background_motion_speed) $data .= ' data-motion-speed="' . $el_background_motion_speed . '"';
+//if ($el_background_motion) $data .= ' data-motion="' . $el_background_motion . '"';
+//if ($el_background_motion_speed) $data .= ' data-motion-speed="' . $el_background_motion_speed . '"';
 
 if ($el_animation_type && $el_animation == 'viewport') $data .= ' data-animation-type="' . $el_animation_type . '"';
 if ($el_animation_delay && $el_animation == 'viewport') $data .= ' data-animation-delay="' . $el_animation_delay . '"';
@@ -129,7 +129,7 @@ switch ($el_background) {
 }
 
 
-$css_class = apply_filters(VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, 'vc_row wpb_row ' . ($this->settings('base') === 'vc_row_inner' ? 'vc_inner ' : '') . 
+$css_class = apply_filters(VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, 'vc_row wpb_row ' . ($this->settings('base') === 'vc_row_inner' ? 'vc_inner ' : '') .
     $el_class . vc_shortcode_custom_css_class($css, ' '), $this->settings['base'], $atts);
 
 

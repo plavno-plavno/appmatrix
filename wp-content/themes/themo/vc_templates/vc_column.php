@@ -14,7 +14,7 @@ extract(shortcode_atts(array(
     'el_alignment' => 'left',
     'el_alignment_mobile' => 'left',
     'el_valignment' => 'start',
-    'el_centred_content' => '', 
+    'el_centred_content' => '',
     'el_background' => '',
     'el_background_color' => '',
     'el_background_color_pattern' => '',
@@ -26,8 +26,8 @@ extract(shortcode_atts(array(
     'el_background_overlay_color' => '',
     'el_background_overlay_pattern' => '',
     'el_background_overlay_pattern_color' => '',
-    'el_background_motion' => '', 
-    'el_background_motion_speed' => '', 
+    'el_background_motion' => '',
+    'el_background_motion_speed' => '',
     'el_background_hover' => '',
     'el_background_hover_color' => '',
     'el_background_hover_color_pattern' => '',
@@ -39,14 +39,14 @@ extract(shortcode_atts(array(
     'el_background_hover_overlay_color' => '',
     'el_background_hover_overlay_pattern' => '',
     'el_background_hover_overlay_pattern_color' => '',
-    'el_background_hover_motion' => '', 
-    'el_background_hover_motion_speed' => '', 
+    'el_background_hover_motion' => '',
+    'el_background_hover_motion_speed' => '',
     'el_url' => '',
     'el_extra_class' => '',
     'el_custom_css' => '',
     'el_animation' => '',
     'el_animation_type' => 'fadeIn',
-    'el_animation_delay' => '500',    
+    'el_animation_delay' => '500',
     'el_animation_duration' => '1000',
     'el_animation_offset' => '95',
     'el_animation_column_name' => '',
@@ -73,8 +73,8 @@ $data = '';
 $data_hover = '';
 
 
-if ($el_background_motion) $data .= ' data-motion="' . esc_attr($el_background_motion) . '"';
-if ($el_background_motion_speed) $data .= ' data-motion-speed="' . esc_attr($el_background_motion_speed) . '"';
+//if ($el_background_motion) $data .= ' data-motion="' . esc_attr($el_background_motion) . '"';
+//if ($el_background_motion_speed) $data .= ' data-motion-speed="' . esc_attr($el_background_motion_speed) . '"';
 
 if ($el_animation_type && $el_animation == 'viewport') $data .= ' data-animation-type="' . esc_attr($el_animation_type) . '"';
 if ($el_animation_delay && $el_animation == 'viewport') $data .= ' data-animation-delay="' . esc_attr($el_animation_delay) . '"';
@@ -181,7 +181,7 @@ $less .= '}';
 
 $html .= ideothemo_add_style($less, 'vc_shortcodes-custom-css');
 
-if ($el_sticky == 'true' && $el_sticky_offset != '') {    
+if ($el_sticky == 'true' && $el_sticky_offset != '') {
     $data .= ' data-sticky-offset="' . esc_attr($el_sticky_offset) . '"';
 }
 

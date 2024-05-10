@@ -46,7 +46,7 @@ extract(shortcode_atts(array(
     'el_rwd_xs' => 'true',
     'el_animation' => '',
     'el_animation_type' => 'fadeIn',
-    'el_animation_delay' => '500',    
+    'el_animation_delay' => '500',
     'el_animation_duration' => '1000',
     'el_animation_offset' => '95',
     'el_animation_row_name' => ''
@@ -58,7 +58,7 @@ if($el_uid == '') $el_uid = ideothemo_shortcode_uid();
 wp_enqueue_script('wpb_composer_front_js');
 
 $el_class = $this->getExtraClass($el_class);
-$css_class = apply_filters(VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, 'vc_row wpb_row ' . ($this->settings('base') === 'vc_row_inner' ? 'vc_inner ' : '') . 
+$css_class = apply_filters(VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, 'vc_row wpb_row ' . ($this->settings('base') === 'vc_row_inner' ? 'vc_inner ' : '') .
     $el_class . vc_shortcode_custom_css_class($css, ' '), $this->settings['base'], $atts);
 
 
@@ -78,8 +78,8 @@ if (isset($matches[0][0])) {
 }
 
 
-if ($el_background_motion) $data .= ' data-motion="' . $el_background_motion . '"';
-if ($el_background_motion_speed) $data .= ' data-motion-speed="' . $el_background_motion_speed . '"';
+//if ($el_background_motion) $data .= ' data-motion="' . $el_background_motion . '"';
+//if ($el_background_motion_speed) $data .= ' data-motion-speed="' . $el_background_motion_speed . '"';
 
 if ($el_animation_type && $el_animation == 'viewport') $data .= ' data-animation-type="' . $el_animation_type . '"';
 if ($el_animation_delay && $el_animation == 'viewport') $data .= ' data-animation-delay="' . $el_animation_delay . '"';
@@ -159,7 +159,7 @@ if ($el_rwd_xs == 'false') {
 if ($el_animation == 'parallax') $el_extra_class .= ' parallax ';
 
 /*Adding classes sidebar and sidebar skin to PS contain shortcodes WP widgets to color widgets correctly */
-if (has_shortcode($content, 'vc_wp_archives') || has_shortcode($content, 'vc_wp_calendar') || has_shortcode($content, 'vc_wp_categories') || has_shortcode($content, 'vc_wp_custommenu') || has_shortcode($content, 'vc_wp_links') || has_shortcode($content, 'vc_wp_meta') || has_shortcode($content, 'vc_wp_pages') || has_shortcode($content, 'vc_wp_posts') || has_shortcode($content, 'vc_wp_recentcomments') || has_shortcode($content, 'vc_wp_rss') || has_shortcode($content, 'vc_wp_search') || has_shortcode($content, 'vc_wp_tagcloud') || has_shortcode($content, 'vc_wp_text') || has_shortcode($content, 'ideo_wp_newest_posts')) $el_extra_class .= ' sidebar '; 
+if (has_shortcode($content, 'vc_wp_archives') || has_shortcode($content, 'vc_wp_calendar') || has_shortcode($content, 'vc_wp_categories') || has_shortcode($content, 'vc_wp_custommenu') || has_shortcode($content, 'vc_wp_links') || has_shortcode($content, 'vc_wp_meta') || has_shortcode($content, 'vc_wp_pages') || has_shortcode($content, 'vc_wp_posts') || has_shortcode($content, 'vc_wp_recentcomments') || has_shortcode($content, 'vc_wp_rss') || has_shortcode($content, 'vc_wp_search') || has_shortcode($content, 'vc_wp_tagcloud') || has_shortcode($content, 'vc_wp_text') || has_shortcode($content, 'ideo_wp_newest_posts')) $el_extra_class .= ' sidebar ';
 
 if (ideothemo_get_general_theme_skin()=='dark'){
     $el_extra_class .= ' skin-light ';

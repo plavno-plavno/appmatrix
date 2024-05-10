@@ -347,7 +347,7 @@ body header #header-navbar.mobile .navbar-toggle > .navbar-toggle-placeholder {
     }
 }
 
-#heroBlock .wpb_wrapper .ideo-single-image {
+.single-portfolio #heroBlock .wpb_wrapper .ideo-single-image {
     width: 100%;
     border-radius: 40px;
     overflow: hidden;
@@ -484,7 +484,7 @@ body.vc-on.wrap-wide .vc_page_section {
     body.single-team.header-on.sticky-slide-hide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
     body.page.header-on.sticky-slide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content.portfolio .vc_page_section:first-child,
     body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child {
-        padding-top: 212px !important;
+        padding-top: 170px !important;
     }
 }
 
@@ -856,14 +856,18 @@ footer, .common-padding {
     padding: 0 16px !important;
 }
 
+#content .common-padding.hero-section, #content .common-m-padding {
+    padding-bottom: 40px !important;
+}
+
 @media screen and (min-width: 1280px) {
     #content .common-padding:not(.hero-section) {
         padding-top: 64px !important;
         padding-bottom: 64px !important;
     }
 
-    #content .common-padding.hero-section {
-        padding-bottom: 65px !important;
+    #content .common-padding.hero-section, #content .common-m-padding {
+        padding-bottom: 64px !important;
     }
 }
 
@@ -2364,9 +2368,10 @@ body.page #content.kontakt {
 }
 
 .portfolio-item .slick-prev {
-    left: 48px !important;
-    height: 60px;
-    width: 60px;
+    left: 1px !important;
+    transform: translateY(-50%);
+    height: 50px;
+    width: 50px;
 }
 
 .portfolio-item .slick-prev i {
@@ -2376,8 +2381,8 @@ body.page #content.kontakt {
 .portfolio-item .slick-next i::before, .portfolio-item .slick-prev i::before{
     content: '';
     display: block;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     background-image: url("data:image/svg+xml;utf8,<svg width='56' height='56' viewBox='0 0 56 56' fill='none' xmlns='http://www.w3.org/2000/svg'><rect y='56' width='56' height='56' rx='28' transform='rotate(-90 0 56)' fill='url(%23paint0_linear_122_872)'/><path fill-rule='evenodd' clip-rule='evenodd' d='M29.9798 17.4574C29.5697 17.0474 28.9049 17.0474 28.4949 17.4574C28.0848 17.8675 28.0848 18.5323 28.4949 18.9424L36.5026 26.9501L16.9654 26.9501C16.3855 26.9501 15.9154 27.4202 15.9154 28.0001C15.9154 28.58 16.3855 29.0501 16.9654 29.0501L36.5022 29.0501L28.4949 37.0574C28.0848 37.4675 28.0848 38.1323 28.4949 38.5424C28.9049 38.9524 29.5697 38.9524 29.9798 38.5424L39.7798 28.7424C40.1898 28.3323 40.1898 27.6675 39.7798 27.2574L29.9798 17.4574Z' fill='%23111324'/><defs><linearGradient id='paint0_linear_122_872' x1='0' y1='84' x2='56' y2='84' gradientUnits='userSpaceOnUse'><stop stop-color='%23D0AC58'/><stop offset='1' stop-color='%23EBBD51'/></linearGradient></defs></svg>");
     background-position: center;
     background-size: contain;
@@ -2393,10 +2398,31 @@ body.page #content.kontakt {
 
 
 .portfolio-item .slick-next {
-    right: 48px !important;
+    right: 1px !important;
+    transform: translateY(-50%);
+    height: 50px;
+    width: 50px;
+    margin: 0;
+}
 
-    height: 60px;
-    width: 60px;
+
+@media (min-width: 992px) {
+    .portfolio-item .slick-next {
+        right: 48px !important;
+        height: 60px;
+        width: 60px;
+    }
+
+    .portfolio-item .slick-next i::before, .portfolio-item .slick-prev i::before{
+        width: 60px;
+        height: 60px;
+    }
+
+    .portfolio-item .slick-prev {
+        left: 48px !important;
+        height: 60px;
+        width: 60px;
+    }
 }
 
 .portfolio-item .ult-carousel-wrapper {
@@ -2467,6 +2493,7 @@ body.skin-light .footer-navigator-bar .portfolio-footer-nav-container a:hover h4
 
 @media (min-width: 992px) {
     .portfolio-info-cards-column {
+        padding-left: 23px !important;
         width: 33.33333333%;
     }
 
@@ -2678,13 +2705,25 @@ body .vc_page_section .vc_row.vc_inner.cta-section.cta-dark #wow_title_663108ea3
         padding: 0 48px;
     }
 
-    body .vc_page_section .vc_row.vc_inner.cta-section .vc_column_container .ideo-single-image, .text-column .wpb_wrapper {
-        width: 96% !important;
-        max-width: 640px;
+    body .vc_page_section .vc_row.vc_inner.cta-section .img-column {
+        max-width: 688px;
+        flex-shrink: 0;
     }
 
+    body .vc_page_section .vc_row.vc_inner.cta-section {
+        gap: 80px;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+
+
+    /*body .vc_page_section .vc_row.vc_inner.cta-section .text-column .wpb_wrapper {*/
+    /*    width: 96% !important;*/
+    /*    max-width: 688px;*/
+    /*}*/
+
     body .vc_page_section .vc_row.vc_inner.cta-section .text-column {
-        width: 50%;
+        width: auto;
     }
 
     body .vc_page_section .vc_row.vc_inner.cta-section.cta-left .text-column .wpb_wrapper {
@@ -2858,9 +2897,11 @@ html {
     }
 }
 
-.single-portfolio .slick-track .ideo-single-image-wrap, .single-portfolio .slick-slide, .single-portfolio .slick-initialized .slick-slide img {
+.single-portfolio .slick-track .ideo-single-image-wrap, .single-portfolio .slick-slide, .single-portfolio .slick-initialized .slick-slide img, .single-portfolio .ult-carousel-wrapper {
     overflow: hidden;
     border-radius: 40px;
+    max-height: 70vh;
+
 }
 
 .footer-navigator-bar .container {
@@ -2875,3 +2916,13 @@ html {
         padding-right: 56px !important;
     }
 }
+
+/*.slick-slider div { transition: none; }*/
+
+.single-portfolio #heroBlock .ult-item-wrap {
+    padding: 0;
+}
+
+.slick-list, .slick-track { touch-action:pan-y; }
+
+

@@ -13,6 +13,12 @@ body {
     --font-family: "Manrope", sans-serif;
 }
 
+:root {
+    --map-scpace-desc: 11px;
+    --map-scpace-tabl: 8px;
+}
+
+
 .padding-block .container {
     max-width: 1920px;
     margin-left: auto;
@@ -214,4 +220,12 @@ body.font-dark  a:hover {
     .h2-title-h {
         width: 60%;
     }
+}
+
+.transparent-dark.column-text p > a.img-link::before {
+    content: none;
+}
+
+.pc-global-section {
+    display: none;
 }

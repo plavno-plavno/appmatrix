@@ -59,6 +59,9 @@ require_once(IDEOTHEMO_INIT_DIR . 'inc/actions.php');
 require_once(IDEOTHEMO_INIT_DIR . 'inc/class-tgm-plugin-activation.php');
 require_once(IDEOTHEMO_INIT_DIR . 'inc/wp_bootstrap_navwalker.php');
 
+//do_action('wp_ajax_generate_all_css');
+
+
 
 require_once(IDEOTHEMO_INIT_DIR . 'inc/meta_boxes.php');
 require_once(IDEOTHEMO_INIT_DIR . 'inc/menufield/function.php');

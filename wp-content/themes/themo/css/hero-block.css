@@ -1,0 +1,60 @@
+.ideo-wow-title.style-text h1.title {
+    font-family: var(--font-family);
+    /*remove important*/
+    font-size: 48px !important;
+    font-weight: 300;
+    color: var(--colorLight);
+}
+
+@media (min-width: 768px) {
+    .ideo-wow-title.style-text  h1.title {
+        font-size: 56px !important;
+    }
+}
+
+@media (min-width: 1100px) {
+    .ideo-wow-title.style-text h1.title {
+        font-size: clamp(64px, 3.9vw + 1.8vh, 80px) !important;
+    }
+}
+
+.hero-title.ideo-wow-title.style-text h1.title {
+    margin-bottom: 16px;
+    margin-top: 0;
+}
+
+@media (min-width: 1920px) {
+    .hero-title.ideo-wow-title.style-text h1.title {
+        margin-bottom: 24px;
+    }
+}
+
+.hero-common-text.column-text p {
+    font-family: var(--font-family);
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--secondLightColor);
+    line-height: 1.4;
+    margin-bottom: 40px;
+    margin-top: 0;
+}
+
+@media (min-width: 1440px) {
+    .hero-common-text.column-text p {
+        font-size: 20px;
+        margin-bottom: 48px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .hero-common-text.column-text p {
+        font-size: 24px;
+        margin-bottom: 56px;
+    }
+}
+
+@media (min-width: 1100px) {
+    .hero-content {
+        max-width: 87%;
+    }
+}

@@ -1,0 +1,217 @@
+body {
+    --colorLight: #FFFFFF;
+    --primary: #EAC571;
+    --brand---primary: #D8AF4F;
+    --text-header: #1D1E22;
+    --mainLightbg: #F4F4F8;
+    --secondDarkColor: #66676C;
+    --grayColor: #9296A4;
+    --secondLightColor: rgba(255, 255, 255, 0.8);
+    --familyRegularWeight: 400;
+    --familySemiBoldWeight: 600;
+    --familyBoldWeight: 700;
+    --font-family: "Manrope", sans-serif;
+}
+
+.padding-block .container {
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .padding-block .container {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
+
+@media (min-width: 1100px) {
+    .padding-block .container {
+        padding-left: 112px;
+        padding-right: 112px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .padding-block .container {
+        padding-left: 120px;
+        padding-right: 120px;
+    }
+}
+
+
+@media (min-width: 1920px) {
+    .padding-block .container {
+        padding-left: 128px;
+        padding-right: 128px;
+    }
+}
+
+.common-page-width {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.dark-block {
+    background-color: var(--text-header);
+}
+
+
+.title-2 {
+    margin-bottom: 24px;
+}
+
+@media (min-width: 1440px) {
+    .title-2 {
+        margin-bottom: 32px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .title-2 {
+        margin-bottom: 40px;
+    }
+}
+
+body.font-dark h3 ,body.font-dark .h3-title p{
+    font-family: var(--font-family);
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 300;
+}
+
+@media (min-width: 768px) {
+    body.font-dark h3,body.font-dark .h3-title p {
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 1440px) {
+    body.font-dark h3, body.font-dark .h3-title p{
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 1920px) {
+    body.font-dark h3, body.font-dark .h3-title p{
+        font-size: 32px;
+    }
+}
+
+::selection {
+    background: var(--primary);
+    color: #fff;
+}
+
+body.vc-on.wrap-wide .vc_page_section.padding-block-y {
+    padding-top: 96px;
+    padding-bottom: 96px;
+}
+
+@media (min-width: 1100px) {
+    body.vc-on.wrap-wide .vc_page_section.padding-block-y {
+        padding-top: 104px;
+        padding-bottom: 104px;
+    }
+}
+
+@media (min-width: 1440px) {
+    body.vc-on.wrap-wide .vc_page_section.padding-block-y {
+        padding-top: 112px;
+        padding-bottom: 112px;
+    }
+}
+
+@media (min-width: 1920px) {
+    body.vc-on.wrap-wide .vc_page_section.padding-block-y {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+}
+
+body.vc-on.wrap-wide .vc_page_section.padding-block-y-t {
+    padding-top: 96px;
+}
+
+@media (min-width: 1100px) {
+    body.vc-on.wrap-wide .vc_page_section.padding-block-y-t {
+        padding-top: 104px;
+    }
+}
+
+@media (min-width: 1440px) {
+    body.vc-on.wrap-wide .vc_page_section.padding-block-y-t {
+        padding-top: 112px;
+    }
+}
+
+@media (min-width: 1920px) {
+    body.vc-on.wrap-wide .vc_page_section.padding-block-y-t {
+        padding-top: 120px;
+    }
+}
+
+.padding-block-y-b {
+    padding-bottom: 96px;
+}
+
+@media (min-width: 1100px) {
+    .padding-block-y-b {
+        padding-bottom: 104px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .padding-block-y-b {
+        padding-bottom: 112px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .padding-block-y-b {
+        padding-bottom: 120px;
+    }
+}
+
+body.font-dark a {
+    color: var(--primary);
+}
+
+body.font-dark  a:hover {
+    color: var(--brand---primary);
+    transition: all .4s ease-out;
+}
+
+.second-bg {
+    background-color: var(--mainLightbg);
+}
+
+.title-centred .column-text-styled.align-center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-text, .column-text.main-text p,.main-text p {
+    font-family: var(--font-family);
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 400;
+}
+
+@media (min-width: 1920px) {
+    .main-text, .column-text.main-text p,.main-text p{
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1100px) {
+    .h2-title-h {
+        width: 60%;
+    }
+}

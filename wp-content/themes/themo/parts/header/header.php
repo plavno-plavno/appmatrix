@@ -1,66 +1,152 @@
-<header id="header" class="<?php echo esc_attr(ideothemo_get_header_classes(1)); ?>"
-        data-header-type="<?php echo esc_attr(ideothemo_get_header_setting('type')); ?>" <?php
-ideothemo_local_modifications(
-    array(
-        'header.type',
-
-        'header.top.style',
-        'header.top.logo.type',
-        'header.top.top_distance',
-
-        'header.sticky.style',
-        'header.sticky.logo.type',
-        'header.sticky.top_distance',
-        'header.sticky.loading_effect',
-
-        'header.side.style',
-        'header.side.align.menu',
-        'header.side.align.bottom_area',
-        'header.side.logo.type',
-        
-        'header.side.offcanvas.topbar.style',
-        'header.side.offcanvas.topbar.transparent',
-        'header.side.offcanvas.stickybar.style',
-        'header.side.offcanvas.topbar.logo.type',
-        'header.side.offcanvas.stickybar.logo.type',
-
-    ));
-?> <?php if (ideothemo_pt_background_effect_enabled('parallax', 1)) : ?> data-motion="parallax" data-motion-speed="<?php echo esc_attr(ideothemo_get_pt_background_moving_speed(1)); ?>"<?php endif; ?>>
-
-    <div class="pt-overlay"></div>
-
-    <div class="background-video" <?php do_action('ideothemo_header_background_tag'); ?>></div>
-
-    <?php if ( ideothemo_page_title_area_enabled() && ideothemo_get_pt_area_background(1) == 'video') : ?>
-    <?php do_action('ideothemo_pagetitle_background_' . ideothemo_get_pt_background_video_platform(1)); ?>
-    <?php endif; ?>
-    <div class="page-title-container skin-<?php echo esc_attr(ideothemo_get_page_title_skin_area(1)); ?>" <?php
-    ideothemo_local_modifications(
-        array(
-            'pagetitle.page_title_settings.page_title_area_skin',
-            'pagetitle.page_title_settings.page_title_area_height',
-            'pagetitle.page_title_settings.page_title_area_content_align',
-            'pagetitle.page_title_background.pt_background_parallax',
-            'pagetitle.page_title_background.pt_background_motion',
-            'pagetitle.page_title_fonts.pt_title_font_size',
-            'pagetitle.page_title_fonts.pt_subtitle_font_size',
-            'pagetitle.page_title_coloring.pt_title_color',
-            'pagetitle.page_title_coloring.pt_subtitle_color',
-            'pagetitle.page_title_coloring.pt_b_text_color',
-            'pagetitle.page_title_coloring.pt_b_text_accent_color',
-            'pagetitle.page_title_coloring.pt_b_background_color',
-            'pagetitle.page_title_coloring.pt_b_border_color'
-        )
-    ); ?>>
-        <?php get_template_part('parts/header/nav'); ?>
-        <?php if (ideothemo_page_title_area_enabled()) : ?>
-        <?php if ( !defined('IDEOTHEMO_CORE_VERSION') && is_singular('post') && ideothemo_get_page_title_local_setting('pagetitle.page_title_settings.page_title_area') == null )  : ?>            
-        <?php else: ?>
-            <?php get_template_part('parts/header/page-title', ideothemo_get_layout_type()); ?>
-        <?php endif; ?>
-        <?php endif; ?>
+<header id="header-navbar" class="header padding-block">
+    <div class="container-block">
+        <div class="header-logo">
+            <picture>
+                <img loading="lazy" src="https://qatsol.bi/wp-content/uploads/2024/06/Qatsol-mobile.svg" alt="AI Chat">
+            </picture>
+        </div>
+        <div class="nav-cta-block">
+            <nav>
+                <ul>
+                    <li class="dropdown-li">
+                        <div class="menu-link">
+                            <span>Services</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 9L12 15L18 9" stroke="#9296A4" stroke-width="2" stroke-linecap="round"
+                                      stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="sub-menu container-block">
+                            <div class="sub-column ">
+                                <p class="sub-title">
+                                    Engineering
+                                </p>
+                                <ul>
+                                    <li><a href="" class="link-menu disabled">PoC Development</a></li>
+                                    <li><a href="" class="link-menu">Application Development</a></li>
+                                    <li><a href="" class="link-menu">Enterprise Applications</a></li>
+                                    <li><a href="" class="link-menu">Quality Assurance & Testing</a></li>
+                                    <li><a href="" class="link-menu">Maintenance & Support</a></li>
+                                </ul>
+                            </div>
+                            <div class="sub-column ">
+                                <p class="sub-title">
+                                    Engineering
+                                </p>
+                                <ul>
+                                    <li><a href="" class="link-menu disabled">PoC Development</a></li>
+                                    <li><a href="" class="link-menu">Application Development</a></li>
+                                    <li><a href="" class="link-menu">Enterprise Applications</a></li>
+                                    <li><a href="" class="link-menu">Quality Assurance & Testing</a></li>
+                                    <li><a href="" class="link-menu">Maintenance & Support</a></li>
+                                </ul>
+                            </div>
+                            <div class="sub-column ">
+                                <p class="sub-title">
+                                    Engineering
+                                </p>
+                                <ul>
+                                    <li><a href="" class="link-menu disabled">PoC Development</a></li>
+                                    <li><a href="" class="link-menu">Application Development</a></li>
+                                    <li><a href="" class="link-menu">Enterprise Applications</a></li>
+                                    <li><a href="" class="link-menu">Quality Assurance & Testing</a></li>
+                                    <li><a href="" class="link-menu">Maintenance & Support</a></li>
+                                </ul>
+                            </div>
+                            <div class="sub-column ">
+                                <p class="sub-title">
+                                    Engineering
+                                </p>
+                                <ul>
+                                    <li><a href="" class="link-menu disabled">PoC Development</a></li>
+                                    <li><a href="" class="link-menu">Application Development</a></li>
+                                    <li><a href="" class="link-menu">Enterprise Applications</a></li>
+                                    <li><a href="" class="link-menu">Quality Assurance & Testing</a></li>
+                                    <li><a href="" class="link-menu">Maintenance & Support</a></li>
+                                </ul>
+                            </div>
+                            <div class="sub-column ">
+                                <p class="sub-title">
+                                    Engineering
+                                </p>
+                                <ul>
+                                    <li><a href="" class="link-menu disabled">PoC Development</a></li>
+                                    <li><a href="" class="link-menu">Application Development</a></li>
+                                    <li><a href="" class="link-menu">Enterprise Applications</a></li>
+                                    <li><a href="" class="link-menu">Quality Assurance & Testing</a></li>
+                                    <li><a href="" class="link-menu">Maintenance & Support</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="menu-link">Case Studies
+                        </a></li>
+                    <li class="dropdown-li">
+                        <div class="menu-link">
+                            <span>Services</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 9L12 15L18 9" stroke="#9296A4" stroke-width="2" stroke-linecap="round"
+                                      stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="sub-menu container-block">
+                            <div class="sub-column">
+                                <ul>
+                                    <li>
+                                        <a href="" class="link-menu">PoC Development</a>
+                                    </li>
+                                    <li><a href="" class="link-menu">Application Development</a></li>
+                                    <li><a href="" class="link-menu">Enterprise Applications</a></li>
+                                    <li><a href="" class="link-menu">Quality Assurance & Testing</a></li>
+                                    <li><a href="" class="link-menu">Maintenance & Support</a></li>
+                                </ul>
+                            </div>
+                            <div class="sub-column">
+                                <ul>
+                                    <li>
+                                        <a href="" class="link-menu">PoC Development</a>
+                                    </li>
+                                    <li><a href="" class="link-menu">Application Development</a></li>
+                                    <li><a href="" class="link-menu">Enterprise Applications</a></li>
+                                    <li><a href="" class="link-menu">Quality Assurance & Testing</a></li>
+                                    <li><a href="" class="link-menu">Maintenance & Support</a></li>
+                                </ul>
+                            </div>
+                            <div class="sub-column">
+                                <ul>
+                                    <li>
+                                        <a href="" class="link-menu">PoC Development</a>
+                                    </li>
+                                    <li><a href="" class="link-menu">Application Development</a></li>
+                                    <li><a href="" class="link-menu">Enterprise Applications</a></li>
+                                    <li><a href="" class="link-menu">Quality Assurance & Testing</a></li>
+                                    <li><a href="" class="link-menu">Maintenance & Support</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="call-to-action-link">
+                <a href="/contact/" class="ca-btn-header">
+                    <span>Contact us</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12H19" stroke="#1D1E22" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                        <path d="M12 5L19 12L12 19" stroke="#1D1E22" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <button class="navigation-hamburger" id="openMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </div>
-
-    <?php do_action('ideothemo_header_bottom'); ?>
 
 </header>

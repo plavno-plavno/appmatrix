@@ -523,18 +523,7 @@ body.vc-on.wrap-wide .vc_page_section {
     }
 }
 
-@media (min-width: 992px) {
-    #header.colored-light #header-navbar > .navbar-standard .navbar-nav > li.navbar-normal .dropmenu > ul, #header.colored-light #header-navbar > .navbar-sticky .navbar-nav > li.navbar-normal .dropmenu > ul {
-        border-radius: 16px;
-        background: var(--colorLight);
-        box-shadow: -8px 37px 46.5px 0 rgba(0, 0, 0, 0.12);
-        padding: 8px 0;
-    }
-}
 
-.background-page.skin-light, body.skin-light #content.background-type-color, body.skin-dark #content.background-type-color {
-    background-color: #F4F4F8;
-}
 
 @media (min-width: 992px) {
     #header.colored-light #header-navbar > .navbar-standard .navbar-nav > li.navbar-normal .dropmenu > ul > li a, #header.colored-light #header-navbar > .navbar-sticky .navbar-nav > li.navbar-normal .dropmenu > ul > li a {

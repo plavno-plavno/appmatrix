@@ -9,6 +9,7 @@
 @import "cta-main.css";
 @import "header.css";
 @import "mobile-menu.css";
+@import "footer.css";
 
 body.open-menu {
     position: fixed;

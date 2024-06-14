@@ -1,13 +1,13 @@
 <footer id="footer-container"
-        class="<?php echo esc_attr(ideothemo_get_footer_classes(1)); ?>" <?php ideothemo_local_modifications(array('footer.footer_settings.copywrite_area_on')) ?>>
+        class="<?php echo esc_attr(ideothemo_get_footer_classes(1)); ?> common-page-width" <?php ideothemo_local_modifications(array('footer.footer_settings.copywrite_area_on')) ?>>
     <?php if (ideothemo_is_boxed_version()) : ?>
-    <div class="container page-width">
+    <div class="container ">
         <?php endif; ?>
 
         <?php if (ideothemo_footer_enabled(1)) : ?>
 
             <?php if (!ideothemo_is_boxed_version()): ?>
-                <div class="page-width <?php echo !ideothemo_is_boxed_version() && (ideothemo_get_footer_type(1) == 'standard' && (ideothemo_get_standard_footer_layout_footer_layout(1) == 'in_grid' || ideothemo_get_standard_footer_layout_footer_layout(1) == 'custom')) ? 'container' : 'container-fluid'; ?>">
+                <div class="<?php echo !ideothemo_is_boxed_version() && (ideothemo_get_footer_type(1) == 'standard' && (ideothemo_get_standard_footer_layout_footer_layout(1) == 'in_grid' || ideothemo_get_standard_footer_layout_footer_layout(1) == 'custom')) ? 'container' : 'container-fluid'; ?>">
             <?php endif; ?>
             <div class="row">
 

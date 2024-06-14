@@ -1,0 +1,364 @@
+.footer-top > .wpb_wrapper {
+    display: grid;
+}
+
+a img.alignnone {
+    margin: 0;
+}
+
+body.skin-light #footer-container {
+    background-color: var(--mainbg);
+}
+
+.footer-top p {
+    margin: 0;
+}
+
+.footer-left-block .ideo-box-content {
+    margin-bottom: 32px;
+}
+
+.transparent-dark.column-text-styled {
+    border: none;
+}
+
+
+.footer-logo .img-link {
+    display: block;
+    width: max-content;
+}
+
+.column-text.footer-logo p {
+    margin-bottom: 24px;
+}
+
+.footer-address.main-text p {
+    color: var(--secondDarkColor);
+    margin-bottom: 12px;
+}
+
+.transparent-dark.column-text-styled.footer-link a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    color: var(--text-header);
+    width: max-content;
+    position: relative;
+}
+
+.transparent-dark.column-text-styled.footer-link a::before {
+    content: "";
+    position: absolute;
+    left: 32px;
+    bottom: 0;
+    width: calc(100% - 32px);
+    background-color: var(--text-header);
+    transition: transform 0.4s, transform-origin 0s;
+    transform: scaleX(0);
+    transform-origin: right center;
+    height: 1px;
+}
+
+.transparent-dark.column-text-styled.footer-link a:hover::before {
+    transform: scaleX(1);
+    transform-origin: left center;
+}
+
+footer .column-text-styled {
+    padding: 0;
+}
+
+.footer-mail-link p {
+    margin-bottom: 12px;
+}
+
+.transparent-light.accordion .panel-default {
+    border-bottom: 1px solid var(--border);
+}
+
+.transparent-light.accordion .panel-default .panel-heading .panel-title a, .transparent-light.accordion .panel-default > .panel-heading .panel-title a.collapsed {
+    font-family: var(--font-family);
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: var(--text-header);
+    letter-spacing: 0.13rem;
+    padding: 19.5px 0;
+    text-transform: uppercase;
+
+}
+
+.accordion .panel-default > .panel-heading .panel-title a:after {
+    background: url('/wp-content/uploads/2024/06/Chevron-down.svg');
+    width: 24px;
+    height: 24px;
+    content: '';
+    transform: translateY(-50%) rotate(180deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+.accordion .panel-default > .panel-heading .panel-title a.collapsed:after {
+    content: '';
+    background: url('/wp-content/uploads/2024/06/Chevron-down.svg');
+    width: 24px;
+    height: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.transparent-light.accordion .panel-default > .panel-heading .panel-title a {
+    border-top: none;
+}
+
+.accordion .panel-default .widget.widget_nav_menu ul.menu .menu-item a {
+    padding: 9px 0;
+    text-transform: capitalize;
+    color: var(--text-header) !important;
+    display: block;
+    font-weight: 500;
+}
+
+.transparent-light.accordion .panel-default > .panel-heading .panel-title a.collapsed {
+    border-top: none;
+}
+
+.panel-body .main-text {
+    margin-bottom: 16px;
+}
+
+.footer-accordion {
+    display: block;
+}
+
+.footer-social-block .wpb_content_element {
+    margin-bottom: 0;
+}
+
+.footer-social-block .wpb_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.footer-social-block .wpb_content_element a {
+    display: flex;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+body.vc-on.wrap-wide .vc_page_section.footer-bottom-section {
+    background-color: var(--colorLight);
+    padding: 32px 0;
+}
+
+.vc_page_section .vc_row.footer-nav-section.footer-nav-section-desc {
+    display: none;
+}
+
+body.vc-on.wrap-wide .vc_page_section.padding-block-footer {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.footer-bottom-menu .menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+}
+
+#footer-content .footer-bottom-menu {
+    margin-bottom: 24px;
+}
+
+#footer-content .footer-bottom-menu .widget a {
+    color: var(--text-header);
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+
+#footer-content .footer-bottom-menu .widget a:hover {
+    color: var(--brand---primary);
+    text-decoration: underline;
+}
+
+.column-text.footer-bottom-copyright p {
+    margin: 0 0 24px 0;
+    color: var(--copyRight);
+}
+
+@media (min-width: 768px) {
+    body.vc-on.wrap-wide .vc_page_section.footer-bottom-section {
+        padding: 24px 0;
+    }
+
+    #footer-content .footer-bottom-menu {
+        margin-bottom: 16px;
+    }
+
+    .column-text.footer-bottom-copyright p {
+        margin-bottom: 0;
+    }
+
+    .bottom-links-footer > .wpb_wrapper {
+        display: grid;
+        grid-template-columns: auto max-content;
+    }
+
+    .footer-bottom-copyright {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+
+    .social-section-footer {
+        grid-area: 2 / 2 / 3 / 3;
+    }
+}
+
+@media (min-width: 1200px) {
+    body.vc-on.wrap-wide .vc_page_section.padding-block-footer {
+        padding-top: 112px;
+        padding-bottom: 112px;
+    }
+
+    .vc_page_section .vc_row.footer-nav-section.footer-nav-section-desc {
+        display: block;
+    }
+
+    .footer-accordion {
+        display: none;
+    }
+
+    .footer-top > .wpb_wrapper {
+        display: grid;
+        grid-template-columns: 25% auto;
+        gap: 30px;
+    }
+
+    .footer-logo .img-link img {
+        width: 88px;
+        height: auto;
+    }
+
+    .column-text.footer-logo p {
+        margin-bottom: 59px;
+    }
+
+    .footer-address.main-text p, .footer-mail-link p {
+        margin-bottom: 14px;
+    }
+
+    .footer-accordion .accordion {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .footer-left-block .ideo-box-content {
+        margin-bottom: 0;
+    }
+
+    .footer-accordion .accordion .panel-title a {
+        pointer-events: none;
+    }
+
+    .accordion .panel-default > .panel-heading .panel-title a:after {
+        content: none;
+    }
+
+    .transparent-light.accordion .panel-default {
+        border-bottom: none;
+    }
+
+    .accordion .panel-body {
+        padding: 0;
+    }
+
+    .transparent-light.accordion .panel-default .panel-heading .panel-title a {
+        color: var(--grayColor);
+    }
+
+    .footer-menu-desc .column-text p {
+        font-family: var(--font-family);
+        font-size: 14px;
+        line-height: 1.2;
+        font-weight: 700;
+        color: var(--grayColor);
+        letter-spacing: 0.13rem;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+
+    .footer-menu-desc .widget .menu-item a {
+        padding: 11px 0 !important;
+        text-transform: capitalize;
+        display: block;
+        color: var(--text-header) !important;
+        position: relative;
+        max-width: 212px;
+        font-weight: 500;
+    }
+
+
+    .footer-menu-desc .widget .menu-item a:hover {
+        color: var(--brand---primary) !important;
+        text-decoration: underline;
+    }
+
+    .footer-social-block .wpb_wrapper {
+        gap: 16px;
+    }
+
+    #footer-content .footer-bottom-menu {
+        margin-bottom: 0;
+    }
+
+    .bottom-links-footer > .wpb_wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@media (min-width: 1440px) {
+    .footer-logo .img-link img {
+        width: 102px;
+    }
+
+    .column-text.footer-logo p {
+        margin-bottom: 47px;
+    }
+
+    body.vc-on.wrap-wide .vc_page_section.padding-block-footer {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+}
+
+@media (min-width: 1920px) {
+    .footer-logo .img-link img {
+        width: 113px;
+    }
+
+    .column-text.footer-logo p {
+        margin-bottom: 65px;
+    }
+
+    .footer-address.main-text p, .footer-mail-link p {
+        margin-bottom: 16px;
+    }
+
+    .footer-menu-desc .column-text p {
+        font-size: 16px;
+        margin-bottom: 24px;
+    }
+
+    .footer-social-block .wpb_wrapper a {
+        width: 32px;
+
+    }
+
+}

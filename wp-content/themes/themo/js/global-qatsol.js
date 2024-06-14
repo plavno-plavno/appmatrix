@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded",() => {
     const burgerMenu = document.getElementById('burgerMenu');
     let accordionMenu = document.getElementsByClassName('acc-services');
 
+
 //burger menu
     openMenuBtn && openMenuBtn.addEventListener('click', function (e) {
         this.classList.toggle('open');
@@ -28,6 +29,8 @@ document.addEventListener("DOMContentLoaded",() => {
             });
         }
     }
+
+
 
     $(window).scroll(function () {
         var scrolled = $(window).scrollTop();
@@ -54,7 +57,7 @@ document.addEventListener("DOMContentLoaded",() => {
     });
 
 
-    var swiper = new Swiper(".techSwiper", {
+    let swiper = new Swiper(".techSwiper", {
         slidesPerView: 1.2,
         spaceBetween: 2,
         breakpoints: {
@@ -69,4 +72,8 @@ document.addEventListener("DOMContentLoaded",() => {
     });
 
     openAccordion(accordionMenu);
+
+
+
+
 })

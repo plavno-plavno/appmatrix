@@ -604,48 +604,6 @@ body.vc-on.wrap-wide .vc_page_section {
     }
 }
 
-.footer-logo {
-    left: 0 !important;
-    display: flex;
-    justify-content: center;
-
-}
-
-.footer-logo img {
-    width: 100%;
-    max-width: 186px;
-}
-
-
-@media (min-width: 992px) {
-    .footer-logo {
-        justify-content: flex-end;
-    }
-
-    .footer-logo .ideo-single-image {
-        text-align: right;
-        margin-left: auto !important;
-    }
-}
-
-body.vc-on.wrap-wide footer .vc_page_section {
-    margin: 0;
-    padding-right: 0 !important;
-    padding-left: 0 !important;
-    background-color: transparent;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    border-top: 1px solid var(--colorLight);
-
-    @media (min-width: 992px) {
-        padding-top: 56px;
-        padding-bottom: 56px;
-    }
-}
-
-body.skin-light #footer-container {
-    background-color: var(--mainbg);
-}
 
 .home .row {
     margin-left: 0;
@@ -717,120 +675,9 @@ body.skin-light #footer-container {
     margin: 0;
 }
 
-#footer-container .footer-ca {
-    margin: 0 0 24px 0;
-    color: var(--mainColor);
-    font-family: var(--familyBold);
-    font-size: 24px !important;
-    letter-spacing: -0.48px;
-    line-height: 1.1;
-}
-
-#footer-container .footer-ca + p {
-    margin: 0;
-}
-
-#footer-container .footer-email {
-    font-size: 16px;
-    font-family: var(--familyRegular);
-    line-height: 1.2;
-    color: var(--mainColor);
-    margin-bottom: 40px;
-    position: relative;
-}
-
-#footer-container .footer-email::before {
-    content: "";
-    display: inline-block;
-    position: absolute;
-    width: 0;
-    height: 1px;
-    background: var(--mainColor);
-    bottom: -6px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-#footer-container .footer-email:hover::before {
-    width: 100%;
-    transition: all .3s ease-in-out;
-}
-
-@media (min-width: 768px) {
-    #footer-container .footer-ca {
-        font-size: clamp(24px, 2vw + 2vh, 56px) !important;
-        letter-spacing: -1.12px;
-    }
-
-    #footer-container .footer-email {
-        font-size: clamp(16px, 2vw + 2vh, 18px);
-    }
-}
 
 
-#footer-container .footer-nav-title p {
-    font-family: var(--familySemiBold);
-    font-size: 14px;
-    line-height: 1.2;
-    color: var(--mainColor);
-    letter-spacing: 0.56px;
-    text-transform: uppercase;
-    margin: 0;
-}
-
-@media (min-width: 768px) {
-    #footer-container .footer-nav-title {
-        margin-bottom: 32px;
-    }
-
-    #footer-container .footer-nav-title p {
-        font-size: clamp(14px, 2vw + 2vh, 16px);
-    }
-}
-
-#footer .footer-nav-section {
-    margin-bottom: 16px !important;
-}
-
-#footer .footer-nav-section .menu-item:not(:last-child) {
-    margin-bottom: 24px;
-}
-
-#footer .footer-nav-section .menu-item:last-child {
-    margin-bottom: 32px;
-}
-
-#footer .footer-nav-section .menu-item a {
-    font-family: var(--familyRegular);
-    font-size: 16px;
-    line-height: 1.2;
-    color: var(--secondColor);
-    text-transform: capitalize;
-    position: relative;
-    transition: color 0.3s ease-in-out;
-}
-
-#footer .footer-nav-section .menu-item a:hover {
-    color: var(--mainColor);
-    transition: color 0.3s ease-in-out;
-}
-
-@media (min-width: 992px) {
-    #footer .footer-nav-section {
-        margin-bottom: 0 !important;
-    }
-
-    #footer .footer-nav-section .menu-item:last-child {
-        margin-bottom: 0;
-    }
-
-    /*hello tatyana*/
-    #footer .footer-nav-section .menu-item a {
-        font-size: clamp(16px, 2vw + 2vh, 18px);
-    }
-}
-
-footer, .common-padding {
+.common-padding {
     padding-left: 16px !important;
     padding-right: 16px !important;
 }
@@ -860,7 +707,7 @@ footer, .common-padding {
 }
 
 @media screen and (min-width: 1280px) {
-    footer, .common-padding {
+    .common-padding {
         padding-left: 56px !important;
         padding-right: 56px !important;
     }

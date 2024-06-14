@@ -7,6 +7,7 @@ body {
     --secondDarkColor: #66676C;
     --grayColor: #9296A4;
     --border: #DCDDE2;
+    --copyRight: #4A4B4E;
     --secondLightColor: rgba(255, 255, 255, 0.8);
     --familyRegularWeight: 400;
     --familySemiBoldWeight: 600;
@@ -20,7 +21,9 @@ body {
 }
 
 
-.padding-block .container, .container-block {
+.padding-block .container, .container-block,
+footer.common-page-width .footer-width.vc_page_section,
+.footer-bottom-section .container{
     max-width: 1920px;
     margin-left: auto;
     margin-right: auto;
@@ -30,21 +33,27 @@ body {
 }
 
 @media (min-width: 768px) {
-    .padding-block .container,.container-block {
+    .padding-block .container,.container-block,
+    footer.common-page-width .footer-width.vc_page_section,
+    .footer-bottom-section .container {
         padding-left: 24px;
         padding-right: 24px;
     }
 }
 
 @media (min-width: 1200px) {
-    .padding-block .container,.container-block {
+    .padding-block .container,.container-block,
+    footer.common-page-width .footer-width.vc_page_section,
+    .footer-bottom-section .container {
         padding-left: 112px;
         padding-right: 112px;
     }
 }
 
 @media (min-width: 1440px) {
-    .padding-block .container,.container-block {
+    .padding-block .container,.container-block,
+    footer.common-page-width .footer-width.vc_page_section,
+    .footer-bottom-section .container {
         padding-left: 120px;
         padding-right: 120px;
     }
@@ -52,7 +61,9 @@ body {
 
 
 @media (min-width: 1920px) {
-    .padding-block .container,.container-block {
+    .padding-block .container,.container-block,
+    footer.common-page-width .footer-width.vc_page_section,
+    .footer-bottom-section .container {
         padding-left: 128px;
         padding-right: 128px;
     }
@@ -191,7 +202,7 @@ body.font-dark a {
 
 body.font-dark  a:hover {
     color: var(--brand---primary);
-    transition: all .4s ease-out;
+    transition: all .3s ease-out;
 }
 
 .second-bg {
@@ -204,7 +215,7 @@ body.font-dark  a:hover {
     margin-right: auto;
 }
 
-.main-text, .column-text.main-text p,.main-text p {
+.main-text, .column-text.main-text p,.main-text p, .main-text .menu-item a {
     font-family: var(--font-family);
     font-size: 16px;
     line-height: 1.4;
@@ -212,7 +223,7 @@ body.font-dark  a:hover {
 }
 
 @media (min-width: 1920px) {
-    .main-text, .column-text.main-text p,.main-text p{
+    .main-text, .column-text.main-text p,.main-text p, .main-text .menu-item a {
         font-size: 18px;
     }
 }

@@ -4,6 +4,13 @@ body.open-mobile-menu {
     width: 100%;
 }
 
+@media (min-width: 1200px) {
+    body.open-mobile-menu {
+        position: relative;
+        overflow: visible;
+    }
+}
+
 #openMenu {
     display: flex;
     width: 48px;
@@ -212,6 +219,7 @@ body #header-navbar.mobile nav {
 }
 
 .mobile-menu-bottom {
+    margin-top: 48px;
     padding-bottom: 50px;
 }
 

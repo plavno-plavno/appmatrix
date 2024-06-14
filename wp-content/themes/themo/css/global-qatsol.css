@@ -957,7 +957,7 @@ body #header-navbar.mobile.skin-light, body #header-navbar.mobile.skin-light nav
 }
 
 body.home {
-    overflow: visible !important;
+    /*overflow: visible !important;*/
 }
 
 #footer .ca-footer {

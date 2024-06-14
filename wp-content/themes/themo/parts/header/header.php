@@ -296,7 +296,6 @@
         </button>
         <div class="menu-burger" id="burgerMenu">
             <div class="menu-info__wrapper">
-
                 <nav class="menu-nav">
                     <ul class="menu-list">
                         <li>
@@ -487,11 +486,12 @@
                             <a href="/" class="disabled">Blog</a>
                         </li>
                     </ul>
+                    <div class="mobile-menu-bottom">
+                        <a  href="/contact/"
+                            class="button flat radius-small size-medium align-center  block colored-light primary-main-btn "
+                            data-id="button-662a83cebac1a"><span>Contact us</span></a>
+                    </div>
                 </nav>
-                <div class="mobile-menu-bottom">
-
-
-                </div>
             </div>
         </div>
     </div>

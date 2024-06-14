@@ -44,7 +44,7 @@
     padding: 48px 16px;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1200px) {
     #content .process-wrapper.dark-block.inner-padding {
         padding: 56px 24px;
     }
@@ -82,7 +82,7 @@
     z-index: 1;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1200px) {
     .cta-block .cta-text p {
         max-width: 36%;
 

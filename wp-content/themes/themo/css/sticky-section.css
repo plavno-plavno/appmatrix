@@ -15,7 +15,7 @@
     }
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1200px) {
     .sticky-card-number.column-text p {
         font-size: 40px;
     }
@@ -61,7 +61,7 @@
     gap: 12px;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1200px) {
     .process-cards .wpb_wrapper {
         gap: 20px;
     }

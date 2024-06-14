@@ -6,7 +6,7 @@
     display: none;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1200px) {
     .map-img {
         display: block;
     }
@@ -18,7 +18,7 @@
 }
 
 
-@media (min-width: 1100px) {
+@media (min-width: 1200px) {
     .column-text-styled.colored-light.column-text-styled.map-card {
         padding: 16px 12px;
         position: absolute;
@@ -33,7 +33,7 @@
     }
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1200px) {
     .column-text-styled.colored-light.column-text-styled.map-card.map-card-1 {
         left: 0;
         top: 44%;
@@ -109,7 +109,7 @@ p.big-number {
     color: var(--secondDarkColor);
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1200px) {
     .map-description {
         font-size: 12px;
     }
@@ -139,7 +139,7 @@ p.big-number {
     }
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1200px) {
     .map-content .ideo-box-content {
         position: relative;
         display: block;

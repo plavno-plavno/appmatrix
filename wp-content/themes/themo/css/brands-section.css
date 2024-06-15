@@ -229,3 +229,7 @@
 .brands-title.ideo-box-content {
     height: max-content;
 }
+
+.brands-block .ideo-single-image, .ideo-single-image img {
+    width: 100%;
+}

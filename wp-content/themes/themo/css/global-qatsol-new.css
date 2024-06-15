@@ -10,6 +10,7 @@
 @import "header.css";
 @import "mobile-menu.css";
 @import "footer.css";
+@import "vertical-tabs.css";
 
 body.open-menu {
     position: fixed;
@@ -173,7 +174,7 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
 }
 
 .primary-main-btn, .trusted-cards-block .ideo-box, .common-card,
-.process-left-block, .map-card {
+.process-left-block, .map-card, .colored-light.container-tabs .nav-tabs > li, .tab-card-with-img {
     border-radius: 4px;
 }
 
@@ -397,7 +398,20 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
 
 @media (min-width: 1200px) {
     .title-subtitle .ideo-box-content {
-        grid-template-columns: 40% auto;
+        grid-template-columns: 33% auto;
+        gap: 20px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .title-subtitle .ideo-box-content {
+        gap: 24px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .title-subtitle .ideo-box-content {
+        gap: 32px;
     }
 }
 
@@ -458,6 +472,24 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
     padding: 18px;
 }
 
+.sticky-card-title.ideo-wow-title.style-text h3, .common-card h3  {
+    color: var(--text-header);
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+@media (min-width: 1440px) {
+    .sticky-card-title.ideo-wow-title.style-text h3, .common-card h3 {
+        margin-bottom: 16px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .sticky-card-title.ideo-wow-title.style-text h3, .common-card h3 {
+        margin-bottom: 24px;
+    }
+}
+
 @media (min-width: 768px) {
     .vc_page_section .vc_row .common-card {
         padding: 20px;
@@ -473,5 +505,34 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
 @media (min-width: 1440px) {
     .vc_page_section .vc_row  .common-card {
         padding: 32px;
+    }
+}
+
+.sticky-card-title.ideo-wow-title.style-text + .main-text p, .common-card p.main-text {
+    color: var(--secondDarkColor);
+    margin: 0;
+}
+
+.process-cards .wpb_wrapper, .services-vertical-tabs .tab-content .vc_tta-panel-body {
+    display: grid;
+    gap: 12px;
+}
+
+@media (min-width: 768px) {
+    .process-cards .wpb_wrapper, .services-vertical-tabs .tab-content .vc_tta-panel-body {
+        gap: 20px;
+    }
+}
+
+
+@media (min-width: 1440px) {
+    .process-cards .wpb_wrapper, .services-vertical-tabs .tab-content .vc_tta-panel-body {
+        gap: 24px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .process-cards .wpb_wrapper, .services-vertical-tabs .tab-content .vc_tta-panel-body {
+        gap: 32px;
     }
 }

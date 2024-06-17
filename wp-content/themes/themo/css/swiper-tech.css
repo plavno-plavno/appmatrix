@@ -61,26 +61,33 @@ body {
     height: auto;
 }
 
-.techSwiper.swiper {
+.swiper {
     opacity: 0;
     visibility: hidden;
+    display: none;
 }
 
-.techSwiper.swiper.swiper-initialized {
+.swiper.swiper-initialized {
     opacity: 1;
     visibility: visible;
+    display: block;
 }
 
 .techSwiper .h3-title {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 0 0 16px 0;
+}
+
+.techSwiper .h3-title p {
     font-family: var(--font-family);
     font-size: 20px;
     line-height: 1.2;
     font-weight: 300;
-    margin-bottom: 16px;
-    display: flex;
-    align-items: center;
-    gap: 16px;
+    margin: 0;
     color: var(--colorLight);
+
 }
 
 @media (min-width: 1920px) {
@@ -96,30 +103,63 @@ body {
 
 .techSwiper .swiper-slide .cases-item__img {
     filter: grayscale(100%);
-    transition: filter 0.4s ease;
 }
 
 .techSwiper .swiper-slide:hover .cases-item__img {
-    filter:none;
-    transition: filter 0.4s ease;
+    filter: none;
+    transition: filter 0.3s ease;
 }
 
 .techSwiper .swiper-slide:hover .cases-item__description {
     background-color: var(--primary);
-    transition: background-color 0.4s ease;
+    transition: background-color 0.3s ease;
 }
 
-.techSwiper .swiper-slide:hover .cases-item__description .h3-title {
+.techSwiper .swiper-slide:hover .cases-item__description .h3-title p {
     color: var(--text-header);
-    transition: all 0.4s ease;
+    transition: color 0.3s ease;
 }
 
 .techSwiper .swiper-slide:hover .cases-item__description .h3-title svg path {
     stroke: var(--text-header);
-    transition: all 0.4s ease;
+    transition: stroke 0.4s ease;
 }
 
 .techSwiper .swiper-slide:hover .cases-item__description .case-item__info {
     color: var(--text-header);
-    transition: all 0.4s ease;
+    transition: color 0.4s ease;
+}
+
+.techSwiper .wp-block-safe-svg-svg-icon {
+    display: flex;
+}
+
+.tab-card-link, .tab-card-link a {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    opacity: 0;
+    margin: 0;
+}
+
+.tab-card-link a:hover {
+    cursor: inherit;
+}
+
+.wp-swiper__slide-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.techSwiper .swiper-slide .cases-item__img + .wp-block-columns {
+    flex-grow: 1;
+}
+
+.techSwiper {
+    position: relative;
+    cursor: url("data:image/svg+xml;utf8,<svg width='56' height='56' viewBox='0 0 56 56' fill='none' xmlns='http://www.w3.org/2000/svg'><rect width='56' height='56' rx='28' fill='%231D1E22'/><path d='M25 23L20 28L25 33' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/><path d='M31 23L36 28L31 33' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>"), auto;
 }

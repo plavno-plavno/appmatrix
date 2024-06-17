@@ -82,3 +82,90 @@ width: 100%;
         top: 174px;
     }
 }
+@media (min-width: 992px) {
+    .vc_page_section .vc_row .vc_column_container.process-cards {
+        padding-left: 20px;
+    }
+    .process-cards .common-card,   .process-cards .process-btn {
+        position: relative;
+    }
+
+    .process-cards .wpb_wrapper::after  {
+        content: '';
+        display: block;
+        background-color: var(--border);
+        position: absolute;
+        left: -40px;
+        top: 44px;
+        width: 1px;
+        height: calc(100% - 44px - 24px);
+    }
+
+    .process-cards .common-card::before{
+        content: '';
+        display: block;
+        background-color: var(--border);
+        position: absolute;
+        left: -40px;
+        top: 44px;
+    }
+
+    .process-cards .common-card::before,  .process-cards .process-btn::before {
+        height: 1px;
+        width: 20px;
+    }
+
+    .process-cards .process-btn::before {
+        content: '';
+        display: block;
+        background-color: var(--border);
+        position: absolute;
+        top: 50%;
+        left: -40px;
+        transform: translateY(-50%);
+    }
+}
+
+@media (min-width: 1440px) {
+    .process-cards .common-card::before, .process-cards .wpb_wrapper::after  {
+        left: -48px;
+        top: 52px;
+    }
+    .process-cards .common-card::before, .process-cards .process-btn::before {
+        width: 24px;
+    }
+
+    .process-cards .wpb_wrapper::after  {
+        height: calc(100% - 48px - 24px);
+    }
+    .process-cards .process-btn::before {
+        left: -48px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .vc_page_section .vc_row  .vc_column_container.process-cards {
+        padding-left: 24px;
+    }
+
+    .process-cards .common-card::before,  .process-cards .wpb_wrapper::after  {
+        left: -64px;
+        top: 65px;
+    }
+    .process-cards .common-card::before, .process-cards .process-btn::before {
+        width: 32px;
+    }
+
+    .process-cards .wpb_wrapper::after  {
+        height: calc(100% - 64px - 28px);
+    }
+    .process-cards .process-btn::before {
+        left: -64px;
+    }
+}
+
+@media (min-width: 768px) {
+    .sticky-left-info {
+        padding-right: 0 !important;
+    }
+}

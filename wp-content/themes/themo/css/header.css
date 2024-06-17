@@ -73,6 +73,10 @@ body #header-navbar.header {
     display: none;
 }
 
+body.font-dark a.ca-btn-header:hover {
+    color: var(--brand---primary);
+}
+
 @media (min-width: 1200px) {
     body #header-navbar.header {
         padding: 0;

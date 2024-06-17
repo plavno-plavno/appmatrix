@@ -167,7 +167,6 @@ body.vc-on.wrap-wide .vc_page_section.padding-block-footer {
     display: flex;
     align-items: center;
     gap: 20px;
-
 }
 
 #footer-content .footer-bottom-menu {
@@ -260,6 +259,7 @@ body.vc-on.wrap-wide .vc_page_section.padding-block-footer {
         margin-bottom: 0;
     }
 
+
     .footer-accordion .accordion .panel-title a {
         pointer-events: none;
     }
@@ -336,6 +336,9 @@ body.vc-on.wrap-wide .vc_page_section.padding-block-footer {
         padding-bottom: 120px;
     }
 
+    .footer-bottom-menu .menu {
+        gap: 24px;
+    }
 }
 
 @media (min-width: 1920px) {
@@ -358,7 +361,13 @@ body.vc-on.wrap-wide .vc_page_section.padding-block-footer {
 
     .footer-social-block .wpb_wrapper a {
         width: 32px;
-
+    }
+    .footer-left-block .footer-link img {
+        width: 32px;
+        height: 32px;
     }
 
+    .footer-bottom-menu .menu {
+        gap: 32px;
+    }
 }

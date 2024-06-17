@@ -151,9 +151,7 @@
         background: var(--colorLight);
     }
 
-    .colored-light.container-tabs .nav-tabs > li:hover a {
-        color: var(--primary);
-    }
+
 
     .colored-light.container-tabs.vertical .nav-tabs > li.active {
         background: var(--colorLight);
@@ -163,10 +161,15 @@
         color: var(--text-header);
     }
 
+
     .colored-light.container-tabs.vertical .nav-tabs > li.active a::before {
         border-color: var(--primary);
         border-left-width: 4px;
         border-radius: 30px 0 0 30px;
+    }
+
+    .colored-light.container-tabs .nav-tabs > li:hover a,  .colored-light.container-tabs.vertical .nav-tabs > li.active:hover a  {
+        color: var(--primary);
     }
 
     .tab-content-img {
@@ -257,4 +260,12 @@
     .tab-card-with-img {
         gap: 32px;
     }
+}
+
+.wp-swiper>.wp-swiper__wrapper {
+    margin: 0;
+}
+
+.colored-light.column-text-styled .main-text .primary-text{
+    color: var(--primary)
 }

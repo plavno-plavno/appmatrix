@@ -2833,12 +2833,12 @@ body.admin-bar {
 
 #header-navbar nav.navbar-standard {
     position: relative;
-    height: 180px
+    /*height: 180px*/
 }
 
 @media (max-width: 991px) {
     #header-navbar nav.navbar-standard {
-        height: 98px
+        /*height: 98px*/
     }
 }
 

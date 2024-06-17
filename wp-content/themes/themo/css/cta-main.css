@@ -9,13 +9,11 @@
 #content .cta-block > .wpb_wrapper .bg-wave {
     position: absolute;
     top: auto;
-    left: 50%;
     bottom: 0;
     right: 0;
     height: 100%;
-    transform: translateX(-50%);
 
-    width: 55%;
+    width: 100%;
     margin: 0 auto;
     z-index: 0;
 }
@@ -99,4 +97,13 @@
 .cta-block .button-wrap.align-center {
     display: flex;
     justify-content: center;
+}
+
+.cta-block {
+    margin-bottom: 96px;
+}
+@media (min-width: 768px) {
+    .cta-block {
+        margin-bottom: 0px;
+    }
 }

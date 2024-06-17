@@ -560,6 +560,7 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
     }
 }
 
-.brands-section .trusted-card a {
-
+.title-with-link .ideo-box-content {
+    align-items: flex-end;
+    justify-content: space-between;
 }

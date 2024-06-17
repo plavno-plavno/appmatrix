@@ -295,8 +295,12 @@ a.img-footer-link:hover svg path {
         margin-bottom: 20px;
     }
 
-    .footer-menu-desc .widget .menu-item a {
+    .footer-menu-desc .widget .menu-item {
         padding: 11px 0 !important;
+    }
+
+    .footer-menu-desc .widget .menu-item a {
+
         text-transform: capitalize;
         display: block;
         color: var(--text-header) !important;
@@ -308,7 +312,6 @@ a.img-footer-link:hover svg path {
 
     .footer-menu-desc .widget .menu-item a:hover {
         color: var(--brand---primary) !important;
-        text-decoration: underline;
     }
 
     .footer-social-block .wpb_wrapper {
@@ -375,3 +378,25 @@ a.img-footer-link:hover svg path {
         gap: 32px;
     }
 }
+
+.menu-item {
+    max-width: 212px;
+}
+
+.menu-item a {
+    display: inline !important;
+    width: max-content;
+    background:
+            linear-gradient(to right,transparent, transparent),
+            linear-gradient(to right, var(--brand---primary), var(--brand---primary), var(--brand---primary));
+    background-size: 100% 1px, 0 1px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 400ms;
+}
+
+.menu-item a:hover,
+a:focus {
+    background-size: 0 1px, 100% 1px;
+}
+

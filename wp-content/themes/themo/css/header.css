@@ -180,6 +180,9 @@ body.font-dark a.ca-btn-header:hover {
         padding: 10px 0;
     }
 
+
+
+
     .sub-column  ul li a {
         font-family: var(--font-family);
         font-size: 16px;
@@ -187,13 +190,21 @@ body.font-dark a.ca-btn-header:hover {
         font-weight: 500;
         color: var(--text-header);
         position: relative;
-        display: block;
         width: max-content;
+        display: inline !important;
+        width: max-content;
+        background:
+                linear-gradient(to right,transparent, transparent),
+                linear-gradient(to right, var(--brand---primary), var(--brand---primary), var(--brand---primary));
+        background-size: 100% 1px, 0 1px;
+        background-position: 100% 100%, 0 100%;
+        background-repeat: no-repeat;
+        transition: background-size 400ms;
     }
 
-    .sub-column  ul li a:hover {
+    .sub-column  ul li a:hover, .sub-column  ul li a:focus {
         color: var(--brand---primary) ;
-        text-decoration: underline;
+        background-size: 0 1px, 100% 1px
     }
 
 

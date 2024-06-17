@@ -1,6 +1,6 @@
 @media (min-width: 768px) {
     .brands-section .section-title .wpb_wrapper .trusted-left-block {
-        width: 73%;
+        width: 76%;
     }
 }
 
@@ -34,6 +34,10 @@
     top: 0;
     transform: translate(0, 0);
     left: 0;
+}
+
+.trusted-link.column-text-styled {
+    padding: 0;
 }
 
 .trusted-link.column-text-styled.colored-light.column-text-styled {
@@ -232,4 +236,8 @@
 
 .brands-block .ideo-single-image, .ideo-single-image img {
     width: 100%;
+}
+
+.wpb_button, .wpb_content_element, ul.wpb_thumbnails-fluid>li {
+    margin-bottom: 0;
 }

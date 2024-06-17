@@ -190,6 +190,10 @@ body.vc-on.wrap-wide .vc_page_section.padding-block-footer {
     color: var(--copyRight);
 }
 
+a.img-footer-link:hover svg path {
+    fill: var(--brand---primary);
+}
+
 @media (min-width: 768px) {
     body.vc-on.wrap-wide .vc_page_section.footer-bottom-section {
         padding: 24px 0;

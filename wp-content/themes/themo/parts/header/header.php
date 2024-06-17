@@ -254,7 +254,7 @@ function custom_mobile_menu_template($theme_location) {
     <div class="container-block">
         <a href="/" class="header-logo">
             <picture>
-                <img loading="lazy" src="https://qatsol.bi/wp-content/uploads/2024/06/Qatsol-mobile.svg" alt="AI Chat">
+                <img loading="lazy" src="/wp-content/uploads/2024/06/Qatsol-mobile.svg" alt="AI Chat">
             </picture>
         </a>
         <div class="nav-cta-block">

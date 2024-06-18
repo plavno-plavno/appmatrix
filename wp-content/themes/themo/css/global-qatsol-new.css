@@ -11,6 +11,7 @@
 @import "mobile-menu.css";
 @import "footer.css";
 @import "vertical-tabs.css";
+@import "about.css";
 
 body.open-menu {
     position: fixed;
@@ -69,6 +70,10 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
     padding-top: 96px !important;
     /*//remove-important*/
     padding-bottom: 96px;
+}
+
+.map-section .section-title .main-text p {
+    margin-bottom: 40px;
 }
 
 @media (min-width: 768px) {
@@ -151,16 +156,25 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
     }
 }
 
+.map-section .ideo-wow-title.style-text h2.title {
+    margin-bottom: 16px;
+}
+
 .tech-section .ideo-wow-title.style-text h2.title,
 .process-section .ideo-wow-title.style-text h2.title,
-.map-section .ideo-wow-title.style-text h2.title {
+.map-section .section-title .main-text p {
     margin-bottom: 32px;
+}
+
+.map-section .section-title .main-text p {
+    max-width: 648px;
+    margin: 0 auto 40px auto;
 }
 
 @media (min-width: 1200px) {
     .tech-section .ideo-wow-title.style-text h2.title,
     .process-section .ideo-wow-title.style-text h2.title,
-    .map-section .ideo-wow-title.style-text h2.title {
+    .map-section .section-title .main-text p {
         margin-bottom: 40px;
     }
 }
@@ -168,7 +182,7 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
 @media (min-width: 1440px) {
     .tech-section .ideo-wow-title.style-text h2.title,
     .process-section .ideo-wow-title.style-text h2.title,
-    .map-section .ideo-wow-title.style-text h2.title {
+    .map-section .section-title .main-text p {
         margin-bottom: 48px;
     }
 }
@@ -176,13 +190,15 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
 @media (min-width: 1920px) {
     .tech-section .ideo-wow-title.style-text h2.title,
     .process-section .ideo-wow-title.style-text h2.title,
-    .map-section .ideo-wow-title.style-text h2.title {
+    .map-section .section-title .main-text p {
         margin-bottom: 56px;
     }
 }
 
-.primary-main-btn, .trusted-cards-block .ideo-box, .common-card,
-.process-left-block, .map-card, .colored-light.container-tabs .nav-tabs > li, .tab-card-with-img {
+.primary-main-btn, .trusted-cards-block .ideo-box, .common-card:not(.card-strieght),
+.process-left-block, .map-card,
+.colored-light.container-tabs .nav-tabs > li,
+.tab-card-with-img{
     border-radius: 4px;
 }
 

@@ -19,6 +19,9 @@ body {
 :root {
     --map-scpace-desc: 11px;
     --map-scpace-tabl: 8px;
+    --gap-tablet: 20px;
+    --gap-desctop-m: 24px;
+    --gap-desctop-l: 32px;
 }
 
 

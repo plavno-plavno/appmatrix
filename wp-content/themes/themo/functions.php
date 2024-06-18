@@ -3204,8 +3204,7 @@ add_filter('upload_mimes', 'my_myme_types', 1, 1);
 
 
 function add_theme_scripts() {
-    wp_enqueue_style( 'style-swiper', get_template_directory_uri() . '/css/swiper-bundle.min.css');
-    wp_enqueue_script( 'script-swiper', get_template_directory_uri() . '/js/swiper-bundle.min.js');
+
     wp_enqueue_style( 'style-custome-qatsol', get_template_directory_uri() . '/assets/css/style.css');
 
     wp_enqueue_style( 'slider', get_template_directory_uri() . '/css/global-qatsol.css');

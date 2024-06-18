@@ -22,6 +22,10 @@
     background: var(--mainLightbg);
 }
 
+.container-tabs.vertical .nav-tabs::before {
+    content: none;
+}
+
 .colored-light.container-tabs .nav-tabs > li.active {
     background: var(--primary);
 }

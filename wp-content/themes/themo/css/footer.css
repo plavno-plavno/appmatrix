@@ -111,8 +111,12 @@ footer .column-text-styled {
     border-top: none;
 }
 
-.accordion .panel-default .widget.widget_nav_menu ul.menu .menu-item a {
+.accordion .panel-default .widget.widget_nav_menu ul.menu .menu-item {
     padding: 9px 0;
+}
+
+.accordion .panel-default .widget.widget_nav_menu ul.menu .menu-item a {
+
     text-transform: capitalize;
     color: var(--text-header) !important;
     display: block;

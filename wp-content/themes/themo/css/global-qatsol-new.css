@@ -151,16 +151,25 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
     }
 }
 
+.map-section .ideo-wow-title.style-text h2.title {
+    margin-bottom: 16px;
+}
+
 .tech-section .ideo-wow-title.style-text h2.title,
 .process-section .ideo-wow-title.style-text h2.title,
-.map-section .ideo-wow-title.style-text h2.title {
+.map-section .section-title .main-text p {
     margin-bottom: 32px;
+}
+
+.map-section .section-title .main-text p {
+    max-width: 648px;
+    margin: 0 auto;
 }
 
 @media (min-width: 1200px) {
     .tech-section .ideo-wow-title.style-text h2.title,
     .process-section .ideo-wow-title.style-text h2.title,
-    .map-section .ideo-wow-title.style-text h2.title {
+    .map-section .section-title .main-text p {
         margin-bottom: 40px;
     }
 }
@@ -168,7 +177,7 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
 @media (min-width: 1440px) {
     .tech-section .ideo-wow-title.style-text h2.title,
     .process-section .ideo-wow-title.style-text h2.title,
-    .map-section .ideo-wow-title.style-text h2.title {
+    .map-section .section-title .main-text p {
         margin-bottom: 48px;
     }
 }
@@ -176,7 +185,7 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
 @media (min-width: 1920px) {
     .tech-section .ideo-wow-title.style-text h2.title,
     .process-section .ideo-wow-title.style-text h2.title,
-    .map-section .ideo-wow-title.style-text h2.title {
+    .map-section .section-title .main-text p {
         margin-bottom: 56px;
     }
 }

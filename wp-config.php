@@ -25,6 +25,11 @@
  */
 
 //TODO
+define( 'WP_MAX_MEMORY_LIMIT' , '8192M' );
+@ini_set('max_execution_time', '180');
+@ini_set('memory_limit', '512M');
+@ini_set('upload_max_filesize', '500M');
+@ini_set('post_max_size', '500M');
 ini_set('display_errors','Off');
 ini_set('error_reporting', E_ALL );
 define('WP_DEBUG_DISPLAY', false);

@@ -1,4 +1,7 @@
 <?php
+//TODO
+$theme_settings = json_decode(get_option('theme_mods_themo')['data_postMessage']);
+
 function custom_menu_template($theme_location) {
     if (($theme_location) && ($locations = get_nav_menu_locations()) && isset($locations[$theme_location])) {
         $menu = wp_get_nav_menu_object($locations[$theme_location]);
@@ -254,7 +257,7 @@ function custom_mobile_menu_template($theme_location) {
     <div class="container-block">
         <a href="/" class="header-logo">
             <picture>
-                <img loading="lazy" src="/wp-content/uploads/2024/06/Qatsol-mobile.svg" alt="AI Chat">
+                <img loading="lazy" src="https://qatsol.com/wp-content/uploads/2024/06/Qatsol-mobile.svg" alt="AI Chat">
             </picture>
         </a>
         <div class="nav-cta-block">

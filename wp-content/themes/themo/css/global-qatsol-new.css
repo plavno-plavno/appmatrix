@@ -11,6 +11,7 @@
 @import "mobile-menu.css";
 @import "footer.css";
 @import "vertical-tabs.css";
+@import "about.css";
 
 body.open-menu {
     position: fixed;
@@ -69,6 +70,10 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
     padding-top: 96px !important;
     /*//remove-important*/
     padding-bottom: 96px;
+}
+
+.map-section .section-title .main-text p {
+    margin-bottom: 40px;
 }
 
 @media (min-width: 768px) {
@@ -163,7 +168,7 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
 
 .map-section .section-title .main-text p {
     max-width: 648px;
-    margin: 0 auto;
+    margin: 0 auto 40px auto;
 }
 
 @media (min-width: 1200px) {
@@ -190,8 +195,10 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
     }
 }
 
-.primary-main-btn, .trusted-cards-block .ideo-box, .common-card,
-.process-left-block, .map-card, .colored-light.container-tabs .nav-tabs > li, .tab-card-with-img {
+.primary-main-btn, .trusted-cards-block .ideo-box, .common-card:not(.card-strieght),
+.process-left-block, .map-card,
+.colored-light.container-tabs .nav-tabs > li,
+.tab-card-with-img{
     border-radius: 4px;
 }
 

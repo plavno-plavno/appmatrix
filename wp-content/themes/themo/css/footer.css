@@ -182,7 +182,6 @@ body.vc-on.wrap-wide .vc_page_section.padding-block-footer {
 
 #footer-content .footer-bottom-menu .widget a:hover {
     color: var(--brand---primary);
-    text-decoration: underline;
 }
 
 .column-text.footer-bottom-copyright p {

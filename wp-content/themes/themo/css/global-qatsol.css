@@ -2611,8 +2611,6 @@ body.page.wrap-wide.vc-on.sidebar-off #content, body.single-portfolio.wrap-wide.
     height: 1px;
     background: var(--primary);
     bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 .transparent-dark.column-text p > a:hover {

@@ -32,6 +32,15 @@
         margin-bottom: 24px;
     }
 }
+.author-block .ideo-box-content .column-text-styled {
+    padding: 0;
+}
+
+
+.author-block .ideo-box-content .author-image .ideo-single-image {
+    width: 48px !important;
+    height: 48px !important;
+}
 
 @media (min-width: 768px) {
     .author-block .ideo-box-content .author-image .ideo-single-image {
@@ -74,6 +83,7 @@
 .h3-title.column-text p {
     color: var(--text-header);
     margin-bottom: 20px;
+    margin-top: 0;
 }
 
 @media (min-width: 768px) {

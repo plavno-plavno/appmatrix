@@ -15,6 +15,7 @@
 .column-text-styled.colored-light.column-text-styled.map-card {
     padding: 18px 14px;
     border-left: 4px solid #D2AB51;
+    background-color: var(--colorLight);
 }
 
 

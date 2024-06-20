@@ -43,9 +43,6 @@ body.open-menu #header-navbar .modern-bars-content {
     max-width: 648px;
 }
 
-.hero-common-text p {
-
-}
 
 .page .row {
     margin-left: 0;
@@ -162,7 +159,8 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
 
 .tech-section .ideo-wow-title.style-text h2.title,
 .process-section .ideo-wow-title.style-text h2.title,
-.map-section .section-title .main-text p {
+.map-section .section-title .main-text p,
+.section-title-h2.ideo-wow-title.style-text:not(.info-block-title) .title {
     margin-bottom: 32px;
 }
 
@@ -198,7 +196,8 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
 .primary-main-btn, .trusted-cards-block .ideo-box, .common-card:not(.card-strieght),
 .process-left-block, .map-card,
 .colored-light.container-tabs .nav-tabs > li,
-.tab-card-with-img{
+.tab-card-with-img, .common-card .wp-swiper__slide-content,
+.row-values, .tag-link, .common-img-card, .grid-2-img-block {
     border-radius: 4px;
 }
 
@@ -212,7 +211,7 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
     position: relative;
     background-color: var(--primary);
     transition: background-color .3s ease-out;
-
+    height: 48px;
 }
 
 @media (min-width: 768px) {
@@ -232,6 +231,7 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
     .primary-main-btn {
         padding: 12px 32px;
         gap: 12px;
+        height: 56px;
     }
 }
 
@@ -250,7 +250,7 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
     }
 }
 
-.primary-main-btn.button::after {
+.primary-main-btn.button:not(.cta-flex-btn)::after {
     content: '';
     display: block;
     width: 24px;
@@ -276,6 +276,7 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
 
 .h2-tag p, .h2-tag.transparent-light.column-text-styled, .brands-section .h2-title h2 {
     margin-bottom: 24px;
+    margin-top: 0;
 }
 
 @media (min-width: 1440px) {
@@ -314,11 +315,11 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
 }
 
 /*remove*/
-.transparent-dark.ideo-wow-title .title {
+.transparent-dark.ideo-wow-title:not(.light-text) .title {
     color: var(--text-header);
 }
 
-.transparent-light.ideo-wow-title .title {
+.transparent-light.ideo-wow-title .title,.transparent-dark.ideo-wow-title.light-text .title {
     color: var(--colorLight);
 }
 .h2-title h2.title {
@@ -361,11 +362,15 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
 }
 
 .common-link a {
-    width: max-content;
+    max-width: max-content;
     display: flex;
     align-items: center;
     gap: 10px;
     position: relative;
+}
+
+.common-link a svg {
+    flex-shrink: 0;
 }
 
 @media (min-width: 1920px) {
@@ -427,7 +432,6 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
 }
 
 .column-text-styled.colored-light.column-text-styled {
-
     border: none;
 }
 
@@ -464,6 +468,7 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
     font-size: 16px;
     line-height: 1.4;
     color: var(--secondDarkColor);
+    margin-top: 0;
 }
 
 @media (min-width: 1920px) {
@@ -481,7 +486,7 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
 }
 
 @media (min-width: 1200px) {
-    .title-subtitle .h2-title h2.title {
+    .title-subtitle:not(.grid-2-title-block) .h2-title h2.title {
         margin-bottom: 0;
     }
 }
@@ -507,7 +512,7 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
     background-color: var(--colorLight);
 }
 
-.vc_page_section .vc_row .common-card {
+.vc_page_section .row .common-card:not(.swiper-slide), .common-card .wp-swiper__slide-content {
     padding: 18px;
 }
 
@@ -530,19 +535,19 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
 }
 
 @media (min-width: 768px) {
-    .vc_page_section .vc_row .common-card {
+    .vc_page_section .vc_row .common-card:not(.swiper-slide), .common-card .wp-swiper__slide-content {
         padding: 20px;
     }
 }
 
 @media (min-width: 1440px) {
-    .vc_page_section .vc_row .common-card {
+    .vc_page_section .vc_row .common-card:not(.swiper-slide), .common-card .wp-swiper__slide-content {
         padding: 24px;
     }
 }
 
-@media (min-width: 1440px) {
-    .vc_page_section .vc_row  .common-card {
+@media (min-width: 1920px) {
+    .vc_page_section .vc_row  .common-card:not(.swiper-slide), .common-card .wp-swiper__slide-content {
         padding: 32px;
     }
 }

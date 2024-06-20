@@ -99,11 +99,11 @@
     justify-content: center;
 }
 
-.cta-block {
+.cta-block:not(.cta-flex-wrapper) {
     margin-bottom: 96px;
 }
 @media (min-width: 768px) {
     .cta-block {
-        margin-bottom: 0px;
+        margin-bottom: 0;
     }
 }

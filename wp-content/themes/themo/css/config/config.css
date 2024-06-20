@@ -8,6 +8,8 @@ body {
     --grayColor: #9296A4;
     --border: #DCDDE2;
     --copyRight: #4A4B4E;
+    --darkGrayBg: #2A2B2F;
+    --bullet: #E1E2E8;
     --secondLightColor: rgba(255, 255, 255, 0.8);
     --familyRegularWeight: 400;
     --familySemiBoldWeight: 600;
@@ -22,12 +24,17 @@ body {
     --gap-tablet: 20px;
     --gap-desctop-m: 24px;
     --gap-desctop-l: 32px;
+    --margin-title-mobile: 32px;
+    --margin-title-desctop-m: 40px;
+    --margin-title-desctop-l: 48px;
+    --margin-title-desctop-xl: 56px;
 }
 
 
 .padding-block .container, .container-block,
 footer.common-page-width .footer-width.vc_page_section,
-.footer-bottom-section .container{
+.footer-bottom-section .container,
+.info-block-2-part .container {
     max-width: 1920px;
     margin-left: auto;
     margin-right: auto;
@@ -82,6 +89,20 @@ footer.common-page-width .footer-width.vc_page_section,
 .dark-block {
     background-color: var(--text-header);
 }
+
+.title-subtitle .light-subtitle.h2-subtitle p {
+    color: var(--secondLightColor);
+}
+
+ .light-subtitle p strong {
+    font-weight: 500;
+     color: var(--colorLight);
+}
+
+ .light-text p,
+ .colored-light.column-text-styled.light-text p {
+     color: var(--colorLight);
+ }
 
 
 .title-2 {
@@ -213,6 +234,10 @@ body.font-dark  a:hover {
     background-color: var(--mainLightbg);
 }
 
+.bg-light {
+    background-color: var(--colorLight);
+}
+
 .title-centred .column-text-styled.align-center {
     text-align: center;
     margin-left: auto;
@@ -220,15 +245,18 @@ body.font-dark  a:hover {
 }
 
 .main-text, .column-text.main-text p,.main-text p,
-.main-text .menu-item a, .colored-light.container-tabs .nav-tabs > li a {
+.main-text .menu-item a,
+.colored-light.container-tabs .nav-tabs > li a,
+.main-text li, .SwiperSolver li {
     font-family: var(--font-family);
     font-size: 16px;
     line-height: 1.4;
     font-weight: 400;
+    margin-top: 0;
 }
 
 @media (min-width: 1920px) {
-    .main-text, .column-text.main-text p,.main-text p, .main-text .menu-item a {
+    .main-text, .column-text.main-text p,.main-text p, .main-text .menu-item a , .SwiperSolver li{
         font-size: 18px;
     }
 }
@@ -236,6 +264,26 @@ body.font-dark  a:hover {
 @media (min-width: 1200px) {
     .h2-title-h {
         width: 60%;
+    }
+}
+
+.subheader-text p {
+    font-family: var(--font-family);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.4;
+    margin: 0;
+}
+
+@media (min-width: 1440px) {
+    .subheader-text p {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .subheader-text p {
+        font-size: 24px;
     }
 }
 
@@ -249,4 +297,13 @@ body.font-dark  a:hover {
 
 a.disabled {
     pointer-events: none;
+}
+
+.h2-subtitle .primary-text {
+    font-weight: 500;
+}
+
+.primary-text,
+.colored-light.column-text-styled .primary-text{
+    color: var(--primary);
 }

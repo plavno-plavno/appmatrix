@@ -1,0 +1,270 @@
+.vc_page_section .row .contact-form-col-1 {
+    margin-bottom: 20px;
+}
+
+.vc_page_section .row .contact-form-col-1 .wpb_wrapper {
+    background-color: var(--text-header);
+    height: 100%;
+}
+
+.vc_page_section .row .contact-form-col-2 .wpb_wrapper {
+    background-color: var(--mainLightbg);
+}
+
+.vc_page_section .row .contact-form-col-1 .wpb_wrapper, .vc_page_section .row .contact-form-col-2 .wpb_wrapper {
+    border-radius: 16px;
+    padding: 32px 18px;
+
+}
+
+.contact-form-col-1 .h2-title .title {
+    margin-bottom: 24px;
+}
+
+.form-info-text > p:nth-child(2) img {
+    margin: 0 8px 0 0;
+}
+
+.form-info-text.transparent-dark.column-text p > a {
+    color: var(--colorLight);
+}
+
+.form-info-text.transparent-dark.column-text p > a:before {
+    background: var(--colorLight);
+}
+
+.contact-form-col-2 .input-label p {
+    font-weight: 500;
+    color: var(--text-header);
+    margin-bottom: 8px;
+}
+
+.contactForm input.wpcf7-form-control.wpcf7-text {
+    background-color: var(--colorLight);
+    border-radius: 4px;
+    color: var(--text-header);
+    text-transform: capitalize;
+}
+
+#aboutUsContactForm input:not(.wpcf7-submit) {
+    height: 47px;
+}
+
+#aboutUsContactForm .checkbox-row input[type="checkbox"] {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    margin: 0;
+    width: 24px;
+    height: 24px;
+    background-color: var(--mainLightbg);
+    border: 2px solid var(--primary);
+    border-radius: 4px;
+    flex-shrink: 0;
+    padding: 0;
+}
+
+#aboutUsContactForm .checkbox-row input[type='checkbox']:checked,#aboutUsContactForm  .checkbox-row input[type='checkbox']:focus {
+    position: relative;
+    outline: none;
+}
+
+#aboutUsContactForm  .checkbox-row input[type='checkbox']:checked {
+    background: var(--primary);
+}
+
+#aboutUsContactForm  .checkbox-row input[type='checkbox']:checked::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 43%;
+    width: 8px;
+    height: 14px;
+    border: solid var(--colorLight);
+    border-width: 0 2px 2px 0;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+#aboutUsContactForm input:not(.wpcf7-submit), #aboutUsContactForm textarea {
+    outline: none;
+    filter: none;
+    cursor: pointer;
+    z-index: 1;
+    text-transform: none;
+    padding: 12px;
+    letter-spacing: 0;
+    border: 1px solid var(--border);
+    background-color: var(--colorLight);
+    border-radius: 4px;
+}
+
+#aboutUsContactForm input:not(.wpcf7-submit):focus, #aboutUsContactForm textarea:focus {
+    border: 1px solid var(--primary);
+    color: var(--text-header);
+}
+
+#aboutUsContactForm input:not(.wpcf7-submit)::placeholder, #aboutUsContactForm textarea::placeholder {
+    font-family: var(--font-family);
+    color: #C6C6C8;
+}
+
+#aboutUsContactForm .contactForm > .main-text:not(:last-child) input {
+    margin-bottom: 12px;
+}
+
+#aboutUsContactForm textarea {
+   height: 96px;
+}
+
+#aboutUsContactForm textarea {
+    margin-bottom: 24px;
+}
+
+#aboutUsContactForm .wpcf7-list-item {
+    display: flex;
+    gap: 12px;
+}
+
+.wpcf7-checkbox .wpcf7-list-item-label {
+    color: var(--secondDarkColor) ;
+}
+
+.wpcf7-checkbox .wpcf7-list-item {
+    margin-left: 0;
+    margin-bottom: 24px;
+}
+
+#aboutUsContactForm .wpcf7-not-valid-tip {
+    position: absolute;
+    top: 36px;
+}
+#aboutUsContactForm  .checkbox-row .wpcf7-not-valid-tip{
+    top: auto;
+    bottom: -20px;
+}
+
+.form-btn-flex > p {
+    position: relative;
+}
+
+.form-btn-flex .wpcf7-spinner {
+    position: absolute;
+    top: 50%;
+    right: 2%;
+    transform: translateY(-50%);
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 1200px) {
+   .vc_page_section .row .contact-form-col-1 {
+        margin-bottom: 0;
+        padding-right: 10px;
+    }
+
+    .vc_page_section .row .contact-form-col-2 {
+        padding-left: 10px;
+    }
+
+   .vc_page_section .row .contact-form-col-1 .wpb_wrapper {
+        padding: 40px;
+    }
+
+  .vc_page_section .row .contact-form-col-2 .wpb_wrapper {
+        padding: 20px;
+    }
+
+    .contact-form-col-1 .h2-title .title {
+        margin-bottom: 40px;
+    }
+
+    #aboutUsContactForm .form-info-text > p:nth-child(2) {
+        margin-bottom: 16px;
+    }
+
+    #aboutUsContactForm .contactForm > .main-text:not(:last-child) input {
+        margin-bottom: 16px;
+    }
+
+    #aboutUsContactForm textarea {
+        margin-bottom: 24px;
+    }
+}
+
+@media (min-width: 1440px) {
+    #aboutUsContactForm .vc_page_section .row .contact-form-col-1 {
+        padding-left: 12px;
+    }
+
+    #aboutUsContactForm .vc_page_section .row .contact-form-col-2 {
+        padding-left: 12px;
+    }
+
+    #aboutUsContactForm .vc_page_section .row .contact-form-col-1 .wpb_wrapper {
+        padding: 48px;
+    }
+
+    #aboutUsContactForm .vc_page_section .row .contact-form-col-2 .wpb_wrapper {
+        padding: 24px;
+    }
+
+    #aboutUsContactForm  .contact-form-col-1 .h2-title .title {
+        margin-bottom: 48px;
+    }
+
+    #aboutUsContactForm textarea {
+        margin-bottom: 40px;
+    }
+
+    .wpcf7-checkbox .wpcf7-list-item {
+        margin-bottom: 32px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .vc_page_section .row .contact-form-col-1 {
+        padding-left: 16px;
+    }
+
+  .vc_page_section .row .contact-form-col-2 {
+        padding-left: 16px;
+    }
+
+   .vc_page_section .row .contact-form-col-1 .wpb_wrapper {
+        padding: 56px;
+    }
+
+     .vc_page_section .row .contact-form-col-2 .wpb_wrapper {
+        padding: 32px;
+    }
+    #aboutUsContactForm input:not(.wpcf7-submit) {
+        height: 58px;
+    }
+    #aboutUsContactForm input:not(.wpcf7-submit), #aboutUsContactForm textarea {
+        padding: 16px;
+    }
+
+    #aboutUsContactForm .contactForm > .main-text:not(:last-child) input {
+        margin-bottom: 24px;
+    }
+
+    #aboutUsContactForm textarea {
+        height: 128px;
+        margin-bottom: 24px;
+    }
+
+    #aboutUsContactForm .checkbox-row input[type="checkbox"] {
+        width: 32px;
+        height: 32px;
+    }
+
+    #aboutUsContactForm .wpcf7-not-valid-tip {
+        position: absolute;
+        top: 40px;
+    }
+    .wpcf7-checkbox .wpcf7-list-item {
+        margin-bottom: 24px;
+    }
+}

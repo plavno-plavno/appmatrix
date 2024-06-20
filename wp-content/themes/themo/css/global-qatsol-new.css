@@ -197,11 +197,11 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
 .process-left-block, .map-card,
 .colored-light.container-tabs .nav-tabs > li,
 .tab-card-with-img, .common-card .wp-swiper__slide-content,
-.row-values, .tag-link, .common-img-card, .grid-2-img-block {
+.row-values, .tag-link, .common-img-card, .grid-2-img-block,#aboutUsContactForm .form-btn-flex input.wpcf7-form-control.wpcf7-submit {
     border-radius: 4px;
 }
 
-.primary-main-btn {
+.primary-main-btn,#aboutUsContactForm .form-btn-flex input.wpcf7-form-control.wpcf7-submit {
     width: 100%;
     padding: 12px 0;
     display: flex;
@@ -212,30 +212,31 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
     background-color: var(--primary);
     transition: background-color .3s ease-out;
     height: 48px;
+    text-transform: capitalize;
 }
 
 @media (min-width: 768px) {
-    .primary-main-btn {
+    .primary-main-btn, #aboutUsContactForm .form-btn-flex input.wpcf7-form-control.wpcf7-submit {
         width: max-content;
         padding: 16px 24px;
     }
 }
 
 @media (min-width: 1200px) {
-    .primary-main-btn {
+    .primary-main-btn, #aboutUsContactForm .form-btn-flex input.wpcf7-form-control.wpcf7-submit {
         padding: 12px 24px;
     }
 }
 
 @media (min-width: 1920px) {
-    .primary-main-btn {
+    .primary-main-btn, #aboutUsContactForm .form-btn-flex input.wpcf7-form-control.wpcf7-submit {
         padding: 12px 32px;
         gap: 12px;
         height: 56px;
     }
 }
 
-.primary-main-btn span {
+.primary-main-btn span,#aboutUsContactForm .form-btn-flex input.wpcf7-form-control.wpcf7-submit {
     font-size: 14px;
     line-height: 1.12;
     letter-spacing: 0.64px;
@@ -245,7 +246,7 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
 }
 
 @media (min-width: 1920px) {
-    .primary-main-btn span {
+    .primary-main-btn span,#aboutUsContactForm .form-btn-flex input.wpcf7-form-control.wpcf7-submit {
         font-size: 16px;
     }
 }
@@ -269,7 +270,7 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
     }
 }
 
-.primary-main-btn:hover {
+.primary-main-btn:hover,#aboutUsContactForm .form-btn-flex input.wpcf7-form-control.wpcf7-submit:hover {
     background-color: var(--brand---primary);
     transition: all .3s ease-out;
 }

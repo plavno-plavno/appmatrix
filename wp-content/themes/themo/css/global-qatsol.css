@@ -2013,7 +2013,7 @@ body.page #content.kontakt {
     font-family: var(--familyRegular);
     font-size: 16px;
     letter-spacing: 0;
-    color: var(--secondColor);
+    /*color: var(--secondColor);*/
 }
 
 #contactUsForm .wpcf7-not-valid-tip {

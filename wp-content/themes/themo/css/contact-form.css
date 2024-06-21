@@ -125,13 +125,19 @@
     gap: 12px;
 }
 
-.wpcf7-checkbox .wpcf7-list-item-label {
+.checkbox-row .wpcf7-list-item-label {
     color: var(--secondDarkColor) ;
+    font-weight: 400;
 }
 
-.wpcf7-checkbox .wpcf7-list-item {
+.checkbox-row .wpcf7-list-item {
     margin-left: 0;
     margin-bottom: 24px;
+}
+
+.checkbox-row .wpcf7-list-item label{
+    display: flex;
+    gap: 12px;
 }
 
 #aboutUsContactForm .wpcf7-not-valid-tip {
@@ -142,6 +148,15 @@
     top: auto;
     bottom: -20px;
 }
+.transparent-dark.column-text .wpcf7-list-item-label a {
+    position: relative;
+    color: var(--primary);
+}
+
+.transparent-dark.column-text .wpcf7-list-item-label a:hover {
+    color: var(--brand---primary);
+}
+
 
 .form-btn-flex > p {
     position: relative;

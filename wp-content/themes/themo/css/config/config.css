@@ -90,7 +90,7 @@ footer.common-page-width .footer-width.vc_page_section,
     background-color: var(--text-header);
 }
 
-.title-subtitle .light-subtitle.h2-subtitle p {
+.title-subtitle .light-subtitle.h2-subtitle p, .reason-block .swiper li {
     color: var(--secondLightColor);
 }
 
@@ -99,8 +99,8 @@ footer.common-page-width .footer-width.vc_page_section,
      color: var(--colorLight);
 }
 
- .light-text p,
- .colored-light.column-text-styled.light-text p {
+ .light-text p,body.font-dark  h3.light-text,
+ .colored-light.column-text-styled.light-text p, .light-text ul li {
      color: var(--colorLight);
  }
 
@@ -249,7 +249,7 @@ body.font-dark  a:hover {
 .colored-light.container-tabs .nav-tabs > li a,
 .main-text li, .SwiperSolver li,
 #aboutUsContactForm input, #aboutUsContactForm textarea,
-.wpcf7 form.invalid .wpcf7-response-output {
+.wpcf7 form.invalid .wpcf7-response-output, .swiper li {
     font-family: var(--font-family);
     font-size: 16px;
     line-height: 1.4;

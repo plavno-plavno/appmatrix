@@ -39,7 +39,7 @@ body.open-menu #header-navbar .modern-bars-content {
     padding: 0 ;
 }
 
-.hero-common-text {
+.hero-common-text:not(.full-text) {
     max-width: 648px;
 }
 
@@ -362,7 +362,7 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
     }
 }
 
-.common-link a {
+.common-link a{
     max-width: max-content;
     display: flex;
     align-items: center;
@@ -380,7 +380,7 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
     }
 }
 
-.common-link a span {
+.common-link a span, .common-link a {
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 16px;
@@ -393,7 +393,7 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
     }
 }
 
-.common-link a::before {
+.common-link a::before, .wpcf7-list-item-label a::before {
     content: "";
     display: block;
     position: absolute;
@@ -418,7 +418,7 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
     cursor: pointer;
 }
 
-.common-link a:hover::before {
+.common-link a:hover::before, .wpcf7-list-item-label a:hover::before {
     transform: scaleX(1);
     transform-origin: left center;
 }

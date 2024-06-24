@@ -244,7 +244,7 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
     }
 }
 
-.primary-main-btn span, #aboutUsContactForm .form-btn-flex input.wpcf7-form-control.wpcf7-submit {
+.primary-main-btn span, body.font-dark .primary-main-btn, body.font-dark .primary-main-btn:hover, #aboutUsContactForm .form-btn-flex input.wpcf7-form-control.wpcf7-submit {
     font-size: 14px;
     line-height: 1.12;
     letter-spacing: 0.64px;

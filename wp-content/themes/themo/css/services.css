@@ -12,38 +12,76 @@
     overflow: hidden;
 }
 
-.solutions-card .ideo-wow-title.style-text .title {
+.solutions-card:not(.margin-s) .ideo-wow-title.style-text .title {
     margin-bottom: 12px;
 }
 
-.solutions-card .sub-text p {
+.solutions-card.margin-s .ideo-wow-title.style-text .title {
+    margin-bottom: 8px;
+}
+
+.solutions-card:not(.margin-s) .sub-text p {
     margin-bottom: 24px;
+}
+
+.solutions-card.margin-s .sub-text p {
+    margin-bottom: 16px;
 }
 
 .solutions-cards-img .ideo-single-image, .solutions-cards-img .ideo-single-image img {
     width: 100% !important;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
 
+    .solutions-card.margin-s , .solutions-card.margin-s > .wpb_wrapper{
+        height: 100%;
+    }
+
+    .solutions-card.margin-s > .wpb_wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .solutions-card.margin-s > .wpb_wrapper .solutions-card__description{
+        flex-grow: 1;
+    }
+    .solutions-card.margin-s .ideo-wow-title.style-text .title {
+        margin-bottom: 12px;
+    }
 }
 
+
 @media (min-width: 1440px) {
-    .solutions-card .ideo-wow-title.style-text .title {
+    .solutions-card:not(.margin-s) .ideo-wow-title.style-text .title {
         margin-bottom: 16px;
     }
 
-    .solutions-card .sub-text p {
+    .solutions-card:not(.margin-s) .sub-text p {
         margin-bottom: 32px;
     }
+
+
+
 }
 
 @media (min-width: 1920px) {
-    .solutions-card .ideo-wow-title.style-text .title {
+    .solutions-card:not(.margin-s) .ideo-wow-title.style-text .title {
         margin-bottom: 24px;
     }
 
-    .solutions-card .sub-text p {
+    .solutions-card:not(.margin-s) .sub-text p {
         margin-bottom: 40px;
+    }
+    .solutions-card.margin-s .ideo-wow-title.style-text .title {
+        margin-bottom: 16px;
+    }
+
+    .solutions-card.margin-s .sub-text p {
+        margin-bottom: 24px;
+    }
+
+    .solutions-card.margin-s .sub-text p {
+        margin-bottom: 24px;
     }
 }

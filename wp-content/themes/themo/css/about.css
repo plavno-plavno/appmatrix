@@ -209,7 +209,12 @@ body .vc_page_section .vc_row.vc_inner.row-values {
     color: var(--secondDarkColor);
 }
 
-.location-cards .wpb_wrapper, .propels-block .wpb_wrapper, .solutions-cards-wrapper > .wpb_wrapper {
+.team-cards-wrapper > .wpb_wrapper {
+    display: grid;
+    gap: 16px;
+}
+
+.location-cards .wpb_wrapper, .propels-block .wpb_wrapper, .solutions-cards-wrapper > .wpb_wrapper{
     display: grid;
     gap: var(--gap-tablet);
 }
@@ -258,6 +263,27 @@ body .vc_page_section .vc_row.vc_inner.row-values {
 .numbers-card .banner-card-title {
     margin-bottom: 8px;
 }
+
+.grid-2-columns__item .grid-2-column-img {
+    margin-bottom: 18px;
+
+}
+
+.grid-2-columns__item .grid-2-column-img .ideo-single-image{
+    width: 152px !important;
+}
+
+.grid-2-columns__item .ideo-wow-title.style-text .title {
+    margin-bottom: 8px;
+}
+.grid-2-columns__item .sub-text {
+    margin-bottom: 12px;
+}
+
+.team-cards-wrapper .ideo-single-image {
+    width: 100% !important;
+}
+
 
 @media (min-width: 768px) {
     .banner-card-title p {
@@ -322,6 +348,42 @@ body .vc_page_section .vc_row.vc_inner.row-values {
     .location-cards .wpb_wrapper, .propels-block .wpb_wrapper {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .grid-2-columns__item .grid-2-column-img {
+        margin-bottom: 0;
+    }
+
+    .grid-2-columns__item .wpb_wrapper {
+        display: flex;
+        gap:var(--gap-tablet);
+    }
+
+    .grid-2-columns__item-info .ideo-box-content {
+        display: flex;
+        flex-direction: column;
+    }
+    .banner-about #mainBlockAboout.common-page-width {
+        align-items: center;
+    }
+
+    .download-btn {
+        flex-grow: 1;
+        display: flex;
+    }
+    .download-btn p {
+        flex-grow: 1;
+        margin-bottom: 0;
+        margin-top: auto;
+    }
+
+    .grid-2-columns__item .grid-2-column-img .ideo-single-image{
+        width: 160px !important;
+    }
+
+    .team-cards-wrapper > .wpb_wrapper {
+        gap: var(--gap-tablet);
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (min-width: 1200px) {
@@ -345,9 +407,7 @@ body .vc_page_section .vc_row.vc_inner.row-values {
         padding-right: 10px;
     }
 
-    .banner-about #mainBlockAboout.common-page-width {
-        align-items: center;
-    }
+
 
     .cta-flex-wrapper .wpb_wrapper {
         width: 85% !important;
@@ -390,8 +450,16 @@ body .vc_page_section .vc_row.vc_inner.row-values {
         padding-left: 20px;
     }
 
+    /*.grid-2-columns > .wpb_wrapper {*/
+    /*    grid-template-columns: repeat(2, 1fr);*/
+    /*}*/
+
     .location-cards .wpb_wrapper {
         grid-template-columns: repeat(5, 1fr);
+    }
+
+    .team-cards-wrapper > .wpb_wrapper {
+        grid-template-columns: repeat(4, 1fr);
     }
 
     .propels-block .wpb_wrapper , .solutions-cards-wrapper > .wpb_wrapper{
@@ -427,6 +495,18 @@ body .vc_page_section .vc_row.vc_inner.row-values {
 
     .solutions-card__description .ideo-box-content  .button-wrap  {
         margin-top: auto;
+    }
+
+    .vc_page_section .vc_row.grid-2-columns-row {
+        gap: 20px;
+    }
+
+    .padding-block:not(.init-block) .grid-2-columns__item {
+        width: calc((100% - 20px)/2);
+    }
+
+    .grid-2-columns__item .grid-2-column-img .ideo-single-image{
+        width: 168px !important;
     }
 }
 
@@ -503,6 +583,22 @@ body .vc_page_section .vc_row.vc_inner.row-values {
 
     .h2-title.info-block-title .title {
         margin-bottom: 48px;
+    }
+
+    .vc_page_section .vc_row.grid-2-columns-row {
+        gap: 24px;
+    }
+
+    .padding-block:not(.init-block) .grid-2-columns__item {
+        width: calc((100% - 24px)/2);
+    }
+
+    .grid-2-columns__item .wpb_wrapper {
+        gap:var(--gap-desctop-m);
+    }
+
+    .grid-2-columns__item .grid-2-column-img .ideo-single-image{
+        width: 176px !important;
     }
 }
 
@@ -589,5 +685,21 @@ body .vc_page_section .vc_row.vc_inner.row-values {
 
     .numbers-card .banner-card-title {
         margin-bottom: 12px;
+    }
+
+    .vc_page_section .vc_row.grid-2-columns-row {
+        gap:var(--gap-desctop-l);
+    }
+
+    .padding-block:not(.init-block) .grid-2-columns__item {
+        width: calc((100% - 32px)/2);
+    }
+
+    .grid-2-columns__item .wpb_wrapper {
+        gap:var(--gap-desctop-l);
+    }
+
+    .grid-2-columns__item .grid-2-column-img .ideo-single-image{
+        width: 184px !important;
     }
 }

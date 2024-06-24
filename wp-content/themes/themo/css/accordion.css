@@ -1,0 +1,41 @@
+.hire-accordion-section .panel-group {
+    display: grid;
+    gap: 8px;
+    margin-bottom: 0;
+}
+
+.hire-accordion-section .colored-light.accordion .panel-default > .panel-heading .panel-title a {
+    background-color: var(--mainLightbg);
+    border: 1px solid var(--border);
+    color: var(--text-header);
+}
+
+.hide-block h4 {
+    font-family: var(--font-family);
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.hide-block {
+    margin-bottom: 24px;
+}
+
+@media (min-width: 1440px) {
+    .hide-block h4 {
+        font-size: 20px;
+        margin-bottom: 16px;
+    }
+    .hide-block {
+        margin-bottom: 32px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .hide-block h4 {
+        font-size: 24px;
+        margin-bottom: 16px;
+    }
+}

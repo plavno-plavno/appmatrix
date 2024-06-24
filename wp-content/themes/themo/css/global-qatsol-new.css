@@ -12,6 +12,7 @@
 @import "footer.css";
 @import "vertical-tabs.css";
 @import "about.css";
+@import "services.css";
 
 body.open-menu {
     position: fixed;
@@ -36,7 +37,7 @@ body.open-menu #header-navbar .modern-bars-content {
 }
 
 .vc_column_container, .vc_column_container {
-    padding: 0 ;
+    padding: 0;
 }
 
 .hero-common-text:not(.full-text) {
@@ -197,11 +198,14 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
 .process-left-block, .map-card,
 .colored-light.container-tabs .nav-tabs > li,
 .tab-card-with-img, .common-card .wp-swiper__slide-content,
-.row-values, .tag-link, .common-img-card, .grid-2-img-block,#aboutUsContactForm .form-btn-flex input.wpcf7-form-control.wpcf7-submit {
+.row-values, .tag-link, .common-img-card, .grid-2-img-block,
+#aboutUsContactForm .form-btn-flex input.wpcf7-form-control.wpcf7-submit,
+.hire-accordion-section .colored-light.accordion .panel-default > .panel-heading .panel-title a,
+.solutions-card .wpb_wrapper {
     border-radius: 4px;
 }
 
-.primary-main-btn,#aboutUsContactForm .form-btn-flex input.wpcf7-form-control.wpcf7-submit {
+.primary-main-btn, #aboutUsContactForm .form-btn-flex input.wpcf7-form-control.wpcf7-submit {
     width: 100%;
     padding: 12px 0;
     display: flex;
@@ -236,7 +240,7 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
     }
 }
 
-.primary-main-btn span,#aboutUsContactForm .form-btn-flex input.wpcf7-form-control.wpcf7-submit {
+.primary-main-btn span, #aboutUsContactForm .form-btn-flex input.wpcf7-form-control.wpcf7-submit {
     font-size: 14px;
     line-height: 1.12;
     letter-spacing: 0.64px;
@@ -246,7 +250,7 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
 }
 
 @media (min-width: 1920px) {
-    .primary-main-btn span,#aboutUsContactForm .form-btn-flex input.wpcf7-form-control.wpcf7-submit {
+    .primary-main-btn span, #aboutUsContactForm .form-btn-flex input.wpcf7-form-control.wpcf7-submit {
         font-size: 16px;
     }
 }
@@ -270,7 +274,7 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
     }
 }
 
-.primary-main-btn:hover,#aboutUsContactForm .form-btn-flex input.wpcf7-form-control.wpcf7-submit:hover {
+.primary-main-btn:hover, #aboutUsContactForm .form-btn-flex input.wpcf7-form-control.wpcf7-submit:hover {
     background-color: var(--brand---primary);
     transition: all .3s ease-out;
 }
@@ -293,7 +297,7 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
 }
 
 .h2-tag.transparent-light.column-text-styled {
-    width: max-content;
+    max-width: max-content;
     border: none;
     padding: 0;
     border-bottom: none;
@@ -320,9 +324,10 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
     color: var(--text-header);
 }
 
-.transparent-light.ideo-wow-title .title,.transparent-dark.ideo-wow-title.light-text .title {
+.transparent-light.ideo-wow-title .title, .transparent-dark.ideo-wow-title.light-text .title {
     color: var(--colorLight);
 }
+
 .h2-title h2.title {
     font-family: var(--font-family);
     font-weight: 300;
@@ -362,7 +367,7 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
     }
 }
 
-.common-link a{
+.common-link a {
     max-width: max-content;
     display: flex;
     align-items: center;
@@ -388,7 +393,7 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
 }
 
 @media (min-width: 1920px) {
-    .common-link a span {
+    .common-link a span, .common-link a {
         font-size: 18px;
     }
 }
@@ -513,11 +518,14 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
     background-color: var(--colorLight);
 }
 
-.vc_page_section .row .common-card:not(.swiper-slide), .common-card .wp-swiper__slide-content {
+.vc_page_section .row .common-card:not(.swiper-slide),
+.common-card .wp-swiper__slide-content,
+.hire-accordion-section .accordion.medium .panel-default > .panel-heading .panel-title a,
+.hire-accordion-section .panel-default > .panel-heading + .panel-collapse > .panel-body, .numbers-card {
     padding: 18px;
 }
 
-.sticky-card-title.ideo-wow-title.style-text h3, .common-card h3  {
+.sticky-card-title.ideo-wow-title.style-text h3, .common-card h3 {
     color: var(--text-header);
     margin-top: 0;
     margin-bottom: 12px;
@@ -536,19 +544,31 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
 }
 
 @media (min-width: 768px) {
-    .vc_page_section .vc_row .common-card:not(.swiper-slide), .common-card .wp-swiper__slide-content {
+    .vc_page_section .vc_row .common-card:not(.swiper-slide),
+    .common-card .wp-swiper__slide-content,
+    .hire-accordion-section .accordion.medium .panel-default > .panel-heading .panel-title a,
+    .hire-accordion-section .panel-default > .panel-heading + .panel-collapse > .panel-body,
+    .numbers-card {
         padding: 20px;
     }
 }
 
 @media (min-width: 1440px) {
-    .vc_page_section .vc_row .common-card:not(.swiper-slide), .common-card .wp-swiper__slide-content {
+    .vc_page_section .vc_row .common-card:not(.swiper-slide),
+    .common-card .wp-swiper__slide-content,
+    .hire-accordion-section .accordion.medium .panel-default > .panel-heading .panel-title a,
+    .hire-accordion-section .panel-default > .panel-heading + .panel-collapse > .panel-body,
+    .numbers-card {
         padding: 24px;
     }
 }
 
 @media (min-width: 1920px) {
-    .vc_page_section .vc_row  .common-card:not(.swiper-slide), .common-card .wp-swiper__slide-content {
+    .vc_page_section .vc_row .common-card:not(.swiper-slide),
+    .common-card .wp-swiper__slide-content,
+    .hire-accordion-section .accordion.medium .panel-default > .panel-heading .panel-title a,
+    .hire-accordion-section .panel-default > .panel-heading + .panel-collapse > .panel-body,
+    .numbers-card {
         padding: 32px;
     }
 }
@@ -585,4 +605,14 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
 .title-with-link .ideo-box-content {
     align-items: flex-end;
     justify-content: space-between;
+}
+
+.wp-block-safe-svg-svg-icon {
+    display: flex;
+}
+
+@media (min-width: 1200px) {
+    .reviews-slider .swiper-pagination {
+        display: none;
+    }
 }

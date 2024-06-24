@@ -1,0 +1,49 @@
+.quotation-block .subheader-text p {
+    color: var(--text-header);
+}
+
+.centred-h2 h2 {
+    max-width: 784px;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.solutions-card .wpb_wrapper {
+    overflow: hidden;
+}
+
+.solutions-card .ideo-wow-title.style-text .title {
+    margin-bottom: 12px;
+}
+
+.solutions-card .sub-text p {
+    margin-bottom: 24px;
+}
+
+.solutions-cards-img .ideo-single-image, .solutions-cards-img .ideo-single-image img {
+    width: 100% !important;
+}
+
+@media (min-width: 1200px) {
+
+}
+
+@media (min-width: 1440px) {
+    .solutions-card .ideo-wow-title.style-text .title {
+        margin-bottom: 16px;
+    }
+
+    .solutions-card .sub-text p {
+        margin-bottom: 32px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .solutions-card .ideo-wow-title.style-text .title {
+        margin-bottom: 24px;
+    }
+
+    .solutions-card .sub-text p {
+        margin-bottom: 40px;
+    }
+}

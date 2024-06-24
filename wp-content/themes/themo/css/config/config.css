@@ -34,7 +34,7 @@ body {
 .padding-block .container, .container-block,
 footer.common-page-width .footer-width.vc_page_section,
 .footer-bottom-section .container,
-.info-block-2-part .container {
+.info-block-2-part .container, body .vc_page_section .vc_row.vc_inner.row-values {
     max-width: 1920px;
     margin-left: auto;
     margin-right: auto;
@@ -46,7 +46,8 @@ footer.common-page-width .footer-width.vc_page_section,
 @media (min-width: 768px) {
     .padding-block .container,.container-block,
     footer.common-page-width .footer-width.vc_page_section,
-    .footer-bottom-section .container {
+    .footer-bottom-section .container,
+    body .vc_page_section .vc_row.vc_inner.row-values {
         padding-left: 24px;
         padding-right: 24px;
     }
@@ -55,7 +56,8 @@ footer.common-page-width .footer-width.vc_page_section,
 @media (min-width: 1200px) {
     .padding-block .container,.container-block,
     footer.common-page-width .footer-width.vc_page_section,
-    .footer-bottom-section .container {
+    .footer-bottom-section .container,
+    body .vc_page_section .vc_row.vc_inner.row-values {
         padding-left: 112px;
         padding-right: 112px;
     }
@@ -64,7 +66,8 @@ footer.common-page-width .footer-width.vc_page_section,
 @media (min-width: 1440px) {
     .padding-block .container,.container-block,
     footer.common-page-width .footer-width.vc_page_section,
-    .footer-bottom-section .container {
+    .footer-bottom-section .container,
+    body .vc_page_section .vc_row.vc_inner.row-values {
         padding-left: 120px;
         padding-right: 120px;
     }
@@ -74,7 +77,8 @@ footer.common-page-width .footer-width.vc_page_section,
 @media (min-width: 1920px) {
     .padding-block .container,.container-block,
     footer.common-page-width .footer-width.vc_page_section,
-    .footer-bottom-section .container {
+    .footer-bottom-section .container,
+    body .vc_page_section .vc_row.vc_inner.row-values {
         padding-left: 128px;
         padding-right: 128px;
     }
@@ -121,7 +125,8 @@ footer.common-page-width .footer-width.vc_page_section,
     }
 }
 
-body.font-dark h3 ,body.font-dark .h3-title p{
+body.font-dark h3 ,body.font-dark .h3-title p,
+.hire-accordion-section .accordion .panel-default > .panel-heading .panel-title a{
     font-family: var(--font-family);
     font-size: 20px;
     line-height: 1.2;
@@ -129,19 +134,22 @@ body.font-dark h3 ,body.font-dark .h3-title p{
 }
 
 @media (min-width: 768px) {
-    body.font-dark h3,body.font-dark .h3-title p {
+    body.font-dark h3,body.font-dark .h3-title p,
+    .hire-accordion-section .accordion .panel-default > .panel-heading .panel-title a{
         font-size: 22px;
     }
 }
 
 @media (min-width: 1440px) {
-    body.font-dark h3, body.font-dark .h3-title p{
+    body.font-dark h3, body.font-dark .h3-title p,
+    .hire-accordion-section .accordion .panel-default > .panel-heading .panel-title a{
         font-size: 24px;
     }
 }
 
 @media (min-width: 1920px) {
-    body.font-dark h3, body.font-dark .h3-title p{
+    body.font-dark h3, body.font-dark .h3-title p,
+    .hire-accordion-section .accordion .panel-default > .panel-heading .panel-title a{
         font-size: 32px;
     }
 }
@@ -199,24 +207,24 @@ body.vc-on.wrap-wide .vc_page_section.padding-block-y-t {
     }
 }
 
-.padding-block-y-b {
+body.vc-on.wrap-wide .vc_page_section.padding-block-y-b {
     padding-bottom: 96px;
 }
 
 @media (min-width: 1200px) {
-    .padding-block-y-b {
+    body.vc-on.wrap-wide .vc_page_section.padding-block-y-b {
         padding-bottom: 104px;
     }
 }
 
 @media (min-width: 1440px) {
-    .padding-block-y-b {
+    body.vc-on.wrap-wide .vc_page_section.padding-block-y-b {
         padding-bottom: 112px;
     }
 }
 
 @media (min-width: 1920px) {
-    .padding-block-y-b {
+    body.vc-on.wrap-wide .vc_page_section.padding-block-y-b {
         padding-bottom: 120px;
     }
 }

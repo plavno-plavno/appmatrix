@@ -90,9 +90,13 @@ footer .column-text-styled {
 }
 
 .accordion .panel-default > .panel-heading .panel-title a:after {
-    background: url('/wp-content/uploads/2024/06/Chevron-down.svg');
+    background-image: url('/wp-content/uploads/2024/06/Chevron-down.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     width: 24px;
     height: 24px;
+    right: 18px;
     content: '';
     transform: translateY(-50%) rotate(180deg);
     transition: transform 0.3s ease-in-out;
@@ -100,11 +104,12 @@ footer .column-text-styled {
 
 .accordion .panel-default > .panel-heading .panel-title a.collapsed:after {
     content: '';
-    background: url('/wp-content/uploads/2024/06/Chevron-down.svg');
-    width: 24px;
-    height: 24px;
+    background-image: url('/wp-content/uploads/2024/06/Chevron-down.svg');
     top: 50%;
     transform: translateY(-50%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .transparent-light.accordion .panel-default > .panel-heading .panel-title a {
@@ -127,7 +132,7 @@ footer .column-text-styled {
     border-top: none;
 }
 
-.panel-body .main-text {
+footer .panel-body .main-text {
     margin-bottom: 16px;
 }
 
@@ -267,12 +272,14 @@ a.img-footer-link:hover svg path {
     }
 
 
-    .footer-accordion .accordion .panel-title a {
-        pointer-events: none;
-    }
+    /*.footer-accordion .accordion .panel-title a {*/
+    /*    pointer-events: none;*/
+    /*}*/
 
     .accordion .panel-default > .panel-heading .panel-title a:after {
-        content: none;
+        width: 32px;
+        height: 32px;
+        right: 20px;
     }
 
     .transparent-light.accordion .panel-default {
@@ -349,11 +356,19 @@ a.img-footer-link:hover svg path {
     .footer-bottom-menu .menu {
         gap: 24px;
     }
+
+    .accordion .panel-default > .panel-heading .panel-title a:after {
+        right: 24px;
+    }
 }
 
 @media (min-width: 1920px) {
     .footer-logo .img-link img {
         width: 113px;
+    }
+
+    .accordion .panel-default > .panel-heading .panel-title a:after {
+        right: 35px;
     }
 
     .column-text.footer-logo p {

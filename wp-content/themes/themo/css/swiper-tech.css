@@ -29,31 +29,38 @@ body {
     object-fit: cover;
 }
 
-.cases-item__description {
+.cases-item__description, .solutions-card__description {
     padding: 18px;
+}
+
+.cases-item__description {
+
     background-color: var(--text-header);
     margin-top: -1px;
 }
 
 @media (min-width: 1200px) {
-    .cases-item__description {
+    .cases-item__description, .solutions-card__description {
         padding: 20px;
+    }
+    .swiper-pagination {
+        display: none;
     }
 }
 
 @media (min-width: 1440px) {
-    .cases-item__description {
+    .cases-item__description, .solutions-card__description {
         padding: 24px;
     }
 }
 
 @media (min-width: 1920px) {
-    .cases-item__description {
+    .cases-item__description, .solutions-card__description {
         padding: 32px;
     }
 }
 
-.cases-item__description .case-item__info {
+.cases-item__description .case-item__info, .h3-title + p {
     color: var(--secondLightColor);
 }
 
@@ -105,27 +112,27 @@ body {
     filter: grayscale(100%);
 }
 
-.techSwiper .swiper-slide:hover .cases-item__img {
+.techSwiper:not(.not-hover) .swiper-slide:hover .cases-item__img {
     filter: none;
     transition: filter 0.3s ease;
 }
 
-.techSwiper .swiper-slide:hover .cases-item__description {
+.techSwiper:not(.not-hover) .swiper-slide:hover .cases-item__description {
     background-color: var(--primary);
     transition: background-color 0.3s ease;
 }
 
-.techSwiper .swiper-slide:hover .cases-item__description .h3-title p {
+.techSwiper:not(.not-hover) .swiper-slide:hover .cases-item__description .h3-title p {
     color: var(--text-header);
     transition: color 0.3s ease;
 }
 
-.techSwiper .swiper-slide:hover .cases-item__description .h3-title svg path {
+.techSwiper:not(.not-hover) .swiper-slide:hover .cases-item__description .h3-title svg path {
     stroke: var(--text-header);
     transition: stroke 0.4s ease;
 }
 
-.techSwiper .swiper-slide:hover .cases-item__description .case-item__info {
+.techSwiper:not(.not-hover) .swiper-slide:hover .cases-item__description .case-item__info {
     color: var(--text-header);
     transition: color 0.4s ease;
 }
@@ -159,7 +166,7 @@ body {
     flex-grow: 1;
 }
 
-.techSwiper:not(.not-hover) {
+.techSwiper:not(.not-cursor) {
     position: relative;
     cursor: url("data:image/svg+xml;utf8,<svg width='56' height='56' viewBox='0 0 56 56' fill='none' xmlns='http://www.w3.org/2000/svg'><rect width='56' height='56' rx='28' fill='%231D1E22'/><path d='M25 23L20 28L25 33' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/><path d='M31 23L36 28L31 33' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>"), auto;
 }

@@ -67,7 +67,7 @@
     overflow: hidden;
 }
 
-.cta-block .transparent-dark.ideo-wow-title .title {
+.cta-block .transparent-dark.ideo-wow-title h2.title {
     color: var(--colorLight);
     margin-bottom: 16px;
 }

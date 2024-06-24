@@ -1,34 +1,36 @@
+.author-block, .author-block .ideo-box-content {
+    gap: 12px;
+    align-items: center !important;
+}
 .author-block .ideo-box-content {
     display: flex;
-    gap: 12px;
-    align-items: center;
 }
 
 @media (min-width: 768px) {
-    .author-block .ideo-box-content {
+    .author-block, .author-block .ideo-box-content  {
         gap: 16px;
     }
 }
 
 
-.author-block .ideo-box-content, .review-info.column-text p {
+.author-block ,.common-card p.review-info.main-text, .author-block .ideo-box-content, .review-info.column-text p {
     margin-bottom: 10px;
 }
 
 @media (min-width: 768px) {
-    .author-block .ideo-box-content, .review-info.column-text p {
+    .author-block ,.common-card p.review-info.main-text,  .author-block .ideo-box-content, .review-info.column-text p {
         margin-bottom: 12px;
     }
 }
 
 @media (min-width: 1440px) {
-    .author-block .ideo-box-content, .review-info.column-text p {
+    .author-block ,.common-card p.review-info.main-text,  .author-block .ideo-box-content, .review-info.column-text p {
         margin-bottom: 16px;
     }
 }
 
 @media (min-width: 1920px) {
-    .author-block .ideo-box-content, .review-info.column-text p {
+    .author-block, .common-card p.review-info.main-text, .author-block .ideo-box-content, .review-info.column-text p  {
         margin-bottom: 24px;
     }
 }
@@ -36,41 +38,45 @@
     padding: 0;
 }
 
+.author-block.wp-block-columns:not(.is-not-stacked-on-mobile) > .author-image.wp-block-column {
+    flex-basis: content;
+    flex-grow: 0;
+}
 
-.author-block .ideo-box-content .author-image .ideo-single-image {
+.author-block  .author-image img , .author-block .ideo-box-content .author-image .ideo-single-image{
     width: 48px !important;
     height: 48px !important;
 }
 
 @media (min-width: 768px) {
-    .author-block .ideo-box-content .author-image .ideo-single-image {
+    .author-block  .author-image img, .author-block .ideo-box-content .author-image .ideo-single-image  {
         width: 56px !important;
         height: 56px !important;
     }
 }
 
 @media (min-width: 1440px) {
-    .author-block .ideo-box-content .author-image .ideo-single-image {
+    .author-block  .author-image img, .author-block .ideo-box-content .author-image .ideo-single-image {
         width: 64px !important;
         height: 64px !important;
     }
 }
 
 @media (min-width: 1920px) {
-    .author-block .ideo-box-content .author-image .ideo-single-image {
+    .author-block  .author-image img, .author-block .ideo-box-content .author-image .ideo-single-image{
         width: 72px !important;
         height: 72px !important;
     }
 }
 
-.author-block .ideo-box-content p:first-child {
+.author-block .author-info p:first-child, .author-block .ideo-box-content p:first-child {
     margin-top: 0;
     margin-bottom: 4px;
     font-weight: 500;
     color: var(--text-header);
 }
 
-.author-block .ideo-box-content p:nth-child(2) {
+.author-block .author-info p:nth-child(2),.author-block .ideo-box-content p:nth-child(2) {
     margin: 0;
     color: var(--grayColor);
 }
@@ -80,26 +86,26 @@
     margin-bottom: 10px;
 }
 
-.h3-title.column-text p {
+.common-card h3.review-text, .h3-title.column-text p{
     color: var(--text-header);
     margin-bottom: 20px;
     margin-top: 0;
 }
 
 @media (min-width: 768px) {
-    .h3-title.column-text p {
+    .common-card h3.review-text, .h3-title.column-text p{
         margin-bottom: 24px;
     }
 }
 
 @media (min-width: 1440px) {
-    .h3-title.column-text p {
+    .common-card h3.review-text, .h3-title.column-text p{
         margin-bottom: 32px;
     }
 }
 
 @media (min-width: 1920px) {
-    .h3-title.column-text p {
+    .common-card h3.review-text, .h3-title.column-text p{
         margin-bottom: 40px;
     }
 }
@@ -132,5 +138,21 @@
 @media (min-width: 1920px) {
     .grid-3-desc .common-card {
         width: calc((100% - 64px) / 3)
+    }
+}
+
+.short-link {
+    margin-top: auto;
+}
+
+.short-link a {
+    max-width: calc(100% + 24px);
+    width: calc(100% + 24px);
+    pointer-events: none;
+}
+@media (min-width: 1920px) {
+    .short-link  a {
+        max-width: calc(100% + 32px);
+        width: calc(100% + 32px);
     }
 }

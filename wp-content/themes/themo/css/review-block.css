@@ -6,69 +6,6 @@
     display: flex;
 }
 
-@media (min-width: 768px) {
-    .author-block, .author-block .ideo-box-content  {
-        gap: 16px;
-    }
-}
-
-
-.author-block ,.common-card p.review-info.main-text, .author-block .ideo-box-content, .review-info.column-text p {
-    margin-bottom: 10px;
-}
-
-@media (min-width: 768px) {
-    .author-block ,.common-card p.review-info.main-text,  .author-block .ideo-box-content, .review-info.column-text p {
-        margin-bottom: 12px;
-    }
-}
-
-@media (min-width: 1440px) {
-    .author-block ,.common-card p.review-info.main-text,  .author-block .ideo-box-content, .review-info.column-text p {
-        margin-bottom: 16px;
-    }
-}
-
-@media (min-width: 1920px) {
-    .author-block, .common-card p.review-info.main-text, .author-block .ideo-box-content, .review-info.column-text p  {
-        margin-bottom: 24px;
-    }
-}
-.author-block .ideo-box-content .column-text-styled {
-    padding: 0;
-}
-
-.author-block.wp-block-columns:not(.is-not-stacked-on-mobile) > .author-image.wp-block-column {
-    flex-basis: content;
-    flex-grow: 0;
-}
-
-.author-block  .author-image img , .author-block .ideo-box-content .author-image .ideo-single-image{
-    width: 48px !important;
-    height: 48px !important;
-}
-
-@media (min-width: 768px) {
-    .author-block  .author-image img, .author-block .ideo-box-content .author-image .ideo-single-image  {
-        width: 56px !important;
-        height: 56px !important;
-    }
-}
-
-@media (min-width: 1440px) {
-    .author-block  .author-image img, .author-block .ideo-box-content .author-image .ideo-single-image {
-        width: 64px !important;
-        height: 64px !important;
-    }
-}
-
-@media (min-width: 1920px) {
-    .author-block  .author-image img, .author-block .ideo-box-content .author-image .ideo-single-image{
-        width: 72px !important;
-        height: 72px !important;
-    }
-}
-
 .author-block .author-info p:first-child, .author-block .ideo-box-content p:first-child {
     margin-top: 0;
     margin-bottom: 4px;
@@ -91,54 +28,22 @@
     margin-bottom: 20px;
     margin-top: 0;
 }
-
-@media (min-width: 768px) {
-    .common-card h3.review-text, .h3-title.column-text p{
-        margin-bottom: 24px;
-    }
+.author-block ,.common-card p.review-info.main-text, .author-block .ideo-box-content, .review-info.column-text p {
+    margin-bottom: 10px;
 }
 
-@media (min-width: 1440px) {
-    .common-card h3.review-text, .h3-title.column-text p{
-        margin-bottom: 32px;
-    }
+.author-block .ideo-box-content .column-text-styled {
+    padding: 0;
 }
 
-@media (min-width: 1920px) {
-    .common-card h3.review-text, .h3-title.column-text p{
-        margin-bottom: 40px;
-    }
+.author-block.wp-block-columns:not(.is-not-stacked-on-mobile) > .author-image.wp-block-column {
+    flex-basis: content;
+    flex-grow: 0;
 }
 
-@media (min-width: 768px) {
-    .vc_page_section .grid-3-desc {
-        flex-direction: row;
-    }
-    .grid-3-desc .common-card {
-        width: calc((100% - 20px) / 2)
-    }
-}
-
-@media (min-width: 992px) {
-    .grid-3-desc {
-        justify-content: space-between;
-    }
-
-    .grid-3-desc .common-card {
-        width: calc((100% - 40px) / 3)
-    }
-}
-
-@media (min-width: 1440px) {
-    .grid-3-desc .common-card {
-        width: calc((100% - 48px) / 3)
-    }
-}
-
-@media (min-width: 1920px) {
-    .grid-3-desc .common-card {
-        width: calc((100% - 64px) / 3)
-    }
+.author-block  .author-image img , .author-block .ideo-box-content .author-image .ideo-single-image{
+    width: 48px !important;
+    height: 48px !important;
 }
 
 .short-link {
@@ -150,9 +55,87 @@
     width: calc(100% + 24px);
     pointer-events: none;
 }
+
+.wp_swiper__navigation {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .author-block, .author-block .ideo-box-content  {
+        gap: 16px;
+    }
+    .author-block ,.common-card p.review-info.main-text,  .author-block .ideo-box-content, .review-info.column-text p {
+        margin-bottom: 12px;
+    }
+
+    .author-block  .author-image img, .author-block .ideo-box-content .author-image .ideo-single-image  {
+        width: 56px !important;
+        height: 56px !important;
+    }
+
+    .common-card h3.review-text, .h3-title.column-text p{
+        margin-bottom: 24px;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .wp_swiper__navigation {
+        display: block;
+    }
+
+    .swiper-button-prev, .swiper-button-next {
+        width: 48px;
+        height: 48px;
+        transform: translateY(-50%);
+    }
+
+    .swiper-button-prev {
+        left: -70px;
+    }
+
+    .swiper-button-next {
+        right: -70px;
+    }
+}
+
+
+@media (min-width: 1440px) {
+    .author-block ,.common-card p.review-info.main-text,  .author-block .ideo-box-content, .review-info.column-text p {
+        margin-bottom: 16px;
+    }
+
+    .author-block  .author-image img, .author-block .ideo-box-content .author-image .ideo-single-image {
+        width: 64px !important;
+        height: 64px !important;
+    }
+
+    .common-card h3.review-text, .h3-title.column-text p{
+        margin-bottom: 32px;
+    }
+}
+
 @media (min-width: 1920px) {
+    .author-block, .common-card p.review-info.main-text, .author-block .ideo-box-content, .review-info.column-text p  {
+        margin-bottom: 24px;
+    }
+
+    .author-block  .author-image img, .author-block .ideo-box-content .author-image .ideo-single-image{
+        width: 72px !important;
+        height: 72px !important;
+    }
+
+    .common-card h3.review-text, .h3-title.column-text p{
+        margin-bottom: 40px;
+    }
+
     .short-link  a {
         max-width: calc(100% + 32px);
         width: calc(100% + 32px);
+    }
+
+    .swiper-button-prev, .swiper-button-next {
+        width: 56px;
+        height: 56px;
     }
 }

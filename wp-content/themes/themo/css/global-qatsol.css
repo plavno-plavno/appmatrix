@@ -1221,7 +1221,7 @@ p, .column-text p, ul, ul li, .wpb_wrapper .column-text-styled.portfolio-info-ca
     color: var(--secondColor);
 }
 
-.portfolio-info .column-text p, ul, ul li {
+.portfolio-info .column-text p {
     font-size: clamp(16px, 1.5vw, 18px) !important;
     line-height: 1.4;
 }

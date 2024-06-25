@@ -21,6 +21,10 @@ body.open-menu {
     background-color: var(--colorLight) !important;
 }
 
+ul {
+    margin: 0;
+}
+
 body.open-menu #header-navbar .modern-bars-content {
     background-color: var(--colorLight);
     transition: all 0.5s;

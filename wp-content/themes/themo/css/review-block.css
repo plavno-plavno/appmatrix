@@ -6,7 +6,7 @@
     display: flex;
 }
 
-.author-block .author-info p:first-child, .author-block .ideo-box-content p:first-child {
+.author-block .author-info p:first-child, .author-block .ideo-box-content p:first-child, .author-block .author-info p:first-child, .author-block .ideo-box-content p:first-child a{
     margin-top: 0;
     margin-bottom: 4px;
     font-weight: 500;

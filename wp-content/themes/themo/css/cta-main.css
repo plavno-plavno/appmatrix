@@ -22,6 +22,10 @@
     height: 100%;
 }
 
+#content .cta-block > .wpb_wrapper .h3-title h3.title {
+    margin-bottom: 16px;
+}
+
 #content .cta-block .section-title .wpb_wrapper {
     max-width: 585px;
     width: 98%;
@@ -35,6 +39,9 @@
 
     #content .cta-block .section-title .subtitle-h2 {
         margin-bottom: 0;
+    }
+    #content .cta-block > .wpb_wrapper .h3-title h3.title {
+        margin-bottom: 0x;
     }
 }
 

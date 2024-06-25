@@ -288,6 +288,10 @@ body .vc_page_section .vc_row.vc_inner.row-values {
     margin-top: 12px;
 }
 
+.form-info-text:not(:last-child) {
+    margin-bottom: 24px;
+}
+
 
 @media (min-width: 768px) {
     .banner-card-title p {
@@ -510,6 +514,10 @@ body .vc_page_section .vc_row.vc_inner.row-values {
     .grid-2-columns__item .grid-2-column-img .ideo-single-image{
         width: 168px !important;
     }
+
+    .form-info-text:not(:last-child) {
+        margin-bottom: 40px;
+    }
 }
 
 @media (min-width: 1440px) {
@@ -601,6 +609,10 @@ body .vc_page_section .vc_row.vc_inner.row-values {
 
     .grid-2-columns__item .grid-2-column-img .ideo-single-image{
         width: 176px !important;
+    }
+
+    .form-info-text:not(:last-child) {
+        margin-bottom: 48px;
     }
 }
 
@@ -707,5 +719,9 @@ body .vc_page_section .vc_row.vc_inner.row-values {
 
     .SwiperSolver .main-text + ul {
         margin-top: 24px;
+    }
+
+    .form-info-text:not(:last-child) {
+        margin-bottom: 56px;
     }
 }

@@ -245,6 +245,8 @@ body .vc_page_section .vc_row.vc_inner.row-values {
 .info-tag {
     border-radius: 200px;
     padding: 10px 20px;
+    width: 100%;
+    text-align: center;
 }
 
 .info-tag:not(.bg-light){
@@ -391,6 +393,10 @@ body .vc_page_section .vc_row.vc_inner.row-values {
     .team-cards-wrapper > .wpb_wrapper {
         gap: var(--gap-tablet);
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .info-tag {
+        width: fit-content;
     }
 }
 

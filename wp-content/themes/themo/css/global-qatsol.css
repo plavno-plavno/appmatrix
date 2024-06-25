@@ -2643,10 +2643,7 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
     }
 }
 
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 40px;
-}
+
 
 .ideo-box .ideo-box-inner {
     transition: none !important;

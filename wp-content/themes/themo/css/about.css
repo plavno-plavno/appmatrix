@@ -444,10 +444,6 @@ body .vc_page_section .vc_row.vc_inner.row-values {
         padding: 64px 40px;
     }
 
-    .grid-with-img > .container > .row {
-        align-items: center;
-    }
-
     .grid-2-img-block {
         margin-bottom: 0;
     }

@@ -284,6 +284,10 @@ body .vc_page_section .vc_row.vc_inner.row-values {
     width: 100% !important;
 }
 
+.SwiperSolver .main-text + ul {
+    margin-top: 12px;
+}
+
 
 @media (min-width: 768px) {
     .banner-card-title p {
@@ -407,7 +411,9 @@ body .vc_page_section .vc_row.vc_inner.row-values {
         padding-right: 10px;
     }
 
-
+    .SwiperSolver .main-text + ul {
+        margin-top: 16px;
+    }
 
     .cta-flex-wrapper .wpb_wrapper {
         width: 85% !important;
@@ -701,5 +707,9 @@ body .vc_page_section .vc_row.vc_inner.row-values {
 
     .grid-2-columns__item .grid-2-column-img .ideo-single-image{
         width: 184px !important;
+    }
+
+    .SwiperSolver .main-text + ul {
+        margin-top: 24px;
     }
 }

@@ -40,8 +40,9 @@ body.open-menu #header-navbar .modern-bars-content {
     letter-spacing: 0;
 }
 
-.banner-section {
+.banner-section.full-screen-height{
  min-height: 100vh;
+    align-items: baseline;
 }
 
 .vc_column_container, .vc_column_container {

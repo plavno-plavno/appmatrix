@@ -101,6 +101,11 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
         /*//remove-important*/
         padding-bottom: 157px;
     }
+
+    .banner-section.full-screen-height{
+        min-height: 100vh;
+        align-items: center;
+    }
 }
 
 @media (min-width: 1200px) {

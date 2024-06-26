@@ -166,6 +166,11 @@ body #header-navbar.mobile nav {
     justify-content: space-between;
 }
 
+.acc-services.active  svg {
+    transform: rotate(180deg);
+    transition: transform 0.2s ease-out;
+}
+
 .panel-mobile {
     max-height: 0;
     overflow: hidden;

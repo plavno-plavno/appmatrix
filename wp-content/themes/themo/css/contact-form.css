@@ -191,7 +191,7 @@ width: 100% !important;
     opacity: 0.48;
 }
 
-.wpcf7-response-output {
+.wpcf7 form.sent .wpcf7-response-output {
     background-color: #FFFFFF;
     width: max-content;
     border: none;

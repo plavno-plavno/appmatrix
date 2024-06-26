@@ -325,6 +325,10 @@ body .vc_page_section .vc_row.vc_inner.row-values {
         margin-bottom: 0;
     }
 
+    .cta-flex-img .ideo-single-image {
+        width: 80px;
+    }
+
     #content .cta-flex-wrapper h3 {
         margin-bottom: 0;
     }
@@ -462,9 +466,9 @@ body .vc_page_section .vc_row.vc_inner.row-values {
         padding-left: 20px;
     }
 
-    /*.grid-2-columns > .wpb_wrapper {*/
-    /*    grid-template-columns: repeat(2, 1fr);*/
-    /*}*/
+    .cta-flex-img .ideo-single-image {
+        width: 96px;
+    }
 
     .location-cards .wpb_wrapper {
         grid-template-columns: repeat(5, 1fr);
@@ -580,6 +584,9 @@ body .vc_page_section .vc_row.vc_inner.row-values {
         padding-left: var(--gap-desctop-m);
     }
 
+    .cta-flex-img .ideo-single-image {
+        width: 104px;
+    }
 
     .location-card .h3-title h3.title {
         margin-bottom: 16px;
@@ -651,6 +658,10 @@ body .vc_page_section .vc_row.vc_inner.row-values {
     body .vc_page_section .vc_row.vc_inner.row-values {
         padding-top: var(--gap-desctop-l);
         padding-bottom: var(--gap-desctop-l);
+    }
+
+    .cta-flex-img .ideo-single-image {
+        width: 112px;
     }
 
     .vc_page_section.industries-section .title-subtitle {

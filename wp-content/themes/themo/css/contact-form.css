@@ -191,6 +191,14 @@ width: 100% !important;
     opacity: 0.48;
 }
 
+.wpcf7-response-output {
+    background-color: #FFFFFF;
+    width: max-content;
+    border: none;
+    border-left: 2px solid #84C940;
+    color: var(--text-header);
+}
+
 @media (min-width: 768px) {
 
 }

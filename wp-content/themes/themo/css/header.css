@@ -130,6 +130,7 @@ body.font-dark a.ca-btn-header:hover {
         padding-bottom: 40px;
         row-gap: 24px;
         max-width: 100%;
+        box-shadow: 0 4px 40px 0 rgba(152, 152, 169, 0.32);
     }
 
     .header nav > ul li.dropdown-li:hover .sub-menu {

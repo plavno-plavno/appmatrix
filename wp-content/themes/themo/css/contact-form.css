@@ -187,6 +187,10 @@ width: 100% !important;
     height: 100%;
 }
 
+.form-btn-flex input[disabled] {
+    opacity: 0.48;
+}
+
 @media (min-width: 768px) {
 
 }

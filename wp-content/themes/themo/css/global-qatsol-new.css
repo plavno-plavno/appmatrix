@@ -255,6 +255,8 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
     text-transform: uppercase;
     font-weight: 700;
     color: var(--text-header);
+    border: none;
+    outline: none;
 }
 
 @media (min-width: 1920px) {

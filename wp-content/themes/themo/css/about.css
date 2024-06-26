@@ -731,3 +731,10 @@ body .vc_page_section .vc_row.vc_inner.row-values {
         margin-bottom: 56px;
     }
 }
+
+@media (max-width: 1199px) {
+
+    .padding-block.banner-about.banner-tablet {
+height: max-content !important;
+    }
+}

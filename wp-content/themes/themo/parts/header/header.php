@@ -265,7 +265,7 @@ function custom_mobile_menu_template($theme_location) {
 
             <?php custom_menu_template(ideothemo_get_header_setting('menu_location') ?: 'main-menu'); ?>
             <div class="call-to-action-link">
-                <a href="/contact/" class="ca-btn-header">
+                <a href="/contact-us/" class="ca-btn-header">
                     <span>Contact us</span>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5 12H19" stroke="#1D1E22" stroke-width="2" stroke-linecap="round"
@@ -286,7 +286,7 @@ function custom_mobile_menu_template($theme_location) {
                 <nav class="menu-nav">
                     <?php custom_mobile_menu_template(ideothemo_get_header_setting('menu_location') ?: 'main-menu'); ?>
                     <div class="mobile-menu-bottom">
-                        <a  href="/contact/"
+                        <a  href="/contact-us/"
                             class="button flat radius-small size-medium align-center  block colored-light primary-main-btn "
                             data-id="button-662a83cebac1a"><span>Contact us</span></a>
                     </div>

@@ -300,6 +300,9 @@ body .vc_page_section .vc_row.vc_inner.row-values {
 
 
 @media (min-width: 768px) {
+    .sticky-card-title.sticky-last-step-centred {
+        text-align: left;
+    }
     .banner-card-title p {
         font-size: 48px;
     }
@@ -410,9 +413,7 @@ body .vc_page_section .vc_row.vc_inner.row-values {
 
 @media (min-width: 1200px) {
 
-    .sticky-card-title.sticky-last-step-centred {
-        text-align: left;
-    }
+
     .banner-card-title p {
         font-size: 56px;
     }

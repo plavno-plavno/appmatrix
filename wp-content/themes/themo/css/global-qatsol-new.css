@@ -120,6 +120,10 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
         /*//remove-important*/
         padding-bottom: 112px;
     }
+
+    #header-navbar nav.navbar-standard{
+        position: static;
+    }
 }
 
 @media (min-width: 1440px) {

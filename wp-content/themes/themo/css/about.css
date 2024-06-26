@@ -294,6 +294,10 @@ body .vc_page_section .vc_row.vc_inner.row-values {
     margin-bottom: 24px;
 }
 
+.sticky-card-title.sticky-last-step-centred {
+    text-align: center;
+}
+
 
 @media (min-width: 768px) {
     .banner-card-title p {

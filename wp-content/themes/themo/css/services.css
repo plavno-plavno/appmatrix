@@ -51,6 +51,12 @@
     }
 }
 
+@media (min-width: 1200px) {
+    .value-column-text .wpb_wrapper {
+        padding-left: 32px;
+    }
+}
+
 
 @media (min-width: 1440px) {
     .solutions-card:not(.margin-s) .ideo-wow-title.style-text .title {

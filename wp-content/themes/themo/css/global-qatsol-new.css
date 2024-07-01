@@ -49,8 +49,12 @@ body.open-menu #header-navbar .modern-bars-content {
     padding: 0;
 }
 
-.hero-common-text:not(.full-text) {
+.hero-common-text:not(.full-text), .hero-common-text:not(.hero-common-text) {
     max-width: 1099px;
+}
+
+.hero-common-text.hero-sub-text {
+    max-width: 675px;
 }
 
 
@@ -62,6 +66,7 @@ body.open-menu #header-navbar .modern-bars-content {
 .background-page.skin-light, body.skin-light #content.background-type-color, body.skin-dark #content.background-type-color {
     background-color: var(--colorLight);
 }
+
 
 
 body.page.header-on.sticky-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,

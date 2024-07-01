@@ -265,19 +265,25 @@ body.font-dark  a:hover {
     margin-top: 0;
 }
 
-@media (min-width: 1920px) {
-    .main-text, .column-text.main-text p,.main-text p, .main-text .menu-item a ,
-    .SwiperSolver li,  #aboutUsContactForm input, #aboutUsContactForm textarea,
-    .wpcf7 form.invalid .wpcf7-response-output, .swiper li{
-        font-size: 18px;
-    }
-}
 
 @media (min-width: 1200px) {
     .h2-title-h {
         width: 60%;
     }
 }
+
+@media (min-width: 1920px) {
+    .main-text, .column-text.main-text p,.main-text p, .main-text .menu-item a ,
+    .SwiperSolver li,  #aboutUsContactForm input, #aboutUsContactForm textarea,
+    .wpcf7 form.invalid .wpcf7-response-output, .swiper li{
+        font-size: 18px;
+    }
+
+    .h2-title-h {
+        width: 56%;
+    }
+}
+
 
 .subheader-text p {
     font-family: var(--font-family);

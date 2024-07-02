@@ -268,7 +268,7 @@ body.font-dark  a:hover {
 
 @media (min-width: 1200px) {
     .h2-title-h {
-        width: 60%;
+        max-width: 1099px;
     }
 }
 
@@ -280,7 +280,7 @@ body.font-dark  a:hover {
     }
 
     .h2-title-h {
-        width: 56%;
+        max-width: 1099px;
     }
 }
 

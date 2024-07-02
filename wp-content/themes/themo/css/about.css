@@ -702,8 +702,12 @@ body .vc_page_section .vc_row.vc_inner.row-values {
         margin-bottom: 24px;
     }
 
-    .location-cards .wpb_wrapper, .propels-block .wpb_wrapper {
+    .location-cards .wpb_wrapper {
         gap: var(--gap-desctop-l);
+    }
+
+    .propels-block .wpb_wrapper {
+        gap: var(--gap-desctop-xl);
     }
     .dark-info-section .b-margin.h2-title h2.title{
         margin-bottom: 58px;

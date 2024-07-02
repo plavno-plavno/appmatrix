@@ -336,7 +336,7 @@ body .vc_page_section .vc_row.vc_inner.row-values {
         width: 80px !important;
     }
 
-    #content .cta-flex-wrapper h3 {
+    #content .cta-flex-wrapper.cta-block > .wpb_wrapper .h3-title h3.title {
         margin-bottom: 0;
     }
 

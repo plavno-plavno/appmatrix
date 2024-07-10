@@ -331,7 +331,7 @@ body .vc_page_section .vc_row.vc_inner.row-values {
     text-align: center;
 }
 
-ul.add-list {
+.column-text .add-list {
     padding-left: 30px;
     padding-top: 3px;
     color: var(--text-header);

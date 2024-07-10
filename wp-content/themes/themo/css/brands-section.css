@@ -111,12 +111,16 @@
     width: 100% !important;
 }
 
-.trusted-card .trusted-img .ideo-single-image img {
+.trusted-card .trusted-img .ideo-single-image img,
+.case-studies-grid .tg-case-studies-custom .tg-item-inner .tg-item-media-holder img,
+.casesSlider .swiper-slide .cases-item__img img {
     transform: scale(1);
     transition: transform 0.3s ease-in-out;
 }
 
-.trusted-card:hover .trusted-img .ideo-single-image img {
+.trusted-card:hover .trusted-img .ideo-single-image img,
+.case-studies-grid .tg-case-studies-custom:hover .tg-item-inner .tg-item-media-holder img,
+.casesSlider .swiper-slide:hover .cases-item__img img {
     transform: scale(1.1);
     transition: transform 0.3s ease-in-out;
 }

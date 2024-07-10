@@ -10,6 +10,15 @@
     .solutions-cards .vc_col-sm-4{
         width: 100%;
     }
+    .vc_page_section .vc_row.grid-3 {
+        gap: 20px;
+        flex-direction: row;
+    }
+
+
+    .grid-3 .vc_col-sm-4 {
+        width: calc((100% - 20px) / 2)
+    }
 
     .vc_col-sm-3 {
         width: calc((100% - 16px) / 2)
@@ -30,6 +39,29 @@
     }
     .solutions-cards .vc_col-sm-4{
         width: 33.33333333%;
+    }
+
+    .grid-3 .vc_col-sm-4 {
+        width: calc((100% - 40px) / 3)
+    }
+}
+
+@media (min-width: 1440px) {
+    .grid-3 .vc_col-sm-4 {
+        width: calc((100% - 48px) / 3)
+    }
+    .vc_page_section .vc_row.grid-3 {
+        gap: 24px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .grid-3 .vc_col-sm-4 {
+        width: calc((100% - 64px) / 3)
+    }
+
+    .vc_page_section .vc_row.grid-3 {
+        gap: 32px;
     }
 }
 
@@ -87,29 +119,30 @@
     margin-bottom: 8px;
 }
 
-.SwiperSolver li:not(:last-child), .swiper li:not(:last-child), .hide-block li:not(:last-child) {
+.SwiperSolver li:not(:last-child), .swiper li:not(:last-child),
+.hide-block li:not(:last-child), .common-card ul li:not(:last-child) {
     margin-bottom: 8px;
 }
 
-.swiper li, .hide-block li {
+.swiper li, .hide-block li, .common-card ul li {
     display: flex;
     position: relative;
     list-style-type: none;
     gap: 16px;
 }
 
-.SwiperSolver li,.hide-block li {
+.SwiperSolver li,.hide-block li, .common-card ul li {
     color: var(--secondDarkColor);
 
 }
 
-li strong {
+li strong, .common-card ul li strong{
     display: contents;
     font-weight: 500;
     color: var(--text-header);
 }
 
-.SwiperSolver li::before, .swiper li::before, .hide-block li::before {
+.SwiperSolver li::before, .swiper li::before, .hide-block li::before,  .common-card ul li::before {
     content: '';
     flex-shrink: 0;
     width: 9px;
@@ -119,7 +152,7 @@ li strong {
     top: 8px;
 }
 
-.SwiperSolver li::before {
+.SwiperSolver li::before, .common-card ul li::before {
     top: 5px;
 }
 
@@ -557,7 +590,7 @@ body .vc_page_section .vc_row.vc_inner.row-values {
     }
 
     .block-2-grid .h2-subtitle p {
-        max-width: 648px;
+        max-width: 600px;
     }
 
     .value-icon .ideo-single-image,  .propels-icon  .ideo-single-image {

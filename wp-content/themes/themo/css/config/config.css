@@ -1,6 +1,7 @@
 body {
     --colorLight: #FFFFFF;
-    --primary: #EAC571;
+    --primary: #D2AB51;
+    --primary-btn: #EAC571;
     --brand---primary: #D8AF4F;
     --text-header: #1D1E22;
     --mainLightbg: #F4F4F8;
@@ -9,6 +10,8 @@ body {
     --border: #DCDDE2;
     --copyRight: #4A4B4E;
     --darkGrayBg: #2A2B2F;
+    --dark-background-low: #2F3034;
+    --dark-background-medium: #2A2B2F;
     --bullet: #E1E2E8;
     --secondLightColor: rgba(255, 255, 255, 0.8);
     --familyRegularWeight: 400;
@@ -94,6 +97,13 @@ footer.common-page-width .footer-width.vc_page_section,
 .dark-block {
     background-color: var(--text-header);
 }
+.dark-card {
+    background-color: var(--dark-background-low);
+}
+
+.dark-block-medium {
+    background-color: var(--dark-background-medium);
+}
 
 .title-subtitle .light-subtitle.h2-subtitle p, .reason-block .swiper li {
     color: var(--secondLightColor);
@@ -127,31 +137,85 @@ footer.common-page-width .footer-width.vc_page_section,
 }
 
 body.font-dark h3 ,body.font-dark .h3-title p,
-.hire-accordion-section .accordion .panel-default > .panel-heading .panel-title a{
+.hire-accordion-section .accordion .panel-default > .panel-heading .panel-title a,
+.case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]),
+.case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]):active,
+.case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]):focus,
+.case-studies-grid .tg-case-studies-custom [class*="tg-element-"] *:not(del),
+.case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]),
+.case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]):active, .tg-case-studies-custom a:not([class*="tg-element-"]):focus, .tg-case-studies-custom [class*="tg-element-"] *:not(del) {
     font-family: var(--font-family);
     font-size: 20px;
     line-height: 1.2;
     font-weight: 300;
 }
 
+.h4-title, .h4-title span, .h4-title p {
+    font-family: var(--font-family);
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: 400;
+}
+.grid-4 .wpb_wrapper {
+    display: grid;
+    gap: 18px;
+}
+
 @media (min-width: 768px) {
     body.font-dark h3,body.font-dark .h3-title p,
-    .hire-accordion-section .accordion .panel-default > .panel-heading .panel-title a{
+    .hire-accordion-section .accordion .panel-default > .panel-heading .panel-title a,
+    .case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]),
+    .case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]):active,
+    .case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]):focus,
+    .case-studies-grid .tg-case-studies-custom [class*="tg-element-"] *:not(del),
+    .case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]),.case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]):active, .tg-case-studies-custom a:not([class*="tg-element-"]):focus, .tg-case-studies-custom [class*="tg-element-"] *:not(del) {
         font-size: 22px;
     }
+    .grid-4 .wpb_wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
 }
 
 @media (min-width: 1440px) {
     body.font-dark h3, body.font-dark .h3-title p,
-    .hire-accordion-section .accordion .panel-default > .panel-heading .panel-title a{
+    .hire-accordion-section .accordion .panel-default > .panel-heading .panel-title a,
+    .case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]),
+    .case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]):active,
+    .case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]):focus,
+    .case-studies-grid .tg-case-studies-custom [class*="tg-element-"] *:not(del),
+    .case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]),.case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]):active, .tg-case-studies-custom a:not([class*="tg-element-"]):focus, .tg-case-studies-custom [class*="tg-element-"] *:not(del) {
         font-size: 24px;
     }
+    .h4-title, .h4-title span, .h4-title p {
+        font-size: 20px;
+    }
+
+    .grid-4 .wpb_wrapper {
+        grid-template-columns: repeat(4, 1fr);
+        row-gap: 40px;
+    }
+
 }
 
 @media (min-width: 1920px) {
     body.font-dark h3, body.font-dark .h3-title p,
-    .hire-accordion-section .accordion .panel-default > .panel-heading .panel-title a{
+    .hire-accordion-section .accordion .panel-default > .panel-heading .panel-title a,
+    .case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]),
+    .case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]):active,
+    .case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]):focus,
+    .case-studies-grid .tg-case-studies-custom [class*="tg-element-"] *:not(del),
+    .case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]), .case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]):active, .tg-case-studies-custom a:not([class*="tg-element-"]):focus, .tg-case-studies-custom [class*="tg-element-"] *:not(del) {
         font-size: 32px;
+    }
+
+    .h4-title, .h4-title span, .h4-title p {
+        font-size: 24px;
+    }
+
+    .grid-4 .wpb_wrapper {
+        row-gap: 48px;
     }
 }
 
@@ -159,10 +223,21 @@ body.font-dark h3 ,body.font-dark .h3-title p,
     background: var(--primary);
     color: #fff;
 }
-
 body.vc-on.wrap-wide .vc_page_section.padding-block-y {
-    padding-top: 96px;
-    padding-bottom: 96px;
+    padding-top: 88px;
+    padding-bottom: 88px;
+}
+
+.flex-block {
+    display: flex;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    body.vc-on.wrap-wide .vc_page_section.padding-block-y {
+        padding-top: 96px;
+        padding-bottom: 96px;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -231,7 +306,7 @@ body.vc-on.wrap-wide .vc_page_section.padding-block-y-b {
 }
 
 body.font-dark a {
-    color: var(--primary);
+    color: var(--primary-btn);
 }
 
 body.font-dark  a:hover {
@@ -251,6 +326,14 @@ body.font-dark  a:hover {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+}
+
+.main-medium-text, .main-medium-text p {
+    font-family: var(--font-family);
+    font-size: 16px;
+    line-height: 1.4;
+    margin-top: 0;
+    font-weight: 500;
 }
 
 .main-text, .column-text.main-text p,.main-text p,
@@ -276,7 +359,7 @@ body.font-dark  a:hover {
 @media (min-width: 1920px) {
     .main-text, .column-text.main-text p,.main-text p, .main-text .menu-item a ,
     .SwiperSolver li,  #aboutUsContactForm input, #aboutUsContactForm textarea,
-    .wpcf7 form.invalid .wpcf7-response-output, .swiper li{
+    .wpcf7 form.invalid .wpcf7-response-output, .swiper li, .main-medium-text, .main-medium-text p {
         font-size: 18px;
     }
 

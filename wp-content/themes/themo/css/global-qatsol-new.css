@@ -13,6 +13,7 @@
 @import "vertical-tabs.css";
 @import "about.css";
 @import "services.css";
+@import "case-studies.css";
 
 body.open-menu {
     position: fixed;
@@ -100,11 +101,15 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
     body.page.header-on.sticky-slide-hide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
     body.single-portfolio.header-on.sticky-slide-hide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
     body.single-team.header-on.sticky-slide-hide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
-    body.page.header-on.sticky-slide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content.portfolio .vc_page_section:first-child,
-    body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child {
+    body.page.header-on.sticky-slide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content.portfolio .vc_page_section:first-child {
         padding-top: 157px !important;
         /*//remove-important*/
         padding-bottom: 157px;
+    }
+
+    body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child {
+        padding-top: 104px;
+        padding-bottom: 104px;
     }
 
     .banner-section.full-screen-height{
@@ -168,11 +173,16 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
     body.page.header-on.sticky-slide-hide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
     body.single-portfolio.header-on.sticky-slide-hide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
     body.single-team.header-on.sticky-slide-hide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
-    body.page.header-on.sticky-slide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content.portfolio .vc_page_section:first-child,
-    body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child {
+    body.page.header-on.sticky-slide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content.portfolio .vc_page_section:first-child {
         padding-top: 260px !important;
         /*//remove-important*/
         padding-bottom: 180px;
+    }
+
+    body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child {
+        padding-top: 224px !important;
+        /*//remove-important*/
+        padding-bottom: 128px;
     }
 }
 
@@ -183,7 +193,7 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
 .tech-section .ideo-wow-title.style-text h2.title,
 .process-section .ideo-wow-title.style-text h2.title,
 .map-section .section-title .main-text p,
-.section-title-h2.ideo-wow-title.style-text:not(.info-block-title) .title {
+.section-title-h2.ideo-wow-title.style-text:not(.info-block-title) .title{
     margin-bottom: 32px;
 }
 
@@ -235,7 +245,7 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
     align-items: center;
     gap: 8px;
     position: relative;
-    background-color: var(--primary);
+    background-color: var(--primary-btn);
     transition: background-color .3s ease-out;
     height: 48px;
     text-transform: capitalize;
@@ -344,7 +354,7 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
 }
 
 /*remove*/
-.transparent-dark.ideo-wow-title:not(.light-text) .title {
+.transparent-dark.ideo-wow-title:not(.light-text):not(.primary-text) .title {
     color: var(--text-header);
 }
 
@@ -636,7 +646,7 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
 }
 
 @media (min-width: 1200px) {
-    .reviews-slider .swiper-pagination {
+    .reviews-slider .swiper-pagination, .casesSlider .swiper-pagination {
         display: none;
     }
 }

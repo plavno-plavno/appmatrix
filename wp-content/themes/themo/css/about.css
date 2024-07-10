@@ -118,7 +118,7 @@
 .SwiperSolver {
     margin-bottom: 8px;
 }
-.column-text > ul:not(:first-child) {
+.column-text > ul:not(:first-child):not(.add-list) {
     margin-top: 8px;
 }
 

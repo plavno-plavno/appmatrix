@@ -331,6 +331,12 @@ body .vc_page_section .vc_row.vc_inner.row-values {
     text-align: center;
 }
 
+ul.add-list {
+    padding-left: 30px;
+    padding-top: 3px;
+    color: var(--text-header);
+}
+
 
 @media (min-width: 768px) {
     .sticky-card-title.sticky-last-step-centred {

@@ -118,6 +118,10 @@
 .SwiperSolver {
     margin-bottom: 8px;
 }
+.column-text > ul:not(:first-child) {
+    margin-top: 8px;
+}
+
 
 .SwiperSolver li:not(:last-child), .swiper li:not(:last-child),
 .hide-block li:not(:last-child), .common-card ul:not(.add-list) li:not(:last-child), .column-text > ul:not(.add-list) li:not(:last-child) {

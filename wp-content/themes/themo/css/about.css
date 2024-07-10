@@ -334,6 +334,9 @@ body .vc_page_section .vc_row.vc_inner.row-values {
 .column-text .add-list {
     padding-left: 30px;
     padding-top: 3px;
+}
+
+.column-text .add-list li {
     color: var(--text-header);
 }
 

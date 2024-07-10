@@ -120,23 +120,23 @@
 }
 
 .SwiperSolver li:not(:last-child), .swiper li:not(:last-child),
-.hide-block li:not(:last-child), .common-card ul li:not(:last-child) {
+.hide-block li:not(:last-child), .common-card ul li:not(:last-child), .column-text ul li:not(:last-child) {
     margin-bottom: 8px;
 }
 
-.swiper li, .hide-block li, .common-card ul li {
+.swiper li, .hide-block li, .common-card ul li, .column-text ul li {
     display: flex;
     position: relative;
     list-style-type: none;
     gap: 16px;
 }
 
-.SwiperSolver li,.hide-block li, .common-card ul li {
+.SwiperSolver li,.hide-block li, .common-card ul li, .column-text ul li {
     color: var(--secondDarkColor);
 
 }
 
-li strong, .common-card ul li strong{
+li strong, .common-card ul li strong, .column-text ul li strong {
     display: contents;
     font-weight: 500;
     color: var(--text-header);
@@ -152,7 +152,7 @@ li strong, .common-card ul li strong{
     top: 8px;
 }
 
-.SwiperSolver li::before, .common-card ul li::before {
+.SwiperSolver li::before, .common-card ul li::before, .column-text ul li::before {
     top: 5px;
 }
 

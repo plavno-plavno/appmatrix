@@ -120,29 +120,29 @@
 }
 
 .SwiperSolver li:not(:last-child), .swiper li:not(:last-child),
-.hide-block li:not(:last-child), .common-card ul li:not(:last-child), .column-text > ul:not(.add-list) li:not(:last-child) {
+.hide-block li:not(:last-child), .common-card ul:not(.add-list) li:not(:last-child), .column-text > ul:not(.add-list) li:not(:last-child) {
     margin-bottom: 8px;
 }
 
-.swiper li, .hide-block li, .common-card ul li, .column-text > ul:not(.add-list) li {
+.swiper li, .hide-block li, .common-card ul:not(.add-list) li, .column-text > ul:not(.add-list) li {
     display: flex;
     position: relative;
     list-style-type: none;
     gap: 16px;
 }
 
-.SwiperSolver li,.hide-block li, .common-card ul li, .column-text > ul:not(.add-list) li {
+.SwiperSolver li,.hide-block li, .common-card ul:not(.add-list) li, .column-text > ul:not(.add-list) li {
     color: var(--secondDarkColor);
 
 }
 
-li strong, .common-card ul li strong, .column-text > ul:not(.add-list) li strong {
+li strong, .common-card ul:not(.add-list) li strong, .column-text > ul:not(.add-list) li strong {
     display: contents;
     font-weight: 500;
     color: var(--text-header);
 }
 
-.SwiperSolver li::before, .swiper li::before, .hide-block li::before,  .common-card ul li::before, .column-text > ul:not(.add-list) li::before {
+.SwiperSolver li::before, .swiper li::before, .hide-block li::before,  .common-card ul:not(.add-list) li::before, .column-text > ul:not(.add-list) li::before {
     content: '';
     flex-shrink: 0;
     width: 9px;
@@ -152,7 +152,7 @@ li strong, .common-card ul li strong, .column-text > ul:not(.add-list) li strong
     top: 8px;
 }
 
-.SwiperSolver li::before, .common-card ul li::before, .column-text > ul:not(.add-list) li::before {
+.SwiperSolver li::before, .common-card ul:not(.add-list) li::before, .column-text > ul:not(.add-list) li::before {
     top: 5px;
 }
 

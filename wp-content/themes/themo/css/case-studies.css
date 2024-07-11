@@ -44,7 +44,7 @@
     align-items: center;
     gap: 8px;
     width: 100%;
-    padding: 20px 18px;
+    padding: 20px  56px 20px 18px;
 }
 
 .case-studies-grid .tg-item-inner .tg-item-title a, .case-studies-grid .tg-item-inner .tg-item-title a:focus {
@@ -466,7 +466,7 @@
     }
 
     .case-studies-grid .tg-item-inner .tg-item-title a, .case-studies-grid .tg-item-inner .tg-item-title a:focus {
-        padding: 20px;
+        padding: 20px 56px 20px 20px;
     }
 
     .title-subtitle-block .h2-subtitle {
@@ -474,7 +474,7 @@
     }
 
     .casesSlider .swiper-slide .cases-block-link a {
-        padding: 20px;
+        padding: 20px 56px 20px 20px;
     }
 
     .subtitle-link-wrapper.vc_row.vc_inner {
@@ -532,7 +532,7 @@
 
 @media (min-width: 1440px) {
     .case-studies-grid .tg-item-inner .tg-item-title a, .case-studies-grid .tg-item-inner .tg-item-title a:focus {
-        padding: 24px;
+        padding: 24px 56px 24px 24px;
     }
 
     .case-hero-columns .wpb_wrapper {
@@ -562,7 +562,7 @@
     }
 
     .casesSlider .swiper-slide .cases-block-link a {
-        padding: 24px;
+        padding: 24px 56px 24px 24px;
     }
 
     .vc_page_section .results-column1.wpb_column {
@@ -645,7 +645,7 @@
     }
 
     .casesSlider .swiper-slide .cases-block-link a {
-        padding: 32px;
+        padding: 32px 56px 32px 32px;
     }
 
     .vc_page_section .results-column1.wpb_column {

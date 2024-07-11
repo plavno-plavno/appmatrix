@@ -592,7 +592,7 @@
 
 @media (min-width: 1920px) {
     .case-studies-grid .tg-item-inner .tg-item-title a, .case-studies-grid .tg-item-inner .tg-item-title a:focus {
-        padding: 32px;
+        padding: 32px 56px 32px 32px;
     }
 
     .case-studies-grid .tg-item-inner .tg-item-title a:after, .casesSlider .swiper-slide .cases-block-link a:after {

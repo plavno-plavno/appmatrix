@@ -128,11 +128,16 @@
     margin-bottom: 8px;
 }
 
-.swiper li, .hide-block li, .common-card ul:not(.add-list) li, .column-text > ul:not(.add-list) li {
+.swiper li, .hide-block li,  .column-text > ul:not(.add-list) li {
     display: flex;
     position: relative;
     list-style-type: none;
     gap: 16px;
+}
+
+.common-card ul:not(.add-list) li {
+    display: block;
+    padding-left: 20px;
 }
 
 .SwiperSolver li,.hide-block li, .common-card ul:not(.add-list) li, .column-text > ul:not(.add-list) li {
@@ -146,7 +151,7 @@ li strong, .common-card ul:not(.add-list) li strong, .column-text > ul:not(.add-
     color: var(--text-header);
 }
 
-.SwiperSolver li::before, .swiper li::before, .hide-block li::before,  .common-card ul:not(.add-list) li::before, .column-text > ul:not(.add-list) li::before {
+.SwiperSolver li::before, .swiper li::before, .hide-block li::before,  .common-card .column-text > ul > li::before, .column-text > ul > li::before {
     content: '';
     flex-shrink: 0;
     width: 9px;
@@ -156,8 +161,31 @@ li strong, .common-card ul:not(.add-list) li strong, .column-text > ul:not(.add-
     top: 8px;
 }
 
+
+
 .SwiperSolver li::before, .common-card ul:not(.add-list) li::before, .column-text > ul:not(.add-list) li::before {
     top: 5px;
+}
+
+.common-card ul:not(.add-list) li::before {
+    position: absolute;
+    left: 0;
+    top: 8px;
+}
+
+.common-card ul:not(.add-list) li ul {
+    padding-top: 8px;
+    list-style-position: outside;
+}
+
+.common-card ul:not(.add-list) li ul li{
+    display: list-item;
+    list-style-type: disc;
+    padding-left: 0;
+}
+
+ul li::marker {
+    margin: 0 !important;
 }
 
 .SwiperSolver .swiper-container {
@@ -335,12 +363,8 @@ body .vc_page_section .vc_row.vc_inner.row-values {
     text-align: center;
 }
 
-.column-text .add-list {
-    padding-left: 30px;
-    padding-top: 3px;
-}
 
-.column-text .add-list li {
+.column-text ul li ul li {
     color: var(--text-header);
 }
 

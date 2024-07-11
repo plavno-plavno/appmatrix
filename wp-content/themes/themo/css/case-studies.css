@@ -326,6 +326,10 @@
     margin-bottom: 8px;
 }
 
+.portfolio-template-default .hero-common-text:not(.full-text) {
+    max-width: 816px;
+}
+
 
 @media (min-width: 768px) {
     .case-studies-grid .tg-grid-holder {
@@ -369,7 +373,7 @@
         gap: 20px;
     }
 
-    .results-2-block .row{
+    .results-2-block .row {
         flex-direction: column;
     }
 
@@ -404,7 +408,8 @@
     .tech-tool-img .ideo-single-image {
         width: 104px !important;
     }
-    .results-2-block .row{
+
+    .results-2-block .row {
         flex-direction: row;
     }
 
@@ -546,7 +551,7 @@
         padding-left: 12px;
     }
 
-    .vc_page_section .results-column2.wpb_column .wpb_wrapper{
+    .vc_page_section .results-column2.wpb_column .wpb_wrapper {
         padding-right: 120px;
     }
 
@@ -630,7 +635,7 @@
 
     }
 
-    .vc_page_section .results-column2.wpb_column .wpb_wrapper{
+    .vc_page_section .results-column2.wpb_column .wpb_wrapper {
         padding-right: 128px;
     }
 

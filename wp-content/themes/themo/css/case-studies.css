@@ -133,6 +133,7 @@
 
 .narrow-preview .ideo-single-image img {
     aspect-ratio: 1920 / 568;
+    object-position: top;
 }
 
 .title-subtitle-block .h2-title {

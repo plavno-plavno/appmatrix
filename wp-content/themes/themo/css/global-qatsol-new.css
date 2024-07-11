@@ -645,6 +645,16 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
     display: flex;
 }
 
+.casesSlider .wp-swiper__slide-content .cases-item__img + .wp-block-columns {
+    flex-grow: 1;
+}
+
+.casesSlider .wp-swiper__slide-content .cases-item__img + .wp-block-columns .wp-block-columns,
+.casesSlider .wp-swiper__slide-content .cases-item__img + .wp-block-columns .wp-block-columns .cases-block-link,
+.casesSlider .wp-swiper__slide-content .cases-item__img + .wp-block-columns .wp-block-columns .cases-block-link a {
+    height: 100%;
+}
+
 @media (min-width: 1200px) {
     .reviews-slider .swiper-pagination, .casesSlider .swiper-pagination {
         display: none;

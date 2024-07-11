@@ -264,6 +264,10 @@
     overflow: hidden;
 }
 
+.casesSlider .swiper-slide .cases-block-link a {
+    position: relative;
+}
+
 .casesSlider .swiper-slide .cases-block-link a:after {
     content: "";
     display: block;

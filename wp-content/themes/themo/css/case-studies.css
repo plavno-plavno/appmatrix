@@ -12,6 +12,7 @@
     gap: 16px;
     grid-auto-rows: 1fr;
     height: max-content !important;
+    grid-template-rows: auto
 }
 
 .case-studies-grid .tg-item {

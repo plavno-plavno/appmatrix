@@ -242,7 +242,7 @@
 .casesSlider .swiper-slide .cases-block-link a {
     gap: 8px;
     width: 100%;
-    padding: 20px 18px;
+    padding: 20px 46px 20px 18px;
     background-color: var(--colorLight);
     color: var(--text-header);
     font-weight: 300;

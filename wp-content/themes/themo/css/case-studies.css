@@ -228,6 +228,8 @@
     object-fit: initial;
     width: 56px;
     height: 56px;
+    display: block;
+    opacity: 1 !important;
 }
 
 @keyframes scroll {

@@ -46,9 +46,13 @@
 .industries-accordion .accordion .panel {
     margin-bottom: 8px;
 }
-.industries-accordion {
 
+
+.row-values .subheader-text p {
+    color: var(--secondDarkColor);
 }
+
+
 
 
 @media (min-width: 768px) {
@@ -65,6 +69,10 @@
     .industries-accordion .wpb_wrapper {
         padding-left: 20px;
     }
+
+    .table-title-block.grid-2-title-block {
+        margin-bottom: 24px;
+    }
 }
 
 @media (min-width: 1440px) {
@@ -77,6 +85,10 @@
     }
     .industries-accordion .accordion  .panel-body {
         padding: 24px;
+    }
+
+    .table-title-block.grid-2-title-block {
+        margin-bottom: 32px;
     }
 }
 
@@ -98,5 +110,9 @@
     }
     .industries-accordion .accordion  .panel-body {
         padding: 32px;
+    }
+
+    .table-title-block.grid-2-title-block {
+        margin-bottom: 56px;
     }
 }

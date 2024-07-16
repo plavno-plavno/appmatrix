@@ -1070,11 +1070,17 @@ div#page-container {
 @media (min-width: 992px) {
     #heroBlock .vc_page_section .row, .vc_page_section .vc_row {
         flex-direction: row;
-        gap: 0;
     }
 
     .hero-left-info .wpb_wrapper, .hero-left-column-dark {
         height: 100%;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    #heroBlock .vc_page_section .row, .vc_page_section .vc_row {
+        gap: 0;
     }
 }
 
@@ -1479,8 +1485,8 @@ li::marker {
 
 @media (min-width: 992px) {
     .vc_page_section .vc_row.cards-wrapper, .single-portfolio .vc_page_section:nth-child(2) .vc_row {
-        grid-template-columns: repeat(3, 1fr);
-        column-gap: 32px
+        /*grid-template-columns: repeat(3, 1fr);*/
+        /*column-gap: 32px*/
     }
 
     .vc_page_section .vc_row.dark-cards-wrapper {

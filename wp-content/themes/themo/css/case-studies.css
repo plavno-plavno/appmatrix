@@ -225,6 +225,12 @@
 }
 
 
+.scroller__inner .tech-tool-img .ideo-single-image {
+    object-fit: initial;
+    width: 56px;
+    height: 56px;
+}
+
 @keyframes scroll {
     to {
         transform: translate(calc(-50% - 0.5rem));
@@ -384,6 +390,10 @@
 
     .tech-tool-img .ideo-single-image {
         width: 64px !important;
+    }
+    .scroller__inner .tech-tool-img .ideo-single-image {
+        width: 100%;
+        height: auto;
     }
 
     .results-left-row-img {

@@ -17239,11 +17239,11 @@ body #header-navbar .navbar-brand > .logo-mobile {
     display: inline-block
 }
 
-.ideo-single-image-wrap:after {
-    content: "";
-    display: block;
-    clear: both
-}
+/*.ideo-single-image-wrap:after {*/
+/*    content: "";*/
+/*    display: block;*/
+/*    clear: both*/
+/*}*/
 
 .ideo-single-image-wrap .ideo-single-image {
     position: relative;

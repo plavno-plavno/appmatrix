@@ -202,6 +202,9 @@
 
 }
 
+.ideo-single-image-wrap:after {
+    content: none;
+}
 
 /*.scroller__inner[data-animated="true"] .wpb_wrapper{*/
 .scroller__inner .wpb_wrapper {

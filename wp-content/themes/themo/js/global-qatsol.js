@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded",() => {
                 const duplicatedItem = item.cloneNode(true);
                 duplicatedItem.setAttribute("aria-hidden", true);
                 scrollerInner.appendChild(duplicatedItem);
-                scrollerInner.appendChild(duplicatedItem);
+                // scrollerInner.appendChild(duplicatedItem);
             });
         });
     }

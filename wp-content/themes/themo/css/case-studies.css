@@ -177,9 +177,7 @@
     user-select: none;
 }
 
-.scroller__inner > .wpb_wrapper {
-    width: max-content !important;
-}
+
 
 .scroller .wpb_wrapper {
     flex-shrink: 0;
@@ -365,6 +363,10 @@
 
 
 @media (min-width: 768px) {
+
+    .scroller__inner > .wpb_wrapper {
+        width: max-content !important;
+    }
     .case-studies-grid .tg-grid-holder {
         grid-template-columns: repeat(2, 1fr);
     }

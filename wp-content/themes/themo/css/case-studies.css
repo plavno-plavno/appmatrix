@@ -202,6 +202,7 @@
 
 .ideo-single-image-wrap:after {
     content: none;
+    clear: unset;
 }
 
 /*.scroller__inner[data-animated="true"] .wpb_wrapper{*/

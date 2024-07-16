@@ -81,7 +81,6 @@ document.addEventListener("DOMContentLoaded",() => {
             // add it into the `.scroller-inner`
             scrollerContent.forEach((item) => {
                 const duplicatedItem = item.cloneNode(true);
-                duplicatedItem.setAttribute("aria-hidden", true);
                 scrollerInner.appendChild(duplicatedItem);
                 scrollerInner.appendChild(duplicatedItem);
             });

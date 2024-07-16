@@ -322,6 +322,9 @@ body.vc-on.wrap-wide .vc_page_section.padding-block-y-b {
 body.font-dark a {
     color: var(--primary-btn);
 }
+body.font-dark a.light-btn {
+    color: var(--text-header);
+}
 
 body.font-dark  a:hover {
     color: var(--brand---primary);

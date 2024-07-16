@@ -143,7 +143,9 @@ body.font-dark h3 ,body.font-dark .h3-title p,
 .case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]):focus,
 .case-studies-grid .tg-case-studies-custom [class*="tg-element-"] *:not(del),
 .case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]),
-.case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]):active, .tg-case-studies-custom a:not([class*="tg-element-"]):focus, .tg-case-studies-custom [class*="tg-element-"] *:not(del) {
+.case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]):active,
+.tg-case-studies-custom a:not([class*="tg-element-"]):focus, .tg-case-studies-custom [class*="tg-element-"] *:not(del),
+.industries-accordion .accordion .panel-default > .panel-heading .panel-title a {
     font-family: var(--font-family);
     font-size: 20px;
     line-height: 1.2;
@@ -168,7 +170,11 @@ body.font-dark h3 ,body.font-dark .h3-title p,
     .case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]):active,
     .case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]):focus,
     .case-studies-grid .tg-case-studies-custom [class*="tg-element-"] *:not(del),
-    .case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]),.case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]):active, .tg-case-studies-custom a:not([class*="tg-element-"]):focus, .tg-case-studies-custom [class*="tg-element-"] *:not(del) {
+    .case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]),
+    .case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]):active,
+    .tg-case-studies-custom a:not([class*="tg-element-"]):focus,
+    .tg-case-studies-custom [class*="tg-element-"] *:not(del),
+    .industries-accordion .accordion .panel-default > .panel-heading .panel-title a {
         font-size: 22px;
     }
     .grid-4 .wpb_wrapper {
@@ -185,7 +191,11 @@ body.font-dark h3 ,body.font-dark .h3-title p,
     .case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]):active,
     .case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]):focus,
     .case-studies-grid .tg-case-studies-custom [class*="tg-element-"] *:not(del),
-    .case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]),.case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]):active, .tg-case-studies-custom a:not([class*="tg-element-"]):focus, .tg-case-studies-custom [class*="tg-element-"] *:not(del) {
+    .case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]),
+    .case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]):active,
+    .tg-case-studies-custom a:not([class*="tg-element-"]):focus,
+    .tg-case-studies-custom [class*="tg-element-"] *:not(del),
+    .industries-accordion .accordion .panel-default > .panel-heading .panel-title a {
         font-size: 24px;
     }
     .h4-title, .h4-title span, .h4-title p {
@@ -206,7 +216,11 @@ body.font-dark h3 ,body.font-dark .h3-title p,
     .case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]):active,
     .case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]):focus,
     .case-studies-grid .tg-case-studies-custom [class*="tg-element-"] *:not(del),
-    .case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]), .case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]):active, .tg-case-studies-custom a:not([class*="tg-element-"]):focus, .tg-case-studies-custom [class*="tg-element-"] *:not(del) {
+    .case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]),
+    .case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]):active,
+    .tg-case-studies-custom a:not([class*="tg-element-"]):focus,
+    .tg-case-studies-custom [class*="tg-element-"] *:not(del),
+    .industries-accordion .accordion .panel-default > .panel-heading .panel-title a{
         font-size: 32px;
     }
 

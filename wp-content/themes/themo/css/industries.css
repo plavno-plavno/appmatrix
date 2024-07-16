@@ -1,71 +1,102 @@
-.grid-4-links .wpb_wrapper {
-    display: grid;
-    gap: 8px;
+.tech-cards .h3-title {
+    margin-bottom: 16px;
 }
 
-.tag-link p {
-    margin: 0;
+.tech-cards .info-tags .ideo-box-content {
+    gap: 2px;
 }
 
-.tag-link p a {
+.tech-cards .info-tag {
+    width: max-content;
+}
+
+.tech-cards .info-tag p {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding: 15px 18px;
+    gap: 6px;
+}
+
+.solutions-cards .ideo-single-image {
+    width: 100% !important;
+}
+
+.industries-accordion .accordion .panel-default > .panel-heading .panel-title a {
+    background-color: var(--colorLight);
     color: var(--text-header);
 }
 
-.tag-link:hover {
-    background-color: var(--text-header);
-    transition: background-color .3s ease-out;
+.industries-accordion .accordion .panel-default > .panel-heading .panel-title a:not(.collapsed) {
+    border-bottom: 1px solid var(--border);
+    transition: border .3s ease-out;
 }
 
-.tag-link:hover p a {
-    color: var(--colorLight);
+.industries-accordion .accordion  .panel-body {
+    padding: 18px;
 }
 
+.industries-accordion .accordion  .panel-body .accordion-inner p:first-child {
+    margin-top: 0;
+}
+
+.industries-accordion .accordion  .panel-body .accordion-inner ul {
+    margin-top: 24px;
+    padding-left: 8px;
+}
+
+.industries-accordion .accordion .panel {
+    margin-bottom: 8px;
+}
+.industries-accordion {
+
+}
 
 
 @media (min-width: 768px) {
-    .grid-4-links .wpb_wrapper {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .tag-link p a {
-        padding-left: 20px;
-        padding-right: 20px;
+    .industries-accordion .accordion  .panel-body {
+        padding: 20px;
     }
 }
 
 @media (min-width: 1200px) {
-    .grid-4-links .wpb_wrapper {
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(auto-fill, 1fr);
-        grid-auto-rows: 1fr;
+    .tech-cards .info-tags .ideo-box-content {
+        gap: 4px;
     }
 
-    .tag-link p a {
-        padding-top: 19px;
-        padding-bottom: 19px;
-    }
-
-    .grid-4-links .subheader-text p {
-        height: 100%;
-        display: flex;
+    .industries-accordion .wpb_wrapper {
+        padding-left: 20px;
     }
 }
 
 @media (min-width: 1440px) {
-    .tag-link p a  {
-        padding-top: 22px;
-        padding-bottom: 22px;
+    .tech-cards .info-tags .ideo-box-content {
+        gap: 6px;
+    }
+
+    .industries-accordion .wpb_wrapper {
+        padding-left: 24px;
+    }
+    .industries-accordion .accordion  .panel-body {
+        padding: 24px;
     }
 }
 
 @media (min-width: 1920px) {
-    .tag-link p a {
-        padding: 23px 24px;
+    .tech-cards .h3-title {
+        margin-bottom: 24px;
+    }
+
+    .tech-cards .info-tag p {
+        gap: 8px;
+    }
+
+    .tech-cards .info-tag p img {
+        width: 32px;
+    }
+
+    .industries-accordion .wpb_wrapper {
+        padding-left: 32px;
+    }
+    .industries-accordion .accordion  .panel-body {
+        padding: 32px;
     }
 }
-
-

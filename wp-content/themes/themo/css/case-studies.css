@@ -391,7 +391,7 @@
     .tech-tool-img .ideo-single-image {
         width: 64px !important;
     }
-    .scroller__inner .tech-tool-img .ideo-single-image {
+    .scroller__inner .tech-tool-img .ideo-single-image img{
         width: 100%;
         height: auto;
     }

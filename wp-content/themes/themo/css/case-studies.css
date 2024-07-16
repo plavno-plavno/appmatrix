@@ -225,7 +225,7 @@
 }
 
 
-.scroller__inner .tech-tool-img .ideo-single-image {
+.scroller__inner .tech-tool-img .ideo-single-image img{
     object-fit: initial;
     width: 56px;
     height: 56px;

@@ -207,7 +207,7 @@
 .scroller__inner .wpb_wrapper {
     width: 100%;
     flex-wrap: nowrap;
-    animation: scroll 60s linear infinite;
+    animation: scroll 30s linear infinite;
 }
 
 

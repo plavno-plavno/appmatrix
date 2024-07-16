@@ -89,3 +89,9 @@ document.addEventListener("DOMContentLoaded",() => {
     }
 
 })
+
+window.addEventListener('load', function() {
+    document.querySelectorAll('img').forEach(function(img) {
+        img.src = img.src;
+    });
+});

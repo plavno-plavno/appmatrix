@@ -7,7 +7,8 @@
     .padding-block:not(.init-block) .vc_col-sm-6,
     .info-block-2-part .vc_col-sm-6,
     .row-values .vc_col-sm-8,
-    .solutions-cards .vc_col-sm-4{
+    .solutions-cards .vc_col-sm-4,
+    .row-values .vc_col-sm-4 {
         width: 100%;
     }
     .vc_page_section .vc_row.grid-3 {
@@ -37,7 +38,7 @@
     .row-values .vc_col-sm-8 {
         width: 66.66666667%;
     }
-    .solutions-cards .vc_col-sm-4{
+    .solutions-cards .vc_col-sm-4, .row-values .vc_col-sm-4 {
         width: 33.33333333%;
     }
 

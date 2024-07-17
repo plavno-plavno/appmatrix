@@ -115,4 +115,8 @@
     .table-title-block.grid-2-title-block {
         margin-bottom: 56px;
     }
+
+    .tech-cards .info-tags .ideo-box-content {
+        gap: 8px;
+    }
 }

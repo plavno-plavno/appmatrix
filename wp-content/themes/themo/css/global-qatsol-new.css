@@ -262,6 +262,7 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
     background-color: var(--colorLight);
     transition: background-color .3s ease-out;
     color: var(--text-header);
+    margin: 0;
 }
 
 .light-btn:hover {

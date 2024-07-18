@@ -30,15 +30,15 @@
     transition: border .3s ease-out;
 }
 
-.industries-accordion .accordion  .panel-body {
+.industries-accordion .accordion .panel-body {
     padding: 18px;
 }
 
-.industries-accordion .accordion  .panel-body .accordion-inner p:first-child {
+.industries-accordion .accordion .panel-body .accordion-inner p:first-child {
     margin-top: 0;
 }
 
-.industries-accordion .accordion  .panel-body .accordion-inner ul {
+.industries-accordion .accordion .panel-body .accordion-inner ul {
     margin-top: 24px;
     padding-left: 8px;
 }
@@ -47,16 +47,20 @@
     margin-bottom: 8px;
 }
 
+.industries-accordion .accordion .panel-heading .panel-title a {
+    padding: 18px;
+}
 
 .row-values .subheader-text p {
     color: var(--secondDarkColor);
 }
 
 
-
-
 @media (min-width: 768px) {
-    .industries-accordion .accordion  .panel-body {
+    .industries-accordion .accordion .panel-body {
+        padding: 20px;
+    }
+    .industries-accordion .accordion .panel-heading .panel-title a {
         padding: 20px;
     }
 }
@@ -83,7 +87,8 @@
     .industries-accordion .wpb_wrapper {
         padding-left: 24px;
     }
-    .industries-accordion .accordion  .panel-body {
+
+    .industries-accordion .accordion .panel-body, .industries-accordion .accordion .panel-heading .panel-title a{
         padding: 24px;
     }
 
@@ -108,7 +113,8 @@
     .industries-accordion .wpb_wrapper {
         padding-left: 32px;
     }
-    .industries-accordion .accordion  .panel-body {
+
+    .industries-accordion .accordion .panel-body, .industries-accordion .accordion .panel-heading .panel-title a {
         padding: 32px;
     }
 

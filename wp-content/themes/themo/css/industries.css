@@ -30,7 +30,7 @@
     transition: border .3s ease-out;
 }
 
-.industries-accordion .accordion .panel-body {
+.industries-accordion .accordion .panel-body, .industries-accordion .accordion .panel-default >  .panel-heading .panel-title a {
     padding: 18px;
 }
 
@@ -47,20 +47,13 @@
     margin-bottom: 8px;
 }
 
-.industries-accordion .accordion .panel-heading .panel-title a {
-    padding: 18px;
-}
-
 .row-values .subheader-text p {
     color: var(--secondDarkColor);
 }
 
 
 @media (min-width: 768px) {
-    .industries-accordion .accordion .panel-body {
-        padding: 20px;
-    }
-    .industries-accordion .accordion .panel-heading .panel-title a {
+    .industries-accordion .accordion .panel-body,  .industries-accordion .accordion .panel-default >  .panel-heading .panel-title a {
         padding: 20px;
     }
 }
@@ -88,7 +81,7 @@
         padding-left: 24px;
     }
 
-    .industries-accordion .accordion .panel-body, .industries-accordion .accordion .panel-heading .panel-title a{
+    .industries-accordion .accordion .panel-body, .industries-accordion .accordion .panel-default > .panel-heading .panel-title a{
         padding: 24px;
     }
 
@@ -114,7 +107,7 @@
         padding-left: 32px;
     }
 
-    .industries-accordion .accordion .panel-body, .industries-accordion .accordion .panel-heading .panel-title a {
+    .industries-accordion .accordion .panel-body, .industries-accordion .accordion .panel-default > .panel-heading .panel-title a {
         padding: 32px;
     }
 

@@ -552,7 +552,7 @@ body.font-dark .primary-main-btn:hover, #aboutUsContactForm .form-btn-flex input
     }
 }
 
-.title-subtitle .h2-subtitle {
+.title-subtitle .h2-subtitle:not(.hero-sub-text){
     display: contents;
 }
 

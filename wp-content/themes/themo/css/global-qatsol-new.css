@@ -195,7 +195,7 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
 .tech-section .ideo-wow-title.style-text h2.title,
 .process-section .ideo-wow-title.style-text h2.title,
 .map-section .section-title .main-text p,
-.section-title-h2.ideo-wow-title.style-text:not(.info-block-title) .title{
+.section-title-h2.ideo-wow-title.style-text:not(.info-block-title) .title,  .title-section .main-text p{
     margin-bottom: 32px;
 }
 
@@ -207,7 +207,7 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
 @media (min-width: 1200px) {
     .tech-section .ideo-wow-title.style-text h2.title,
     .process-section .ideo-wow-title.style-text h2.title,
-    .map-section .section-title .main-text p {
+    .map-section .section-title .main-text p,  .title-section .main-text p {
         margin-bottom: 40px;
     }
 }
@@ -215,7 +215,7 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
 @media (min-width: 1440px) {
     .tech-section .ideo-wow-title.style-text h2.title,
     .process-section .ideo-wow-title.style-text h2.title,
-    .map-section .section-title .main-text p {
+    .map-section .section-title .main-text p,  .title-section .main-text p {
         margin-bottom: 48px;
     }
 }
@@ -223,7 +223,7 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
 @media (min-width: 1920px) {
     .tech-section .ideo-wow-title.style-text h2.title,
     .process-section .ideo-wow-title.style-text h2.title,
-    .map-section .section-title .main-text p {
+    .map-section .section-title .main-text p, .title-section .main-text p{
         margin-bottom: 56px;
     }
 }

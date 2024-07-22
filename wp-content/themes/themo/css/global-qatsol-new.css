@@ -561,7 +561,7 @@ body.font-dark .primary-main-btn:hover, #aboutUsContactForm .form-btn-flex input
 }
 
 @media (min-width: 1200px) {
-    .title-subtitle:not(.grid-2-title-block) .h2-title h2.title {
+    .title-subtitle:not(.grid-2-title-block):not(.title-with-subtitle) .h2-title h2.title {
         margin-bottom: 0;
     }
 }

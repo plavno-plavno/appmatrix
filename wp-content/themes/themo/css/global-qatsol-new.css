@@ -56,7 +56,7 @@ body.open-menu #header-navbar .modern-bars-content {
     max-width: 1099px;
 }
 
-.hero-common-text.hero-sub-text {
+.hero-common-text.hero-sub-text, .hero-sub-text {
     max-width: 675px;
 }
 

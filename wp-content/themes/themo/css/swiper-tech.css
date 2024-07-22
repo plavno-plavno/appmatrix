@@ -122,6 +122,10 @@ body {
     transition: background-color 0.3s ease;
 }
 
+.techSwiper:not(.not-hover) .swiper-slide:hover .cases-item__description li::before {
+    background-color: var(--colorLight);
+}
+
 .techSwiper:not(.not-hover) .swiper-slide:hover .cases-item__description .h3-title p {
     color: var(--text-header);
     transition: color 0.3s ease;

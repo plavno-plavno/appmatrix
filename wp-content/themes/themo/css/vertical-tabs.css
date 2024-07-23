@@ -110,6 +110,9 @@
     overflow: hidden;
 }
 
+.tab-card-block-img .common-card .main-text a {
+z-index: 3;
+}
 
 @media (min-width: 768px) {
     .services-section .title-subtitle, .services-vertical-tabs .nav-tabs {

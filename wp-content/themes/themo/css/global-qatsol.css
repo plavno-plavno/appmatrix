@@ -2654,14 +2654,6 @@ body.page.wrap-wide.vc-on.sidebar-off #content, body.single-portfolio.wrap-wide.
 }
 
 
-
-.single-portfolio .slick-track .ideo-single-image-wrap, .single-portfolio .slick-slide, .single-portfolio .slick-initialized .slick-slide img, .single-portfolio .ult-carousel-wrapper {
-    overflow: hidden;
-    border-radius: 40px;
-    max-height: 70vh;
-
-}
-
 .footer-navigator-bar .container {
     padding-left: 16px !important;
     padding-right: 16px !important;

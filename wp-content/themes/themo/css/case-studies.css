@@ -401,6 +401,7 @@
 
     .tech-tool-img .ideo-single-image, .marquee__group img {
         width: 64px !important;
+        height: auto;
     }
     .scroller__inner .tech-tool-img .ideo-single-image img{
         width: 100%;

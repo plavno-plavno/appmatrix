@@ -434,7 +434,7 @@ a.disabled {
     color: var(--primary);
 }
 
-a.long-link {
+a.long-link, .row-values a {
     position: relative;
     width: max-content;
     display: inline !important;
@@ -448,7 +448,8 @@ a.long-link {
     transition: background-size 400ms;
 }
 
-a.long-link:hover, a.long-link:focus {
+a.long-link:hover, a.long-link:focus,
+.row-values a:hover, .row-values a:focus {
     color: var(--brand---primary) ;
     background-size: 0 1px, 100% 1px
 }

@@ -38,7 +38,7 @@ function ideothemo_custom_post_types_init()
         'show_ui' => true,
         'show_in_menu' => true,
         'query_var' => true,
-        'rewrite' => array('slug' =>'case-studies'),
+        'rewrite' => array('slug' =>' $portfolio_slug'),
         'capability_type' => 'post',
         'has_archive' => false,
         'hierarchical' => false,

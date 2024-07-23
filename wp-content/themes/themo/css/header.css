@@ -128,7 +128,7 @@ body.font-dark a.ca-btn-header:hover {
         background: #FFFFFF;
         padding-top: 40px;
         padding-bottom: 40px;
-        row-gap: 24px;
+        row-gap: 0;
         max-width: 100%;
         box-shadow: 0 4px 40px 0 rgba(152, 152, 169, 0.32);
     }
@@ -157,7 +157,7 @@ body.font-dark a.ca-btn-header:hover {
     .sub-menu {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
-        gap: 20px;
+        column-gap: 20px;
     }
 
     .sub-column .sub-title {

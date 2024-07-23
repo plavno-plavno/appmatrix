@@ -20,7 +20,7 @@
     margin-bottom: 8px;
 }
 
-.solutions-card:not(.margin-s) .sub-text p {
+.solutions-card:not(.margin-s):not(.only-text) .sub-text p {
     margin-bottom: 24px;
 }
 
@@ -63,12 +63,9 @@
         margin-bottom: 16px;
     }
 
-    .solutions-card:not(.margin-s) .sub-text p {
+    .solutions-card:not(.margin-s):not(.only-text) .sub-text p {
         margin-bottom: 32px;
     }
-
-
-
 }
 
 @media (min-width: 1920px) {
@@ -76,7 +73,7 @@
         margin-bottom: 24px;
     }
 
-    .solutions-card:not(.margin-s) .sub-text p {
+    :not(.only-text) {
         margin-bottom: 40px;
     }
     .solutions-card.margin-s .ideo-wow-title.style-text .title {

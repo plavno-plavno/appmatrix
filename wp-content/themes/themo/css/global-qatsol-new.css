@@ -375,7 +375,7 @@ body.font-dark .primary-main-btn:hover, #aboutUsContactForm .form-btn-flex input
 .h2-tag p {
     font-family: var(--font-family);
     font-size: 14px;
-    line-height: 1.2;
+    line-height: 1.4;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 3.84px;

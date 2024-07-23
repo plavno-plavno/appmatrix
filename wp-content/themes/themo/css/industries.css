@@ -25,6 +25,10 @@
     color: var(--text-header);
 }
 
+.industries-accordion.second-bg-accordion .accordion .panel-default > .panel-heading .panel-title a {
+    background-color: var(--border);
+}
+
 .industries-accordion .accordion .panel-default > .panel-heading .panel-title a:not(.collapsed) {
     border-bottom: 1px solid var(--border);
     transition: border .3s ease-out;

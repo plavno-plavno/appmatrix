@@ -454,3 +454,7 @@ a.long-link:hover, a.long-link:focus,
     color: var(--brand---primary) ;
     background-size: 0 1px, 100% 1px
 }
+
+.flex-align-end .container > .row {
+    align-items: flex-end;
+}

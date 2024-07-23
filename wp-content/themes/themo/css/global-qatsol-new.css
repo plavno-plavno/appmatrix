@@ -375,11 +375,15 @@ body.font-dark .primary-main-btn:hover, #aboutUsContactForm .form-btn-flex input
 .h2-tag p {
     font-family: var(--font-family);
     font-size: 14px;
-    line-height: 1.4;
+    line-height: 1.7;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 3.84px;
     color: var(--brand---primary);
+}
+
+@media (min-width: 768px) {
+    line-height: 1.4;
 }
 
 @media (min-width: 1920px) {

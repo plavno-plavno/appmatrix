@@ -464,7 +464,7 @@ a.long-link:hover, a.long-link:focus,
     width: 100%;
 }
 
-.full-btn-with-arrow::before {
+.full-btn-with-arrow::after {
     content: '';
     display: block;
     width: 24px;
@@ -476,7 +476,7 @@ a.long-link:hover, a.long-link:focus,
 }
 
 @media (min-width: 1920px) {
-    .full-btn-with-arrow::before {
+    .full-btn-with-arrow::after {
         width: 32px;
         height: 32px;
     }

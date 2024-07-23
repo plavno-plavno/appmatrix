@@ -39,7 +39,7 @@
     .marquee__group, .marquee:not(.scroll-img-animation) {
         gap: 41px;
     }
-    
+
 }
 
 @media (min-width: 1920px) {

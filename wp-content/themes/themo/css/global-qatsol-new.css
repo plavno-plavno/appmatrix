@@ -265,8 +265,9 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
     margin: 0;
 }
 
-.light-btn:hover {
+body.font-dark  a.light-btn:hover {
     border: 1px solid var(--brand---primary) !important;
+    color: var(--text-header);
 }
 
 .light-btn-with-arrow::after {

@@ -345,6 +345,10 @@ body.font-dark  a:hover {
     margin-right: auto;
 }
 
+.title-centred .hero-sub-text {
+    margin: 0 auto;
+}
+
 .main-medium-text, .main-medium-text p {
     font-family: var(--font-family);
     font-size: 16px;

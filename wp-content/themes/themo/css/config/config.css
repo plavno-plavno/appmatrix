@@ -433,3 +433,22 @@ a.disabled {
 .colored-light.column-text-styled .primary-text{
     color: var(--primary);
 }
+
+a.long-link {
+    position: relative;
+    width: max-content;
+    display: inline !important;
+    width: max-content;
+    background:
+            linear-gradient(to right,transparent, transparent),
+            linear-gradient(to right, var(--brand---primary), var(--brand---primary), var(--brand---primary));
+    background-size: 100% 1px, 0 1px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 400ms;
+}
+
+a.long-link:hover, a.long-link:focus {
+    color: var(--brand---primary) ;
+    background-size: 0 1px, 100% 1px
+}

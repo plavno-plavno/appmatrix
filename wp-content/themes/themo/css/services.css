@@ -73,7 +73,7 @@
         margin-bottom: 24px;
     }
 
-    :not(.only-text) {
+    .solutions-card:not(.margin-s):not(.only-text) .sub-text p {
         margin-bottom: 40px;
     }
     .solutions-card.margin-s .ideo-wow-title.style-text .title {

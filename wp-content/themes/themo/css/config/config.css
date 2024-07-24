@@ -443,6 +443,7 @@ a.long-link, .row-values a, .long-link a, .solutions-cards li a {
     width: max-content;
     display: inline !important;
     width: max-content;
+    color: var(--brand---primary);
     background:
             linear-gradient(to right,transparent, transparent),
             linear-gradient(to right, var(--brand---primary), var(--brand---primary), var(--brand---primary));

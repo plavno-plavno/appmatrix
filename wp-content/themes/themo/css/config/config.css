@@ -438,7 +438,7 @@ a.disabled {
     color: var(--primary);
 }
 
-a.long-link, .row-values a, .long-link a {
+a.long-link, .row-values a, .long-link a, .solutions-cards li a {
     position: relative;
     width: max-content;
     display: inline !important;
@@ -454,7 +454,8 @@ a.long-link, .row-values a, .long-link a {
 
 a.long-link:hover, a.long-link:focus,
 .row-values a:hover, .row-values a:focus,
-.long-link a:hover, .long-link a:focus {
+.long-link a:hover, .long-link a:focus ,
+.solutions-cards li a:hover, .solutions-cards li a:focus {
     color: var(--brand---primary) ;
     background-size: 0 1px, 100% 1px
 }

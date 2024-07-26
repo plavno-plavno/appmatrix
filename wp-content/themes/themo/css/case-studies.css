@@ -374,8 +374,6 @@
 }
 
 @media (min-width: 768px) {
-
-
     .case-studies-grid .tg-grid-holder {
         grid-template-columns: repeat(2, 1fr);
     }

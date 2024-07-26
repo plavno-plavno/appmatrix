@@ -1,0 +1,12 @@
+
+@media (min-width: 768px) {
+    .align-centred .row {
+        align-items: center;
+    }
+}
+
+@media (min-width: 1200px) {
+    .grid-2-title-block .common-link {
+        margin-top: 40px;
+    }
+}

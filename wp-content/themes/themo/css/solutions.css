@@ -7,7 +7,7 @@
 
 @media (min-width: 1200px) {
     .grid-2-title-block.title-subtitle .h2-title h2.title {
-        margin-bottom: 0;
+        /*margin-bottom: 0;*/
     }
     .grid-2-title-block .common-link {
         margin-top: 40px;

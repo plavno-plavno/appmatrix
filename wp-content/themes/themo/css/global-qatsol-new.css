@@ -16,6 +16,7 @@
 @import "services.css";
 @import "case-studies.css";
 @import "industries.css";
+@import "solutions.css";
 
 body.open-menu {
     position: fixed;

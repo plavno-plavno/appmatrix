@@ -1,3 +1,7 @@
+.propels-block .icon-with-title h3.title {
+    margin-bottom: 12px;
+}
+
 
 @media (min-width: 768px) {
     .align-centred .row {
@@ -11,5 +15,11 @@
     }
     .grid-2-title-block .common-link {
         margin-top: 40px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .propels-block .icon-with-title h3.title {
+        margin-bottom: 24px;
     }
 }

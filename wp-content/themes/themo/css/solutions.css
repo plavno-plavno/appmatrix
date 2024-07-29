@@ -7,6 +7,8 @@
     .align-centred .row {
         align-items: center;
     }
+
+
 }
 
 @media (min-width: 1200px) {
@@ -15,6 +17,14 @@
     }
     .grid-2-title-block .common-link {
         margin-top: 40px;
+    }
+
+    .title-with-subtitle {
+        align-items: flex-end;
+    }
+
+    .title-with-subtitle .section-title .h2-title h2.title {
+        margin-bottom: 0;
     }
 }
 

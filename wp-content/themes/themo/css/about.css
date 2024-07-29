@@ -263,7 +263,7 @@ body .vc_page_section .vc_row.vc_inner.row-values {
     overflow: hidden;
 }
 
-.grid-with-img .h2-subtitle p:last-child {
+.grid-with-img .h2-subtitle p:last-child, .grid-with-img .common-link {
     margin-bottom: var(--gap-desctop-m);
 }
 
@@ -656,7 +656,7 @@ body .vc_page_section .vc_row.vc_inner.row-values {
         margin-bottom: 24px;
     }
 
-    .grid-with-img .h2-subtitle p:last-child {
+    .grid-with-img .h2-subtitle p:last-child, .grid-with-img .common-link {
         margin-bottom: var(--gap-desctop-l);
     }
 
@@ -756,7 +756,7 @@ body .vc_page_section .vc_row.vc_inner.row-values {
         margin-bottom: 32px;
     }
 
-    .grid-with-img .h2-subtitle p:last-child {
+    .grid-with-img .h2-subtitle p:last-child, .grid-with-img .common-link {
         margin-bottom: var(--margin-title-desctop-m);
     }
 

@@ -16,6 +16,12 @@
         flex-direction: row;
     }
 
+    .vc_page_section .vc_row.grid-5-items {
+        flex-wrap: wrap;
+        gap: 20px;
+        flex-direction: row;
+    }
+
 
     .grid-3 .vc_col-sm-4, .grid-5-items .vc_col-sm-1\/5 {
         width: calc((100% - 20px) / 2)

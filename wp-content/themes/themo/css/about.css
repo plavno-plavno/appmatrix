@@ -3,6 +3,12 @@
 @import "contact-form.css";
 @import "accordion.css";
 
+.grid-5-items {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
 @media (min-width: 768px) {
     .padding-block:not(.init-block) .vc_col-sm-6,
     .info-block-2-part .vc_col-sm-6,

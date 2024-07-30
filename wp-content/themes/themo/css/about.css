@@ -17,7 +17,7 @@
     }
 
 
-    .grid-3 .vc_col-sm-4 {
+    .grid-3 .vc_col-sm-4, .grid-5-items .vc_col-sm-1/5 {
         width: calc((100% - 20px) / 2)
     }
 

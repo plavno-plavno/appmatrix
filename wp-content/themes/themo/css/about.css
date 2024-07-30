@@ -49,7 +49,7 @@
     }
 
     .grid-5-items .vc_col-sm-1\/5 {
-        width: calc((100% - 20px) / 5);
+        width: calc((100% - var(--gap-tablet)*4) / 5);
     }
 
     .grid-3 .vc_col-sm-4 {
@@ -64,6 +64,9 @@
     .vc_page_section .vc_row.grid-3 {
         gap: 24px;
     }
+    .grid-5-items .vc_col-sm-1\/5 {
+        width: calc((100% - var(--gap-desctop-m)*4) / 5);
+    }
 }
 
 @media (min-width: 1920px) {
@@ -73,6 +76,10 @@
 
     .vc_page_section .vc_row.grid-3 {
         gap: 32px;
+    }
+
+    .grid-5-items .vc_col-sm-1\/5 {
+        width: calc((100% - var(--gap-desctop-l)*4) / 5);
     }
 }
 

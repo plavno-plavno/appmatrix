@@ -48,6 +48,10 @@
         width: 33.33333333%;
     }
 
+    .grid-5-items .vc_col-sm-1\/5 {
+        width: calc((100% - 20px) / 5);
+    }
+
     .grid-3 .vc_col-sm-4 {
         width: calc((100% - 40px) / 3)
     }

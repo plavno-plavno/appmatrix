@@ -2,6 +2,10 @@
     margin-bottom: 12px;
 }
 
+.img-full-min .ideo-single-image img {
+    aspect-ratio: 1920 / 568;
+}
+
 
 @media (min-width: 768px) {
     .align-centred .row {

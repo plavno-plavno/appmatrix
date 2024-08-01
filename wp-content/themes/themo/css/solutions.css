@@ -6,13 +6,15 @@
     aspect-ratio: 1920 / 568;
 }
 
+.cta-block.cta-block-b:not(.cta-flex-wrapper) {
+    margin-top: 96px;
+}
+
 
 @media (min-width: 768px) {
     .align-centred .row {
         align-items: center;
     }
-
-
 }
 
 @media (min-width: 1200px) {

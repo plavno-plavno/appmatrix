@@ -538,7 +538,8 @@ body .vc_page_section .vc_row.vc_inner.row-values {
     }
 
     .banner-about {
-        height: 100vh;
+        height: fit-content !important;
+        min-height: 100vh;
     }
 
     .value-icon .ideo-single-image,  .propels-icon  .ideo-single-image{

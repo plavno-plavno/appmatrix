@@ -136,7 +136,7 @@ footer.common-page-width .footer-width.vc_page_section,
     }
 }
 
-body.font-dark h3 ,body.font-dark .h3-title p,
+body h3 ,body .h3-title p,
 .hire-accordion-section .accordion .panel-default > .panel-heading .panel-title a,
 .case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]),
 .case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]):active,
@@ -164,7 +164,7 @@ body.font-dark h3 ,body.font-dark .h3-title p,
 }
 
 @media (min-width: 768px) {
-    body.font-dark h3,body.font-dark .h3-title p,
+    body h3,body .h3-title p,
     .hire-accordion-section .accordion .panel-default > .panel-heading .panel-title a,
     .case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]),
     .case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]):active,
@@ -185,7 +185,7 @@ body.font-dark h3 ,body.font-dark .h3-title p,
 }
 
 @media (min-width: 1440px) {
-    body.font-dark h3, body.font-dark .h3-title p,
+    body h3, body .h3-title p,
     .hire-accordion-section .accordion .panel-default > .panel-heading .panel-title a,
     .case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]),
     .case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]):active,
@@ -210,7 +210,7 @@ body.font-dark h3 ,body.font-dark .h3-title p,
 }
 
 @media (min-width: 1920px) {
-    body.font-dark h3, body.font-dark .h3-title p,
+    body h3, body .h3-title p,
     .hire-accordion-section .accordion .panel-default > .panel-heading .panel-title a,
     .case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]),
     .case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]):active,

@@ -44,8 +44,8 @@ body.open-menu #header-navbar .modern-bars-content {
     letter-spacing: 0;
 }
 
-.banner-section.full-screen-height{
- min-height: 100vh;
+.banner-section.full-screen-height {
+    min-height: 100vh;
     align-items: baseline;
 }
 
@@ -72,17 +72,16 @@ body.open-menu #header-navbar .modern-bars-content {
 }
 
 
-
 body.page.header-on.sticky-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
 body.single-portfolio.header-on.sticky-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
 body.single-team.header-on.sticky-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
 body.page.header-on.sticky-slide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
-body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
 body.single-team.header-on.sticky-slide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
 body.page.header-on.sticky-slide-hide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
 body.single-portfolio.header-on.sticky-slide-hide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
 body.single-team.header-on.sticky-slide-hide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
-body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child {
+body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
+body.single-solutions .pagetitle-off.sticky-slide-header #content {
     padding-top: 96px !important;
     /*//remove-important*/
     padding-bottom: 96px;
@@ -110,12 +109,13 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
         padding-bottom: 157px;
     }
 
-    body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child {
+    body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
+    body.single-solutions .pagetitle-off.sticky-slide-header #content {
         padding-top: 104px;
         padding-bottom: 104px;
     }
 
-    .banner-section.full-screen-height{
+    .banner-section.full-screen-height {
         align-items: center;
     }
 }
@@ -133,13 +133,14 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
     body.single-portfolio.header-on.sticky-slide-hide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
     body.single-team.header-on.sticky-slide-hide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
     body.page.header-on.sticky-slide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content.portfolio .vc_page_section:first-child,
-    body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child {
+    body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
+    body.single-solutions .pagetitle-off.sticky-slide-header #content {
         padding-top: 272px !important;
         /*//remove-important*/
         padding-bottom: 112px;
     }
 
-    #header-navbar nav.navbar-standard{
+    #header-navbar nav.navbar-standard {
         position: static;
     }
 }
@@ -157,7 +158,8 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
     body.single-portfolio.header-on.sticky-slide-hide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
     body.single-team.header-on.sticky-slide-hide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
     body.page.header-on.sticky-slide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content.portfolio .vc_page_section:first-child,
-    body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child {
+    body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
+    body.single-solutions .pagetitle-off.sticky-slide-header #content {
         padding-top: 200px !important;
         /*//remove-important*/
         padding-bottom: 120px;
@@ -182,7 +184,8 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
         padding-bottom: 180px;
     }
 
-    body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child {
+    body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
+    body.single-solutions .pagetitle-off.sticky-slide-header #content {
         padding-top: 224px !important;
         /*//remove-important*/
         padding-bottom: 128px;
@@ -196,7 +199,7 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
 .tech-section .ideo-wow-title.style-text h2.title,
 .process-section .ideo-wow-title.style-text h2.title,
 .map-section .section-title .main-text p,
-.section-title-h2.ideo-wow-title.style-text:not(.info-block-title) .title,  .title-section .main-text p{
+.section-title-h2.ideo-wow-title.style-text:not(.info-block-title) .title, .title-section .main-text p {
     margin-bottom: 32px;
 }
 
@@ -208,7 +211,7 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
 @media (min-width: 1200px) {
     .tech-section .ideo-wow-title.style-text h2.title,
     .process-section .ideo-wow-title.style-text h2.title,
-    .map-section .section-title .main-text p,  .title-section .main-text p {
+    .map-section .section-title .main-text p, .title-section .main-text p {
         margin-bottom: 40px;
     }
 }
@@ -216,7 +219,7 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
 @media (min-width: 1440px) {
     .tech-section .ideo-wow-title.style-text h2.title,
     .process-section .ideo-wow-title.style-text h2.title,
-    .map-section .section-title .main-text p,  .title-section .main-text p {
+    .map-section .section-title .main-text p, .title-section .main-text p {
         margin-bottom: 48px;
     }
 }
@@ -224,7 +227,7 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
 @media (min-width: 1920px) {
     .tech-section .ideo-wow-title.style-text h2.title,
     .process-section .ideo-wow-title.style-text h2.title,
-    .map-section .section-title .main-text p, .title-section .main-text p{
+    .map-section .section-title .main-text p, .title-section .main-text p {
         margin-bottom: 56px;
     }
 }
@@ -253,7 +256,7 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
     text-transform: capitalize;
 }
 
-.primary-main-btn,  #aboutUsContactForm .form-btn-flex input.wpcf7-form-control.wpcf7-submit, .main-btn  {
+.primary-main-btn, #aboutUsContactForm .form-btn-flex input.wpcf7-form-control.wpcf7-submit, .main-btn {
     background-color: var(--primary-btn);
     transition: background-color .3s ease-out;
 }
@@ -266,7 +269,7 @@ body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.top
     margin: 0;
 }
 
-body.font-dark  a.light-btn:hover {
+body.font-dark a.light-btn:hover {
     border: 1px solid var(--brand---primary) !important;
     color: var(--text-header);
 }
@@ -558,7 +561,7 @@ body.font-dark .primary-main-btn:hover, #aboutUsContactForm .form-btn-flex input
     }
 }
 
-.title-subtitle .h2-subtitle:not(.hero-sub-text){
+.title-subtitle .h2-subtitle:not(.hero-sub-text) {
     display: contents;
 }
 

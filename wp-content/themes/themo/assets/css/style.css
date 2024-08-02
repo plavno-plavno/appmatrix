@@ -1365,9 +1365,6 @@ table.striped_standard th, table.ideo-table.striped_standard th, table.striped_s
     border-top: 0
 }
 
-.pagetitle-off.standard-header #content, .pagetitle-off.sticky-header #content, .pagetitle-off.sticky-slide-header #content, .pagetitle-off.sticky-slide-hide-header #content {
-    padding-top: 121px
-}
 
 .ult-carousel-wrapper button.slick-prev i, .ult-carousel-wrapper button.slick-next i {
     display: block;

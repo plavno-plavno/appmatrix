@@ -114,7 +114,7 @@ footer.common-page-width .footer-width.vc_page_section,
      color: var(--colorLight);
 }
 
- .light-text p,body.font-dark  h3.light-text,
+ .light-text p,body   h3.light-text,
  .colored-light.column-text-styled.light-text p, .light-text ul li {
      color: var(--colorLight);
  }
@@ -136,7 +136,7 @@ footer.common-page-width .footer-width.vc_page_section,
     }
 }
 
-body.font-dark h3 ,body.font-dark .h3-title p,
+body  h3 ,body  .h3-title p,
 .hire-accordion-section .accordion .panel-default > .panel-heading .panel-title a,
 .case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]),
 .case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]):active,
@@ -164,7 +164,7 @@ body.font-dark h3 ,body.font-dark .h3-title p,
 }
 
 @media (min-width: 768px) {
-    body.font-dark h3,body.font-dark .h3-title p,
+    body  h3,body  .h3-title p,
     .hire-accordion-section .accordion .panel-default > .panel-heading .panel-title a,
     .case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]),
     .case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]):active,
@@ -185,7 +185,7 @@ body.font-dark h3 ,body.font-dark .h3-title p,
 }
 
 @media (min-width: 1440px) {
-    body.font-dark h3, body.font-dark .h3-title p,
+    body  h3, body  .h3-title p,
     .hire-accordion-section .accordion .panel-default > .panel-heading .panel-title a,
     .case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]),
     .case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]):active,
@@ -210,7 +210,7 @@ body.font-dark h3 ,body.font-dark .h3-title p,
 }
 
 @media (min-width: 1920px) {
-    body.font-dark h3, body.font-dark .h3-title p,
+    body  h3, body  .h3-title p,
     .hire-accordion-section .accordion .panel-default > .panel-heading .panel-title a,
     .case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]),
     .case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]):active,
@@ -319,14 +319,14 @@ body.vc-on.wrap-wide .vc_page_section.padding-block-y-b {
     }
 }
 
-body.font-dark a {
+body  a {
     color: var(--primary-btn);
 }
-body.font-dark a.light-btn {
+body  a.light-btn {
     color: var(--text-header);
 }
 
-body.font-dark  a:hover {
+body   a:hover {
     color: var(--brand---primary);
     transition: all .3s ease-out;
 }

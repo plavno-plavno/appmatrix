@@ -55,6 +55,17 @@
     color: var(--secondDarkColor);
 }
 
+.accordion .panel-default > .panel-heading .panel-title a {
+    display: block;
+    outline: none;
+    text-decoration: none;
+    position: relative;
+}
+
+.accordion .panel-default > .panel-heading .panel-title a:after {
+    position: absolute;
+    top: 50%;
+}
 
 @media (min-width: 768px) {
     .industries-accordion .accordion .panel-body,  .industries-accordion .accordion .panel-default >  .panel-heading .panel-title a {

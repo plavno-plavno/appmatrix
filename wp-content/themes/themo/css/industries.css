@@ -84,6 +84,10 @@
     border: none;
 }
 
+.colored-light.accordion.panel-group .panel {
+    position: relative;
+}
+
 .colored-light.accordion.panel-group .panel:after {
     position: absolute;
     bottom: 0;

@@ -110,7 +110,7 @@ body.single-solutions .pagetitle-off.sticky-slide-header #content {
 
     body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
     body.single-solutions.pagetitle-off.sticky-slide-header #content .vc_page_section:first-child{
-        padding-top: 104px;
+        padding-top: 104px !important;
         padding-bottom: 104px;
     }
 
@@ -139,7 +139,7 @@ body.single-solutions .pagetitle-off.sticky-slide-header #content {
     }
 
     body.single-solutions.pagetitle-off.sticky-slide-header #content .vc_page_section:first-child{
-        padding-top: 192px;
+        padding-top: 192px !important;
         padding-bottom: 112px;
     }
 

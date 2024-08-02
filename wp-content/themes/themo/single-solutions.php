@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <?php the_post(); ?>
 
-<div id="content" class="it-blog <?php echo ideothemo_get_content_classes(); ?>" <?php do_action('ideothemo_content_tag'); ?>>
+<div id="content" class="it-blog">
     <?php if (!ideothemo_is_boxed_version() && (ideothemo_is_sidebar_enabled() || !has_shortcode(get_the_content(), 'vc_row'))): ?>
     <div class="container">
     <?php endif; ?>

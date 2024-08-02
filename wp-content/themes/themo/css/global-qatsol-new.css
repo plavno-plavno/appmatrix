@@ -110,7 +110,7 @@ body.single-solutions .pagetitle-off.sticky-slide-header #content {
     }
 
     body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
-    body.single-solutions .pagetitle-off.sticky-slide-header #content {
+    body.single-solutions.pagetitle-off.sticky-slide-header #content {
         padding-top: 104px;
         padding-bottom: 104px;
     }
@@ -134,7 +134,7 @@ body.single-solutions .pagetitle-off.sticky-slide-header #content {
     body.single-team.header-on.sticky-slide-hide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
     body.page.header-on.sticky-slide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content.portfolio .vc_page_section:first-child,
     body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
-    body.single-solutions .pagetitle-off.sticky-slide-header #content {
+    body.single-solutions.pagetitle-off.sticky-slide-header #content {
         padding-top: 272px !important;
         /*//remove-important*/
         padding-bottom: 112px;
@@ -159,7 +159,7 @@ body.single-solutions .pagetitle-off.sticky-slide-header #content {
     body.single-team.header-on.sticky-slide-hide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
     body.page.header-on.sticky-slide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content.portfolio .vc_page_section:first-child,
     body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
-    body.single-solutions .pagetitle-off.sticky-slide-header #content {
+    body.single-solutions.pagetitle-off.sticky-slide-header #content {
         padding-top: 200px !important;
         /*//remove-important*/
         padding-bottom: 120px;
@@ -185,7 +185,7 @@ body.single-solutions .pagetitle-off.sticky-slide-header #content {
     }
 
     body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
-    body.single-solutions .pagetitle-off.sticky-slide-header #content {
+    body.single-solutions.pagetitle-off.sticky-slide-header #content {
         padding-top: 224px !important;
         /*//remove-important*/
         padding-bottom: 128px;

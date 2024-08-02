@@ -6,7 +6,7 @@
     <div class="container">
     <?php endif; ?>
        <div class="row">
-            <div class="entry-content <?php echo ideothemo_get_theme_skin_class(); ?> <?php echo ideothemo_get_blog_sidebar_page_classes(ideothemo_get_sidebar_position()); ?>">
+            <div class="entry-content">
                 <?php the_content(); ?>
             </div>
         </div>

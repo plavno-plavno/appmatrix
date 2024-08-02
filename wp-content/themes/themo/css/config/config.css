@@ -319,14 +319,14 @@ body.vc-on.wrap-wide .vc_page_section.padding-block-y-b {
     }
 }
 
-body.font-dark a {
+body a {
     color: var(--primary-btn);
 }
-body.font-dark a.light-btn {
+body a.light-btn {
     color: var(--text-header);
 }
 
-body.font-dark  a:hover {
+body  a:hover {
     color: var(--brand---primary);
     transition: all .3s ease-out;
 }

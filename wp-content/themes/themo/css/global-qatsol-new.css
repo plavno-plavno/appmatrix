@@ -71,11 +71,6 @@ body.open-menu #header-navbar .modern-bars-content {
     background-color: var(--colorLight);
 }
 
-body.single-solutions.pagetitle-off.sticky-slide-header #content {
-    padding-top: 0;
-}
-
-
 body.page.header-on.sticky-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
 body.single-portfolio.header-on.sticky-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
 body.single-team.header-on.sticky-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
@@ -137,10 +132,14 @@ body.single-solutions .pagetitle-off.sticky-slide-header #content {
     body.single-portfolio.header-on.sticky-slide-hide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
     body.single-team.header-on.sticky-slide-hide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
     body.page.header-on.sticky-slide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content.portfolio .vc_page_section:first-child,
-    body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
-    body.single-solutions.pagetitle-off.sticky-slide-header #content .vc_page_section:first-child{
+    body.single-portfolio.header-on.sticky-slide-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child {
         padding-top: 272px !important;
         /*//remove-important*/
+        padding-bottom: 112px;
+    }
+
+    body.single-solutions.pagetitle-off.sticky-slide-header #content .vc_page_section:first-child{
+        padding-top: 192px;
         padding-bottom: 112px;
     }
 

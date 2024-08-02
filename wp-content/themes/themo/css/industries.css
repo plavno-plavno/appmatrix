@@ -84,6 +84,16 @@
     border: none;
 }
 
+.colored-light.accordion.panel-group .panel:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: "";
+    display: block;
+    border-bottom: solid 1px rgba(135, 142, 157, 0.2);
+}
+
 @media (min-width: 768px) {
     .industries-accordion .accordion .panel-body,  .industries-accordion .accordion .panel-default >  .panel-heading .panel-title a {
         padding: 20px;

@@ -31,11 +31,7 @@ body {
     line-height: 28px;
 }
 
-body.font-dark h3 {
-    font-size: 45px;
-    line-height: 1.22em;
-    font-weight: 300;
-}
+
 
 .rev_slider_wrapper .fullwidthabanner {
     box-shadow: 0 10px 55px 5px rgba(137, 173, 255, 0.35);
@@ -408,10 +404,7 @@ div.custom-idea.vc_page_section {
 }
 
 @media only screen and (max-width: 767px) {
-    .mkdf-section-title-holder .mkdf-st-title,
-    body.font-dark h3 {
-        font-size: 28px;
-    }
+
 
     .custom-ideas-users .mkdf-flip-in {
         transform: translate(0, -9px);

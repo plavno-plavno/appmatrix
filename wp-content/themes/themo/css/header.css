@@ -73,7 +73,7 @@ body #header-navbar.header {
     display: none;
 }
 
-body.font-dark a.ca-btn-header:hover {
+body a.ca-btn-header:hover {
     color: var(--brand---primary);
 }
 
@@ -214,7 +214,7 @@ body.font-dark a.ca-btn-header:hover {
         align-items: center;
     }
 
-    body.font-dark a.ca-btn-header {
+    body a.ca-btn-header {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -297,13 +297,13 @@ body.font-dark a.ca-btn-header:hover {
         font-size: 16px;
     }
 
-    body.font-dark a.ca-btn-header {
+    body a.ca-btn-header {
         padding-left: 32px;
         padding-right: 32px;
         font-size: 16px;
     }
 
-    body.font-dark a.ca-btn-header svg {
+    body a.ca-btn-header svg {
         width: 32px;
         height: 32px;
     }

@@ -319,7 +319,7 @@ body.vc-on.wrap-wide .vc_page_section.padding-block-y-b {
     }
 }
 
-body a {
+body a, .common-link a {
     color: var(--primary-btn);
 }
 body a.light-btn {

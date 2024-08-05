@@ -92,6 +92,7 @@ body.single-solutions .pagetitle-off.sticky-slide-header #content {
 
 p {
     outline: 0;
+    margin: 0;
 }
 
 @media (min-width: 768px) {

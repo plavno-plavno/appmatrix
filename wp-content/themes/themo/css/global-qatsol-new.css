@@ -90,6 +90,10 @@ body.single-solutions .pagetitle-off.sticky-slide-header #content {
     margin-bottom: 40px;
 }
 
+p {
+    outline: 0;
+}
+
 @media (min-width: 768px) {
     body.page.header-on.standard-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,
     body.single-portfolio.header-on.standard-header.pagetitle-off.slider-off.topbar-off.vc-on.sidebar-off #content .vc_page_section:first-child,

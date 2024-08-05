@@ -3217,3 +3217,25 @@ function add_theme_scripts() {
 add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
 
 
+function fb_opengraph() {
+    global $post;
+
+    if(is_single()) {
+
+            $img_src = get_stylesheet_directory_uri() . 'https://qatsol.com/wp-content/uploads/2024/06/Photo-1-1.svg';
+        if($excerpt = $post->post_excerpt) {
+            $excerpt = strip_tags($post->post_excerpt);
+            $excerpt = str_replace("", "'", $excerpt);
+        } else {
+            $excerpt = get_bloginfo('description');
+        }
+        ?>
+
+        <meta property="og:image" content="<?php echo $img_src; ?>"/>
+
+        <?php
+    } else {
+        return;
+    }
+}
+add_action('wp_head', 'fb_opengraph', 5);

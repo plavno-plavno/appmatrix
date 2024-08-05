@@ -3217,13 +3217,3 @@ function add_theme_scripts() {
 add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
 
 
-function add_open_graph_tags() {
-    if (is_single()) {
-        global $post;
-        $default_image = 'https://qatsol.com/wp-content/uploads/2024/06/Photo-1-1.svg'; // Укажите URL вашего изображения по умолчанию
-        $og_image = get_the_post_thumbnail_url($post->ID, 'full') ? get_the_post_thumbnail_url($post->ID, 'full') : $default_image;
-        echo '<meta property="og:image" content="' . esc_url($og_image) . '"/>';
-        // Другие Open Graph теги можно добавить здесь
-    }
-}
-add_action('wp_head', 'add_open_graph_tags');

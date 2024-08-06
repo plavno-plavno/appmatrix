@@ -35,7 +35,7 @@
 }
 
 .industries-accordion .accordion .panel-body, .industries-accordion .accordion .panel-default >  .panel-heading .panel-title a {
-    padding: 18px 18px 18px 41px;
+    padding: 18px 41px 18px 18px;
 }
 
 .industries-accordion .accordion .panel-body .accordion-inner p:first-child {

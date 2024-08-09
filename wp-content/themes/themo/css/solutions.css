@@ -18,7 +18,7 @@
 }
 
 @media (min-width: 1200px) {
-    .block-2-grid.mission-section .grid-2-title-block.title-subtitle .h2-title h2.title {
+    .block-2-grid.mission-section .grid-2-title-block.title-subtitle .h2-title:not(.h2-title-h) h2.title {
         margin-bottom: 0;
     }
     .grid-2-title-block .common-link {

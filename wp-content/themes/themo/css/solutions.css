@@ -29,8 +29,8 @@
         align-items: flex-end;
     }
 
-    .title-with-subtitle .section-title .h2-title h2.title {
-        /*!*margin-bottom: 0;*! // check slider with industries*/
+    .title-with-subtitle .vc_col-sm-6.section-title .h2-title h2.title {
+        margin-bottom: 0;
     }
 }
 

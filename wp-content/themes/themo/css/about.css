@@ -312,6 +312,10 @@ body .vc_page_section .vc_row.vc_inner.row-values {
     margin-bottom: 32px;
 }
 
+.dark-info-section h2.title{
+    margin-bottom: 32px;
+}
+
 .dark-info-section .h2-subtitle p{
     margin-bottom: 24px;
 }
@@ -506,7 +510,9 @@ body .vc_page_section .vc_row.vc_inner.row-values {
 }
 
 @media (min-width: 1200px) {
-
+    .dark-info-section h2.title{
+        margin-bottom: 40px;
+    }
 
     .banner-card-title p {
         font-size: 56px;
@@ -733,9 +739,15 @@ body .vc_page_section .vc_row.vc_inner.row-values {
     .form-info-text:not(:last-child) {
         margin-bottom: 48px;
     }
+    .dark-info-section h2.title{
+        margin-bottom: 48px;
+    }
 }
 
 @media (min-width: 1920px) {
+    .dark-info-section h2.title{
+        margin-bottom: 56px;
+    }
     .banner-card-title p {
         font-size: 72px;
         margin-bottom: 8px;

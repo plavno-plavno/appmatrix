@@ -30,7 +30,7 @@
     }
 
     .title-with-subtitle .section-title .h2-title h2.title {
-        margin-bottom: 0;
+        /*!*margin-bottom: 0;*! // check slider with industries*/
     }
 }
 

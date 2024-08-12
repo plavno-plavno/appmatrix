@@ -24,6 +24,10 @@
     margin-bottom: 24px;
 }
 
+.solutions-card:not(.margin-s):not(.only-text) .sub-text ~ .button-wrap{
+    margin-top: 24px;
+}
+
 .solutions-card.margin-s .sub-text p {
     margin-bottom: 16px;
 }

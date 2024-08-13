@@ -383,6 +383,7 @@ body  a:hover {
 
 @media (min-width: 1920px) {
     .main-text, .column-text.main-text p,.main-text p, .main-text .menu-item a ,
+    .main-text ul li,
     .SwiperSolver li,  #aboutUsContactForm input, #aboutUsContactForm textarea,
     .wpcf7 form.invalid .wpcf7-response-output, .swiper li, .main-medium-text, .main-medium-text p, .common-card li {
         font-size: 18px;

@@ -358,6 +358,7 @@ body  a:hover {
 }
 
 .main-text, .column-text.main-text p,.main-text p,
+.main-text ul li,
 .main-text .menu-item a,
 .colored-light.container-tabs .nav-tabs > li a,
 .main-text li, .SwiperSolver li,

@@ -86,7 +86,7 @@
 
 .teamSwiper .h4-title {
     margin-top: 0;
-    margin-bottom: 4px;
+    margin-bottom: 12px;
 }
 
 @media (min-width: 768px) {
@@ -192,6 +192,10 @@
         margin-top: 16px;
         margin-bottom: 8px;
     }
+
+    .teamSwiper .h4-title {
+        margin-bottom: 16px;
+    }
 }
 
 @media (min-width: 1920px) {
@@ -234,7 +238,7 @@
         height: 128px;
     }
 
-    .teamSwiper .h3-title {
+    .teamSwiper .h3-title, .teamSwiper .h4-title {
         margin-top: 24px;
     }
 }

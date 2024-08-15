@@ -24,7 +24,7 @@
 /*    margin-bottom: 24px;*/
 /*}*/
 
-.solutions-card:not(.margin-s):not(.only-text) .sub-text ~ .button-wrap{
+.solutions-card:not(.margin-s):not(.only-text) .sub-text ~ .button-wrap {
     margin-top: 24px;
 }
 
@@ -54,12 +54,26 @@
     width: 100%;
 }
 
-.teamSwiper .swiper-pagination{
+.teamSwiper .swiper-pagination {
     display: block;
 }
 
 .teamSwiper .wp_swiper__navigation {
-    display: block;
+    display: block !important;
+    position: absolute;
+    top: 68px;
+    right: 96px;
+}
+
+.teamSwiper .wp_swiper__navigation .wp_swiper__navigation-container {
+    display: flex;
+}
+
+.teamSwiper .wp_swiper__navigation .wp_swiper__navigation-container .swiper-button-prev, .teamSwiper .wp_swiper__navigation .wp_swiper__navigation-container .swiper-button-next {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    margin: 0;
 }
 
 .block-with-tags .common-link {
@@ -106,18 +120,19 @@
         margin-top: 32px;
     }
 
-    .solutions-card.margin-s , .solutions-card.margin-s > .wpb_wrapper{
+    .solutions-card.margin-s, .solutions-card.margin-s > .wpb_wrapper {
         height: 100%;
     }
 
-    .solutions-card.margin-s > .wpb_wrapper{
+    .solutions-card.margin-s > .wpb_wrapper {
         display: flex;
         flex-direction: column;
     }
 
-    .solutions-card.margin-s > .wpb_wrapper .solutions-card__description{
+    .solutions-card.margin-s > .wpb_wrapper .solutions-card__description {
         flex-grow: 1;
     }
+
     .solutions-card.margin-s .ideo-wow-title.style-text .title {
         margin-bottom: 12px;
     }
@@ -146,7 +161,7 @@
         grid-template-columns: auto 28%;
     }
 
-    .block-2-grid-team .container > .row .grid-2-title-block.block-with-tags .wpb_wrapper{
+    .block-2-grid-team .container > .row .grid-2-title-block.block-with-tags .wpb_wrapper {
         max-width: 816px;
     }
 
@@ -154,11 +169,11 @@
         max-width: 690px;
     }
 
-    .solutions-card:not(.margin-s):not(.only-text) .sub-text ~ .button-wrap{
+    .solutions-card:not(.margin-s):not(.only-text) .sub-text ~ .button-wrap {
         margin-top: auto;
     }
 
-    .solutions-card:not(.margin-s):not(.only-text) .sub-text ~ .button-wrap a{
+    .solutions-card:not(.margin-s):not(.only-text) .sub-text ~ .button-wrap a {
         margin-top: 24px;
     }
 
@@ -178,7 +193,7 @@
     /*.solutions-card:not(.margin-s):not(.only-text) .sub-text p {*/
     /*    margin-bottom: 32px;*/
     /*}*/
-    .solutions-card:not(.margin-s):not(.only-text) .sub-text ~ .button-wrap{
+    .solutions-card:not(.margin-s):not(.only-text) .sub-text ~ .button-wrap {
         margin-bottom: 0;
     }
 
@@ -204,7 +219,7 @@
         margin-bottom: 8px;
     }
 
-    .teamSwiper .h4-title, .teamSwiper .h4-title + p  {
+    .teamSwiper .h4-title, .teamSwiper .h4-title + p {
         margin-bottom: 16px;
     }
 }
@@ -217,9 +232,10 @@
     /*.solutions-card:not(.margin-s):not(.only-text) .sub-text p {*/
     /*    margin-bottom: 40px;*/
     /*}*/
-    .solutions-card:not(.margin-s):not(.only-text) .sub-text ~ .button-wrap{
+    .solutions-card:not(.margin-s):not(.only-text) .sub-text ~ .button-wrap {
         margin-bottom: 0;
     }
+
     .solutions-card.margin-s .ideo-wow-title.style-text .title {
         margin-bottom: 16px;
     }
@@ -249,7 +265,7 @@
         height: 128px;
     }
 
-    .teamSwiper .h3-title, .teamSwiper .h4-title, .teamSwiper .h4-title + p  {
+    .teamSwiper .h3-title, .teamSwiper .h4-title, .teamSwiper .h4-title + p {
         margin-top: 24px;
     }
 }

@@ -1199,9 +1199,9 @@ h5, h6 {
         font-size: clamp(24px, 2vw + 2vh, 56px) !important;
     }
 
-    h3 {
-        margin-bottom: 32px;
-    }
+    /*h3 {*/
+    /*    margin-bottom: 32px;*/
+    /*}*/
 
     .portfolio-column {
         padding-right: 80px !important;

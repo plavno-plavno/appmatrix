@@ -139,7 +139,7 @@
 }
 
 .teamSwiper .swiper-wrapper .swiper-slide {
-    height: 100%;
+    height: auto;
 }
 
 @media (min-width: 768px) {

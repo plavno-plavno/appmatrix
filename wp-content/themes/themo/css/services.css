@@ -82,6 +82,7 @@
 .teamSwiper .h3-title {
     margin-top: 12px;
     margin-bottom: 4px;
+    color: var(--text-header)
 }
 
 .teamSwiper .h4-title {
@@ -94,8 +95,9 @@
 }
 
 .teamSwiper .info-tags .wp-block-group__inner-container .info-tag {
-    color: var(--mainColor);
+    color: var(--text-header);
     width: max-content;
+    margin: initial !important;
 }
 
 @media (min-width: 768px) {

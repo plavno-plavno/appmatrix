@@ -37,7 +37,7 @@ body.open-menu #header-navbar .modern-bars-content {
 
 #header-navbar ul.navbar-menu > li > a {
     font-size: 18px;
-    color: var(--mainColor);
+    color: var(--text-header);
     text-transform: capitalize;
     font-weight: 400;
     font-family: var(--familyRegular);

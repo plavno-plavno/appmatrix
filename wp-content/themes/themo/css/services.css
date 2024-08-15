@@ -276,8 +276,12 @@
         height: 128px;
     }
 
-    .teamSwiper .h3-title, .teamSwiper .h4-title, .teamSwiper .h4-title + p {
+    .teamSwiper .h3-title {
         margin-top: 24px;
+    }
+
+    .teamSwiper .h4-title, .teamSwiper .h4-title + p {
+        margin-bottom: 24px;
     }
 
     .teamSwiper .wp_swiper__navigation .wp_swiper__navigation-container .swiper-button-prev, .teamSwiper .wp_swiper__navigation .wp_swiper__navigation-container .swiper-button-next {

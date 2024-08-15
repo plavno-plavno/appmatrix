@@ -50,6 +50,14 @@
     width: 100%;
 }
 
+.teamSwiper .swiper-pagination{
+    display: block;
+}
+
+.teamSwiper .wp_swiper__navigation {
+    display: block;
+}
+
 @media (min-width: 768px) {
 
     .solutions-card.margin-s , .solutions-card.margin-s > .wpb_wrapper{

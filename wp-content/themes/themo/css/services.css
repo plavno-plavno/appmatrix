@@ -66,6 +66,18 @@
     margin-top: 24px;
 }
 
+.teamSwiper .team-slide {
+    background-color: var(--mainLightbg);
+    padding: 18px;
+}
+
+.teamSwiper .team-slide .member-photo {
+    overflow: hidden;
+    border-radius: 50%;
+    width: 96px;
+    height: 96px;
+}
+
 @media (min-width: 768px) {
 
     .block-with-tags .common-link {
@@ -91,6 +103,15 @@
     .block-2-grid-team .container > .row {
         grid-template-columns: auto 50%;
         gap: 20px;
+    }
+
+    .teamSwiper .team-slide {
+        padding: 20px;
+    }
+
+    .teamSwiper .team-slide .member-photo {
+        width: 104px;
+        height: 104px;
     }
 }
 
@@ -118,6 +139,12 @@
     .solutions-card:not(.margin-s):not(.only-text) .sub-text ~ .button-wrap a{
         margin-top: 24px;
     }
+
+
+    .teamSwiper .team-slide .member-photo {
+        width: 112px;
+        height: 112px;
+    }
 }
 
 
@@ -139,6 +166,15 @@
 
     .block-2-grid-team .container > .row {
         grid-template-columns: auto 40%;
+    }
+
+    .teamSwiper .team-slide {
+        padding: 24px;
+    }
+
+    .teamSwiper .team-slide .member-photo {
+        width: 120px;
+        height: 120px;
     }
 }
 
@@ -171,5 +207,14 @@
 
     .block-with-tags .common-link {
         margin-top: 40px;
+    }
+
+    .teamSwiper .team-slide {
+        padding: 32px;
+    }
+
+    .teamSwiper .team-slide .member-photo {
+        width: 128px;
+        height: 128px;
     }
 }

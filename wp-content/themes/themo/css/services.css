@@ -172,7 +172,7 @@
     }
 
     .block-2-grid-team .container > .row {
-        grid-template-columns: auto 28%;
+        grid-template-columns: auto 40%;
     }
 
     .block-2-grid-team .container > .row .grid-2-title-block.block-with-tags .wpb_wrapper {
@@ -214,10 +214,7 @@
     .block-with-tags .info-tags {
         margin-top: 48px;
     }
-
-    .block-2-grid-team .container > .row {
-        grid-template-columns: auto 40%;
-    }
+    
 
     .teamSwiper .team-slide {
         padding: 24px;

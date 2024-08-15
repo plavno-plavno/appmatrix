@@ -106,6 +106,10 @@ body {
         width: 32px;
         height: 32px;
     }
+
+    .techSwiper .h3-title p {
+        font-size: 32px;
+    }
 }
 
 .techSwiper .swiper-slide .cases-item__img {

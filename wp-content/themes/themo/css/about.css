@@ -396,6 +396,10 @@ body .vc_page_section .vc_row.vc_inner.row-values {
     color: var(--text-header);
 }
 
+.grid-with-img .h2-subtitle {
+    color: var(--mainColor);
+}
+
 
 @media (min-width: 768px) {
     .sticky-card-title.sticky-last-step-centred {

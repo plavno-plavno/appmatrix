@@ -116,6 +116,11 @@ body {
     filter: grayscale(100%);
 }
 
+.swiper-without-img .text-with-list {
+    color: var(--secondLightColor);
+    margin-bottom: 10px;
+}
+
 .techSwiper:not(.not-hover) .swiper-slide:hover .cases-item__img {
     filter: none;
     transition: filter 0.3s ease;

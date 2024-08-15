@@ -136,6 +136,7 @@
 
 .teamSwiper .swiper-wrapper {
     height: auto !important;
+    align-items: normal;
 }
 
 .teamSwiper .swiper-wrapper .swiper-slide {

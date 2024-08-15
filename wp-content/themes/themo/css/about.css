@@ -328,7 +328,7 @@ body .vc_page_section .vc_row.vc_inner.row-values {
     margin-bottom: 32px;
 }
 
-.info-tags .ideo-box-content, .block-with-tags .info-tags{
+.info-tags .ideo-box-content, .block-with-tags .info-tags .wp-block-group__inner-container{
     display: flex;
     align-items: center;
     gap: 8px;

@@ -78,132 +78,133 @@
     display: block !important;
     right: 0;
     left: 0;
+    transform: none;
 }
 
 .teamSwiper .swiper-pagination {
-    bottom: auto;
-    top: 31px;
-    width: max-content;
-    right: 140px;
-    left: auto;
-    color: var(--secondDarkColor);
+bottom: auto;
+top: 31px;
+width: max-content;
+right: 140px;
+left: auto;
+color: var(--secondDarkColor);
 }
 
 .block-with-tags .common-link {
-    margin-top: 24px;
+margin-top: 24px;
 }
 
 .teamSwiper .team-slide {
-    background-color: var(--mainLightbg);
-    padding: 18px;
-    border-radius: 4px;
+background-color: var(--mainLightbg);
+padding: 18px;
+border-radius: 4px;
 }
 
 .teamSwiper .team-slide .member-photo {
-    overflow: hidden;
-    border-radius: 50%;
-    width: 96px;
-    height: 96px;
+overflow: hidden;
+border-radius: 50%;
+width: 96px;
+height: 96px;
 }
 
 .teamSwiper .h3-title {
-    margin-top: 12px;
-    margin-bottom: 4px;
-    color: var(--text-header)
+margin-top: 12px;
+margin-bottom: 4px;
+color: var(--text-header)
 }
 
 .teamSwiper .h4-title {
-    margin-top: 0;
-    margin-bottom: 12px;
+margin-top: 0;
+margin-bottom: 12px;
 }
 
 .teamSwiper .h4-title + p {
-    margin-bottom: 12px;
+margin-bottom: 12px;
 }
 
 .teamSwiper .info-tags .wp-block-group__inner-container .info-tag {
-    color: var(--text-header);
-    width: max-content;
-    margin: initial !important;
+color: var(--text-header);
+width: max-content;
+margin: initial !important;
 }
 
 @media (min-width: 768px) {
 
-    .block-with-tags .common-link {
-        margin-top: 32px;
-    }
+.block-with-tags .common-link {
+margin-top: 32px;
+}
 
-    .solutions-card.margin-s, .solutions-card.margin-s > .wpb_wrapper {
-        height: 100%;
-    }
+.solutions-card.margin-s, .solutions-card.margin-s > .wpb_wrapper {
+height: 100%;
+}
 
-    .solutions-card.margin-s > .wpb_wrapper {
-        display: flex;
-        flex-direction: column;
-    }
+.solutions-card.margin-s > .wpb_wrapper {
+display: flex;
+flex-direction: column;
+}
 
-    .solutions-card.margin-s > .wpb_wrapper .solutions-card__description {
-        flex-grow: 1;
-    }
+.solutions-card.margin-s > .wpb_wrapper .solutions-card__description {
+flex-grow: 1;
+}
 
-    .solutions-card.margin-s .ideo-wow-title.style-text .title {
-        margin-bottom: 12px;
-    }
+.solutions-card.margin-s .ideo-wow-title.style-text .title {
+margin-bottom: 12px;
+}
 
-    .block-2-grid-team .container > .row {
-        grid-template-columns: auto 50%;
-        gap: 20px;
-    }
+.block-2-grid-team .container > .row {
+grid-template-columns: auto 50%;
+gap: 20px;
+}
 
-    .teamSwiper .team-slide {
-        padding: 20px;
-    }
+.teamSwiper .team-slide {
+padding: 20px;
+}
 
-    .teamSwiper .team-slide .member-photo {
-        width: 104px;
-        height: 104px;
-    }
+.teamSwiper .team-slide .member-photo {
+width: 104px;
+height: 104px;
+}
 }
 
 @media (min-width: 1200px) {
-    .value-column-text .wpb_wrapper {
-        padding-left: 32px;
-    }
+.value-column-text .wpb_wrapper {
+padding-left: 32px;
+}
 
-    .block-2-grid-team .container > .row {
-        grid-template-columns: auto 28%;
-    }
+.block-2-grid-team .container > .row {
+grid-template-columns: auto 28%;
+}
 
-    .block-2-grid-team .container > .row .grid-2-title-block.block-with-tags .wpb_wrapper {
-        max-width: 816px;
-    }
+.block-2-grid-team .container > .row .grid-2-title-block.block-with-tags .wpb_wrapper {
+max-width: 816px;
+}
 
-    .block-2-grid-team .container > .row .grid-2-title-block.block-with-tags .h2-subtitle p {
-        max-width: 690px;
-    }
+.block-2-grid-team .container > .row .grid-2-title-block.block-with-tags .h2-subtitle p {
+max-width: 690px;
+}
 
-    .solutions-card:not(.margin-s):not(.only-text) .sub-text ~ .button-wrap {
-        margin-top: auto;
-    }
+.solutions-card:not(.margin-s):not(.only-text) .sub-text ~ .button-wrap {
+margin-top: auto;
+}
 
-    .solutions-card:not(.margin-s):not(.only-text) .sub-text ~ .button-wrap a {
-        margin-top: 24px;
-    }
+.solutions-card:not(.margin-s):not(.only-text) .sub-text ~ .button-wrap a {
+margin-top: 24px;
+}
 
 
-    .teamSwiper .team-slide .member-photo {
-        width: 112px;
-        height: 112px;
-    }
+.teamSwiper .team-slide .member-photo {
+width: 112px;
+height: 112px;
+}
 }
 
 
 @media (min-width: 1440px) {
-    .solutions-card:not(.margin-s) .ideo-wow-title.style-text .title {
-        margin-bottom: 16px;
-    }
+.solutions-card:not(.margin-s) .ideo-wow-title.style-text .title {
+margin-bottom: 16px;
+}
 
-    /*.solutions-card:not(.margin-s):not(.only-text) .sub-text p {*/
+/*.solutions-card:not(.margin-s):not(.only-text) .sub-text p {*/
     /*    margin-bottom: 32px;*/
     /*}*/
     .solutions-card:not(.margin-s):not(.only-text) .sub-text ~ .button-wrap {

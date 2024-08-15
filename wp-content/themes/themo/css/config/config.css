@@ -105,7 +105,7 @@ footer.common-page-width .footer-width.vc_page_section,
     background-color: var(--dark-background-medium);
 }
 
-.title-subtitle .light-subtitle.h2-subtitle p, .reason-block .swiper li {
+.title-subtitle .light-subtitle.h2-subtitle p, .reason-block .swiper li, .reason-block .swiper li strong {
     color: var(--secondLightColor);
 }
 

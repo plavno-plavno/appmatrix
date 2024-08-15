@@ -97,6 +97,12 @@ body {
 
 }
 
+@media (min-width: 768px) {
+    .techSwiper .h3-title p {
+        font-size: 22px;
+    }
+}
+
 @media (min-width: 1440px) {
     .techSwiper .h3-title p {
         font-size: 24px;

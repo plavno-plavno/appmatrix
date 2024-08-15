@@ -109,6 +109,7 @@
 
     .solutions-card:not(.margin-s):not(.only-text) .sub-text ~ .button-wrap{
         margin-top: auto;
+        margin-bottom: 0;
     }
 
     .solutions-card:not(.margin-s):not(.only-text) .sub-text ~ .button-wrap a{

@@ -89,6 +89,14 @@
     margin-bottom: 12px;
 }
 
+.teamSwiper .h4-title + p {
+    margin-bottom: 12px;
+}
+
+.teamSwiper .info-tags .wp-block-group__inner-container .info-tag {
+    color: var(--mainColor);
+}
+
 @media (min-width: 768px) {
 
     .block-with-tags .common-link {
@@ -193,7 +201,7 @@
         margin-bottom: 8px;
     }
 
-    .teamSwiper .h4-title {
+    .teamSwiper .h4-title, .teamSwiper .h4-title + p  {
         margin-bottom: 16px;
     }
 }
@@ -238,7 +246,7 @@
         height: 128px;
     }
 
-    .teamSwiper .h3-title, .teamSwiper .h4-title {
+    .teamSwiper .h3-title, .teamSwiper .h4-title, .teamSwiper .h4-title + p  {
         margin-top: 24px;
     }
 }

@@ -294,7 +294,7 @@ body .vc_page_section .vc_row.vc_inner.row-values {
     margin-bottom: 8px;
 }
 
-.sub-text, .sub-text p{
+.sub-text, .sub-text p, body.font-dark .sub-text{
     color: var(--secondDarkColor);
 }
 

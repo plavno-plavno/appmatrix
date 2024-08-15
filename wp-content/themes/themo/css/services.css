@@ -95,6 +95,7 @@
 
 .teamSwiper .info-tags .wp-block-group__inner-container .info-tag {
     color: var(--mainColor);
+    width: max-content;
 }
 
 @media (min-width: 768px) {

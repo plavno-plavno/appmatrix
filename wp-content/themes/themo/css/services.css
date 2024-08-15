@@ -43,6 +43,7 @@
 .block-2-grid-team .container > .row {
     display: grid;
     gap: 16px;
+    grid-template-columns: 100%;
 }
 
 .block-2-grid-team .container > .row .vc_column_container {
@@ -68,7 +69,7 @@
     }
 
     .block-2-grid-team .container > .row {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: auto 50%;
         gap: 20px;
     }
 }

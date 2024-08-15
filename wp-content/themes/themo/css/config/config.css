@@ -113,6 +113,10 @@ footer.common-page-width .footer-width.vc_page_section,
     color: var(--colorLight);
 }
 
+.reason-block .swiper li a {
+    display: contents;
+}
+
  .light-subtitle p strong {
     font-weight: 500;
      color: var(--colorLight);

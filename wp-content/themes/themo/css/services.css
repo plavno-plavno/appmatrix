@@ -81,6 +81,14 @@
     .block-2-grid-team .container > .row {
         grid-template-columns: auto 28%;
     }
+
+    .block-2-grid-team .container > .row .grid-2-title-block.block-with-tags .wpb_wrapper{
+        max-width: 816px;
+    }
+
+    .block-2-grid-team .container > .row .grid-2-title-block.block-with-tags .h2-subtitle p {
+        max-width: 690px;
+    }
 }
 
 

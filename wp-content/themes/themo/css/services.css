@@ -109,7 +109,6 @@
 
     .solutions-card:not(.margin-s):not(.only-text) .sub-text ~ .button-wrap{
         margin-top: auto;
-        margin-bottom: 0;
     }
 
     .solutions-card:not(.margin-s):not(.only-text) .sub-text ~ .button-wrap a{
@@ -127,7 +126,7 @@
     /*    margin-bottom: 32px;*/
     /*}*/
     .solutions-card:not(.margin-s):not(.only-text) .sub-text ~ .button-wrap{
-        margin-bottom: 32px;
+        margin-bottom: 0;
     }
 
     .block-with-tags .info-tags {
@@ -148,7 +147,7 @@
     /*    margin-bottom: 40px;*/
     /*}*/
     .solutions-card:not(.margin-s):not(.only-text) .sub-text ~ .button-wrap{
-        margin-bottom: 40px;
+        margin-bottom: 0;
     }
     .solutions-card.margin-s .ideo-wow-title.style-text .title {
         margin-bottom: 16px;

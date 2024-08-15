@@ -160,7 +160,7 @@ body h3 ,body .h3-title p,
     font-weight: 300;
 }
 
-.h4-title, .h4-title span, .h4-title p {
+.h4-title, .h4-title span, .h4-title p, .teamSwiper .swiper-pagination {
     font-family: var(--font-family);
     font-size: 18px;
     line-height: 1.4;
@@ -206,7 +206,7 @@ body h3 ,body .h3-title p,
     .industries-accordion .accordion .panel-default > .panel-heading .panel-title a {
         font-size: 24px;
     }
-    .h4-title, .h4-title span, .h4-title p {
+    .h4-title, .h4-title span, .h4-title p, .teamSwiper .swiper-pagination {
         font-size: 20px;
     }
 
@@ -232,7 +232,7 @@ body h3 ,body .h3-title p,
         font-size: 32px;
     }
 
-    .h4-title, .h4-title span, .h4-title p {
+    .h4-title, .h4-title span, .h4-title p, .teamSwiper .swiper-pagination {
         font-size: 24px;
     }
 

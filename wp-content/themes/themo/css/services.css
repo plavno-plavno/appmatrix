@@ -61,12 +61,13 @@
 .teamSwiper .wp_swiper__navigation {
     display: block;
     position: absolute;
-    top: 68px;
-    right: 96px;
+    top: 20px;
+    right: 20px;
 }
 
 .teamSwiper .wp_swiper__navigation .wp_swiper__navigation-container {
     display: flex;
+    gap: 8px;
 }
 
 .teamSwiper .wp_swiper__navigation .wp_swiper__navigation-container .swiper-button-prev, .teamSwiper .wp_swiper__navigation .wp_swiper__navigation-container .swiper-button-next {
@@ -75,6 +76,16 @@
     height: 48px;
     margin: 0;
     display: block !important;
+    right: 0;
+    left: 0;
+}
+
+.teamSwipe .swiper-pagination {
+    bottom: auto;
+    top: 31px;
+    width: max-content;
+    right: 140px;
+    left: auto;
 }
 
 .block-with-tags .common-link {

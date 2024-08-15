@@ -58,7 +58,15 @@
     display: block;
 }
 
+.block-with-tags .common-link {
+    margin-top: 24px;
+}
+
 @media (min-width: 768px) {
+
+    .block-with-tags .common-link {
+        margin-top: 32px;
+    }
 
     .solutions-card.margin-s , .solutions-card.margin-s > .wpb_wrapper{
         height: 100%;
@@ -97,6 +105,14 @@
 
     .block-2-grid-team .container > .row .grid-2-title-block.block-with-tags .h2-subtitle p {
         max-width: 690px;
+    }
+
+    .solutions-card:not(.margin-s):not(.only-text) .sub-text ~ .button-wrap{
+        margin-top: auto;
+    }
+
+    .solutions-card:not(.margin-s):not(.only-text) .sub-text ~ .button-wrap a{
+        margin-top: 24px;
     }
 }
 
@@ -147,5 +163,9 @@
 
     .block-with-tags .info-tags {
         margin-top: 56px;
+    }
+
+    .block-with-tags .common-link {
+        margin-top: 40px;
     }
 }

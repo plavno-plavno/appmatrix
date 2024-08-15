@@ -36,6 +36,10 @@
     width: 100% !important;
 }
 
+.block-with-tags .info-tags {
+    margin-top: 40px;
+}
+
 @media (min-width: 768px) {
 
     .solutions-card.margin-s , .solutions-card.margin-s > .wpb_wrapper{
@@ -73,6 +77,10 @@
     .solutions-card:not(.margin-s):not(.only-text) .sub-text ~ .button-wrap{
         margin-bottom: 32px;
     }
+
+    .block-with-tags .info-tags {
+        margin-top: 48px;
+    }
 }
 
 @media (min-width: 1920px) {
@@ -96,5 +104,9 @@
 
     .solutions-card.margin-s .sub-text p {
         margin-bottom: 24px;
+    }
+
+    .block-with-tags .info-tags {
+        margin-top: 56px;
     }
 }

@@ -10,7 +10,7 @@
     width: max-content;
 }
 
-.tech-cards .info-tag p {
+.tech-cards .info-tag p, .block-with-tags .info-tags .info-tag p{
     display: flex;
     align-items: center;
     gap: 6px;
@@ -142,7 +142,7 @@
         margin-bottom: 24px;
     }
 
-    .tech-cards .info-tag p {
+    .tech-cards .info-tag p, .block-with-tags .info-tags .info-tag  {
         gap: 8px;
     }
 

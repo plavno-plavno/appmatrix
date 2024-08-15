@@ -149,6 +149,11 @@ body {
     display: flex;
 }
 
+.techSwiper .wp-swiper__slide-content > .wp-block-columns{
+    height: 100%;
+
+}
+
 .tab-card-link, .tab-card-link a {
     position: absolute;
     top: 0;

@@ -527,7 +527,7 @@ body.font-dark .primary-main-btn:hover, #aboutUsContactForm .form-btn-flex input
     border: none;
 }
 
-.title-subtitle .ideo-box-content {
+.title-subtitle:not(.block-with-tags) .ideo-box-content {
     display: grid;
 }
 

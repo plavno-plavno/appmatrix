@@ -134,6 +134,10 @@
     margin: initial !important;
 }
 
+.teamSwiper .swiper-wrapper {
+    height: auto !important;
+}
+
 .teamSwiper .swiper-wrapper .swiper-slide {
     height: 100%;
 }

@@ -134,6 +134,10 @@
     margin: initial !important;
 }
 
+.teamSwiper .swiper-wrapper .swiper-slide {
+    height: 100%;
+}
+
 @media (min-width: 768px) {
 
     .block-with-tags .common-link {

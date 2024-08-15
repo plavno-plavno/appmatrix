@@ -40,6 +40,11 @@
     margin-top: 40px;
 }
 
+.block-2-grid-team .container > .row {
+    display: grid;
+    gap: 16px;
+}
+
 @media (min-width: 768px) {
 
     .solutions-card.margin-s , .solutions-card.margin-s > .wpb_wrapper{
@@ -57,11 +62,20 @@
     .solutions-card.margin-s .ideo-wow-title.style-text .title {
         margin-bottom: 12px;
     }
+
+    .block-2-grid-team .container > .row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
 }
 
 @media (min-width: 1200px) {
     .value-column-text .wpb_wrapper {
         padding-left: 32px;
+    }
+
+    .block-2-grid-team .container > .row {
+        grid-template-columns: auto 28%;
     }
 }
 
@@ -80,6 +94,10 @@
 
     .block-with-tags .info-tags {
         margin-top: 48px;
+    }
+
+    .block-2-grid-team .container > .row {
+        grid-template-columns: auto 40%;
     }
 }
 

@@ -86,6 +86,7 @@
     width: max-content;
     right: 140px;
     left: auto;
+    color: var(--secondDarkColor);
 }
 
 .block-with-tags .common-link {

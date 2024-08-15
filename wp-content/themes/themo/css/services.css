@@ -40,6 +40,10 @@
     margin-top: 40px;
 }
 
+.block-with-tags .info-tag {
+    width: max-content;
+}
+
 .block-2-grid-team .container > .row {
     display: grid;
     gap: 16px;

@@ -168,6 +168,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 100%;
+    align-self: stretch;
 }
 
 .techSwiper .swiper-slide .cases-item__img + .wp-block-columns {

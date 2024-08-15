@@ -109,6 +109,10 @@ footer.common-page-width .footer-width.vc_page_section,
     color: var(--secondLightColor);
 }
 
+.reason-block .swiper li strong {
+    color: var(--colorLight);
+}
+
  .light-subtitle p strong {
     font-weight: 500;
      color: var(--colorLight);

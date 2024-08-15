@@ -45,6 +45,10 @@
     gap: 16px;
 }
 
+.block-2-grid-team .container > .row .vc_column_container {
+    width: 100%;
+}
+
 @media (min-width: 768px) {
 
     .solutions-card.margin-s , .solutions-card.margin-s > .wpb_wrapper{

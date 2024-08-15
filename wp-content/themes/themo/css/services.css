@@ -79,6 +79,11 @@
     height: 96px;
 }
 
+.teamSwiper .h3-title {
+    margin-top: 12px;
+    margin-bottom: 4px;
+}
+
 @media (min-width: 768px) {
 
     .block-with-tags .common-link {
@@ -177,6 +182,11 @@
         width: 120px;
         height: 120px;
     }
+
+    .teamSwiper .h3-title {
+        margin-top: 16px;
+        margin-bottom: 8px;
+    }
 }
 
 @media (min-width: 1920px) {
@@ -217,5 +227,9 @@
     .teamSwiper .team-slide .member-photo {
         width: 128px;
         height: 128px;
+    }
+
+    .teamSwiper .h3-title {
+        margin-top: 24px;
     }
 }

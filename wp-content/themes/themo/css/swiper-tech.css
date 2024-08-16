@@ -29,8 +29,11 @@ body {
     object-fit: cover;
 }
 
-.cases-item__description, .solutions-card__description, .solutions-card__imgs {
+.cases-item__description, .solutions-card__description {
     padding: 18px;
+}
+.solutions-card__imgs {
+    padding: 18px 18px 12px 18px;
 }
 
 .cases-item__description {
@@ -40,8 +43,12 @@ body {
 }
 
 @media (min-width: 1200px) {
-    .cases-item__description, .solutions-card__description, .solutions-card__imgs {
+    .cases-item__description, .solutions-card__description {
         padding: 20px;
+    }
+
+    .solutions-card__imgs {
+        padding: 20px 20px 16px 20px;
     }
     .swiper-pagination {
         display: none;
@@ -52,11 +59,19 @@ body {
     .cases-item__description, .solutions-card__description, .solutions-card__imgs {
         padding: 24px;
     }
+
+    .solutions-card__imgs {
+        padding: 24px 24px 16px 24px;
+    }
 }
 
 @media (min-width: 1920px) {
     .cases-item__description, .solutions-card__description, .solutions-card__imgs {
         padding: 32px;
+    }
+
+    .solutions-card__imgs {
+        padding: 32px 32px 24px 32px;
     }
 }
 

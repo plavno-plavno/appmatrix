@@ -265,7 +265,7 @@
         margin-bottom: 24px;
     }
 
-    .entry-content .service-logo-block:not(:last-child) .container .row {
+    .entry-content .service-logo-block:not(:last-child) .container {
         margin-bottom: 40px;
     }
 }
@@ -333,7 +333,7 @@
         margin-bottom: 32px;
     }
 
-    .entry-content .service-logo-block:not(:last-child) .container .row {
+    .entry-content .service-logo-block:not(:last-child) .container  {
         margin-bottom: 48px;
     }
 }

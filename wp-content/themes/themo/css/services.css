@@ -143,7 +143,7 @@
     height: auto;
 }
 
-.h3-title-block {
+.h3-title-block .container .row  {
     margin-bottom: 18px;
 }
 

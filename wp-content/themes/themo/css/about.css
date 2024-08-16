@@ -620,8 +620,12 @@ body .vc_page_section .vc_row.vc_inner.row-values {
         flex-grow: 1;
     }
 
-    .solutions-card__description .ideo-box-content {
+    .solutions-card__description:not(.solutions-card__imgs) .ideo-box-content {
         display: flex;
+
+    }
+
+    .solutions-card__description:not(.solutions-card__imgs) .ideo-box-content {
         flex-direction: column;
     }
 

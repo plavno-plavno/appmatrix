@@ -405,7 +405,7 @@ body .vc_page_section .vc_row.vc_inner.row-values {
     color: var(--mainColor);
 }
 
-.solutions-card__description.solutions-card__imgs .ideo-box-content {
+.solutions-card__imgs .ideo-box-content {
     display: flex;
     gap: 12px;
 }
@@ -639,7 +639,7 @@ body .vc_page_section .vc_row.vc_inner.row-values {
 
     }
 
-    .solutions-card__description:not(.solutions-card__imgs) .ideo-box-content {
+    .solutions-card__description .ideo-box-content {
         flex-direction: column;
     }
 
@@ -766,11 +766,11 @@ body .vc_page_section .vc_row.vc_inner.row-values {
         margin-bottom: 48px;
     }
 
-    .solutions-card__description.solutions-card__imgs .ideo-box-content {
+    .solutions-card__imgs .ideo-box-content {
         gap: 16px;
     }
 
-    .solutions-card__description.solutions-card__imgs .ideo-single-image {
+    .solutions-card__imgs .ideo-single-image {
         width: 48px !important;
     }
 }
@@ -899,11 +899,11 @@ body .vc_page_section .vc_row.vc_inner.row-values {
         margin-bottom: 56px;
     }
 
-    .solutions-card__description.solutions-card__imgs .ideo-box-content {
+    .solutions-card__imgs .ideo-box-content {
         gap: 24px;
     }
 
-    .solutions-card__description.solutions-card__imgs .ideo-single-image {
+   .solutions-card__imgs .ideo-single-image {
         width: 56px !important;
     }
 }

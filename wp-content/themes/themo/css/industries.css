@@ -37,7 +37,7 @@
 .industries-accordion .accordion .panel-body,
 .industries-accordion .accordion .panel-default >  .panel-heading .panel-title a,
 
-.hire-accordion-section .accordion.medium .panel-default > .panel-heading .panel-title a{
+.hire-accordion-section .wpb_wrapper .accordion.medium .panel-default > .panel-heading .panel-title a{
     padding: 18px 41px 18px 18px;
 }
 

@@ -147,7 +147,7 @@
     margin-bottom: 18px;
 }
 
-.entry-content .service-logo-block:not(:last-child) {
+.entry-content .service-logo-block:not(:last-child) .container {
     margin-bottom: 32px;
 }
 

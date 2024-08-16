@@ -147,6 +147,10 @@
     margin-bottom: 18px;
 }
 
+.entry-content .service-logo-block:not(:last-child) {
+    margin-bottom: 32px;
+}
+
 @media (min-width: 768px) {
 
     .block-with-tags .common-link {
@@ -260,6 +264,10 @@
     .h3-title-block .container .row {
         margin-bottom: 24px;
     }
+
+    .entry-content .service-logo-block:not(:last-child) {
+        margin-bottom: 40px;
+    }
 }
 
 @media (min-width: 1920px) {
@@ -323,5 +331,9 @@
 
     .h3-title-block .container .row {
         margin-bottom: 32px;
+    }
+
+    .entry-content .service-logo-block:not(:last-child) {
+        margin-bottom: 48px;
     }
 }

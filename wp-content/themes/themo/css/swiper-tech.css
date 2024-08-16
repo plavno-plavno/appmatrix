@@ -29,8 +29,12 @@ body {
     object-fit: cover;
 }
 
-.cases-item__description, .solutions-card__description {
+.cases-item__description, .solutions-card__description:not(.solutions-card__description_img) {
     padding: 18px;
+}
+
+.solutions-card__description.solutions-card__description_img {
+    padding: 12px 18px 18px 18px;
 }
 .solutions-card__imgs {
     padding: 18px 18px 0 18px;
@@ -43,8 +47,12 @@ body {
 }
 
 @media (min-width: 1200px) {
-    .cases-item__description, .solutions-card__description {
+    .cases-item__description, .solutions-card__description:not(.solutions-card__description_img) {
         padding: 20px;
+    }
+
+    .solutions-card__description.solutions-card__description_img {
+        padding: 16px 20px 20px 20px;
     }
 
     .solutions-card__imgs {
@@ -56,8 +64,12 @@ body {
 }
 
 @media (min-width: 1440px) {
-    .cases-item__description, .solutions-card__description, .solutions-card__imgs {
+    .cases-item__description, .solutions-card__description:not(.solutions-card__description_img) {
         padding: 24px;
+    }
+
+    .solutions-card__description.solutions-card__description_img {
+        padding: 16px 24px 24px 24px;
     }
 
     .solutions-card__imgs {
@@ -66,8 +78,12 @@ body {
 }
 
 @media (min-width: 1920px) {
-    .cases-item__description, .solutions-card__description, .solutions-card__imgs {
+    .cases-item__description, .solutions-card__description:not(.solutions-card__description_img) {
         padding: 32px;
+    }
+
+    .solutions-card__description.solutions-card__description_img {
+        padding: 24px 32px 32px 32px;
     }
 
     .solutions-card__imgs {

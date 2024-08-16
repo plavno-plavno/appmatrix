@@ -184,7 +184,7 @@
         height: 104px;
     }
 
-    .h3-title-block {
+    .h3-title-block .container .row {
         margin-bottom: 20px;
     }
 }
@@ -257,7 +257,7 @@
         margin-bottom: 16px;
     }
 
-    .h3-title-block {
+    .h3-title-block .container .row {
         margin-bottom: 24px;
     }
 }
@@ -321,7 +321,7 @@
         right: 160px;
     }
 
-    .h3-title-block {
+    .h3-title-block .container .row {
         margin-bottom: 32px;
     }
 }

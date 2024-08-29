@@ -141,9 +141,21 @@
     gap: 12px;
 }
 
+.wpcf7-form-control-wrap {
+    display: inline-block;
+}
+
+.input-label.main-text + p {
+    position: relative;
+}
+
 #aboutUsContactForm .wpcf7-not-valid-tip {
     position: absolute;
-    top: 36px;
+    bottom: 0;
+}
+
+#aboutUsContactForm .contactForm > .main-text:not(:last-child) input + .wpcf7-not-valid-tip {
+    bottom: -9px;
 }
 #aboutUsContactForm  .checkbox-row .wpcf7-not-valid-tip{
     top: auto;

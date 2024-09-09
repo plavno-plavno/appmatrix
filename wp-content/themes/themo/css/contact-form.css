@@ -143,6 +143,7 @@
 
 .wpcf7-form-control-wrap {
     display: inline-block;
+    width: 100%;
 }
 
 .input-label.main-text + p {

@@ -3205,7 +3205,6 @@ add_filter('upload_mimes', 'my_myme_types', 1, 1);
 
 function add_theme_scripts() {
 
-    wp_enqueue_style( 'style-custome-qatsol', get_template_directory_uri() . '/assets/css/style.css');
 
     wp_enqueue_script( 'script', get_template_directory_uri() . '/js/global-qatsol.js');
     wp_enqueue_style( 'style-custome-qatsol-new', get_template_directory_uri() . '/css/global-qatsol-new.css');

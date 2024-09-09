@@ -34,6 +34,39 @@ body {
     --margin-title-desctop-xl: 56px;
 }
 
+#header-navbar nav.navbar-standard-width-full .page-width,
+.entry-content .container, .page-width,
+.footer-navigator-bar .container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0;
+    width: 100% !important;
+}
+
+body.vc-on.wrap-wide .vc_page_section {
+    padding: 0;
+    margin: 0;
+}
+
+.entry-content {
+    padding: 0;
+}
+
+.vc_page_section .row.vc_inner, .vc_page_section .vc_row.vc_inner {
+    margin: 0;
+}
+
+#footer-container.sticky {
+    position: static;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1
+}
+
+body.page.wrap-wide.vc-on.sidebar-off #content, body.single-portfolio.wrap-wide.vc-on.sidebar-off #content, body.single-team.wrap-wide.vc-on.sidebar-off #content {
+    padding: 0;
+}
 
 .padding-block .container, .container-block,
 footer.common-page-width .footer-width.vc_page_section,

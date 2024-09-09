@@ -172,6 +172,10 @@ body.vc-on.wrap-wide .vc_page_section.padding-block-footer {
     padding-bottom: 24px;
 }
 
+#footer .widget_nav_menu {
+    margin-bottom: 0;
+}
+
 .footer-bottom-menu .menu {
     display: flex;
     align-items: center;
@@ -186,6 +190,7 @@ body.vc-on.wrap-wide .vc_page_section.padding-block-footer {
     color: var(--text-header);
     font-weight: 500;
     text-transform: capitalize;
+    letter-spacing: 0;
 }
 
 
@@ -310,7 +315,7 @@ a.img-footer-link:hover svg path {
     }
 
     .footer-menu-desc .widget .menu-item a {
-
+        letter-spacing: 0;
         text-transform: capitalize;
         display: block;
         color: var(--text-header) !important;

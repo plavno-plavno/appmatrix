@@ -64,6 +64,11 @@ body.vc-on.wrap-wide .vc_page_section {
     z-index: 1
 }
 
+.vc_page_section .row, .vc_page_section .vc_row, .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
 body.page.wrap-wide.vc-on.sidebar-off #content, body.single-portfolio.wrap-wide.vc-on.sidebar-off #content, body.single-team.wrap-wide.vc-on.sidebar-off #content {
     padding: 0;
 }

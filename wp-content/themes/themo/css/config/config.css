@@ -483,7 +483,7 @@ a.disabled {
 
 .primary-text,
 .colored-light.column-text-styled .primary-text, .transparent-dark.column-text a{
-    color: var(--brand---primary);
+    color: var(--primary-btn);
 }
 
 a.long-link, .row-values a, .long-link a, .solutions-cards .column-text li a {

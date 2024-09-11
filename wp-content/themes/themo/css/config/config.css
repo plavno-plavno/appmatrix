@@ -499,6 +499,7 @@ a.long-link, .row-values a, .long-link a, .solutions-cards .column-text li a {
     background-position: 100% 100%, 0 100%;
     background-repeat: no-repeat;
     transition: background-size 400ms;
+    font-weight: 500;
 }
 
 a.long-link:hover, a.long-link:focus,

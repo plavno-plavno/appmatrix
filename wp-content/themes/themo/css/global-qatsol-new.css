@@ -25,7 +25,9 @@ body.open-menu {
     background-color: var(--colorLight) !important;
 }
 
-
+#page-container {
+    margin-bottom: inherit !important;
+}
 
 
 ul {

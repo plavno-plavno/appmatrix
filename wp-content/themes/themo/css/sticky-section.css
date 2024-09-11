@@ -81,6 +81,11 @@ width: 100%;
     }
 }
 
+.sticky-left-info .process-left-block  .ideo-single-image {
+    width: 100% !important;
+    margin-bottom: 20px;
+}
+
 @media (min-width: 992px) {
     .sticky-left-info .wpb_wrapper {
         position: sticky;

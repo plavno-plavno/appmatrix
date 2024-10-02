@@ -723,7 +723,7 @@ body.font-dark .primary-main-btn:hover, #aboutUsContactForm .form-btn-flex input
     color: var(--secondDarkColor);
 }
 
-.legal-page li::before {
+.column-text .legal-page  ul li::before {
     top: 11px;
 }
 

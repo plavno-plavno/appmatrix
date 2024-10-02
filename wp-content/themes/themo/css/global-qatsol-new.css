@@ -727,6 +727,10 @@ body.font-dark .primary-main-btn:hover, #aboutUsContactForm .form-btn-flex input
     top: 11px;
 }
 
+.legal-page ul {
+    margin: 8px 0;
+}
+
 .legal-page h4 {
     color: var(--text-header);
 }

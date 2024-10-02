@@ -723,6 +723,14 @@ body.font-dark .primary-main-btn:hover, #aboutUsContactForm .form-btn-flex input
     color: var(--secondDarkColor);
 }
 
+.legal-page li::before {
+    top: 11px;
+}
+
+.legal-page h4 {
+    color: var(--text-header);
+}
+
 @media (min-width: 1920px) {
     .legal-page li, .legal-page p {
         font-size: 18px;

@@ -717,3 +717,14 @@ body.font-dark .primary-main-btn:hover, #aboutUsContactForm .form-btn-flex input
         display: none;
     }
 }
+
+.legal-page li, .legal-page p {
+    font-size: 16px ;
+    color: var(--secondDarkColor);
+}
+
+@media (min-width: 1920px) {
+    .legal-page li, .legal-page p {
+        font-size: 18px;
+    }
+}

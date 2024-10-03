@@ -3225,3 +3225,47 @@ function add_open_graph_tags() {
     }
 }
 add_action('wp_head', 'add_open_graph_tags');
+
+
+function load_more_posts() {
+    $paged = $_POST['page'];
+
+    $args = array(
+        'post_type' => 'post',
+        'posts_per_page' => 9,
+        'paged' => $paged
+    );
+
+    $blog_posts = new WP_Query($args);
+
+    if ($blog_posts->have_posts()) :
+        $response = '';
+        while ($blog_posts->have_posts()) : $blog_posts->the_post();
+            $response .= '<div class="post-item">';
+            $response .= '<a href="' . get_permalink() . '">';
+            $response .= '<div class="post-thumbnail">';
+            if (has_post_thumbnail()) {
+                $response .= get_the_post_thumbnail(get_the_ID(), 'medium');
+            } else {
+                $response .= '<img src="' . get_template_directory_uri() . '/images/placeholder.png" alt="Placeholder">';
+            }
+            $response .= '</div>';
+            $response .= '<div class="post-content">';
+            $response .= '<h2>' . get_the_title() . '</h2>';
+            $response .= '<p>' . get_the_time('d.m.Y') . '</p>';
+            $response .= '</div>';
+            $response .= '</a>';
+            $response .= '</div>';
+        endwhile;
+
+        wp_send_json_success($response);
+    else :
+        wp_send_json_error('No more posts');
+    endif;
+
+    wp_reset_postdata();
+}
+
+add_action('wp_ajax_load_more_posts', 'load_more_posts');
+add_action('wp_ajax_nopriv_load_more_posts', 'load_more_posts');
+

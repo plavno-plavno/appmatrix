@@ -1,132 +1,241 @@
-<?php get_header(); ?>
+<?php
 
-<div id="content" class="it-blog <?php echo ideothemo_get_content_classes(); ?>" <?php do_action('ideothemo_content_tag');?>>
-    <?php if (!ideothemo_is_boxed_version()): ?>
-    <div class="container">
-    <?php endif; ?>
-        <div class="row">
-        <div class="entry-content <?php echo ideothemo_get_blog_sidebar_page_classes(ideothemo_get_sidebar_position()); ?>">
-            <!-- single posts list element -->
-            <?php while (have_posts()) : the_post(); ?>
-            <article
-                class="it-list-view ideo-blog-single ideo-blog-entry <?php echo ideothemo_get_theme_skin_class();?>">
+get_header();
 
-                <?php /** NAV */ ?>
-                <?php if (ideothemo_nextprev_navi_enabled()) : ?>
-
-                    <?php get_template_part('parts/blog/single/nav'); ?>
-
-                <?php endif; ?>
-
-
-                <header>
-
-                    <?php /** TOP */ ?>
-                    <?php if (ideothemo_blog_feature_image_enabled()) : ?>
-
-                        <?php get_template_part('parts/blog/single/feature_image'); ?>
-
-                    <?php endif;?>
-
-                    <?php /** POST TITLE */ ?>
-                    <?php if (ideothemo_blog_post_title_enabled()) : ?>
-                        <h1 class="post-title"<?php ideothemo_customize_attrs(ideothemo_get_post_meta('blog.blog_single.blog_single_post_title'), ideothemo_blog_post_title_enabled(false, false)); ?>><?php the_title(); ?></h1>
-                    <?php endif;?>
-
-                    <?php if (ideothemo_blog_meta_enabled()): ?>
-                        <div
-                            class="post-meta"<?php ideothemo_customize_attrs(ideothemo_get_post_meta('blog.blog_single.blog_single_post_meta'), ideothemo_blog_meta_enabled(false, false)); ?>>
-                            <?php /** AUTHOR */ ?>
-                            <?php if (ideothemo_blog_author_enabled()) : ?>
-                                <?php get_template_part('parts/blog/single/meta/authors'); ?>
-                            <?php endif; ?>
-
-                            <?php /** DATE */ ?>
-                            <?php if (ideothemo_blog_date_enabled()) : ?>
-                                <?php get_template_part('parts/blog/single/meta/date'); ?>
-                            <?php endif; ?>
-
-                            <?php /** TAGS */ ?>
-                            <?php if (ideothemo_blog_tags_enabled()) : ?>
-
-                                <?php get_template_part('parts/blog/single/meta/tags'); ?>
-
-                            <?php endif; ?>
-
-                            <?php /** COMMENTS */ ?>
-                            <?php if (ideothemo_blog_comments_enabled()) : ?>
-
-                                <?php get_template_part('parts/blog/single/meta/comments'); ?>
-
-                            <?php endif; ?>
-                        </div>
-
-                    <?php endif; ?>
-
-                </header>
-
-                <div class="blog-content">
-                    <?php the_content(); ?>
-                    <?php wp_link_pages(array(
-                        'before'      => '<div class="pagination standard skin-colored-' . ideothemo_get_general_theme_skin() . '">',
-                        'after'       => '</div>',
-                        'link_before' => '<span>',
-                        'link_after'  => '</span>',
-                    )); ?>
+function display_authors($authors) {
+    foreach ($authors as $author) {
+        ?>
+        <div class="author">
+            <img class="logo-author" src="<?php echo esc_url($author['logo']); ?>" alt="<?php echo esc_attr($author['name']); ?>">
+            <div class="info-author">
+                <span class="title"><?php echo esc_html($author['name']); ?></span>
+                <span class="add-title"><?php echo esc_html($author['position_at_work']); ?></span>
+                <div class="social">
+                    <?php foreach ($author['social'] as $social) { ?>
+                        <a href="<?php echo esc_url($social['link']); ?>">
+                            <img src="<?php echo esc_url($social['ico']); ?>" alt="">
+                        </a>
+                    <?php } ?>
                 </div>
+            </div>
+        </div>
+        <?php
+    }
+}
+?>
 
-                <footer>
 
-                    <?php /** CATEGORIES */ ?>
-                    <?php if (ideothemo_blog_categories_enabled()) : ?>
 
-                        <?php get_template_part('parts/blog/single/categories'); ?>
+    <div class="single-post-wrapper">
 
-                    <?php endif;?>
 
-                    <?php /** SOCIAL MEDIA */ ?>
-                    <?php if (ideothemo_blog_social_enabled()) : ?>
+        <div class="post-header">
+            <h1><?php the_title(); ?></h1>
+            <div class="post-meta authors">
+                <?php
+                $authors = get_field('authors', get_the_ID());
 
-                        <?php get_template_part('parts/blog/single/social'); ?>
+                display_authors($authors);
+                ?>
 
-                    <?php endif; ?>
-
-                    <?php /** AUTHOR DETAILS */ ?>
-                    <?php if (ideothemo_blog_author_enabled()) : ?>
-
-                        <?php get_template_part('parts/blog/single/author_details'); ?>
-
-                    <?php endif;?>
-
-                    <?php /** RELATED POSTS */ ?>
-                    <?php if (ideothemo_blog_related_posts_enabled()) : ?>
-
-                        <?php get_template_part('parts/blog/single/related_posts'); ?>
-
-                    <?php endif;?>
-
-                    <?php /** COMMENTS */ ?>
-                    <?php if (ideothemo_blog_comments_enabled()) : ?>
-
-                        <?php get_template_part('parts/blog/single/comments'); ?>
-
-                    <?php endif;?>
-
-                </footer>
-            </article>
+            </div>
         </div>
 
-        <?php endwhile; ?>
 
-        <?php
-        get_sidebar();
-        ?>
+        <div class="post-featured-image">
+            <?php if (has_post_thumbnail()) : ?>
+                <?php the_post_thumbnail('large'); ?>
+            <?php endif; ?>
+        </div>
+
+
+        <div class="post-content-block">
+            <div class="post-content-menu">
+                <?php echo dynamic_content_menu(); ?>
+            </div>
+            <div class="post-content">
+                <?php
+                while (have_posts()) : the_post();
+                    echo add_anchors_to_headings(get_the_content());
+                endwhile;
+                ?>
+            </div>
+            <?php
+                display_authors($authors);
+            ?>
+        </div>
+
+        <div class="latest-posts-carousel swiper-container">
+            <h3>Our latest insights</h3>
+            <div class="swiper-wrapper">
+                <?php
+                $recent_args = array(
+                    'post_type' => 'post',
+                    'posts_per_page' => 6
+                );
+                $recent_posts = new WP_Query($recent_args);
+
+                if ($recent_posts->have_posts()) :
+                    while ($recent_posts->have_posts()) : $recent_posts->the_post(); ?>
+                        <div class="swiper-slide">
+                            <a href="<?php the_permalink(); ?>">
+                                <div class="carousel-thumbnail">
+                                    <?php if (has_post_thumbnail()) {
+                                        the_post_thumbnail('medium');
+                                    } else { ?>
+                                        <img src="<?php echo get_template_directory_uri(); ?>/images/placeholder.png" alt="Placeholder">
+                                    <?php } ?>
+                                </div>
+                                <div class="carousel-content">
+                                    <h3><?php the_title(); ?></h3>
+                                    <p><?php the_time('d.m.Y'); ?></p>
+                                </div>
+                            </a>
+                        </div>
+                    <?php endwhile;
+                endif;
+
+                wp_reset_postdata();
+                ?>
+            </div>
+
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
     </div>
-    <?php if (!ideothemo_is_boxed_version()): ?>
-    </div>
-    <?php endif;?>
 
-    <?php do_action('ideothemo_content_entry_after'); ?>
-</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const menuItems = document.querySelectorAll('.dynamic-menu a');
+        const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
 
-<?php get_footer(); ?>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    document.querySelector('.dynamic-menu a.active')?.classList.remove('active');
+                    document.querySelector(`.dynamic-menu a[href="#${id}"]`).classList.add('active');
+                }
+            });
+        }, {
+            threshold: 0.5
+        });
+
+        headings.forEach(heading => {
+            observer.observe(heading);
+        });
+    });
+
+</script>
+
+<style>
+
+    .single-post-wrapper {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .post-header h1 {
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+
+    .post-meta {
+        color: #777;
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .post-featured-image {
+        margin-bottom: 20px;
+    }
+
+    .post-content-block {
+        line-height: 1.8;
+        font-size: 18px;
+        color: #333;
+    }
+
+    .post-social-share span {
+        font-weight: bold;
+        margin-right: 10px;
+    }
+
+    .post-social-share a {
+        margin-right: 15px;
+        color: #0073aa;
+    }
+
+    .post-social-share a:hover {
+        text-decoration: underline;
+    }
+
+
+    .latest-posts-carousel h3 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .related-post-item img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .related-post-item h4 {
+        font-size: 16px;
+        color: #333;
+    }
+
+    .latest-posts-carousel {
+        margin: 40px 0;
+        position: relative;
+        width: 100%;
+    }
+
+    .swiper-wrapper {
+        display: flex;
+    }
+
+    .swiper-slide {
+        width: 250px;
+        background-color: #f5f5f5;
+        margin-right: 20px;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .carousel-thumbnail img {
+        width: 100%;
+        height: auto;
+    }
+
+    .carousel-content {
+        padding: 15px;
+    }
+
+    .carousel-content h3 {
+        font-size: 16px;
+        margin: 0 0 10px;
+    }
+
+    .carousel-content p {
+        font-size: 12px;
+        color: #777;
+    }
+
+
+    .swiper-button-next, .swiper-button-prev {
+        color: #333;
+        width: 44px;
+        height: 44px;
+    }
+
+
+</style>
+<?php
+get_footer();

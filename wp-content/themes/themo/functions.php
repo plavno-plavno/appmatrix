@@ -3269,3 +3269,135 @@ function load_more_posts() {
 add_action('wp_ajax_load_more_posts', 'load_more_posts');
 add_action('wp_ajax_nopriv_load_more_posts', 'load_more_posts');
 
+
+function enqueue_swiper_assets() {
+    // Подключение стилей Swiper.js
+    wp_enqueue_style('swiper-css', 'https://unpkg.com/swiper/swiper-bundle.min.css');
+
+    // Подключение скриптов Swiper.js
+    wp_enqueue_script('swiper-js', 'https://unpkg.com/swiper/swiper-bundle.min.js', array(), null, true);
+
+    // Включаем наш кастомный JS для инициализации карусели
+    wp_add_inline_script('swiper-js', '
+        var swiper = new Swiper(".swiper-container", {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 1
+                },
+                1024: {
+                    slidesPerView: 2
+                },
+                1200: {
+                    slidesPerView: 3
+                }
+            }
+        });
+    ');
+}
+add_action('wp_enqueue_scripts', 'enqueue_swiper_assets');
+
+function latest_insights_shortcode($atts) {
+    $atts = shortcode_atts(array(
+        'posts' => 6,
+    ), $atts, 'latest_insights');
+
+    $latest_posts = new WP_Query(array(
+        'posts_per_page' => $atts['posts'],
+        'post__not_in' => array(get_the_ID()),
+    ));
+
+    // Проверка наличия постов
+    if (!$latest_posts->have_posts()) {
+        return '<p>No posts found.</p>';
+    }
+
+    ob_start(); ?>
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <?php while ($latest_posts->have_posts()) : $latest_posts->the_post(); ?>
+                <div class="swiper-slide">
+                    <a href="<?php the_permalink(); ?>">
+                        <?php if (has_post_thumbnail()) {
+                            the_post_thumbnail('medium');
+                        } else { ?>
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/placeholder.png" alt="Placeholder">
+                        <?php } ?>
+                        <h4><?php the_title(); ?></h4>
+                        <span class="post-date"><?php echo get_the_date('d.m.Y'); ?></span>
+                    </a>
+                </div>
+            <?php endwhile; ?>
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <?php
+    wp_reset_postdata();
+
+    return ob_get_clean();
+}
+add_shortcode('latest_insights', 'latest_insights_shortcode');
+
+function add_anchors_to_headings($content) {
+    preg_match_all('/<h([1-6])>(.*?)<\/h[1-6]>/', $content, $matches, PREG_SET_ORDER);
+
+    if (!empty($matches)) {
+        foreach ($matches as $match) {
+            $heading_level = $match[1];
+            $heading_text = strip_tags($match[2]);
+            $anchor = sanitize_title($heading_text);
+
+            $content = str_replace($match[0], '<h' . $heading_level . ' id="' . $anchor . '">' . $heading_text . '</h' . $heading_level . '>', $content);
+        }
+    }
+
+    return $content;
+}
+
+
+//add_filter('the_content', 'add_anchors_to_headings');
+
+function dynamic_content_menu() {
+    global $post;
+
+    $content = $post->post_content;
+
+    preg_match_all('/<h([1-6])>(.*?)<\/h[1-6]>/', $content, $matches, PREG_SET_ORDER);
+
+    if (!empty($matches)) {
+        $menu = '<div class="dynamic-menu">';
+        $menu .= '<ul>';
+
+        foreach ($matches as $match) {
+            $heading_level = $match[1];
+            $heading_text = strip_tags($match[2]);
+            $anchor = sanitize_title($heading_text);
+
+
+            $menu .= '<li class="menu-item menu-item-h' . $heading_level . '">';
+            $menu .= '<a href="#' . $anchor . '">' . $heading_text . '</a>';
+            $menu .= '</li>';
+        }
+
+        $menu .= '</ul>';
+        $menu .= '</div>';
+
+        return $menu;
+    }
+
+    return '';
+}
+
+
+//add_shortcode('dynamic_menu', 'dynamic_content_menu');

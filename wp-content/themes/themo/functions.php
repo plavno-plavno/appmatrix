@@ -3218,10 +3218,9 @@ add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
 function add_open_graph_tags() {
     if (is_single()) {
         global $post;
-        $default_image = 'https://qatsol.com/wp-content/uploads/2024/08/favicon.png'; // Укажите URL вашего изображения по умолчанию
+        $default_image = 'https://qatsol.com/wp-content/uploads/2024/08/favicon.png';
         $og_image = get_the_post_thumbnail_url($post->ID, 'full') ? get_the_post_thumbnail_url($post->ID, 'full') : $default_image;
         echo '<meta property="og:image" content="' . esc_url($og_image) . '"/>';
-        // Другие Open Graph теги можно добавить здесь
     }
 }
 add_action('wp_head', 'add_open_graph_tags');
@@ -3271,13 +3270,8 @@ add_action('wp_ajax_nopriv_load_more_posts', 'load_more_posts');
 
 
 function enqueue_swiper_assets() {
-    // Подключение стилей Swiper.js
-    wp_enqueue_style('swiper-css', 'https://unpkg.com/swiper/swiper-bundle.min.css');
-
-    // Подключение скриптов Swiper.js
-    wp_enqueue_script('swiper-js', 'https://unpkg.com/swiper/swiper-bundle.min.js', array(), null, true);
-
-    // Включаем наш кастомный JS для инициализации карусели
+//    wp_enqueue_style('swiper-css', 'https://unpkg.com/swiper/swiper-bundle.min.css');
+//    wp_enqueue_script('swiper-js', 'https://unpkg.com/swiper/swiper-bundle.min.js', array(), null, true);
     wp_add_inline_script('swiper-js', '
         var swiper = new Swiper(".swiper-container", {
             slidesPerView: 3,
@@ -3313,7 +3307,6 @@ function latest_insights_shortcode($atts) {
         'post__not_in' => array(get_the_ID()),
     ));
 
-    // Проверка наличия постов
     if (!$latest_posts->have_posts()) {
         return '<p>No posts found.</p>';
     }

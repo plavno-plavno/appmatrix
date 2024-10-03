@@ -116,7 +116,7 @@ function display_authors($authors) {
                 if (entry.isIntersecting) {
                     const id = entry.target.getAttribute('id');
                     document.querySelector('.dynamic-menu a.active')?.classList.remove('active');
-                    document.querySelector(`.dynamic-menu a[href="#${id}"]`).classList.add('active');
+                    document.querySelector(`.dynamic-menu a[href="#${id}"]`)?.classList.add('active');
                 }
             });
         }, {

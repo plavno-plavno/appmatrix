@@ -25,6 +25,10 @@
     gap: 12px;
 }
 
+.post-content-article {
+    margin-bottom: 48px;
+}
+
 .info-author .author-name {
     font-weight: 500;
     font-size: 16px;
@@ -135,6 +139,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     flex-shrink: 0;
+    margin-bottom: 18px;
 }
 
 .post-content-article blockquote h3{
@@ -265,6 +270,7 @@
     .post-content-article blockquote::before{
         width: 96px;
         height: 96px;
+        margin-bottom: 0;
     }
 }
 
@@ -325,6 +331,10 @@
     .post-content-article h4 {
         font-size: 20px;
     }
+
+    .post-content-article {
+        margin-bottom: 56px;
+    }
 }
 
 @media (min-width: 1920px) {
@@ -376,5 +386,9 @@
 
     .post-content-article h5 {
         font-size: 20px;
+    }
+
+    .post-content-article {
+        margin-bottom: 64px;
     }
 }

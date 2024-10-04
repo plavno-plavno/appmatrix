@@ -182,6 +182,7 @@
 }
 
 .dynamic-menu ul li a:hover {
+    background: linear-gradient(to right, transparent, transparent), linear-gradient(to right, var(--brand---primary), var(--brand---primary), var(--brand---primary));
     transition: all .3s ease-out;
     background-size: 0 1px, 100% 1px;
 }

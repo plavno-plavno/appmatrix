@@ -67,9 +67,10 @@ function display_authors($authors)
             <?php
             display_authors($authors);
             ?>
-        </div>
-        <div class="post-content-menu">
-            <?php echo dynamic_content_menu(); ?>
+
+            <div class="post-content-menu">
+                <?php echo dynamic_content_menu(); ?>
+            </div>
         </div>
     </div>
 

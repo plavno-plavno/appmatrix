@@ -8,16 +8,20 @@ get_header(); ?>
 <div class="blog-header">
     <div class="padding-block banner-about dark-block">
         <div class="common-page-width">
-            <div class="banner-grid-container">
-                <div class="hero-content">
-                    <div class="h1-title hero-title">
-                        <h1><?php the_title(); ?></h1>
+            <div class="container">
+                <div class="banner-grid-container">
+                    <div class="hero-content">
+                        <div class="h1-title hero-title">
+                            <h1>
+                                <span><?php the_title(); ?></span>
+                            </h1>
+                        </div>
+                        <div class="hero-common-text hero-sub-text">
+                            <p><?php the_content(); ?></p>
+                        </div>
                     </div>
-                    <div class="hero-common-text hero-sub-text">
-                        <p><?php the_content(); ?></p>
-                    </div>
+                    <div class=""></div>
                 </div>
-                <div class=""></div>
             </div>
         </div>
     </div>
@@ -41,7 +45,8 @@ get_header(); ?>
                         <?php if (has_post_thumbnail()) {
                             the_post_thumbnail('medium');
                         } else { ?>
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/placeholder.png" alt="Placeholder">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/placeholder.png"
+                                 alt="Placeholder">
                         <?php } ?>
                     </div>
                     <div class="post-content">

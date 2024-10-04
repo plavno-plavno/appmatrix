@@ -45,6 +45,17 @@
     line-height: 1.4;
     color: var(--secondDarkColor);
 }
+.post-content-article ol {
+    padding-left: 10px;
+}
+
+.post-content-article h4{
+    font-family: var(--font-family);
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: 400;
+}
+
 
 .post-content-article p {
     margin-bottom: 8px;
@@ -279,6 +290,10 @@
         width: 104px;
         height: 104px;
     }
+
+    .post-content-article h4 {
+        font-size: 20px;
+    }
 }
 
 @media (min-width: 1920px) {
@@ -322,5 +337,9 @@
 
     .post-content-article blockquote{
         gap: 24px;
+    }
+
+    .post-content-article h4  {
+        font-size: 24px;
     }
 }

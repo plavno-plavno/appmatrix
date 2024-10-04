@@ -12,11 +12,11 @@ get_header(); ?>
                 <div class="banner-grid-container">
                     <div class="hero-content">
                         <div class="h1-title hero-title">
-                            <h1>
+                            <h1 class="title">
                                 <span><?php the_title(); ?></span>
                             </h1>
                         </div>
-                        <div class="hero-common-text hero-sub-text">
+                        <div class="hero-common-text hero-sub-text column-text">
                             <p><?php the_content(); ?></p>
                         </div>
                     </div>

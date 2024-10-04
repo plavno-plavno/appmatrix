@@ -89,6 +89,8 @@ document.addEventListener("DOMContentLoaded",() => {
 
 })
 
+console.log('test')
+
 window.addEventListener('load', function() {
     document.querySelectorAll('img').forEach(function(img) {
         img.src = img.src;

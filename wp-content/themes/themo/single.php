@@ -11,7 +11,7 @@ function display_authors($authors)
                  alt="<?php echo esc_attr($author['name']); ?>">
             <div class="info-author">
                 <div class="author-name"><?php echo esc_html($author['name']); ?></div>
-                <div class="add-title"><?php echo esc_html($author['position_at_work']); ?></div>
+                <div class="author-position"><?php echo esc_html($author['position_at_work']); ?></div>
                 <div class="social">
                     <?php foreach ($author['social'] as $social) { ?>
                         <a href="<?php echo esc_url($social['link']); ?>">
@@ -170,6 +170,13 @@ function display_authors($authors)
             margin-bottom: 4px;
         }
 
+        .author-position {
+            font-size: 16px;
+            line-height: 1.4;
+            color: var(--secondDarkColor);
+            margin-bottom: 4px;
+        }
+
         .post-featured-image {
             margin-bottom: 20px;
         }
@@ -271,9 +278,11 @@ function display_authors($authors)
                 gap: 16px;
             }
 
-            .info-author .author-name {
+            .info-author .author-name,.author-position {
                 margin-bottom: 8px;
             }
+
+
         }
 
         @media (min-width: 1440px) {
@@ -303,7 +312,7 @@ function display_authors($authors)
                 height: 96px;
             }
 
-            .info-author .author-name {
+            .info-author .author-name, .author-position {
                 font-size: 18px;
             }
         }

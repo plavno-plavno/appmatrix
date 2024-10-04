@@ -280,6 +280,10 @@
     order: 0;
 }
 
+.swiper-button-next, .swiper-button-prev {
+    display: none;
+}
+
 @media (min-width: 768px) {
     .post-header h1 {
         margin-bottom: 40px;
@@ -332,9 +336,6 @@
         position: sticky;
         top: 120px
     }
-    .latest-posts-carousel .subtitle-link-wrapper{
-        margin-bottom: 0;
-    }
 }
 
 @media (min-width: 1280px) {
@@ -346,7 +347,12 @@
         margin-bottom: 8px;
     }
 
-
+    .latest-posts-carousel .subtitle-link-wrapper{
+        margin-bottom: 0;
+    }
+    .swiper-button-next, .swiper-button-prev {
+        display: block;
+    }
 }
 
 @media (min-width: 1440px) {

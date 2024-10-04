@@ -57,22 +57,22 @@ function display_authors($authors)
     <div class="post-content-block padding-block padding-block-y process-section">
         <div class="container">
             <div class="blog-grid-article">
-            <div class="post-content-wrapper">
-                <div class="post-content-article">
+                <div class="post-content-wrapper">
+                    <div class="post-content-article">
+                        <?php
+                        while (have_posts()) : the_post();
+                            echo add_anchors_to_headings(get_the_content());
+                        endwhile;
+                        ?>
+                    </div>
                     <?php
-                    while (have_posts()) : the_post();
-                        echo add_anchors_to_headings(get_the_content());
-                    endwhile;
+                    display_authors($authors);
                     ?>
-                </div>
-                <?php
-                display_authors($authors);
-                ?>
 
-            </div>
-            <div class="post-content-menu">
-                <?php echo dynamic_content_menu(); ?>
-            </div>
+                </div>
+                <div class="post-content-menu">
+                    <?php echo dynamic_content_menu(); ?>
+                </div>
             </div>
         </div>
     </div>
@@ -185,15 +185,22 @@ function display_authors($authors)
             margin-bottom: 4px;
         }
 
-        .post-featured-image {
-            margin-bottom: 20px;
+        .post-content-article p {
+            font-size: 16px;
+            line-height: 1.4;
+            color: var(--secondDarkColor);
+            margin-bottom: 8px;
         }
 
-        .post-content-block {
-            line-height: 1.8;
-            font-size: 18px;
-            color: #333;
+        .post-content-article a {
+            color: var(--primary);
         }
+
+        .post-content-article h2 {
+            color: var(--text-header);
+            margin: 24px 0;
+        }
+
 
         .post-social-share span {
             font-weight: bold;
@@ -305,6 +312,10 @@ function display_authors($authors)
             .blog-grid-article {
                 grid-template-columns: auto 249px;
             }
+
+            .post-content-article p {
+                margin-bottom: 12px;
+            }
         }
 
         @media (min-width: 1280px) {
@@ -359,8 +370,13 @@ function display_authors($authors)
             .blog-grid-article {
                 grid-template-columns: auto 392px;
             }
+
             .post-content-wrapper {
                 padding: 32px;
+            }
+
+            .post-content-article h2 {
+                margin: 32px 0;
             }
         }
 

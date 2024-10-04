@@ -28,11 +28,11 @@ function display_authors($authors)
 ?>
 
     <div class="single-post-wrapper">
-
-        <div class="padding-block">
+        <div class="blog-header post-header">
+        <div class="padding-block banner-about">
             <div class="common-page-width">
                 <div class="container">
-                    <div class="post-header">
+
                         <h1><?php the_title(); ?></h1>
                         <div class="post-meta authors">
                             <?php

@@ -27,21 +27,20 @@ function display_authors($authors)
 
 ?>
 
-    <div class="single-post-wrapper">
-        <div class="blog-header post-header">
-        <div class="padding-block banner-about">
+
+    <div class="blog-header post-header">
+        <div class="padding-block">
             <div class="common-page-width">
                 <div class="container">
 
-                        <h1><?php the_title(); ?></h1>
-                        <div class="post-meta authors">
-                            <?php
-                            $authors = get_field('authors', get_the_ID());
+                    <h1><?php the_title(); ?></h1>
+                    <div class="post-meta authors">
+                        <?php
+                        $authors = get_field('authors', get_the_ID());
 
-                            display_authors($authors);
-                            ?>
+                        display_authors($authors);
+                        ?>
 
-                        </div>
                     </div>
                 </div>
             </div>
@@ -137,13 +136,6 @@ function display_authors($authors)
     </script>
 
     <style>
-
-        .single-post-wrapper {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
         .post-header h1 {
             font-size: 32px;
             margin-bottom: 10px;

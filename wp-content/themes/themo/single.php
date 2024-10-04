@@ -29,7 +29,7 @@ function display_authors($authors)
 
     <div class="single-post-wrapper">
 
-        <div class="padding-block banner-about dark-block">
+        <div class="padding-block">
             <div class="common-page-width">
                 <div class="container">
                     <div class="post-header">

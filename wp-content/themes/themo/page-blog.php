@@ -27,7 +27,7 @@ get_header(); ?>
     </div>
 </div>
 
-<div class="post-grid" id="post-grid">
+<div class="post-grid padding-block padding-block-y process-section" id="post-grid">
 
     <?php
     $args = array(
@@ -92,10 +92,6 @@ get_header(); ?>
 </script>
 
 <style>
-    .blog-header {
-        text-align: center;
-        margin-bottom: 40px;
-    }
 
     .post-grid {
         display: grid;

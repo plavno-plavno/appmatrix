@@ -283,7 +283,7 @@ body h3 ,body .h3-title p,
     background: var(--primary);
     color: #fff;
 }
-body.vc-on.wrap-wide .vc_page_section.padding-block-y {
+body.vc-on.wrap-wide .vc_page_section.padding-block-y, .padding-block-y {
     padding-top: 88px;
     padding-bottom: 88px;
 }
@@ -294,28 +294,28 @@ body.vc-on.wrap-wide .vc_page_section.padding-block-y {
 }
 
 @media (min-width: 768px) {
-    body.vc-on.wrap-wide .vc_page_section.padding-block-y {
+    body.vc-on.wrap-wide .vc_page_section.padding-block-y, .padding-block-y {
         padding-top: 96px;
         padding-bottom: 96px;
     }
 }
 
 @media (min-width: 1200px) {
-    body.vc-on.wrap-wide .vc_page_section.padding-block-y {
+    body.vc-on.wrap-wide .vc_page_section.padding-block-y, .padding-block-y {
         padding-top: 104px;
         padding-bottom: 104px;
     }
 }
 
 @media (min-width: 1440px) {
-    body.vc-on.wrap-wide .vc_page_section.padding-block-y {
+    body.vc-on.wrap-wide .vc_page_section.padding-block-y, .padding-block-y {
         padding-top: 112px;
         padding-bottom: 112px;
     }
 }
 
 @media (min-width: 1920px) {
-    body.vc-on.wrap-wide .vc_page_section.padding-block-y {
+    body.vc-on.wrap-wide .vc_page_section.padding-block-y, .padding-block-y {
         padding-top: 120px;
         padding-bottom: 120px;
     }

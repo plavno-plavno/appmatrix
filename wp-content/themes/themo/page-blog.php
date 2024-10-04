@@ -128,7 +128,7 @@ get_header(); ?>
         flex-direction: column;
         justify-content: space-between;
         gap: 12px;
-        padding: 20px  56px 20px 18px;
+        padding: 20px  18px;
     }
 
     .post-thumbnail img {

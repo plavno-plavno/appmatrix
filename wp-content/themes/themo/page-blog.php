@@ -6,26 +6,25 @@
 get_header(); ?>
 
 <div class="blog-header">
-    <h1><?php the_title(); ?></h1>
-    <p><?php the_content(); ?></p>
-</div>
-
-<div class="post-grid" id="post-grid">
     <div class="padding-block banner-about dark-block">
         <div class="common-page-width">
             <div class="banner-grid-container">
                 <div class="hero-content">
                     <div class="h1-title hero-title">
-                        <h1>Qatsol Blog</h1>
+                        <h1><?php the_title(); ?></h1>
                     </div>
                     <div class="hero-common-text hero-sub-text">
-                        <p>Qatsol’s IT experts share their engineering experience and perspectives on software development, custom‑built enterprise solutions, and data‑driven business agility.</p>
+                        <p><?php the_content(); ?></p>
                     </div>
                 </div>
                 <div class=""></div>
             </div>
         </div>
     </div>
+</div>
+
+<div class="post-grid" id="post-grid">
+
     <?php
     $args = array(
         'post_type' => 'post',

@@ -77,45 +77,7 @@ function display_authors($authors)
         </div>
     </div>
 
-    <div class="latest-posts-carousel swiper-container">
-        <h3>Our latest insights</h3>
-        <div class="swiper-wrapper">
-            <?php
-            $recent_args = array(
-                'post_type' => 'post',
-                'posts_per_page' => 6
-            );
-            $recent_posts = new WP_Query($recent_args);
-
-            if ($recent_posts->have_posts()) :
-                while ($recent_posts->have_posts()) : $recent_posts->the_post(); ?>
-                    <div class="swiper-slide">
-                        <a href="<?php the_permalink(); ?>">
-                            <div class="carousel-thumbnail">
-                                <?php if (has_post_thumbnail()) {
-                                    the_post_thumbnail('medium');
-                                } else { ?>
-                                    <img src="<?php echo get_template_directory_uri(); ?>/images/placeholder.png"
-                                         alt="Placeholder">
-                                <?php } ?>
-                            </div>
-                            <div class="carousel-content">
-                                <h3><?php the_title(); ?></h3>
-                                <p><?php the_time('d.m.Y'); ?></p>
-                            </div>
-                        </a>
-                    </div>
-                <?php endwhile;
-            endif;
-
-            wp_reset_postdata();
-            ?>
-        </div>
-
-
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-    </div>
+    <?php echo latest_posts_carousel_shortcode(); ?>
 
 
     <script>

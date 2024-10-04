@@ -193,7 +193,18 @@ function display_authors($authors)
         }
 
         .post-content-article a {
-            color: var(--primary);
+            display: inline !important;
+            width: max-content;
+            background: linear-gradient(to right, transparent, transparent), linear-gradient(to right, var(--brand---primary), var(--brand---primary), var(--brand---primary));
+            background-size: 100% 1px, 0 1px;
+            background-position: 100% 100%, 0 100%;
+            background-repeat: no-repeat;
+            transition: background-size 400ms;
+        }
+
+        .post-content-article a:hover {
+            transition: all .3s ease-out;
+            background-size: 0 1px, 100% 1px;
         }
 
         .post-content-article h2 {

@@ -191,10 +191,17 @@ body h3 ,body .h3-title p,
 .case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]),
 .case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]):active,
 .tg-case-studies-custom a:not([class*="tg-element-"]):focus, .tg-case-studies-custom [class*="tg-element-"] *:not(del),
-.industries-accordion .accordion .panel-default > .panel-heading .panel-title a, .post-content h2,
-.post-content-article h2{
+.industries-accordion .accordion .panel-default > .panel-heading .panel-title a, .post-content h2 {
     font-family: var(--font-family);
     font-size: 20px;
+    line-height: 1.2;
+    font-weight: 300;
+    letter-spacing: 0;
+}
+
+.post-content-article h2 {
+    font-family: var(--font-family);
+    font-size: 32px;
     line-height: 1.2;
     font-weight: 300;
     letter-spacing: 0;
@@ -223,14 +230,24 @@ body h3 ,body .h3-title p,
     .tg-case-studies-custom a:not([class*="tg-element-"]):focus,
     .tg-case-studies-custom [class*="tg-element-"] *:not(del),
     .industries-accordion .accordion .panel-default > .panel-heading .panel-title a,
-    .post-content h2, .post-content-article h2{
+    .post-content h2 {
         font-size: 22px;
+    }
+
+    .post-content-article h2 {
+        font-size: 36px;
     }
     .grid-4 .wpb_wrapper {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
     }
 
+}
+
+@media (min-width: 1280px) {
+    .post-content-article h2 {
+        font-size: 48px;
+    }
 }
 
 @media (min-width: 1440px) {
@@ -245,8 +262,12 @@ body h3 ,body .h3-title p,
     .tg-case-studies-custom a:not([class*="tg-element-"]):focus,
     .tg-case-studies-custom [class*="tg-element-"] *:not(del),
     .industries-accordion .accordion .panel-default > .panel-heading .panel-title a,
-    .post-content h2,  .post-content-article h2 {
+    .post-content h2 {
         font-size: 24px;
+    }
+
+    .post-content-article h2 {
+        font-size: 48px;
     }
     .h4-title, .h4-title span, .h4-title p, .teamSwiper .swiper-pagination {
         font-size: 20px;
@@ -277,6 +298,10 @@ body h3 ,body .h3-title p,
 
     .h4-title, .h4-title span, .h4-title p, .teamSwiper .swiper-pagination {
         font-size: 24px;
+    }
+
+    .post-content-article h2 {
+        font-size: 56px;
     }
 
     .grid-4 .wpb_wrapper {

@@ -101,11 +101,17 @@ get_header(); ?>
         color: var(--text-header);
         position: relative;
         padding-right: 25px;
+        width: 100%;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
 
     .post-content h3::after {
         right: 7px;
     }
+
 
     .post-content{
         padding: 20px  56px 20px 18px;

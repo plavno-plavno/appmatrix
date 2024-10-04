@@ -47,7 +47,7 @@
     padding: 20px  56px 20px 18px;
 }
 
-.case-studies-grid .tg-item-inner .tg-item-title a, .case-studies-grid .tg-item-inner .tg-item-title a:focus, .post-content h3 {
+.case-studies-grid .tg-item-inner .tg-item-title a, .case-studies-grid .tg-item-inner .tg-item-title a:focus {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;

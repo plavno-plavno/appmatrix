@@ -3501,6 +3501,7 @@ function enqueue_swiper_assets()
                     slidesPerView: 2
                 },
                 1024: {
+                  spaceBetween: 20,
                     slidesPerView: 3
                 },
                     1440: {

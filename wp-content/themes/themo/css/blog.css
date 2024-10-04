@@ -232,11 +232,9 @@
 }
 
 .swiper-slide {
-    width: 250px;
     background-color: var(--mainLightbg);
-    border-radius: 8px;
+    border-radius: 4px;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .carousel-thumbnail img {

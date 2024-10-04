@@ -28,38 +28,39 @@ get_header(); ?>
 </div>
 
 <div class="post-grid padding-block padding-block-y process-section" id="post-grid">
+    <div class="container">
+        <?php
+        $args = array(
+            'post_type' => 'post',
+            'posts_per_page' => 9,
+            'paged' => 1
+        );
+        $blog_posts = new WP_Query($args);
 
-    <?php
-    $args = array(
-        'post_type' => 'post',
-        'posts_per_page' => 9,
-        'paged' => 1
-    );
-    $blog_posts = new WP_Query($args);
+        if ($blog_posts->have_posts()) :
+            while ($blog_posts->have_posts()) : $blog_posts->the_post(); ?>
+                <div class="post-item">
+                    <a href="<?php the_permalink(); ?>">
+                        <div class="post-thumbnail">
+                            <?php if (has_post_thumbnail()) {
+                                the_post_thumbnail('medium');
+                            } else { ?>
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/placeholder.png"
+                                     alt="Placeholder">
+                            <?php } ?>
+                        </div>
+                        <div class="post-content">
+                            <h2><?php the_title(); ?></h2>
+                            <p><?php the_time('d.m.Y'); ?></p>
+                        </div>
+                    </a>
+                </div>
+            <?php endwhile;
+        endif;
 
-    if ($blog_posts->have_posts()) :
-        while ($blog_posts->have_posts()) : $blog_posts->the_post(); ?>
-            <div class="post-item">
-                <a href="<?php the_permalink(); ?>">
-                    <div class="post-thumbnail">
-                        <?php if (has_post_thumbnail()) {
-                            the_post_thumbnail('medium');
-                        } else { ?>
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/placeholder.png"
-                                 alt="Placeholder">
-                        <?php } ?>
-                    </div>
-                    <div class="post-content">
-                        <h2><?php the_title(); ?></h2>
-                        <p><?php the_time('d.m.Y'); ?></p>
-                    </div>
-                </a>
-            </div>
-        <?php endwhile;
-    endif;
-
-    wp_reset_postdata();
-    ?>
+        wp_reset_postdata();
+        ?>
+    </div>
 </div>
 
 <div class="load-more">

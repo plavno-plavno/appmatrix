@@ -95,14 +95,7 @@ get_header(); ?>
 </script>
 
 <style>
-
-    .post-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 20px;
-    }
-
-    .post-item {
+        .post-item {
         background-color: #f5f5f5;
         border-radius: 8px;
         overflow: hidden;

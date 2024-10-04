@@ -141,7 +141,7 @@
     color: var(--text-header);
 }
 
-.post-content-article ol {
+.post-content-article ol,.post-content-article ul {
     margin: 10px 0;
 }
 

@@ -3612,3 +3612,61 @@ function dynamic_content_menu()
 
 
 //add_shortcode('dynamic_menu', 'dynamic_content_menu');
+
+function latest_posts_carousel_shortcode() {
+    ob_start();
+
+    ?>
+    <div class="latest-posts-carousel swiper-container">
+        <h3>Our latest insights</h3>
+        <div class="swiper-wrapper">
+            <?php
+            $recent_args = array(
+                'post_type' => 'post',
+                'posts_per_page' => 6
+            );
+            $recent_posts = new WP_Query($recent_args);
+
+            if ($recent_posts->have_posts()) :
+                while ($recent_posts->have_posts()) : $recent_posts->the_post(); ?>
+                    <div class="swiper-slide">
+                        <a href="<?php the_permalink(); ?>">
+                            <div class="carousel-thumbnail">
+                                <?php if (has_post_thumbnail()) {
+                                    the_post_thumbnail('medium');
+                                } else { ?>
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/placeholder.png" alt="Placeholder">
+                                <?php } ?>
+                            </div>
+                            <div class="carousel-content">
+                                <h3><?php the_title(); ?></h3>
+                                <p><?php the_time('d.m.Y'); ?></p>
+                            </div>
+                        </a>
+                    </div>
+                <?php endwhile;
+            endif;
+
+            wp_reset_postdata();
+            ?>
+        </div>
+
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <?php
+
+    return ob_get_clean();
+}
+
+
+add_shortcode('latest_posts_carousel', 'latest_posts_carousel_shortcode');
+
+function enqueue_blog_css() {
+    if ((is_single() && 'post' == get_post_type()) || is_page('blog')) {
+        wp_enqueue_style('blog-style', get_template_directory_uri() . '/css/blog.css');
+    }
+}
+add_action('wp_enqueue_scripts', 'enqueue_blog_css');

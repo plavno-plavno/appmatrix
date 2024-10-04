@@ -201,6 +201,11 @@ function display_authors($authors)
             margin: 24px 0;
         }
 
+        .post-content-article img {
+            display: inline-block;
+            margin: 32px 0;
+        }
+
 
         .post-social-share span {
             font-weight: bold;
@@ -315,6 +320,15 @@ function display_authors($authors)
 
             .post-content-article p {
                 margin-bottom: 12px;
+            }
+
+            .post-content-menu {
+                order: 1;
+            }
+
+            .post-content-menu .dynamic-menu {
+                position: sticky;
+                top: 120px
             }
         }
 

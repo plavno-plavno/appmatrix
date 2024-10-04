@@ -286,6 +286,12 @@ function display_authors($authors)
             }
         }
 
+        @media (min-width: 991px) {
+            .blog-grid-article {
+                grid-template-columns: auto 249px;
+            }
+        }
+
         @media (min-width: 1280px) {
             .author {
                 gap: 16px;
@@ -311,6 +317,10 @@ function display_authors($authors)
                 width: 88px;
                 height: 88px;
             }
+
+            .blog-grid-article {
+                grid-template-columns: auto 282px;
+            }
         }
 
         @media (min-width: 1920px) {
@@ -329,6 +339,10 @@ function display_authors($authors)
 
             .info-author .author-name, .author-position {
                 font-size: 18px;
+            }
+
+            .blog-grid-article {
+                grid-template-columns: auto 392px;
             }
         }
 

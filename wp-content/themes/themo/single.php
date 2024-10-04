@@ -56,18 +56,19 @@ function display_authors($authors)
 
     <div class="post-content-block padding-block padding-block-y process-section">
         <div class="container">
-
-            <div class="post-content">
+            <div class="post-content-wrapper">
+                <div class="post-content">
+                    <?php
+                    while (have_posts()) : the_post();
+                        echo add_anchors_to_headings(get_the_content());
+                    endwhile;
+                    ?>
+                </div>
                 <?php
-                while (have_posts()) : the_post();
-                    echo add_anchors_to_headings(get_the_content());
-                endwhile;
+                display_authors($authors);
                 ?>
-            </div>
-            <?php
-            display_authors($authors);
-            ?>
 
+            </div>
             <div class="post-content-menu">
                 <?php echo dynamic_content_menu(); ?>
             </div>

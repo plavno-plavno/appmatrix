@@ -352,6 +352,10 @@
         height: 104px;
     }
 
+    .post-content-article blockquote::after {
+        content: none;
+    }
+
     .post-content-article h4 {
         font-size: 20px;
     }

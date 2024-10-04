@@ -6,8 +6,25 @@
 get_header(); ?>
 
 <div class="blog-header">
-    <h1><?php the_title(); ?></h1>
-    <p><?php the_content(); ?></p>
+    <div class="padding-block banner-about dark-block">
+        <div class="common-page-width">
+            <div class="container">
+                <div class="banner-grid-container">
+                    <div class="hero-content vc_col-sm-8 hero-common-left">
+                        <div class="h1-title hero-title">
+                            <h1 class="title">
+                                <span><?php the_title(); ?></span>
+                            </h1>
+                        </div>
+                        <div class="hero-common-text hero-sub-text column-text">
+                            <p><?php the_content(); ?></p>
+                        </div>
+                    </div>
+                    <div class="vc_col-sm-4 hero-common-right"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="post-grid" id="post-grid">
@@ -20,25 +37,26 @@ get_header(); ?>
     );
     $blog_posts = new WP_Query($args);
 
-    if ($blog_posts->have_posts()) :
-        while ($blog_posts->have_posts()) : $blog_posts->the_post(); ?>
-            <div class="post-item">
-                <a href="<?php the_permalink(); ?>">
-                    <div class="post-thumbnail">
-                        <?php if (has_post_thumbnail()) {
-                            the_post_thumbnail('medium');
-                        } else { ?>
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/placeholder.png" alt="Placeholder">
-                        <?php } ?>
+            if ($blog_posts->have_posts()) :
+                while ($blog_posts->have_posts()) : $blog_posts->the_post(); ?>
+                    <div class="post-item">
+                        <a href="<?php the_permalink(); ?>">
+                            <div class="post-thumbnail">
+                                <?php if (has_post_thumbnail()) {
+                                    the_post_thumbnail('medium');
+                                } else { ?>
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/placeholder.png"
+                                         alt="Placeholder">
+                                <?php } ?>
+                            </div>
+                            <div class="post-content">
+                                <h3><?php the_title(); ?></h3>
+                                <p><?php the_time('d.m.Y'); ?></p>
+                            </div>
+                        </a>
                     </div>
-                    <div class="post-content">
-                        <h2><?php the_title(); ?></h2>
-                        <p><?php the_time('d.m.Y'); ?></p>
-                    </div>
-                </a>
-            </div>
-        <?php endwhile;
-    endif;
+                <?php endwhile;
+            endif;
 
     wp_reset_postdata();
     ?>
@@ -78,22 +96,40 @@ get_header(); ?>
 </script>
 
 <style>
-    .blog-header {
-        text-align: center;
-        margin-bottom: 40px;
+
+    .post-item a {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
     }
 
-    .post-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 20px;
-    }
-
-    .post-item {
-        background-color: #f5f5f5;
-        border-radius: 8px;
+    .post-content h3 {
+        margin: 0;
+        color: var(--text-header);
+        position: relative;
+        padding-right: 40px;
+        width: 100%;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
         overflow: hidden;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .post-item .post-content {
+        flex-grow: 1;
+    }
+
+    .post-content h3::after {
+        right: 7px;
+    }
+
+
+    .post-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 20px 18px;
     }
 
     .post-thumbnail img {
@@ -101,37 +137,58 @@ get_header(); ?>
         height: auto;
     }
 
-    .post-content {
-        padding: 15px;
-    }
-
-    .post-content h2 {
-        font-size: 18px;
-        margin: 0 0 10px;
-    }
-
-    .post-content p {
-        font-size: 14px;
-        color: #777;
+    .post-content h3 + p {
+        font-size: 16px;
+        color: var(--secondDarkColor);
     }
 
     .load-more {
-        text-align: center;
-        margin-top: 30px;
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
     }
 
-    #load-more {
-        padding: 10px 20px;
-        background-color: #333;
-        color: #fff;
+    .load-more button {
+        padding: 0;
+        background-color: transparent;
         border: none;
-        border-radius: 5px;
         cursor: pointer;
         font-size: 16px;
+        font-weight: 500;
+        color: var(--primary-btn);
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 10px;
     }
 
-    #load-more:hover {
-        background-color: #555;
+    .load-more button::after {
+        content: "";
+        display: block;
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 5V19' stroke='%23EAC571' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M19 12L12 19L5 12' stroke='%23EAC571' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+        width: 24px;
+        height: 24px;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        flex-shrink: 0;
+
+    }
+
+    .load-more button:hover {
+        color: var(--primary);
+    }
+
+    @media (min-width: 1440px) {
+        .post-content {
+            gap: 16px;
+        }
+    }
+
+    @media (min-width: 192px) {
+        .post-content h3 + p {
+            font-size: 18px;
+        }
     }
 
 </style>

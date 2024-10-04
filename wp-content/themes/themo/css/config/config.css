@@ -191,7 +191,7 @@ body h3 ,body .h3-title p,
 .case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]),
 .case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]):active,
 .tg-case-studies-custom a:not([class*="tg-element-"]):focus, .tg-case-studies-custom [class*="tg-element-"] *:not(del),
-.industries-accordion .accordion .panel-default > .panel-heading .panel-title a {
+.industries-accordion .accordion .panel-default > .panel-heading .panel-title a, .post-content h2{
     font-family: var(--font-family);
     font-size: 20px;
     line-height: 1.2;
@@ -220,7 +220,8 @@ body h3 ,body .h3-title p,
     .case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]):active,
     .tg-case-studies-custom a:not([class*="tg-element-"]):focus,
     .tg-case-studies-custom [class*="tg-element-"] *:not(del),
-    .industries-accordion .accordion .panel-default > .panel-heading .panel-title a {
+    .industries-accordion .accordion .panel-default > .panel-heading .panel-title a,
+    .post-content h2{
         font-size: 22px;
     }
     .grid-4 .wpb_wrapper {
@@ -241,7 +242,8 @@ body h3 ,body .h3-title p,
     .case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]):active,
     .tg-case-studies-custom a:not([class*="tg-element-"]):focus,
     .tg-case-studies-custom [class*="tg-element-"] *:not(del),
-    .industries-accordion .accordion .panel-default > .panel-heading .panel-title a {
+    .industries-accordion .accordion .panel-default > .panel-heading .panel-title a,
+    .post-content h2 {
         font-size: 24px;
     }
     .h4-title, .h4-title span, .h4-title p, .teamSwiper .swiper-pagination {
@@ -266,7 +268,8 @@ body h3 ,body .h3-title p,
     .case-studies-grid .tg-case-studies-custom a:not([class*="tg-element-"]):active,
     .tg-case-studies-custom a:not([class*="tg-element-"]):focus,
     .tg-case-studies-custom [class*="tg-element-"] *:not(del),
-    .industries-accordion .accordion .panel-default > .panel-heading .panel-title a{
+    .industries-accordion .accordion .panel-default > .panel-heading .panel-title a,
+    .post-content h2 {
         font-size: 32px;
     }
 
@@ -283,7 +286,7 @@ body h3 ,body .h3-title p,
     background: var(--primary);
     color: #fff;
 }
-body.vc-on.wrap-wide .vc_page_section.padding-block-y {
+body.vc-on.wrap-wide .vc_page_section.padding-block-y, .padding-block-y {
     padding-top: 88px;
     padding-bottom: 88px;
 }
@@ -294,28 +297,28 @@ body.vc-on.wrap-wide .vc_page_section.padding-block-y {
 }
 
 @media (min-width: 768px) {
-    body.vc-on.wrap-wide .vc_page_section.padding-block-y {
+    body.vc-on.wrap-wide .vc_page_section.padding-block-y, .padding-block-y {
         padding-top: 96px;
         padding-bottom: 96px;
     }
 }
 
 @media (min-width: 1200px) {
-    body.vc-on.wrap-wide .vc_page_section.padding-block-y {
+    body.vc-on.wrap-wide .vc_page_section.padding-block-y, .padding-block-y {
         padding-top: 104px;
         padding-bottom: 104px;
     }
 }
 
 @media (min-width: 1440px) {
-    body.vc-on.wrap-wide .vc_page_section.padding-block-y {
+    body.vc-on.wrap-wide .vc_page_section.padding-block-y, .padding-block-y {
         padding-top: 112px;
         padding-bottom: 112px;
     }
 }
 
 @media (min-width: 1920px) {
-    body.vc-on.wrap-wide .vc_page_section.padding-block-y {
+    body.vc-on.wrap-wide .vc_page_section.padding-block-y, .padding-block-y {
         padding-top: 120px;
         padding-bottom: 120px;
     }

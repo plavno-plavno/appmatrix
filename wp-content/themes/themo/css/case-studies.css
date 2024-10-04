@@ -7,7 +7,7 @@
     padding: 0;
 }
 
-.case-studies-grid .tg-grid-holder {
+.case-studies-grid .tg-grid-holder, .post-grid {
     display: grid;
     gap: 16px;
     grid-auto-rows: 1fr;
@@ -34,12 +34,12 @@
     border-radius: 0 !important;
 }
 
-.tg-case-studies-custom {
+.tg-case-studies-custom,.post-item {
     border-radius: 4px;
     overflow: hidden;
 }
 
-.case-studies-grid .tg-item-inner .tg-item-title a, .case-studies-grid .tg-item-inner .tg-item-title a:focus {
+.case-studies-grid .tg-item-inner .tg-item-title a, .case-studies-grid .tg-item-inner .tg-item-title a:focus{
     display: flex;
     align-items: center;
     gap: 8px;
@@ -55,7 +55,7 @@
     padding-right: 56px;
 }
 
-.case-studies-grid .tg-item-inner .tg-item-title a:after {
+.case-studies-grid .tg-item-inner .tg-item-title a:after, .post-content h3::after {
     content: "";
     display: block;
     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5 12H19' stroke='%239296A4' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3cpath d='M12 5L19 12L12 19' stroke='%239296A4' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
@@ -71,17 +71,17 @@
     transform: translateY(-50%);
 }
 
-.case-studies-grid .tg-case-studies-custom .tg-item-content-holder {
+.case-studies-grid .tg-case-studies-custom .tg-item-content-holder, .post-content {
     background-color: var(--mainLightbg) !important;
     transition: all .3s ease-out;
 }
 
-.case-studies-grid .tg-case-studies-custom:hover .tg-item-content-holder {
+.case-studies-grid .tg-case-studies-custom:hover .tg-item-content-holder, .post-item a:hover .post-content {
     background-color: var(--text-header) !important;
     transition: all .3s ease-out;
 }
 
-.case-studies-grid .tg-case-studies-custom:hover .tg-item-content-holder .tg-item-title a {
+.case-studies-grid .tg-case-studies-custom:hover .tg-item-content-holder .tg-item-title a,.post-item a:hover .post-content h3 {
     color: var(--colorLight) !important;
     transition: color 0.3s ease-in-out;
 }
@@ -374,7 +374,7 @@
 }
 
 @media (min-width: 768px) {
-    .case-studies-grid .tg-grid-holder {
+    .case-studies-grid .tg-grid-holder, .post-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -479,8 +479,7 @@
 }
 
 @media (min-width: 1200px) {
-
-    .case-studies-grid .tg-grid-holder {
+    .case-studies-grid .tg-grid-holder, .post-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 

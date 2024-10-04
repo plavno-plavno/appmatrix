@@ -47,11 +47,11 @@ function display_authors($authors)
         </div>
     </div>
 
-    <div class="post-featured-image">
-        <?php if (has_post_thumbnail()) : ?>
-            <?php the_post_thumbnail('large'); ?>
-        <?php endif; ?>
-    </div>
+<!--    <div class="post-featured-image">-->
+<!--        --><?php //if (has_post_thumbnail()) : ?>
+<!--            --><?php //the_post_thumbnail('large'); ?>
+<!--        --><?php //endif; ?>
+<!--    </div>-->
 
 
     <div class="post-content-block">

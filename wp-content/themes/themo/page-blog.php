@@ -147,7 +147,7 @@ get_header(); ?>
         margin-top: 40px;
     }
 
-    .load-more {
+    .load-more button {
         padding: 0;
         background-color: transparent;
         border: none;
@@ -158,7 +158,7 @@ get_header(); ?>
         position: relative;
     }
 
-    .load-more::after {
+    .load-more button::after {
         content: "";
         display: block;
         background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg width=%2224%22 height=%2224%22 viewBox=%220 0 24 24%22 fill=%22none%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cpath d=%22M12 5V19%22 stroke=%22%EAC571%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/%3E%3Cpath d=%22M19 12L12 19L5 12%22 stroke=%22%EAC571%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/%3E%3C/svg%3E");
@@ -174,7 +174,7 @@ get_header(); ?>
         transform: translateY(-50%);
     }
 
-    .load-more:hover {
+    .load-more button:hover {
         color: var(--primary);
     }
 

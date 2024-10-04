@@ -3638,7 +3638,7 @@ function latest_posts_carousel_shortcode()
                         </a>
                     </div>
                 </div>
-                <div class="swiper-wrapper">
+                <div class="swiper-wrapper swiper-last-articles">
                     <?php
                     $recent_args = array(
                         'post_type' => 'post',

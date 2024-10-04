@@ -220,6 +220,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: baseline;
+    margin-bottom: 32px;
 }
 
 .latest-posts-carousel h2.title {
@@ -305,6 +306,11 @@
         height: 96px;
         margin-bottom: 0;
     }
+
+    .latest-posts-carousel .subtitle-link-wrapper{
+        margin-bottom: 0;
+    }
+
 }
 
 @media (min-width: 991px) {

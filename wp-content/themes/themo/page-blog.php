@@ -12,9 +12,10 @@ get_header(); ?>
 
 <div class="post-grid" id="post-grid">
     <?php
+    $posts_per_page = 9;
     $args = array(
         'post_type' => 'post',
-        'posts_per_page' => 9,
+        'posts_per_page' => $posts_per_page,
         'paged' => 1
     );
     $blog_posts = new WP_Query($args);
@@ -42,10 +43,14 @@ get_header(); ?>
     wp_reset_postdata();
     ?>
 </div>
+<?php
+    if ($blog_posts->found_posts > $posts_per_page) :
+?>
+    <div class="load-more">
+        <button id="load-more">Show more ↓</button>
+    </div>
 
-<div class="load-more">
-    <button id="load-more">Show more ↓</button>
-</div>
+<?php endif; ?>
 
 <script type="text/javascript">
     var ajaxUrl = "<?php echo admin_url('admin-ajax.php'); ?>";

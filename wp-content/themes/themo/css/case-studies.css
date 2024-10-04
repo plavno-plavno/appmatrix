@@ -7,7 +7,7 @@
     padding: 0;
 }
 
-.case-studies-grid .tg-grid-holder {
+.case-studies-grid .tg-grid-holder, .post-grid {
     display: grid;
     gap: 16px;
     grid-auto-rows: 1fr;
@@ -374,7 +374,7 @@
 }
 
 @media (min-width: 768px) {
-    .case-studies-grid .tg-grid-holder {
+    .case-studies-grid .tg-grid-holder, .post-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -479,8 +479,7 @@
 }
 
 @media (min-width: 1200px) {
-
-    .case-studies-grid .tg-grid-holder {
+    .case-studies-grid .tg-grid-holder, .post-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 

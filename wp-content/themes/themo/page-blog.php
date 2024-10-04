@@ -33,7 +33,7 @@ get_header(); ?>
         <?php
         $args = array(
             'post_type' => 'post',
-            'posts_per_page' => 9,
+            'posts_per_page' => 6,
             'paged' => 1
         );
         $blog_posts = new WP_Query($args);

@@ -62,12 +62,13 @@ get_header(); ?>
         wp_reset_postdata();
         ?>
         </div>
+        <div class="load-more">
+            <button id="load-more">Show more ↓</button>
+        </div>
     </div>
 </div>
 
-<div class="load-more">
-    <button id="load-more">Show more ↓</button>
-</div>
+
 
 <script type="text/javascript">
     var ajaxUrl = "<?php echo admin_url('admin-ajax.php'); ?>";

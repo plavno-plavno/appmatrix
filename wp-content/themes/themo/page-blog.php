@@ -27,8 +27,9 @@ get_header(); ?>
     </div>
 </div>
 
-<div class="post-grid padding-block padding-block-y process-section" id="post-grid">
+<div class="padding-block padding-block-y process-section" id="post-grid">
     <div class="container">
+        <div class="post-grid">
         <?php
         $args = array(
             'post_type' => 'post',
@@ -60,6 +61,7 @@ get_header(); ?>
 
         wp_reset_postdata();
         ?>
+        </div>
     </div>
 </div>
 

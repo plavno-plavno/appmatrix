@@ -83,7 +83,7 @@ function display_authors($authors)
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const menuItems = document.querySelectorAll('.dynamic-menu a');
-            const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+            const headings = document.querySelectorAll(' h2');
 
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {

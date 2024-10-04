@@ -65,9 +65,11 @@ function display_authors($authors)
                         endwhile;
                         ?>
                     </div>
-                    <?php
-                    display_authors($authors);
-                    ?>
+                    <div class="post-meta authors">
+                        <?php
+                        display_authors($authors);
+                        ?>
+                    </div>
 
                 </div>
                 <div class="post-content-menu">
@@ -77,7 +79,7 @@ function display_authors($authors)
         </div>
     </div>
 
-    <?php echo latest_posts_carousel_shortcode(); ?>
+<?php echo latest_posts_carousel_shortcode(); ?>
 
 
     <script>

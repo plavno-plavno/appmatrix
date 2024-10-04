@@ -215,6 +215,17 @@
     padding: 0;
 }
 
+.latest-posts-carousel .subtitle-link-wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+}
+
+.latest-posts-carousel h2.title {
+    margin-top: 0;
+}
+
 .swiper-wrapper {
     display: flex;
 }

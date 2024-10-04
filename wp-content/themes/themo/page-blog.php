@@ -27,15 +27,17 @@ get_header(); ?>
     </div>
 </div>
 
-<div class="post-grid" id="post-grid">
-    <?php
-    $posts_per_page = 9;
-    $args = array(
-        'post_type' => 'post',
-        'posts_per_page' => $posts_per_page,
-        'paged' => 1
-    );
-    $blog_posts = new WP_Query($args);
+<div class="padding-block padding-block-y process-section" id="post-grid">
+    <div class="container">
+        <div class="post-grid">
+            <?php
+            $posts_per_page = 9;
+            $args = array(
+                'post_type' => 'post',
+                'posts_per_page' => $posts_per_page,
+                'paged' => 1
+            );
+            $blog_posts = new WP_Query($args);
 
             if ($blog_posts->have_posts()) :
                 while ($blog_posts->have_posts()) : $blog_posts->the_post(); ?>
@@ -58,17 +60,20 @@ get_header(); ?>
                 <?php endwhile;
             endif;
 
-    wp_reset_postdata();
-    ?>
-</div>
-<?php
-    if ($blog_posts->found_posts > $posts_per_page) :
-?>
-    <div class="load-more">
-        <button id="load-more">Show more ↓</button>
-    </div>
+            wp_reset_postdata();
+            ?>
+        </div>
+        <?php
+        if ($blog_posts->found_posts > $posts_per_page) :
+            ?>
+            <div class="load-more">
+                <button id="load-more">Show more </button>
+            </div>
 
-<?php endif; ?>
+        <?php endif; ?>
+    </div>
+</div>
+
 
 <script type="text/javascript">
     var ajaxUrl = "<?php echo admin_url('admin-ajax.php'); ?>";

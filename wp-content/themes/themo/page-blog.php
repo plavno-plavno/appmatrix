@@ -98,6 +98,7 @@ get_header(); ?>
 
     h3 {
         margin: 0;
+        color: var(--text-header);
     }
     .post-content{
         padding: 20px  56px 20px 18px;

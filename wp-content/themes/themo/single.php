@@ -221,6 +221,8 @@ function display_authors($authors)
             margin: 16px 0;
             border: none;
             background-color: var(--mainLightbg);
+            border-radius: 8px;
+            padding: 18px;
         }
 
         .post-content-article blockquote::before{
@@ -233,6 +235,10 @@ function display_authors($authors)
             background-size: contain;
             background-repeat: no-repeat;
             flex-shrink: 0;
+        }
+
+        .post-content-article blockquote h3{
+            color: var(--text-header);
         }
 
 
@@ -340,6 +346,16 @@ function display_authors($authors)
                 border-radius: 4px;
                 padding: 24px;
             }
+
+            .post-content-article blockquote{
+                display: flex;
+                align-items: center;
+                gap: 20px;
+            }
+            .post-content-article blockquote::before{
+                width: 96px;
+                height: 96px;
+            }
         }
 
         @media (min-width: 991px) {
@@ -390,6 +406,11 @@ function display_authors($authors)
             .blog-grid-article {
                 grid-template-columns: auto 282px;
             }
+
+            .post-content-article blockquote::before{
+                width: 104px;
+                height: 104px;
+            }
         }
 
         @media (min-width: 1920px) {
@@ -424,6 +445,15 @@ function display_authors($authors)
 
             .post-content-article p {
                 font-size: 18px;
+            }
+
+            .post-content-article blockquote::before{
+                width: 112px;
+                height: 112px;
+            }
+
+            .post-content-article blockquote{
+                gap: 24px;
             }
         }
 

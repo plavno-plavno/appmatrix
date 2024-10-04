@@ -30,44 +30,43 @@ get_header(); ?>
 <div class="padding-block padding-block-y process-section" id="post-grid">
     <div class="container">
         <div class="post-grid">
-        <?php
-        $args = array(
-            'post_type' => 'post',
-            'posts_per_page' => 9,
-            'paged' => 1
-        );
-        $blog_posts = new WP_Query($args);
+            <?php
+            $args = array(
+                'post_type' => 'post',
+                'posts_per_page' => 9,
+                'paged' => 1
+            );
+            $blog_posts = new WP_Query($args);
 
-        if ($blog_posts->have_posts()) :
-            while ($blog_posts->have_posts()) : $blog_posts->the_post(); ?>
-                <div class="post-item">
-                    <a href="<?php the_permalink(); ?>">
-                        <div class="post-thumbnail">
-                            <?php if (has_post_thumbnail()) {
-                                the_post_thumbnail('medium');
-                            } else { ?>
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/placeholder.png"
-                                     alt="Placeholder">
-                            <?php } ?>
-                        </div>
-                        <div class="post-content">
-                            <h3><?php the_title(); ?></h3>
-                            <p><?php the_time('d.m.Y'); ?></p>
-                        </div>
-                    </a>
-                </div>
-            <?php endwhile;
-        endif;
+            if ($blog_posts->have_posts()) :
+                while ($blog_posts->have_posts()) : $blog_posts->the_post(); ?>
+                    <div class="post-item">
+                        <a href="<?php the_permalink(); ?>">
+                            <div class="post-thumbnail">
+                                <?php if (has_post_thumbnail()) {
+                                    the_post_thumbnail('medium');
+                                } else { ?>
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/placeholder.png"
+                                         alt="Placeholder">
+                                <?php } ?>
+                            </div>
+                            <div class="post-content">
+                                <h3><?php the_title(); ?></h3>
+                                <p><?php the_time('d.m.Y'); ?></p>
+                            </div>
+                        </a>
+                    </div>
+                <?php endwhile;
+            endif;
 
-        wp_reset_postdata();
-        ?>
+            wp_reset_postdata();
+            ?>
         </div>
         <div class="load-more">
-            <button id="load-more">Show more ↓</button>
+            <button id="load-more">Show more</button>
         </div>
     </div>
 </div>
-
 
 
 <script type="text/javascript">
@@ -124,12 +123,12 @@ get_header(); ?>
     }
 
 
-    .post-content{
+    .post-content {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         gap: 12px;
-        padding: 20px  18px;
+        padding: 20px 18px;
     }
 
     .post-thumbnail img {
@@ -156,22 +155,22 @@ get_header(); ?>
         font-weight: 500;
         color: var(--primary-btn);
         position: relative;
+        display: flex;
+        align-items: center;
+        gap: 10px;
     }
 
     .load-more button::after {
         content: "";
         display: block;
-        background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg width=%2224%22 height=%2224%22 viewBox=%220 0 24 24%22 fill=%22none%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cpath d=%22M12 5V19%22 stroke=%22%EAC571%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/%3E%3Cpath d=%22M19 12L12 19L5 12%22 stroke=%22%EAC571%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/%3E%3C/svg%3E");
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 5V19' stroke='%23EAC571' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M19 12L12 19L5 12' stroke='%23EAC571' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
         width: 24px;
         height: 24px;
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
         flex-shrink: 0;
-        position: absolute;
-        right: 25px;
-        top: 50%;
-        transform: translateY(-50%);
+
     }
 
     .load-more button:hover {
@@ -179,10 +178,11 @@ get_header(); ?>
     }
 
     @media (min-width: 1440px) {
-        .post-content{
+        .post-content {
             gap: 16px;
         }
     }
+
     @media (min-width: 192px) {
         .post-content h3 + p {
             font-size: 18px;

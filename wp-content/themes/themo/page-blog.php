@@ -144,22 +144,40 @@ get_header(); ?>
 
     .load-more {
         text-align: center;
-        margin-top: 30px;
+        margin-top: 40px;
     }
 
-    #load-more {
-        padding: 10px 20px;
-        background-color: #333;
-        color: #fff;
+    .load-more {
+        padding: 0;
+        background-color: transparent;
         border: none;
-        border-radius: 5px;
         cursor: pointer;
         font-size: 16px;
+        font-weight: 500;
+        color: var(--primary-btn);
+        position: relative;
     }
 
-    #load-more:hover {
-        background-color: #555;
+    .load-more::after {
+        content: "";
+        display: block;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg width=%2224%22 height=%2224%22 viewBox=%220 0 24 24%22 fill=%22none%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cpath d=%22M12 5V19%22 stroke=%22%EAC571%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/%3E%3Cpath d=%22M19 12L12 19L5 12%22 stroke=%22%EAC571%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/%3E%3C/svg%3E");
+        width: 24px;
+        height: 24px;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        flex-shrink: 0;
+        position: absolute;
+        right: 25px;
+        top: 50%;
+        transform: translateY(-50%);
     }
+
+    .load-more:hover {
+        color: var(--primary);
+    }
+
     @media (min-width: 1440px) {
         .post-content{
             gap: 16px;

@@ -34,7 +34,7 @@
     border-radius: 0 !important;
 }
 
-.tg-case-studies-custom {
+.tg-case-studies-custom,.post-item {
     border-radius: 4px;
     overflow: hidden;
 }

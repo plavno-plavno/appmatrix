@@ -58,7 +58,7 @@ function display_authors($authors)
         <div class="container">
             <div class="blog-grid-article">
             <div class="post-content-wrapper">
-                <div class="post-content">
+                <div class="post-content-article">
                     <?php
                     while (have_posts()) : the_post();
                         echo add_anchors_to_headings(get_the_content());
@@ -276,6 +276,15 @@ function display_authors($authors)
             gap: 48px;
         }
 
+        .post-content-wrapper {
+            margin-bottom: 30px;
+        }
+
+        .post-content-menu {
+            position: relative;
+            order: 0;
+        }
+
         @media (min-width: 768px) {
             .post-header h1 {
                 margin-bottom: 40px;
@@ -283,6 +292,12 @@ function display_authors($authors)
 
             .post-meta {
                 flex-direction: row;
+            }
+
+            .post-content-wrapper {
+                border: 1px solid var(--border);
+                border-radius: 4px;
+                padding: 24px;
             }
         }
 
@@ -343,6 +358,9 @@ function display_authors($authors)
 
             .blog-grid-article {
                 grid-template-columns: auto 392px;
+            }
+            .post-content-wrapper {
+                padding: 32px;
             }
         }
 

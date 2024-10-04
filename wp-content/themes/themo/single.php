@@ -47,27 +47,29 @@ function display_authors($authors)
         </div>
     </div>
 
-<!--    <div class="post-featured-image">-->
-<!--        --><?php //if (has_post_thumbnail()) : ?>
-<!--            --><?php //the_post_thumbnail('large'); ?>
-<!--        --><?php //endif; ?>
-<!--    </div>-->
+    <!--    <div class="post-featured-image">-->
+    <!--        --><?php //if (has_post_thumbnail()) : ?>
+    <!--            --><?php //the_post_thumbnail('large'); ?>
+    <!--        --><?php //endif; ?>
+    <!--    </div>-->
 
 
     <div class="post-content-block padding-block padding-block-y process-section">
-        <div class="post-content-menu">
-            <?php echo dynamic_content_menu(); ?>
-        </div>
-        <div class="post-content">
+        <div class="container">
+            <div class="post-content-menu">
+                <?php echo dynamic_content_menu(); ?>
+            </div>
+            <div class="post-content">
+                <?php
+                while (have_posts()) : the_post();
+                    echo add_anchors_to_headings(get_the_content());
+                endwhile;
+                ?>
+            </div>
             <?php
-            while (have_posts()) : the_post();
-                echo add_anchors_to_headings(get_the_content());
-            endwhile;
+            display_authors($authors);
             ?>
         </div>
-        <?php
-        display_authors($authors);
-        ?>
     </div>
 
     <div class="latest-posts-carousel swiper-container">
@@ -139,6 +141,7 @@ function display_authors($authors)
         .post-header {
             background-color: var(--mainLightbg);
         }
+
         .post-header h1 {
             font-size: 32px;
             margin: 0 0 24px 0;
@@ -278,7 +281,7 @@ function display_authors($authors)
                 gap: 16px;
             }
 
-            .info-author .author-name,.author-position {
+            .info-author .author-name, .author-position {
                 margin-bottom: 8px;
             }
 
@@ -289,9 +292,11 @@ function display_authors($authors)
             .post-header h1 {
                 margin-bottom: 48px;
             }
+
             .post-meta {
                 gap: 24px;
             }
+
             .logo-author {
                 width: 88px;
                 height: 88px;

@@ -142,8 +142,9 @@ get_header(); ?>
     }
 
     .load-more {
-        text-align: center;
         margin-top: 40px;
+        display: flex;
+        justify-content: center;
     }
 
     .load-more button {

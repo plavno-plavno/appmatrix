@@ -313,6 +313,12 @@ body.font-dark a.light-btn:hover {
     }
 }
 
+@media (min-width: 991px) {
+    .vc_page_section .video-background .video-player {
+        display: block;
+    }
+}
+
 @media (min-width: 1200px) {
     .primary-main-btn, #aboutUsContactForm .form-btn-flex input.wpcf7-form-control.wpcf7-submit, .main-btn {
         padding: 12px 24px;

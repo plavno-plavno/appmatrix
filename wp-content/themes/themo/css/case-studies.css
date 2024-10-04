@@ -39,7 +39,7 @@
     overflow: hidden;
 }
 
-.case-studies-grid .tg-item-inner .tg-item-title a, .case-studies-grid .tg-item-inner .tg-item-title a:focus, .post-content{
+.case-studies-grid .tg-item-inner .tg-item-title a, .case-studies-grid .tg-item-inner .tg-item-title a:focus{
     display: flex;
     align-items: center;
     gap: 8px;

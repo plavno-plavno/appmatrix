@@ -95,7 +95,9 @@ get_header(); ?>
 </script>
 
 <style>
-
+    .post-content{
+        padding: 20px  56px 20px 18px;
+    }
     .post-thumbnail img {
         width: 100%;
         height: auto;

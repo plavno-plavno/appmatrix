@@ -74,25 +74,29 @@ get_header(); ?>
     var ajaxUrl = "<?php echo admin_url('admin-ajax.php'); ?>";
     var page = 2;
 
-    document.getElementById('load-more').addEventListener('click', function () {
-        var xhr = new XMLHttpRequest();
-        xhr.open('POST', ajaxUrl, true);
-        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+    var loadMore = document.getElementById('load-more');
+    if (loadMore) {
+        document.getElementById('load-more').addEventListener('click', function () {
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', ajaxUrl, true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
 
-        xhr.onload = function () {
-            if (xhr.status === 200) {
-                var response = JSON.parse(xhr.responseText);
-                if (response.success) {
-                    document.getElementById('post-grid').insertAdjacentHTML('beforeend', response.data);
-                    page++;
-                } else {
-                    document.getElementById('load-more').style.display = 'none';
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    var response = JSON.parse(xhr.responseText);
+                    if (response.success) {
+                        document.getElementById('post-grid').insertAdjacentHTML('beforeend', response.data);
+                        page++;
+                    } else {
+                        document.getElementById('load-more').style.display = 'none';
+                    }
                 }
-            }
-        };
+            };
 
-        xhr.send('action=load_more_posts&page=' + page);
-    });
+            xhr.send('action=load_more_posts&page=' + page);
+        });
+    }
+
 </script>
 
 <style>

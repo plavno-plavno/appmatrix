@@ -378,6 +378,10 @@ function display_authors($authors)
             .post-content-article h2 {
                 margin: 32px 0;
             }
+
+            .post-content-article p {
+                font-size: 18px;
+            }
         }
 
     </style>

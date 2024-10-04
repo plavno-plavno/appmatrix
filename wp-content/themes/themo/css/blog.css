@@ -356,6 +356,11 @@
         content: none;
     }
 
+    blockquote:after {
+        content: none;
+        display: none;
+    }
+
     .post-content-article h4 {
         font-size: 20px;
     }

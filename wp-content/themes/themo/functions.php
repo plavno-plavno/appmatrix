@@ -3625,7 +3625,7 @@ function latest_posts_carousel_shortcode()
                     <p> [ FEATURED BLOG POSTS ]</p>
                 </div>
                 <div class="subtitle-link-wrapper">
-                    <div class="vc_col-sm-6">
+                    <div class="vc_col-sm-6 h2-title">
                         <h2 class="title"><span>Our latest insights</span></h2>
                     </div>
                     <div class="vc_col-sm-6 title-link">

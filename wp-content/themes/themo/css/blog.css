@@ -207,9 +207,12 @@
 }
 
 .latest-posts-carousel {
-    margin: 40px 0;
     position: relative;
     width: 100%;
+}
+
+.latest-posts-carousel .vc_col-sm-6 {
+    padding: 0;
 }
 
 .swiper-wrapper {

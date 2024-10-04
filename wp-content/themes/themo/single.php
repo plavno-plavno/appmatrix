@@ -185,10 +185,13 @@ function display_authors($authors)
             margin-bottom: 4px;
         }
 
-        .post-content-article p {
+        .post-content-article p,  .post-content-article ol li {
             font-size: 16px;
             line-height: 1.4;
             color: var(--secondDarkColor);
+        }
+
+        .post-content-article p {
             margin-bottom: 8px;
         }
 
@@ -239,7 +242,17 @@ function display_authors($authors)
 
         .post-content-article blockquote h3{
             color: var(--text-header);
+            margin: 0;
         }
+
+        .post-content-article p strong {
+            color: var(--text-header);
+        }
+
+        .post-content-article ol {
+            margin: 10px 0;
+        }
+
 
 
         .post-social-share span {
@@ -443,7 +456,7 @@ function display_authors($authors)
                 margin: 32px 0;
             }
 
-            .post-content-article p {
+            .post-content-article p,   .post-content-article ol li {
                 font-size: 18px;
             }
 

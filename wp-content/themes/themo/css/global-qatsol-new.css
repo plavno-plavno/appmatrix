@@ -215,7 +215,8 @@ p {
 .tech-section .ideo-wow-title.style-text h2.title,
 .process-section .ideo-wow-title.style-text h2.title,
 .map-section .section-title .main-text p,
-.section-title-h2.ideo-wow-title.style-text:not(.info-block-title) .title, .title-section .main-text p {
+.section-title-h2.ideo-wow-title.style-text:not(.info-block-title) .title, .title-section .main-text p,
+.latest-posts-carousel h2.title {
     margin-bottom: 32px;
 }
 
@@ -227,7 +228,8 @@ p {
 @media (min-width: 1200px) {
     .tech-section .ideo-wow-title.style-text h2.title,
     .process-section .ideo-wow-title.style-text h2.title,
-    .map-section .section-title .main-text p, .title-section .main-text p {
+    .map-section .section-title .main-text p, .title-section .main-text p,
+    .latest-posts-carousel h2.title {
         margin-bottom: 40px;
     }
 }
@@ -235,7 +237,8 @@ p {
 @media (min-width: 1440px) {
     .tech-section .ideo-wow-title.style-text h2.title,
     .process-section .ideo-wow-title.style-text h2.title,
-    .map-section .section-title .main-text p, .title-section .main-text p {
+    .map-section .section-title .main-text p, .title-section .main-text p,
+    .latest-posts-carousel h2.title{
         margin-bottom: 48px;
     }
 }

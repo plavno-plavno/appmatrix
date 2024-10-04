@@ -100,11 +100,11 @@ get_header(); ?>
         margin: 0;
         color: var(--text-header);
         position: relative;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
-        display: block;
-        padding-right: 36px;
+        padding-right: 25px;
+    }
+
+    .post-content h3::after {
+        right: 7px;
     }
 
     .post-content{

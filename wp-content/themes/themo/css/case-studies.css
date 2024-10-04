@@ -71,17 +71,17 @@
     transform: translateY(-50%);
 }
 
-.case-studies-grid .tg-case-studies-custom .tg-item-content-holder {
+.case-studies-grid .tg-case-studies-custom .tg-item-content-holder, .post-content {
     background-color: var(--mainLightbg) !important;
     transition: all .3s ease-out;
 }
 
-.case-studies-grid .tg-case-studies-custom:hover .tg-item-content-holder {
+.case-studies-grid .tg-case-studies-custom:hover .tg-item-content-holder, .post-item a:hover .post-content {
     background-color: var(--text-header) !important;
     transition: all .3s ease-out;
 }
 
-.case-studies-grid .tg-case-studies-custom:hover .tg-item-content-holder .tg-item-title a {
+.case-studies-grid .tg-case-studies-custom:hover .tg-item-content-holder .tg-item-title a,.post-item a:hover .post-content h3 {
     color: var(--colorLight) !important;
     transition: color 0.3s ease-in-out;
 }

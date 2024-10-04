@@ -95,6 +95,10 @@ get_header(); ?>
 </script>
 
 <style>
+
+    h3 {
+        margin: 0;
+    }
     .post-content{
         padding: 20px  56px 20px 18px;
     }

@@ -40,7 +40,7 @@ get_header(); ?>
 
         if ($blog_posts->have_posts()) :
             while ($blog_posts->have_posts()) : $blog_posts->the_post(); ?>
-                <div class="post-item tg-case-studies-custom">
+                <div class="post-item">
                     <a href="<?php the_permalink(); ?>">
                         <div class="post-thumbnail">
                             <?php if (has_post_thumbnail()) {
@@ -50,7 +50,7 @@ get_header(); ?>
                                      alt="Placeholder">
                             <?php } ?>
                         </div>
-                        <div class="post-content tg-element-1">
+                        <div class="post-content">
                             <h3><?php the_title(); ?></h3>
                             <p><?php the_time('d.m.Y'); ?></p>
                         </div>

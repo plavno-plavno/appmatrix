@@ -33,7 +33,7 @@ function display_authors($authors)
             <div class="common-page-width">
                 <div class="container">
 
-                    <h1><?php the_title(); ?></h1>
+                    <h1 class="title"><?php the_title(); ?></h1>
                     <div class="post-meta authors">
                         <?php
                         $authors = get_field('authors', get_the_ID());
@@ -136,9 +136,12 @@ function display_authors($authors)
     </script>
 
     <style>
+        .post-header {
+            background-color: var(--mainLightbg);
+        }
         .post-header h1 {
             font-size: 32px;
-            margin-bottom: 10px;
+            margin: 0 0 10px 0;
         }
 
         .post-meta {

@@ -28,7 +28,7 @@ function display_authors($authors)
 ?>
 
 
-    <div class="blog-header post-header">
+    <div class="post-header">
         <div class="padding-block">
             <div class="common-page-width">
                 <div class="container">

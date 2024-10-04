@@ -3503,6 +3503,12 @@ function enqueue_swiper_assets()
                 1024: {
                     slidesPerView: 3
                 },
+                    1440: {
+                       spaceBetween: 24,
+                },
+                              1920: {
+                       spaceBetween: 32,
+                },
             }
         });
     ');
@@ -3632,9 +3638,12 @@ function latest_posts_carousel_shortcode()
                     <div class="vc_col-sm-6 title-link common-link">
                         <a href="/blog">
                             <span>Explore our blog to learn more about tech & people</span>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5 12H19" stroke="#EAC571" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                <path d="M12 5L19 12L12 19" stroke="#EAC571" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 12H19" stroke="#EAC571" stroke-width="2" stroke-linecap="round"
+                                      stroke-linejoin="round"></path>
+                                <path d="M12 5L19 12L12 19" stroke="#EAC571" stroke-width="2" stroke-linecap="round"
+                                      stroke-linejoin="round"></path>
                             </svg>
                         </a>
                     </div>

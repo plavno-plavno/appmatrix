@@ -258,6 +258,7 @@
 
 .post-content-wrapper {
     margin-bottom: 30px;
+    order: 1;
 }
 
 .post-content-menu {
@@ -300,6 +301,10 @@
 
     .post-content-article p {
         margin-bottom: 12px;
+    }
+
+    .post-content-wrapper {
+        order: 0;
     }
 
     .post-content-menu {

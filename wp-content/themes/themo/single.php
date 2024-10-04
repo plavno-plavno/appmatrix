@@ -56,9 +56,7 @@ function display_authors($authors)
 
     <div class="post-content-block padding-block padding-block-y process-section">
         <div class="container">
-            <div class="post-content-menu">
-                <?php echo dynamic_content_menu(); ?>
-            </div>
+
             <div class="post-content">
                 <?php
                 while (have_posts()) : the_post();
@@ -69,6 +67,9 @@ function display_authors($authors)
             <?php
             display_authors($authors);
             ?>
+        </div>
+        <div class="post-content-menu">
+            <?php echo dynamic_content_menu(); ?>
         </div>
     </div>
 

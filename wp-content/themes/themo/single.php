@@ -54,7 +54,7 @@ function display_authors($authors)
 <!--    </div>-->
 
 
-    <div class="post-content-block">
+    <div class="post-content-block padding-block padding-block-y process-section">
         <div class="post-content-menu">
             <?php echo dynamic_content_menu(); ?>
         </div>

@@ -96,6 +96,10 @@ get_header(); ?>
 
 <style>
 
+    .post-content {
+        position: relative;
+    }
+
     h3 {
         margin: 0;
         color: var(--text-header);

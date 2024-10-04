@@ -55,7 +55,7 @@
     padding-right: 56px;
 }
 
-.case-studies-grid .tg-item-inner .tg-item-title a:after, .post-content h3::after {
+.case-studies-grid .tg-item-inner .tg-item-title a:after, .post-content::after {
     content: "";
     display: block;
     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5 12H19' stroke='%239296A4' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3cpath d='M12 5L19 12L12 19' stroke='%239296A4' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");

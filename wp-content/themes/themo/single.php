@@ -10,8 +10,8 @@ function display_authors($authors)
             <img class="logo-author" src="<?php echo esc_url($author['logo']); ?>"
                  alt="<?php echo esc_attr($author['name']); ?>">
             <div class="info-author">
-                <span class="title"><?php echo esc_html($author['name']); ?></span>
-                <span class="add-title"><?php echo esc_html($author['position_at_work']); ?></span>
+                <div class="author-name"><?php echo esc_html($author['name']); ?></div>
+                <div class="add-title"><?php echo esc_html($author['position_at_work']); ?></div>
                 <div class="social">
                     <?php foreach ($author['social'] as $social) { ?>
                         <a href="<?php echo esc_url($social['link']); ?>">
@@ -151,6 +151,25 @@ function display_authors($authors)
             gap: 20px;
         }
 
+        .logo-author {
+            width: 80px;
+            height: 80px;
+        }
+
+        .author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .info-author .author-name {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 1.4;
+            color: var(--text-header);
+            margin-bottom: 4px;
+        }
+
         .post-featured-image {
             margin-bottom: 20px;
         }
@@ -247,12 +266,26 @@ function display_authors($authors)
             }
         }
 
+        @media (min-width: 1280px) {
+            .author {
+                gap: 16px;
+            }
+
+            .info-author .author-name {
+                margin-bottom: 8px;
+            }
+        }
+
         @media (min-width: 1440px) {
             .post-header h1 {
                 margin-bottom: 48px;
             }
             .post-meta {
                 gap: 24px;
+            }
+            .logo-author {
+                width: 88px;
+                height: 88px;
             }
         }
 
@@ -263,6 +296,15 @@ function display_authors($authors)
 
             .post-meta {
                 gap: 32px;
+            }
+
+            .logo-author {
+                width: 96px;
+                height: 96px;
+            }
+
+            .info-author .author-name {
+                font-size: 18px;
             }
         }
 

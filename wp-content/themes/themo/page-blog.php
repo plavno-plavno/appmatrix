@@ -96,16 +96,26 @@ get_header(); ?>
 
 <style>
 
+    .post-item a {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+    }
+
     .post-content h3 {
         margin: 0;
         color: var(--text-header);
         position: relative;
-        padding-right: 25px;
+        padding-right: 40px;
         width: 100%;
         display: -webkit-box;
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
         overflow: hidden;
+    }
+
+    .post-item .post-content {
+        flex-grow: 1;
     }
 
     .post-content h3::after {
@@ -114,25 +124,21 @@ get_header(); ?>
 
 
     .post-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 12px;
         padding: 20px  56px 20px 18px;
     }
+
     .post-thumbnail img {
         width: 100%;
         height: auto;
     }
 
-    .post-content {
-        padding: 15px;
-    }
-
-    .post-content h2 {
-        font-size: 18px;
-        margin: 0 0 10px;
-    }
-
-    .post-content p {
-        font-size: 14px;
-        color: #777;
+    .post-content h3 + p {
+        font-size: 16px;
+        color: var(--secondDarkColor);
     }
 
     .load-more {
@@ -152,6 +158,16 @@ get_header(); ?>
 
     #load-more:hover {
         background-color: #555;
+    }
+    @media (min-width: 1440px) {
+        .post-content{
+            gap: 16px;
+        }
+    }
+    @media (min-width: 192px) {
+        .post-content h3 + p {
+            font-size: 18px;
+        }
     }
 
 </style>

@@ -10,7 +10,7 @@ get_header(); ?>
         <div class="common-page-width">
             <div class="container">
                 <div class="banner-grid-container">
-                    <div class="hero-content">
+                    <div class="hero-content vc_col-sm-8">
                         <div class="h1-title hero-title">
                             <h1 class="title">
                                 <span><?php the_title(); ?></span>
@@ -20,7 +20,7 @@ get_header(); ?>
                             <p><?php the_content(); ?></p>
                         </div>
                     </div>
-                    <div class=""></div>
+                    <div class="vc_col-sm-4"></div>
                 </div>
             </div>
         </div>

@@ -141,7 +141,8 @@ function display_authors($authors)
         }
         .post-header h1 {
             font-size: 32px;
-            margin: 0 0 10px 0;
+            margin: 0 0 24px 0;
+            color: var(--text-header);
         }
 
         .post-meta {
@@ -236,6 +237,23 @@ function display_authors($authors)
             height: 44px;
         }
 
+        @media (min-width: 768px) {
+            .post-header h1 {
+                margin-bottom: 40px;
+            }
+        }
+
+        @media (min-width: 1440px) {
+            .post-header h1 {
+                margin-bottom: 48px;
+            }
+        }
+
+        @media (min-width: 1920px) {
+            .post-header h1 {
+                margin-bottom: 56px;
+            }
+        }
 
     </style>
 <?php

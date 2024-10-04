@@ -3621,9 +3621,9 @@ function latest_posts_carousel_shortcode()
     <div class="post-content-block padding-block padding-block-y process-section">
         <div class="container">
             <div class="latest-posts-carousel swiper-container">
-                <p class="h2-tag">
-                    [ FEATURED BLOG POSTS ]
-                </p>
+                <div class="h2-tag">
+                    <p> [ FEATURED BLOG POSTS ]</p>
+                </div>
                 <div class="subtitle-link-wrapper">
                     <div class="vc_col-sm-6">
                         <h2 class="title"><span>Our latest insights</span></h2>

@@ -40,7 +40,7 @@
     margin-bottom: 4px;
 }
 
-.post-content-article p,  .post-content-article ol li {
+.post-content-article p,  .post-content-article ol li, .post-content-article ul li  {
     font-size: 16px;
     line-height: 1.4;
     color: var(--secondDarkColor);

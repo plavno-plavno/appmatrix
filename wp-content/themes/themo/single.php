@@ -56,6 +56,7 @@ function display_authors($authors)
 
     <div class="post-content-block padding-block padding-block-y process-section">
         <div class="container">
+            <div class="blog-grid-article">
             <div class="post-content-wrapper">
                 <div class="post-content">
                     <?php
@@ -71,6 +72,7 @@ function display_authors($authors)
             </div>
             <div class="post-content-menu">
                 <?php echo dynamic_content_menu(); ?>
+            </div>
             </div>
         </div>
     </div>
@@ -267,6 +269,11 @@ function display_authors($authors)
             color: #333;
             width: 44px;
             height: 44px;
+        }
+
+        .blog-grid-article {
+            display: grid;
+            gap: 48px;
         }
 
         @media (min-width: 768px) {

@@ -45,8 +45,25 @@
     line-height: 1.4;
     color: var(--secondDarkColor);
 }
-.post-content-article ol {
+.post-content-article ol, .post-content-article ul {
     padding-left: 10px;
+}
+
+.post-content-article ul li {
+    display: flex;
+    position: relative;
+    list-style-type: none;
+    gap: 16px;
+}
+
+.post-content-article ul li::before {
+    content: '';
+    flex-shrink: 0;
+    width: 9px;
+    height: 9px;
+    background-color: var(--brand---primary);
+    position: relative;
+    top: 8px;
 }
 
 .post-content-article h4{
@@ -54,6 +71,14 @@
     font-size: 18px;
     line-height: 1.4;
     font-weight: 400;
+    color: var(--text-header);
+}
+
+.post-content-article h5 {
+    font-family: var(--font-family);
+    font-weight: 500;
+    line-height: 1.4;
+    font-size: 18px;
     color: var(--text-header);
 }
 
@@ -342,5 +367,9 @@
 
     .post-content-article h4  {
         font-size: 24px;
+    }
+
+    .post-content-article h5 {
+        font-size: 20px;
     }
 }

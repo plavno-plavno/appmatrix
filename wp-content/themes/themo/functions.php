@@ -3486,22 +3486,23 @@ function enqueue_swiper_assets()
         wp_add_inline_script('swiper-js', '
         var swiper = new Swiper(".swiper-container", {
             slidesPerView: 1,
-            spaceBetween: 20,
+       
             loop: true,
             navigation: {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
             },
+                  pagination: {
+        el: ".swiper-pagination",
+      },
             breakpoints: {
                 768: {
+                     spaceBetween: 20,
                     slidesPerView: 2
                 },
                 1024: {
                     slidesPerView: 3
                 },
-                1200: {
-                    slidesPerView: 3
-                }
             }
         });
     ');
@@ -3664,7 +3665,9 @@ function latest_posts_carousel_shortcode()
                                     </div>
                                 </a>
                             </div>
+                            <div class="swiper-pagination"></div>
                         <?php endwhile;
+
                     endif;
 
                     wp_reset_postdata();

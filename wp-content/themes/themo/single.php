@@ -78,11 +78,10 @@ function display_authors($authors)
             </div>
         </div>
     </div>
-    <div class="post-content-block padding-block padding-block-y process-section">
-        <div class="container">
+
+
             <?php echo latest_posts_carousel_shortcode(); ?>
-        </div>
-    </div>
+
 
 
     <script>

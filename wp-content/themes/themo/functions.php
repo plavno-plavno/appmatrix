@@ -3613,47 +3613,63 @@ function dynamic_content_menu()
 
 //add_shortcode('dynamic_menu', 'dynamic_content_menu');
 
-function latest_posts_carousel_shortcode() {
+function latest_posts_carousel_shortcode()
+{
     ob_start();
 
     ?>
-    <div class="latest-posts-carousel swiper-container">
-        <h3>Our latest insights</h3>
-        <div class="swiper-wrapper">
-            <?php
-            $recent_args = array(
-                'post_type' => 'post',
-                'posts_per_page' => 6
-            );
-            $recent_posts = new WP_Query($recent_args);
-
-            if ($recent_posts->have_posts()) :
-                while ($recent_posts->have_posts()) : $recent_posts->the_post(); ?>
-                    <div class="swiper-slide">
-                        <a href="<?php the_permalink(); ?>">
-                            <div class="carousel-thumbnail">
-                                <?php if (has_post_thumbnail()) {
-                                    the_post_thumbnail('medium');
-                                } else { ?>
-                                    <img src="<?php echo get_template_directory_uri(); ?>/images/placeholder.png" alt="Placeholder">
-                                <?php } ?>
-                            </div>
-                            <div class="carousel-content">
-                                <h3><?php the_title(); ?></h3>
-                                <p><?php the_time('d.m.Y'); ?></p>
-                            </div>
-                        </a>
+    <div class="post-content-block padding-block padding-block-y process-section">
+        <div class="container">
+            <div class="latest-posts-carousel swiper-container">
+                <p class="h2-tag">
+                    [ FEATURED BLOG POSTS ]
+                </p>
+                <div class="subtitle-link-wrapper">
+                    <div class="vc_col-sm-6">
+                        <h2 class="title"><span>Our latest insights</span></h2>
                     </div>
-                <?php endwhile;
-            endif;
+                    <div class="vc_col-sm-6 title-link">
+                        <a href="/blog">Explore our blog to learn more about tech & people</a>
+                    </div>
+                </div>
+                <div class="swiper-wrapper">
+                    <?php
+                    $recent_args = array(
+                        'post_type' => 'post',
+                        'posts_per_page' => 6
+                    );
+                    $recent_posts = new WP_Query($recent_args);
 
-            wp_reset_postdata();
-            ?>
+                    if ($recent_posts->have_posts()) :
+                        while ($recent_posts->have_posts()) : $recent_posts->the_post(); ?>
+                            <div class="swiper-slide">
+                                <a href="<?php the_permalink(); ?>">
+                                    <div class="carousel-thumbnail">
+                                        <?php if (has_post_thumbnail()) {
+                                            the_post_thumbnail('medium');
+                                        } else { ?>
+                                            <img src="<?php echo get_template_directory_uri(); ?>/images/placeholder.png"
+                                                 alt="Placeholder">
+                                        <?php } ?>
+                                    </div>
+                                    <div class="carousel-content">
+                                        <h3><?php the_title(); ?></h3>
+                                        <p><?php the_time('d.m.Y'); ?></p>
+                                    </div>
+                                </a>
+                            </div>
+                        <?php endwhile;
+                    endif;
+
+                    wp_reset_postdata();
+                    ?>
+                </div>
+
+
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
         </div>
-
-
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
     </div>
 
     <?php
@@ -3664,9 +3680,11 @@ function latest_posts_carousel_shortcode() {
 
 add_shortcode('latest_posts_carousel', 'latest_posts_carousel_shortcode');
 
-function enqueue_blog_css() {
+function enqueue_blog_css()
+{
     if ((is_single() && 'post' == get_post_type()) || is_page('blog')) {
         wp_enqueue_style('blog-style', get_template_directory_uri() . '/css/blog.css');
     }
 }
+
 add_action('wp_enqueue_scripts', 'enqueue_blog_css');

@@ -3665,7 +3665,7 @@ function latest_posts_carousel_shortcode()
                                     </div>
                                 </a>
                             </div>
-                            <div class="swiper-pagination"></div>
+
                         <?php endwhile;
 
                     endif;
@@ -3674,7 +3674,7 @@ function latest_posts_carousel_shortcode()
                     ?>
                 </div>
 
-
+                <div class="swiper-pagination"></div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
             </div>

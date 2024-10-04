@@ -307,9 +307,7 @@
         margin-bottom: 0;
     }
 
-    .latest-posts-carousel .subtitle-link-wrapper{
-        margin-bottom: 0;
-    }
+
 
 }
 
@@ -333,6 +331,9 @@
     .post-content-menu .dynamic-menu {
         position: sticky;
         top: 120px
+    }
+    .latest-posts-carousel .subtitle-link-wrapper{
+        margin-bottom: 0;
     }
 }
 

@@ -179,6 +179,8 @@
     background: linear-gradient(to right, transparent, transparent), linear-gradient(to right, var(--text-header), var(--text-header), var(--text-header));
     background-size: 100% 1px, 0 1px;
     background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 400ms;
 }
 
 .dynamic-menu ul li a:hover {

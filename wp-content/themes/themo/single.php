@@ -146,9 +146,9 @@ function display_authors($authors)
         }
 
         .post-meta {
-            color: #777;
-            font-size: 14px;
-            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
         }
 
         .post-featured-image {
@@ -241,17 +241,28 @@ function display_authors($authors)
             .post-header h1 {
                 margin-bottom: 40px;
             }
+
+            .post-meta {
+                flex-direction: row;
+            }
         }
 
         @media (min-width: 1440px) {
             .post-header h1 {
                 margin-bottom: 48px;
             }
+            .post-meta {
+                gap: 24px;
+            }
         }
 
         @media (min-width: 1920px) {
             .post-header h1 {
                 margin-bottom: 56px;
+            }
+
+            .post-meta {
+                gap: 32px;
             }
         }
 

@@ -162,15 +162,18 @@ body.vc-on.wrap-wide .vc_page_section.footer-bottom-section {
     background-color: var(--colorLight);
     padding: 32px 0;
 }
-footer .footer-content .vc_page_section.padding-block-footer {
-    position: relative;
-}
+
 
 .vc_page_section .vc_row.footer-nav-section.footer-nav-section-desc {
     display: none;
 }
 
 body.vc-on.wrap-wide .vc_page_section.padding-block-footer {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+footer .footer-content .vc_page_section.padding-block-footer {
     padding-top: 24px;
     padding-bottom: 24px;
 }

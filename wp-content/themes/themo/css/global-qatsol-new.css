@@ -754,18 +754,33 @@ body.font-dark .primary-main-btn:hover, #aboutUsContactForm .form-btn-flex input
     }
 }
 
-#videoBG .video-background{
-    overflow: visible;
+.banner-section {
+    overflow: hidden;
 }
 
-#videoBG .video-background .video-player{
+#videoBG .video-background-banner{
+    overflow: visible;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+#videoBG .video-background-banner .video-player{
     height: 100vh !important;
     width: 100vw !important;
     object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 @media (max-width: 991px) {
-    #videoBG .video-background .video-player{
+    #videoBG .video-background-banner .video-player{
         display: block;
     }
 }

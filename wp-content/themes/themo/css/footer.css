@@ -168,10 +168,6 @@ body.vc-on.wrap-wide .vc_page_section.footer-bottom-section {
     display: none;
 }
 
-body.vc-on.wrap-wide .vc_page_section.padding-block-footer {
-    padding-top: 24px;
-    padding-bottom: 24px;
-}
 
 #footer-container .footer-content .vc_page_section.padding-block-footer {
     padding-top: 24px;
@@ -241,10 +237,6 @@ a.img-footer-link:hover svg path {
 }
 
 @media (min-width: 1200px) {
-    body.vc-on.wrap-wide .vc_page_section.padding-block-footer {
-        padding-top: 112px;
-        padding-bottom: 112px;
-    }
     #footer-container .footer-content .vc_page_section.padding-block-footer {
         padding-top: 112px;
         padding-bottom: 112px;
@@ -363,10 +355,6 @@ a.img-footer-link:hover svg path {
         margin-bottom: 47px;
     }
 
-    body.vc-on.wrap-wide .vc_page_section.padding-block-footer {
-        padding-top: 120px;
-        padding-bottom: 120px;
-    }
     #footer-container .footer-content .vc_page_section.padding-block-footer {
         padding-top: 120px;
         padding-bottom: 120px;

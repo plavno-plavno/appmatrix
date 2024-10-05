@@ -173,7 +173,7 @@ body.vc-on.wrap-wide .vc_page_section.padding-block-footer {
     padding-bottom: 24px;
 }
 
-#footer-container footer .footer-content .vc_page_section.padding-block-footer {
+#footer-container .footer-content .vc_page_section.padding-block-footer {
     padding-top: 24px;
     padding-bottom: 24px;
 }
@@ -245,7 +245,7 @@ a.img-footer-link:hover svg path {
         padding-top: 112px;
         padding-bottom: 112px;
     }
-    #footer-container footer .footer-content .vc_page_section.padding-block-footer {
+    #footer-container .footer-content .vc_page_section.padding-block-footer {
         padding-top: 112px;
         padding-bottom: 112px;
     }
@@ -367,7 +367,7 @@ a.img-footer-link:hover svg path {
         padding-top: 120px;
         padding-bottom: 120px;
     }
-    #footer-container footer .footer-content .vc_page_section.padding-block-footer {
+    #footer-container .footer-content .vc_page_section.padding-block-footer {
         padding-top: 120px;
         padding-bottom: 120px;
     }

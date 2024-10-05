@@ -265,7 +265,9 @@
 
 .dynamic-menu ul li {
     list-style: none;
-    padding: 8px 32px;
+    padding: 8px 8px 8px 32px;
+    display: inline-block;
+    max-width: 100%;
 }
 
 .dynamic-menu ul li a:not(.active) {

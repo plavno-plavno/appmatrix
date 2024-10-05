@@ -3649,58 +3649,66 @@ function latest_posts_carousel_shortcode()
                         </a>
                     </div>
                 </div>
-                <div class="swiper-container">
-                <div class="swiper-wrapper swiper-last-articles">
-                    <?php
-                    $recent_args = array(
-                        'post_type' => 'post',
-                        'posts_per_page' => 6
-                    );
-                    $recent_posts = new WP_Query($recent_args);
+                <div class="blog-slider">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper swiper-last-articles">
+                            <?php
+                            $recent_args = array(
+                                'post_type' => 'post',
+                                'posts_per_page' => 6
+                            );
+                            $recent_posts = new WP_Query($recent_args);
 
-                    if ($recent_posts->have_posts()) :
-                        while ($recent_posts->have_posts()) : $recent_posts->the_post(); ?>
-                            <div class="swiper-slide">
-                                <a href="<?php the_permalink(); ?>">
-                                    <div class="carousel-thumbnail">
-                                        <?php if (has_post_thumbnail()) {
-                                            the_post_thumbnail('medium');
-                                        } else { ?>
-                                            <img src="<?php echo get_template_directory_uri(); ?>/images/placeholder.png"
-                                                 alt="Placeholder">
-                                        <?php } ?>
+                            if ($recent_posts->have_posts()) :
+                                while ($recent_posts->have_posts()) : $recent_posts->the_post(); ?>
+                                    <div class="swiper-slide">
+                                        <a href="<?php the_permalink(); ?>">
+                                            <div class="carousel-thumbnail">
+                                                <?php if (has_post_thumbnail()) {
+                                                    the_post_thumbnail('medium');
+                                                } else { ?>
+                                                    <img src="<?php echo get_template_directory_uri(); ?>/images/placeholder.png"
+                                                         alt="Placeholder">
+                                                <?php } ?>
+                                            </div>
+                                            <div class="carousel-content">
+                                                <h3><?php the_title(); ?></h3>
+                                                <p><?php the_time('d.m.Y'); ?></p>
+                                            </div>
+                                        </a>
                                     </div>
-                                    <div class="carousel-content">
-                                        <h3><?php the_title(); ?></h3>
-                                        <p><?php the_time('d.m.Y'); ?></p>
-                                    </div>
-                                </a>
-                            </div>
 
-                        <?php endwhile;
+                                <?php endwhile;
 
-                    endif;
+                            endif;
 
-                    wp_reset_postdata();
-                    ?>
-                </div>
-
-                <div class="swiper-pagination"></div>
-                <div class="custom-button-next">
-                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="1" y="1" width="46" height="46" rx="23" stroke="#DCDDE2" stroke-width="2"/>
-                        <path d="M24 30L18 24L24 18" stroke="#1D1E22" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M30 24H18" stroke="#1D1E22" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-
-                </div>
-                <div class="custom-button-prev">
-                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="1" y="1" width="46" height="46" rx="23" stroke="#DCDDE2" stroke-width="2"/>
-                        <path d="M18 24H30" stroke="#1D1E22" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M24 18L30 24L24 30" stroke="#1D1E22" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </div>
+                            wp_reset_postdata();
+                            ?>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <div class="swiper-navigation">
+                        <div class="custom-button-prev">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <rect x="1" y="1" width="46" height="46" rx="23" stroke="#DCDDE2" stroke-width="2"/>
+                                <path d="M24 30L18 24L24 18" stroke="#1D1E22" stroke-width="2" stroke-linecap="round"
+                                      stroke-linejoin="round"/>
+                                <path d="M30 24H18" stroke="#1D1E22" stroke-width="2" stroke-linecap="round"
+                                      stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="custom-button-next">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <rect x="1" y="1" width="46" height="46" rx="23" stroke="#DCDDE2" stroke-width="2"/>
+                                <path d="M18 24H30" stroke="#1D1E22" stroke-width="2" stroke-linecap="round"
+                                      stroke-linejoin="round"/>
+                                <path d="M24 18L30 24L24 30" stroke="#1D1E22" stroke-width="2" stroke-linecap="round"
+                                      stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

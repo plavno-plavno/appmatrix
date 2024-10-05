@@ -1005,11 +1005,11 @@ var direction, lastScrollTop = 0;
                 });
             });
         } else {
-            // $('video').each(function () {
-            //     this.pause();
-            //     delete this;
-            //     $(this).remove();
-            // });
+            $('video').each(function () {
+                this.pause();
+                delete this;
+                $(this).remove();
+            });
         }
 
         $('.ideo-lightbox').magnificPopup({ type: 'image' });
@@ -2181,9 +2181,9 @@ jQuery(function () {
     });
     jQuery(window).trigger('resize');
 
-    if (isMobile.any) {
-        jQuery('.video-background .video-player').remove();
-    }
+    // if (isMobile.any) {
+    //     jQuery('.video-background .video-player').remove();
+    // }
 });
 
 function resizePreloader() {

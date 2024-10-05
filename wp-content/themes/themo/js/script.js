@@ -1005,11 +1005,12 @@ var direction, lastScrollTop = 0;
                 });
             });
         } else {
-            // $('video').each(function () {
-            //     this.pause();
-            //     delete this;
-            //     $(this).remove();
-            // });
+            $('video').each(function () {
+                debugger
+                this.pause();
+                delete this;
+                $(this).remove();
+            });
         }
 
         $('.ideo-lightbox').magnificPopup({ type: 'image' });

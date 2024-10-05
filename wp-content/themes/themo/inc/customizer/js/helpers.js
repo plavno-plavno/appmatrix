@@ -2814,11 +2814,11 @@
         if (player) player.destroy();
 
         //destroy selfhost
-        $(selector).find('video').each(function () {
-            this.pause();
-            delete this;
-            $(this).remove();
-        });
+        // $(selector).find('video').each(function () {
+        //     this.pause();
+        //     delete this;
+        //     $(this).remove();
+        // });
     };
 
     namespace.videoBackground = function (selector, settings) {

@@ -3485,7 +3485,7 @@ function enqueue_swiper_assets()
         wp_enqueue_script('swiper-js', 'https://unpkg.com/swiper/swiper-bundle.min.js', array(), null, true);
         wp_add_inline_script('swiper-js', '
         var swiper = new Swiper(".swiper-container", {
-            slidesPerView: 1,
+            slidesPerView: 3,
        
             loop: true,
             navigation: {

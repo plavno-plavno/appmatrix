@@ -3628,7 +3628,7 @@ function latest_posts_carousel_shortcode()
     ?>
     <div class="post-content-block padding-block padding-block-y process-section">
         <div class="container">
-            <div class="latest-posts-carousel swiper-container">
+            <div class="latest-posts-carousel">
                 <div class="h2-tag">
                     <p> [ FEATURED BLOG POSTS ]</p>
                 </div>
@@ -3649,6 +3649,7 @@ function latest_posts_carousel_shortcode()
                         </a>
                     </div>
                 </div>
+                <div class="swiper-container">
                 <div class="swiper-wrapper swiper-last-articles">
                     <?php
                     $recent_args = array(
@@ -3684,10 +3685,7 @@ function latest_posts_carousel_shortcode()
                     ?>
                 </div>
 
-                <div class="swiper-pagination">
-
-
-                </div>
+                <div class="swiper-pagination"></div>
                 <div class="custom-button-next">
                     <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect x="1" y="1" width="46" height="46" rx="23" stroke="#DCDDE2" stroke-width="2"/>
@@ -3702,6 +3700,7 @@ function latest_posts_carousel_shortcode()
                         <path d="M18 24H30" stroke="#1D1E22" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M24 18L30 24L24 30" stroke="#1D1E22" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
+                </div>
                 </div>
             </div>
         </div>

@@ -770,13 +770,13 @@ body.font-dark .primary-main-btn:hover, #aboutUsContactForm .form-btn-flex input
 }
 
 #videoBG .video-background-banner .video-player{
-    height: 100vh !important;
+    min-height: calc(100vh + 80px) !important;
     width: 100vw !important;
     object-fit: cover;
     position: absolute;
-    top: calc(50% + 200px);
+    top: calc(50% + 80px);
     left: 50%;
-    transform: translate(-50%, calc(-50% + 200px));
+    transform: translate(-50%, calc(-50% + 80px));
 }
 
 @media (max-width: 991px) {

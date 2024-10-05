@@ -3663,7 +3663,7 @@ function latest_posts_carousel_shortcode()
 
                             if ($recent_posts->have_posts()) :
                                 while ($recent_posts->have_posts()) : $recent_posts->the_post(); ?>
-                                    <div class="swiper-slide">
+                                    <div class="swiper-slide post-item">
                                         <a href="<?php the_permalink(); ?>" class="swiper-slide-link">
                                             <div class="carousel-thumbnail">
                                                 <?php if (has_post_thumbnail()) {

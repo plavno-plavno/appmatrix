@@ -380,6 +380,7 @@
 }
 blockquote:after {
     content: none;
+    width: 100%;
 }
 
 

@@ -758,8 +758,14 @@ body.font-dark .primary-main-btn:hover, #aboutUsContactForm .form-btn-flex input
     overflow: visible;
 }
 
+#videoBG .video-background .video-player{
+    height: 100vh !important;
+    width: 100vw !important;
+    object-fit: cover;
+}
+
 @media (max-width: 991px) {
-    #videoBG .video-background{
+    #videoBG .video-background .video-player{
         display: block;
     }
 }

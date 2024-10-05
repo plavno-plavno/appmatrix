@@ -552,7 +552,7 @@ blockquote h3 {
         margin: 32px 0;
     }
 
-    .post-content-article p, .post-content-article ol li {
+    .post-content-article p, .post-content-article ol li, .post-content-article ul li {
         font-size: 18px;
     }
 

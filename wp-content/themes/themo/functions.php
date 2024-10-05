@@ -3486,8 +3486,7 @@ function enqueue_swiper_assets()
         wp_add_inline_script('swiper-js', '
         var swiper = new Swiper(".swiper-container", {
             slidesPerView: 1,
-       
-            loop: true,
+  
             navigation: {
                 nextEl: ".custom-button-next",
                 prevEl: ".custom-button-prev",

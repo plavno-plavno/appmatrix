@@ -3685,6 +3685,10 @@ function latest_posts_carousel_shortcode()
                 </div>
 
                 <div class="swiper-pagination">
+
+
+                </div>
+                <div class="custom-button-next">
                     <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect x="1" y="1" width="46" height="46" rx="23" stroke="#DCDDE2" stroke-width="2"/>
                         <path d="M24 30L18 24L24 18" stroke="#1D1E22" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -3692,16 +3696,12 @@ function latest_posts_carousel_shortcode()
                     </svg>
 
                 </div>
-                <div class="custom-button-next">
+                <div class="custom-button-prev">
                     <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect x="1" y="1" width="46" height="46" rx="23" stroke="#DCDDE2" stroke-width="2"/>
                         <path d="M18 24H30" stroke="#1D1E22" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M24 18L30 24L24 30" stroke="#1D1E22" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
-
-                </div>
-                <div class="custom-button-prev">
-
                 </div>
             </div>
         </div>

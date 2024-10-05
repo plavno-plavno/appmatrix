@@ -3673,7 +3673,7 @@ function latest_posts_carousel_shortcode()
                                                          alt="Placeholder">
                                                 <?php } ?>
                                             </div>
-                                            <div class="carousel-content common-card">
+                                            <div class="post-content common-card">
                                                 <h3><?php the_title(); ?></h3>
                                                 <p><?php the_time('d.m.Y'); ?></p>
                                             </div>

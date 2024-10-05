@@ -3662,7 +3662,7 @@ function latest_posts_carousel_shortcode()
                             if ($recent_posts->have_posts()) :
                                 while ($recent_posts->have_posts()) : $recent_posts->the_post(); ?>
                                     <div class="swiper-slide">
-                                        <a href="<?php the_permalink(); ?>">
+                                        <a href="<?php the_permalink(); ?>" class="swiper-slide-link">
                                             <div class="carousel-thumbnail">
                                                 <?php if (has_post_thumbnail()) {
                                                     the_post_thumbnail('medium');
@@ -3671,7 +3671,7 @@ function latest_posts_carousel_shortcode()
                                                          alt="Placeholder">
                                                 <?php } ?>
                                             </div>
-                                            <div class="carousel-content">
+                                            <div class="carousel-content common-card">
                                                 <h3><?php the_title(); ?></h3>
                                                 <p><?php the_time('d.m.Y'); ?></p>
                                             </div>

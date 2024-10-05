@@ -624,7 +624,8 @@ body.font-dark .primary-main-btn:hover, #aboutUsContactForm .form-btn-flex input
 .vc_page_section .row .common-card:not(.swiper-slide),
 .common-card .wp-swiper__slide-content,
 .hire-accordion-section .accordion.medium .panel-default > .panel-heading .panel-title a,
-.hire-accordion-section .panel-default > .panel-heading + .panel-collapse > .panel-body, .numbers-card {
+.hire-accordion-section .panel-default > .panel-heading + .panel-collapse > .panel-body, .numbers-card,
+.common-card.carousel-content {
     padding: 18px;
 }
 
@@ -651,7 +652,7 @@ body.font-dark .primary-main-btn:hover, #aboutUsContactForm .form-btn-flex input
     .common-card .wp-swiper__slide-content,
     .hire-accordion-section .accordion.medium .panel-default > .panel-heading .panel-title a,
     .hire-accordion-section .panel-default > .panel-heading + .panel-collapse > .panel-body,
-    .numbers-card {
+    .numbers-card, .common-card.carousel-content {
         padding: 20px;
     }
 }
@@ -661,7 +662,7 @@ body.font-dark .primary-main-btn:hover, #aboutUsContactForm .form-btn-flex input
     .common-card .wp-swiper__slide-content,
     .hire-accordion-section .accordion.medium .panel-default > .panel-heading .panel-title a,
     .hire-accordion-section .panel-default > .panel-heading + .panel-collapse > .panel-body,
-    .numbers-card {
+    .numbers-card, .common-card.carousel-content {
         padding: 24px;
     }
 }
@@ -671,7 +672,7 @@ body.font-dark .primary-main-btn:hover, #aboutUsContactForm .form-btn-flex input
     .common-card .wp-swiper__slide-content,
     .hire-accordion-section .accordion.medium .panel-default > .panel-heading .panel-title a,
     .hire-accordion-section .panel-default > .panel-heading + .panel-collapse > .panel-body,
-    .numbers-card {
+    .numbers-card, .common-card.carousel-content {
         padding: 32px;
     }
 }

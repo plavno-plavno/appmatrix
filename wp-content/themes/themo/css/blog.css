@@ -189,10 +189,9 @@
     background-size: 0 1px, 100% 1px;
 }
 
-
-.latest-posts-carousel h3 {
-    font-size: 24px;
-    margin-bottom: 20px;
+.swiper-slide-link {
+    display: flex;
+    flex-direction: column;
 }
 
 .related-post-item img {
@@ -245,15 +244,11 @@
 .carousel-thumbnail img {
     width: 100%;
     height: auto;
+    aspect-ratio: 533 / 320;
 }
 
 .carousel-content {
     padding: 15px;
-}
-
-.carousel-content h3 {
-    font-size: 16px;
-    margin: 0 0 10px;
 }
 
 .carousel-content p {
@@ -270,9 +265,6 @@
     opacity: 1;
     visibility: visible;
 }
-
-
-
 
 .blog-grid-article {
     display: grid;
@@ -380,6 +372,10 @@
 
     .custom-button-next {
         right: -70px;
+    }
+
+    .blog-slider {
+        position: relative;
     }
 
 }

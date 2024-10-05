@@ -769,7 +769,7 @@ body.font-dark .primary-main-btn:hover, #aboutUsContactForm .form-btn-flex input
     background-size: cover;
 }
 
-#videoBG .video-background-banner .video-player{
+#videoBG .video-background-banner .video-player-banner{
     min-height: calc(100vh + 80px) !important;
     width: 100vw !important;
     object-fit: cover;
@@ -780,7 +780,7 @@ body.font-dark .primary-main-btn:hover, #aboutUsContactForm .form-btn-flex input
 }
 
 @media (max-width: 991px) {
-    #videoBG .video-background-banner .video-player{
+    #videoBG .video-background-banner .video-player-banner{
         display: block;
     }
 }

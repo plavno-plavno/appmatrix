@@ -239,6 +239,7 @@
     background-color: var(--mainLightbg);
     border-radius: 4px;
     overflow: hidden;
+    height: auto
 }
 
 .carousel-thumbnail img {
@@ -258,6 +259,16 @@
 .carousel-content p {
     font-size: 12px;
     color: #777;
+}
+
+.latest-posts-carousel.swiper-container {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.latest-posts-carousel.swiper-container.swiper-initialized {
+    opacity: 1;
+    visibility: visible;
 }
 
 

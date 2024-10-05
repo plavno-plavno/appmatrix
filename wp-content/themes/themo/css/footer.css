@@ -163,6 +163,11 @@ body.vc-on.wrap-wide .vc_page_section.footer-bottom-section {
     padding: 32px 0;
 }
 
+#footer-container .footer-content .vc_page_section.footer-bottom-section{
+    background-color: var(--colorLight);
+    padding: 32px 0;
+}
+
 
 .vc_page_section .vc_row.footer-nav-section.footer-nav-section-desc {
     display: none;
@@ -211,6 +216,9 @@ a.img-footer-link:hover svg path {
 
 @media (min-width: 768px) {
     body.vc-on.wrap-wide .vc_page_section.footer-bottom-section {
+        padding: 24px 0;
+    }
+    #footer-container .footer-content .vc_page_section.footer-bottom-section{
         padding: 24px 0;
     }
 

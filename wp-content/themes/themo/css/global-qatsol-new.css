@@ -753,3 +753,13 @@ body.font-dark .primary-main-btn:hover, #aboutUsContactForm .form-btn-flex input
         font-size: 18px;
     }
 }
+
+#videoBG {
+    overflow: visible;
+}
+
+@media (max-width: 991px) {
+    #videoBG {
+        display: block;
+    }
+}

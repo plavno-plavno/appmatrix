@@ -754,7 +754,7 @@ body.font-dark .primary-main-btn:hover, #aboutUsContactForm .form-btn-flex input
     }
 }
 
-.banner-section {
+.banner-section.vc_page_section {
     overflow: hidden;
 }
 

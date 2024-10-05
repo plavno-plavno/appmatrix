@@ -120,7 +120,7 @@
 }
 
 .post-content-article {
-    margin-bottom: 48px;
+    margin-bottom: 20px;
 }
 
 .info-author .author-name {
@@ -213,7 +213,7 @@
 
 .post-content-article img {
     display: inline-block;
-    margin: 32px 0;
+    margin: 15px 0;
 }
 
 .post-content-article blockquote {
@@ -494,7 +494,9 @@ blockquote h3 {
     .blog-slider {
         position: relative;
     }
-
+    .post-content-article img {
+        margin: 20px 0;
+    }
 }
 
 @media (min-width: 1440px) {
@@ -529,7 +531,7 @@ blockquote h3 {
     }
 
     .post-content-article {
-        margin-bottom: 56px;
+        margin-bottom: 25px;
     }
 }
 
@@ -585,12 +587,16 @@ blockquote h3 {
     }
 
     .post-content-article {
-        margin-bottom: 64px;
+        margin-bottom: 35px;
     }
 
     .custom-button-prev, .custom-button-next {
         width: 56px;
         height: 56px;
+    }
+
+    .post-content-article img {
+        margin: 32px 0;
     }
 }
 

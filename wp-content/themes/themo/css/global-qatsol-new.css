@@ -754,12 +754,12 @@ body.font-dark .primary-main-btn:hover, #aboutUsContactForm .form-btn-flex input
     }
 }
 
-#videoBG {
+#videoBG .video-background{
     overflow: visible;
 }
 
 @media (max-width: 991px) {
-    #videoBG {
+    #videoBG .video-background{
         display: block;
     }
 }

@@ -380,9 +380,15 @@
 }
 blockquote:after {
     content: none;
+}
+
+blockquote h3 {
     width: 100%;
 }
 
+#page-container + div {
+    z-index: -1;
+}
 
 @media (min-width: 768px) {
     .post-header h1 {

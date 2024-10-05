@@ -245,6 +245,10 @@ a.img-footer-link:hover svg path {
         padding-top: 112px;
         padding-bottom: 112px;
     }
+    footer .footer-content .vc_page_section.padding-block-footer {
+        padding-top: 112px;
+        padding-bottom: 112px;
+    }
 
     .vc_page_section .vc_row.footer-nav-section.footer-nav-section-desc {
         display: block;
@@ -360,6 +364,10 @@ a.img-footer-link:hover svg path {
     }
 
     body.vc-on.wrap-wide .vc_page_section.padding-block-footer {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+    footer .footer-content .vc_page_section.padding-block-footer {
         padding-top: 120px;
         padding-bottom: 120px;
     }

@@ -479,6 +479,10 @@ blockquote h3 {
         transform: translateY(-50%);
     }
 
+    .custom-button-prev.swiper-button-disabled, .custom-button-next.swiper-button-disabled {
+        opacity: 0.5;
+    }
+
     .custom-button-prev {
         left: -70px;
     }

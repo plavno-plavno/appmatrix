@@ -3483,11 +3483,11 @@ function enqueue_swiper_assets()
     wp_enqueue_style('swiper-css', 'https://unpkg.com/swiper/swiper-bundle.min.css');
     wp_enqueue_script('swiper-js', 'https://unpkg.com/swiper/swiper-bundle.min.js', array(), null, true);
 
-    wp_add_inline_style('swiper-css-inline', '  
+    wp_add_inline_style('swiper-css', '  
     .swiper-navigation {
     display: none;
-    },
-    .swiper-wrapper {
+    }
+    .swiper-container.swiper-last-blog {
         position: relative;
         width: 100%;
         height: 100%;

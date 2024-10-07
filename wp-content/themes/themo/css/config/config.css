@@ -516,7 +516,7 @@ a.disabled {
     color: var(--primary-btn);
 }
 
-a.long-link, .row-values a, .long-link a, .solutions-cards .column-text li a {
+a.long-link, .row-values a, .long-link a, .solutions-cards .column-text li a, .dynamic-menu ul li.active a {
     position: relative;
     width: max-content;
     display: inline !important;
@@ -535,7 +535,8 @@ a.long-link, .row-values a, .long-link a, .solutions-cards .column-text li a {
 a.long-link:hover, a.long-link:focus,
 .row-values a:hover, .row-values a:focus,
 .long-link a:hover, .long-link a:focus ,
-.solutions-cards .column-text li a:hover, .solutions-cards .column-text li a:focus {
+.solutions-cards .column-text li a:hover, .solutions-cards .column-text li a:focus,
+.dynamic-menu ul li.active a:hover, .dynamic-menu ul li.active a:focus{
     color: var(--brand---primary) ;
     background-size: 0 1px, 100% 1px
 }

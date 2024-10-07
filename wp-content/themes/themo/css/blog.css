@@ -271,7 +271,7 @@
     max-width: 100%;
 }
 
-.dynamic-menu ul li:not(.active) a {
+.dynamic-menu ul li a {
     color: var(--text-header);
     background: linear-gradient(to right, transparent, transparent), linear-gradient(to right, var(--text-header), var(--text-header), var(--text-header));
     background-size: 100% 1px, 0 1px;
@@ -279,6 +279,8 @@
     background-repeat: no-repeat;
     transition: background-size 400ms;
 }
+
+
 
 
 .dynamic-menu ul li a:hover {

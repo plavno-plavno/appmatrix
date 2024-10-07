@@ -129,8 +129,6 @@ document.addEventListener("DOMContentLoaded",() => {
     })
 })
 
-console.log('teeeest')
-
 
     document.addEventListener('wpcf7beforesubmit', function(event) {
         var form = event.target;

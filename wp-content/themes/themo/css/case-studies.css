@@ -710,3 +710,7 @@
         width: 32px;
     }
 }
+
+.wpcf7 form.invalid .wpcf7-response-output {
+    border-color: var(--primary);
+}

@@ -82,7 +82,7 @@ function display_authors($authors)
 
 <?php echo latest_posts_carousel_shortcode(); ?>
 
-    <div id="contactUsFormBlock" class="vc_page_section vc_page_section_  padding-block padding-block-y skin-dark">
+    <div id="contactUsFormBlock" class="vc_page_section vc_page_section_  padding-block padding-block-y-b skin-dark">
         <div class="container">
             <div class="row">
                 <div id="aboutUsContactForm" class="vc_row_inner vc_row">

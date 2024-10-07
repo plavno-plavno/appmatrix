@@ -3484,45 +3484,78 @@ function enqueue_swiper_assets()
     wp_enqueue_script('swiper-js', 'https://unpkg.com/swiper/swiper-bundle.min.js', array(), null, true);
 
     wp_add_inline_style('swiper-css', '  
-    .swiper-navigation {
+   .swiper-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    transition-property: transform;
+    transition-timing-function: var(--swiper-wrapper-transition-timing-function, initial);
+    box-sizing: content-box;
+}
+
+.swiper-navigation {
     display: none;
+}
+
+.post-content h3 {
+    margin: 0;
+    color: var(--text-header);
+    position: relative;
+    padding-right: 40px;
+    width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.post-content h3::after {
+    right: 7px;
+}
+
+.post-content h3 + p {
+    font-size: 16px;
+    color: var(--secondDarkColor);
+}
+
+@media (min-width: 1200px) {
+        .swiper-navigation {
+        display: block;
     }
-    .swiper-container.swiper-last-blog {
+    
+        .custom-button-prev, .custom-button-next {
+        width: 48px;
+        height: 48px;
+        position: absolute;
+        top: 50%;
+        z-index: 99;
+        transform: translateY(-50%);
+    }
+
+    .custom-button-prev.swiper-button-disabled, .custom-button-next.swiper-button-disabled {
+        opacity: 0.5;
+    }
+
+    .custom-button-prev {
+        left: -70px;
+    }
+
+    .custom-button-next {
+        right: -70px;
+    }
+
+    .blog-slider {
         position: relative;
-        width: 100%;
-        height: 100%;
-        z-index: 1;
-        display: flex;
-        transition-property: transform;
-        transition-timing-function: var(--swiper-wrapper-transition-timing-function, initial);
-        box-sizing: content-box;
     }
-    @media (min-width: 1200px) {
-      .swiper-navigation {
-            
-            display: block;
-        }
-          .custom-button-prev, .custom-button-next {
-            width: 48px;
-            height: 48px;
-            position: absolute;
-            top: 50%;
-            z-index: 99;
-            transform: translateY(-50%);
-        }
-    
-        .custom-button-prev.swiper-button-disabled, .custom-button-next.swiper-button-disabled {
-            opacity: 0.5;
-        }
-    
-        .custom-button-prev {
-            left: -70px;
-        }
-    
-        .custom-button-next {
-            right: -70px;
-        }
-        }');
+}
+
+@media (min-width: 192px) {
+    .post-content h3 + p {
+        font-size: 18px;
+    }
+}');
 
     wp_add_inline_script('swiper-js', '
       document.addEventListener("DOMContentLoaded",() => {

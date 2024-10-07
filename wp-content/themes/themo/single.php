@@ -93,7 +93,7 @@ function display_authors($authors)
                                     <img src="https://qatsol.com/wp-content/uploads/2024/06/Group-1.webp" class="form-img-bg" alt="form">
                                 </div>
                             </div>
-                        </div>
+
 
                         <div class="h2-tag" style="color: #d2ab51;">
                             <p>Contact us</p>
@@ -104,6 +104,7 @@ function display_authors($authors)
                             <img src="/wp-content/uploads/2024/06/Mail.svg" width="24" height="24" alt="Mail Icon">
                             <a href="mailto:contact@qatsol.com">contact@qatsol.com</a>
                         </div>
+                    </div>
                     </div>
                     <div class="vc_column_inner contact-form-col-2" style="width: 50%;">
                         <div class="contact-form">

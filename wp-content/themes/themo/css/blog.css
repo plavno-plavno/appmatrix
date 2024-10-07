@@ -617,3 +617,7 @@ blockquote h3 {
 .transparent-dark.ideo-wow-title .title {
     border: none;
 }
+
+.common-link {
+    position: relative;
+}

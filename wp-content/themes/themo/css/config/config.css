@@ -457,6 +457,10 @@ body a:hover {
     font-size: 18px;
 }
 
+.wpcf7 form.invalid .wpcf7-response-output {
+    margin: 2em 0.5em 1em;
+}
+
 
 @media (min-width: 1200px) {
     .h2-title-h {
@@ -573,3 +577,5 @@ a.long-link:hover, a.long-link:focus,
         height: 32px;
     }
 }
+
+

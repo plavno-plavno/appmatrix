@@ -95,10 +95,10 @@ function display_authors($authors)
                             </div>
 
 
-                        <div class="h2-tag" style="color: #d2ab51;">
-                            <p>Contact us</p>
+                        <div class="h2-tag blog-h2-tag" style="color: #d2ab51; ">
+                            <p>[ contact us ]</p>
                         </div>
-                        <h2 class="h2-title light-text" style="text-align: left;">Let’s Talk!</h2>
+                        <h2 class="h2-title light-text title" style="text-align: left;">Let’s Talk!</h2>
                         <div class="main-text light-text form-info-text" style="font-size: 18px; line-height: 1.4;">
                             <p>For sales and general inquiries:</p>
                             <img src="/wp-content/uploads/2024/06/Mail.svg" width="24" height="24" alt="Mail Icon">

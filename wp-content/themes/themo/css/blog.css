@@ -607,3 +607,9 @@ blockquote h3 {
 #aboutUsContactForm .wpb_wrapper {
     position: relative;
 }
+
+.blog-h2-tag {
+    color: var(--primary);
+    z-index: 2;
+    position: relative;
+}

@@ -824,3 +824,15 @@ video::-ms-media-controls {
     visibility: visible;
     padding-bottom: 46px;
 }
+
+.video-background-banner-bg {
+    overflow: visible;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background: linear-gradient(180deg, rgba(29, 30, 34, 0.4032) 0%, rgba(29, 30, 34, 0.72) 100%);
+}

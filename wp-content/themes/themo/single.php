@@ -61,7 +61,7 @@ function display_authors($authors)
                     <div class="post-content-article">
                         <?php
                         while (have_posts()) : the_post();
-                            echo apply_filters( 'the_content', add_anchors_to_headings(get_the_content()) );
+                            echo apply_filters('the_content', add_anchors_to_headings(get_the_content()));
                         endwhile;
                         ?>
                     </div>
@@ -80,26 +80,35 @@ function display_authors($authors)
     </div>
 
 
-            <?php echo latest_posts_carousel_shortcode(); ?>
+<?php echo latest_posts_carousel_shortcode(); ?>
 
-    <div id="contactUsFormBlock" class="padding-block padding-block-y">
-        <div class="vc_column">
-            <div id="aboutUsContactForm" class="vc_row_inner">
-                <div class="vc_column_inner contact-form-col-1" style="background-image: url('/wp-content/uploads/2024/06/background-image.jpg'); width: 50%;">
-                    <img src="/wp-content/uploads/2024/06/background-image.jpg" class="form-img-bg" alt="">
-                    <div class="h2-tag" style="color: #d2ab51;">
-                        <p>Contact us</p>
+    <div id="contactUsFormBlock" class="padding-block padding-block-y vc_page_section">
+        <div class="container">
+            <div class="vc_column">
+                <div id="aboutUsContactForm" class="vc_row_inner vc_row">
+                    <div class="vc_col-sm-6 vc_column_inner contact-form-col-1">
+                        <div class="wpb_wrapper">
+                            <div class="form-img-bg">
+                                <div class="ideo-single-image">
+                                    <img src="https://qatsol.com/wp-content/uploads/2024/06/Group-1.webp" class="form-img-bg" alt="form">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="h2-tag" style="color: #d2ab51;">
+                            <p>Contact us</p>
+                        </div>
+                        <h2 class="h2-title light-text" style="text-align: left;">Let’s Talk!</h2>
+                        <div class="main-text light-text form-info-text" style="font-size: 18px; line-height: 1.4;">
+                            <p>For sales and general inquiries:</p>
+                            <img src="/wp-content/uploads/2024/06/Mail.svg" width="24" height="24" alt="Mail Icon">
+                            <a href="mailto:contact@qatsol.com">contact@qatsol.com</a>
+                        </div>
                     </div>
-                    <h2 class="h2-title light-text" style="text-align: left;">Let’s Talk!</h2>
-                    <div class="main-text light-text form-info-text" style="font-size: 18px; line-height: 1.4;">
-                        <p>For sales and general inquiries:</p>
-                        <img src="/wp-content/uploads/2024/06/Mail.svg" width="24" height="24" alt="Mail Icon">
-                        <a href="mailto:contact@qatsol.com">contact@qatsol.com</a>
-                    </div>
-                </div>
-                <div class="vc_column_inner contact-form-col-2" style="width: 50%;">
-                    <div class="contact-form">
-                        <?php echo do_shortcode('[contact-form-7 id="ec6f1e0" title="Kontaktformular AppMatrix_EN"]'); ?>
+                    <div class="vc_column_inner contact-form-col-2" style="width: 50%;">
+                        <div class="contact-form">
+                            <?php echo do_shortcode('[contact-form-7 id="ec6f1e0" title="Kontaktformular AppMatrix_EN"]'); ?>
+                        </div>
                     </div>
                 </div>
             </div>

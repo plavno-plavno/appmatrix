@@ -3480,8 +3480,10 @@ add_action('wp_ajax_nopriv_load_more_posts', 'load_more_posts');
 
 function enqueue_swiper_assets()
 {
+    if (is_single()) {
         wp_enqueue_style('swiper-css', 'https://unpkg.com/swiper/swiper-bundle.min.css');
         wp_enqueue_script('swiper-js', 'https://unpkg.com/swiper/swiper-bundle.min.js', array(), null, true);
+    }
         wp_add_inline_script('swiper-js', '
         var swiper = new Swiper(".swiper-container.swiper-last-blog", {
             slidesPerView: 1,
@@ -3513,6 +3515,7 @@ function enqueue_swiper_assets()
             }
         });
     ');
+
 }
 
 add_action('wp_enqueue_scripts', 'enqueue_swiper_assets');

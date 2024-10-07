@@ -138,7 +138,7 @@
     margin-bottom: 4px;
 }
 
-.post-content-article p, .post-content-article ol li, .post-content-article ul li {
+.post-content-article, .post-content-article p, .post-content-article ol li, .post-content-article ul li {
     font-size: 16px;
     line-height: 1.4;
     color: var(--secondDarkColor);
@@ -565,7 +565,7 @@ blockquote h3 {
         margin: 32px 0;
     }
 
-    .post-content-article p, .post-content-article ol li, .post-content-article ul li {
+    .post-content-article, .post-content-article p, .post-content-article ol li, .post-content-article ul li {
         font-size: 18px;
     }
 

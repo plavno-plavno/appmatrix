@@ -3480,41 +3480,82 @@ add_action('wp_ajax_nopriv_load_more_posts', 'load_more_posts');
 
 function enqueue_swiper_assets()
 {
-        wp_enqueue_style('swiper-css', 'https://unpkg.com/swiper/swiper-bundle.min.css');
-        wp_enqueue_script('swiper-js', 'https://unpkg.com/swiper/swiper-bundle.min.js', array(), null, true);
+    wp_enqueue_style('swiper-css', 'https://unpkg.com/swiper/swiper-bundle.min.css');
+    wp_enqueue_script('swiper-js', 'https://unpkg.com/swiper/swiper-bundle.min.js', array(), null, true);
 
-        wp_add_inline_style('swiper-css-inline', '');
+    wp_add_inline_style('swiper-css-inline', '  
+    .swiper-navigation {
+    display: none;
+    },
+    .swiper-wrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        display: flex;
+        transition-property: transform;
+        transition-timing-function: var(--swiper-wrapper-transition-timing-function, initial);
+        box-sizing: content-box;
+    }
+    @media (min-width: 1200px) {
+      .swiper-navigation {
+            
+            display: block;
+        }
+          .custom-button-prev, .custom-button-next {
+            width: 48px;
+            height: 48px;
+            position: absolute;
+            top: 50%;
+            z-index: 99;
+            transform: translateY(-50%);
+        }
+    
+        .custom-button-prev.swiper-button-disabled, .custom-button-next.swiper-button-disabled {
+            opacity: 0.5;
+        }
+    
+        .custom-button-prev {
+            left: -70px;
+        }
+    
+        .custom-button-next {
+            right: -70px;
+        }
+        }');
 
-        wp_add_inline_script('swiper-js', '
-        var swiper = new Swiper(".swiper-container.swiper-last-blog", {
-            slidesPerView: 1,
-  
-            navigation: {
-                nextEl: ".custom-button-next",
-                prevEl: ".custom-button-prev",
+    wp_add_inline_script('swiper-js', '
+      document.addEventListener("DOMContentLoaded",() => {
+    let swiper = new Swiper(".swiper-container.swiper-last-blog", {
+        slidesPerView: 1,
+
+        navigation: {
+            nextEl: ".custom-button-next",
+            prevEl: ".custom-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+        },
+        breakpoints: {
+            768: {
+                spaceBetween: 20,
+                slidesPerView: 2
             },
-                  pagination: {
-                    el: ".swiper-pagination",
-                  },
-            breakpoints: {
-                768: {
-                   spaceBetween: 20,
-                   slidesPerView: 2
-                },
-                1024: {
-                   spaceBetween: 20,
-                   slidesPerView: 3
-                },
-                1440: {
-                   spaceBetween: 24,
-                   slidesPerView: 3
-                },
-              1920: {
-                   spaceBetween: 32,
-                   slidesPerView: 3
-                },
-            }
-        });
+            1024: {
+                spaceBetween: 20,
+                slidesPerView: 3
+            },
+            1440: {
+                spaceBetween: 24,
+                slidesPerView: 3
+            },
+            1920: {
+                spaceBetween: 32,
+                slidesPerView: 3
+            },
+        }
+    })
+})
     ');
 
 

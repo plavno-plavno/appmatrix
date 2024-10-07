@@ -87,6 +87,7 @@ document.addEventListener("DOMContentLoaded",() => {
         });
     }
 
+
 })
 
 
@@ -96,3 +97,36 @@ window.addEventListener('load', function() {
     });
 });
 
+document.addEventListener("DOMContentLoaded",() => {
+    let swiper = new Swiper(".swiper-container.swiper-last-blog", {
+        slidesPerView: 1,
+
+        navigation: {
+            nextEl: ".custom-button-next",
+            prevEl: ".custom-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+        },
+        breakpoints: {
+            768: {
+                spaceBetween: 20,
+                slidesPerView: 2
+            },
+            1024: {
+                spaceBetween: 20,
+                slidesPerView: 3
+            },
+            1440: {
+                spaceBetween: 24,
+                slidesPerView: 3
+            },
+            1920: {
+                spaceBetween: 32,
+                slidesPerView: 3
+            },
+        }
+    })
+})
+
+console.log('teeeest')

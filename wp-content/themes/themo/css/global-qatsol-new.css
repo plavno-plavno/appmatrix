@@ -813,3 +813,14 @@ video::-ms-media-controls {
 .banner-section.banner-section-video .common-page-width  > .wpb_wrapper .wpb_wrapper{
     position: static;
 }
+
+.swiper-container.swiper-last-blog{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.swiper-container.swiper-initialized.swiper-last-blog {
+    opacity: 1;
+    visibility: visible;
+    padding-bottom: 46px;
+}

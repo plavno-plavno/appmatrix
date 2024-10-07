@@ -774,9 +774,13 @@ body.font-dark .primary-main-btn:hover, #aboutUsContactForm .form-btn-flex input
     width: 100vw !important;
     object-fit: cover;
     position: absolute;
-    top: calc(50% + 80px);
+    top: calc(50% + 280px);
     left: 50%;
     transform: translate(-50%, calc(-50% + 80px));
+}
+
+@media (min-width: 768px) {
+    top: calc(50% + 80px);
 }
 
 @media (max-width: 991px) {

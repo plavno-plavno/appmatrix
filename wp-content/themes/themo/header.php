@@ -1,15 +1,25 @@
-<?php ideothemo_set_ID(); 
+<?php ideothemo_set_ID();
 $id = get_the_ID();
 
 if ($id != 1129) {
 ?>
-   
+
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js">
     <head>
         <meta charset="<?php bloginfo( 'charset' ); ?>">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <?php
+        if (is_single()) {
+            if (has_excerpt()) {
+                $meta_description = get_the_excerpt();
+            } else {
+                $meta_description = wp_trim_words(get_the_content(), 20);
+            }
+            ?>
+            <meta name="description" content="<?php echo esc_attr($meta_description); ?>">
+        <?php } ?>
 
         <?php wp_head(); ?>
     </head>
@@ -58,7 +68,7 @@ if ($id != 1129) {
 	 * @see foton_core_set_open_graph_meta - hooked with 10
 	 */
 	do_action( 'foton_mikado_action_header_meta' );
-	
+
 	wp_head(); ?>
 </head>
 <body <?php body_class(); ?> data-id="<?php echo get_the_ID(); ?>" itemscope itemtype="http://schema.org/WebPage">
@@ -84,7 +94,7 @@ if ($id != 1129) {
              * @see foton_mikado_get_header_bottom_navigation() - hooked with 40
              */
             do_action( 'foton_mikado_action_after_wrapper_inner' ); ?>
-	        
+
             <div class="mkdf-content" <?php foton_mikado_content_elem_style_attr(); ?>>
                 <div class="mkdf-content-inner">
 				<?php get_template_part('parts/header/header'); ?>

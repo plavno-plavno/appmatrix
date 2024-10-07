@@ -770,7 +770,7 @@ body.font-dark .primary-main-btn:hover, #aboutUsContactForm .form-btn-flex input
 }
 
 #videoBG .video-background-banner .video-player-banner{
-    min-height: 100vh !important;
+    min-height: calc(100vh + 100px) !important;
     width: 100vw !important;
     object-fit: cover;
     position: absolute;

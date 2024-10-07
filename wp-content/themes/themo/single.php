@@ -94,13 +94,11 @@ function display_authors($authors)
                                          class="form-img-bg" alt="form">
                                 </div>
                             </div>
-
-
-                            <div class="h2-tag blog-h2-tag" style="color: #d2ab51; ">
+                            <div class="h2-tag blog-h2-tag">
                                 <p>[ contact us ]</p>
                             </div>
                             <div class="h2-title light-text">
-                                <h2 class="title" style="text-align: left;">
+                                <h2 class="title transparent-dark ideo-wow-title light-text">
                                     <span>Let’s Talk!</span>
                                 </h2></div>
 

@@ -97,8 +97,8 @@ function display_authors($authors)
                             <div class="h2-tag blog-h2-tag">
                                 <p>[ contact us ]</p>
                             </div>
-                            <div class="h2-title light-text">
-                                <h2 class="title transparent-dark ideo-wow-title light-text">
+                            <div class="h2-title transparent-dark ideo-wow-title light-text">
+                                <h2 class="title ">
                                     <span>Let’s Talk!</span>
                                 </h2></div>
 

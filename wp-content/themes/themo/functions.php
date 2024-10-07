@@ -3480,11 +3480,10 @@ add_action('wp_ajax_nopriv_load_more_posts', 'load_more_posts');
 
 function enqueue_swiper_assets()
 {
-    if (is_single()) {
         wp_enqueue_style('swiper-css', 'https://unpkg.com/swiper/swiper-bundle.min.css');
         wp_enqueue_script('swiper-js', 'https://unpkg.com/swiper/swiper-bundle.min.js', array(), null, true);
         wp_add_inline_script('swiper-js', '
-        var swiper = new Swiper(".swiper-container", {
+        var swiper = new Swiper(".swiper-container.swiper-last-blog", {
             slidesPerView: 1,
   
             navigation: {
@@ -3514,7 +3513,6 @@ function enqueue_swiper_assets()
             }
         });
     ');
-    }
 }
 
 add_action('wp_enqueue_scripts', 'enqueue_swiper_assets');
@@ -3651,7 +3649,7 @@ function latest_posts_carousel_shortcode()
                     </div>
                 </div>
                 <div class="blog-slider">
-                    <div class="swiper-container">
+                    <div class="swiper-container swiper-last-blog">
                         <div class="swiper-wrapper swiper-last-articles">
                             <?php
                             $recent_args = array(

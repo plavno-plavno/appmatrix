@@ -130,3 +130,52 @@ document.addEventListener("DOMContentLoaded",() => {
 })
 
 console.log('teeeest')
+
+
+    document.addEventListener('wpcf7beforesubmit', function(event) {
+        var form = event.target;
+        var submitButton = form.querySelector('input[type="submit"], button[type="submit"]');
+
+        if (submitButton) {
+            submitButton.disabled = true;
+        }
+    });
+
+    document.addEventListener('wpcf7mailsent', function(event) {
+        var form = event.target;
+        var submitButton = form.querySelector('input[type="submit"], button[type="submit"]');
+
+        if (submitButton) {
+            submitButton.disabled = false;
+        }
+    });
+
+    document.addEventListener('wpcf7invalid', function(event) {
+        var form = event.target;
+        var submitButton = form.querySelector('input[type="submit"], button[type="submit"]');
+
+        if (submitButton) {
+            submitButton.disabled = false;
+        }
+    });
+
+    document.addEventListener('wpcf7spam', function(event) {
+        var form = event.target;
+        var submitButton = form.querySelector('input[type="submit"], button[type="submit"]');
+
+        if (submitButton) {
+            submitButton.disabled = false;
+        }
+    });
+
+    document.addEventListener('wpcf7mailfailed', function(event) {
+        var form = event.target;
+        var submitButton = form.querySelector('input[type="submit"], button[type="submit"]');
+
+        if (submitButton) {
+            submitButton.disabled = false;
+        }
+    });
+
+
+

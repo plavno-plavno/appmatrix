@@ -61,7 +61,7 @@ function display_authors($authors)
                     <div class="post-content-article">
                         <?php
                         while (have_posts()) : the_post();
-                            echo add_anchors_to_headings(get_the_content());
+                            echo apply_filters( 'the_content', add_anchors_to_headings(get_the_content()) );
                         endwhile;
                         ?>
                     </div>

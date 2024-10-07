@@ -3570,7 +3570,7 @@ add_shortcode('latest_insights', 'latest_insights_shortcode');
 
 function add_anchors_to_headings($content)
 {
-    preg_match_all('/<h([1-6])>(.*?)<\/h[1-6]>/', $content, $matches, PREG_SET_ORDER);
+    preg_match_all('/<h([2])[^>]*>(.*?)<\/h[2]>/', $content, $matches, PREG_SET_ORDER);
 
     if (!empty($matches)) {
         foreach ($matches as $match) {
@@ -3594,7 +3594,7 @@ function dynamic_content_menu()
 
     $content = $post->post_content;
 
-    preg_match_all('/<h([2])>(.*?)<\/h[2]>/', $content, $matches, PREG_SET_ORDER);
+    preg_match_all('/<h([2])[^>]*>(.*?)<\/h[2]>/', $content, $matches, PREG_SET_ORDER);
 
     if (!empty($matches)) {
         $menu = '<div class="dynamic-menu">';

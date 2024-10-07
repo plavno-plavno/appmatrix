@@ -780,7 +780,9 @@ body.font-dark .primary-main-btn:hover, #aboutUsContactForm .form-btn-flex input
 }
 
 @media (min-width: 768px) {
-    top: calc(50% + 80px);
+    #videoBG .video-background-banner .video-player-banner {
+        top: calc(50% + 80px);
+    }
 }
 
 @media (max-width: 991px) {

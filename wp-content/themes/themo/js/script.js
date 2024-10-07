@@ -1004,15 +1004,7 @@ var direction, lastScrollTop = 0;
                     videoId: $(this).data('youtube_id')
                 });
             });
-        } else {
-            $('video').each(function () {
-                debugger
-                this.pause();
-                delete this;
-                $(this).remove();
-            });
         }
-
         $('.ideo-lightbox').magnificPopup({ type: 'image' });
     });
 

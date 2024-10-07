@@ -271,7 +271,7 @@
     max-width: 100%;
 }
 
-.dynamic-menu ul li a:not(.active) {
+.dynamic-menu ul li:not(.active) a {
     color: var(--text-header);
     background: linear-gradient(to right, transparent, transparent), linear-gradient(to right, var(--text-header), var(--text-header), var(--text-header));
     background-size: 100% 1px, 0 1px;

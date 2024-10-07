@@ -770,23 +770,45 @@ body.font-dark .primary-main-btn:hover, #aboutUsContactForm .form-btn-flex input
 }
 
 #videoBG .video-background-banner .video-player-banner{
-    min-height: calc(100vh + 80px) !important;
+    min-height: 100vh !important;
     width: 100vw !important;
     object-fit: cover;
     position: absolute;
-    top: calc(50% + 280px);
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, calc(-50% + 80px));
+    transform: translate(-50%, calc(-50%));
 }
 
-@media (min-width: 768px) {
-    #videoBG .video-background-banner .video-player-banner {
-        top: calc(50% + 80px);
-    }
-}
+
 
 @media (max-width: 991px) {
     #videoBG .video-background-banner .video-player-banner{
         display: block;
     }
+}
+
+/* Скрыть элементы управления для WebKit-браузеров */
+video::-webkit-media-controls {
+    display: none !important;
+}
+
+/* Скрыть элементы управления для Firefox */
+video::-moz-media-controls {
+    display: none !important;
+}
+
+/* Скрыть элементы управления для Opera */
+video::-o-media-controls {
+    display: none !important;
+}
+
+/* Скрыть элементы управления для Internet Explorer */
+video::-ms-media-controls {
+    display: none !important;
+}
+
+.banner-section.banner-section-video .container, .banner-section.banner-section-video .common-page-width,
+.banner-section.banner-section-video .common-page-width  > .wpb_wrapper,
+.banner-section.banner-section-video .common-page-width  > .wpb_wrapper .wpb_wrapper{
+    position: static;
 }

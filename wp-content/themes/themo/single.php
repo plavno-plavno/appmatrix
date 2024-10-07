@@ -84,7 +84,7 @@ function display_authors($authors)
 
     <div id="contactUsFormBlock" class="padding-block padding-block-y vc_page_section">
         <div class="container">
-            <div class="vc_column">
+            <div class="row">
                 <div id="aboutUsContactForm" class="vc_row_inner vc_row">
                     <div class="vc_col-sm-6 vc_column_inner contact-form-col-1">
                         <div class="wpb_wrapper">

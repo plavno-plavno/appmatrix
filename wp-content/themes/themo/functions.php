@@ -3480,7 +3480,6 @@ add_action('wp_ajax_nopriv_load_more_posts', 'load_more_posts');
 
 function enqueue_swiper_assets()
 {
-    if (is_single()) {
         wp_enqueue_style('swiper-css', 'https://unpkg.com/swiper/swiper-bundle.min.css');
         wp_enqueue_script('swiper-js', 'https://unpkg.com/swiper/swiper-bundle.min.js', array(), null, true);
 
@@ -3493,29 +3492,29 @@ function enqueue_swiper_assets()
                 prevEl: ".custom-button-prev",
             },
                   pagination: {
-        el: ".swiper-pagination",
-      },
+                    el: ".swiper-pagination",
+                  },
             breakpoints: {
                 768: {
-                     spaceBetween: 20,
-                    slidesPerView: 2
+                   spaceBetween: 20,
+                   slidesPerView: 2
                 },
                 1024: {
-                  spaceBetween: 20,
-                    slidesPerView: 3
+                   spaceBetween: 20,
+                   slidesPerView: 3
                 },
-                    1440: {
-                       spaceBetween: 24,
-                       slidesPerView: 3
+                1440: {
+                   spaceBetween: 24,
+                   slidesPerView: 3
                 },
-                              1920: {
-                       spaceBetween: 32,
-                       slidesPerView: 3
+              1920: {
+                   spaceBetween: 32,
+                   slidesPerView: 3
                 },
             }
         });
     ');
-    }
+
 
 }
 
@@ -3685,7 +3684,6 @@ function latest_posts_carousel_shortcode()
 
                             endif;
 
-                            wp_reset_postdata();
                             ?>
                         </div>
                         <div class="swiper-pagination"></div>
@@ -3718,7 +3716,7 @@ function latest_posts_carousel_shortcode()
     </div>
 
     <?php
-
+    wp_reset_postdata();
     return ob_get_clean();
 }
 

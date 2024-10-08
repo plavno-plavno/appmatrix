@@ -12,13 +12,9 @@ if ($id != 1129) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
         <?php
         if (is_single()) {
+            $meta_description = '';
             if (has_excerpt()) {
                 $meta_description = get_the_excerpt();
-            } else {
-                $meta_description = wp_trim_words(
-                    html_entity_decode(wp_strip_all_tags(strip_shortcodes(get_the_content()))),
-                    20
-                );
             }
             ?>
             <meta name="description" content="<?php echo esc_attr($meta_description); ?>">

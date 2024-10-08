@@ -15,7 +15,7 @@ if ($id != 1129) {
             if (has_excerpt()) {
                 $meta_description = get_the_excerpt();
             } else {
-                $meta_description = wp_trim_words(get_the_content(), 20);
+                $meta_description = wp_trim_words(wp_strip_all_tags(strip_shortcodes(get_the_content())), 20);
             }
             ?>
             <meta name="description" content="<?php echo esc_attr($meta_description); ?>">

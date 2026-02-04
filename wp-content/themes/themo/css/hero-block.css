@@ -63,3 +63,14 @@
         max-width: 87%;
     }
 }
+
+.hero-badge {
+    display: inline-block;
+    margin-bottom: 27px;
+    padding: 10px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 111px;
+    font-size: 18px;
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.8);
+}

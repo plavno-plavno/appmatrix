@@ -29,7 +29,7 @@ body {
     object-fit: cover;
 }
 
-.cases-item__description, .solutions-card__description:not(.solutions-card__description_img) {
+.cases-item__description, .solutions-card__description:not(.solutions-card__description_img), .cases-item__description.transparent-card .wp-block-cover__inner-container {
     padding: 18px;
 }
 
@@ -47,7 +47,7 @@ body {
 }
 
 @media (min-width: 1200px) {
-    .cases-item__description, .solutions-card__description:not(.solutions-card__description_img) {
+    .cases-item__description, .solutions-card__description:not(.solutions-card__description_img), .cases-item__description.transparent-card .wp-block-cover__inner-container {
         padding: 20px;
     }
 
@@ -64,7 +64,7 @@ body {
 }
 
 @media (min-width: 1440px) {
-    .cases-item__description, .solutions-card__description:not(.solutions-card__description_img) {
+    .cases-item__description, .solutions-card__description:not(.solutions-card__description_img), .cases-item__description.transparent-card .wp-block-cover__inner-container {
         padding: 24px;
     }
 
@@ -78,7 +78,7 @@ body {
 }
 
 @media (min-width: 1920px) {
-    .cases-item__description, .solutions-card__description:not(.solutions-card__description_img) {
+    .cases-item__description, .solutions-card__description:not(.solutions-card__description_img), .cases-item__description.transparent-card .wp-block-cover__inner-container {
         padding: 32px;
     }
 

@@ -254,6 +254,10 @@ function custom_mobile_menu_template($theme_location) {
 ?>
 
 <header id="header-navbar" class="header padding-block">
+    <div class="top-banner-add">
+    Now accepting projects for Q1 2026 model training cycles. 
+    <a href="/contact-us/" class="top-banner-link">Reserve</a> technical discovery slot.
+</div>
     <div class="container-block">
         <a href="/" class="header-logo">
             <picture>

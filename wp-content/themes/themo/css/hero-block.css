@@ -78,6 +78,9 @@ body .is-layout-constrained > p.has-text-align-left.hero-badge {
     margin-left: 0 !important;
 }
 
+body #header-navbar.mobile > .container-block{
+    height: 80px;
+}
 
 .hero-badge p {
     color: rgba(255, 255, 255, 0.8);
@@ -384,7 +387,7 @@ body #header-navbar.header.padding-block {
 }
 
 body #header-navbar.header.padding-block > .container-block{
-    padding-top: 0x;
+    padding-top: 0;
     padding-bottom: 0;
 }
 
@@ -539,7 +542,6 @@ body #header-navbar.header.padding-block > .container-block{
         gap: 24px;
         grid-template-columns: repeat(3,1fr);
     }
-
     .header nav > ul li.dropdown-li .sub-menu {
         top: 135px;
         z-index: 5;
@@ -555,7 +557,7 @@ body #header-navbar.header.padding-block > .container-block{
         top: 80px;
     }
     .header:not(.header-fixed) nav > ul li.dropdown-li .sub-menu {
-        top: 143px;
+        top: 134px;
     }
 
     .header nav > ul li .menu-link {

@@ -3425,7 +3425,7 @@ function add_open_graph_tags()
 {
     if (is_single()) {
         global $post;
-        $default_image = 'https://qatsol.com/wp-content/uploads/2024/08/favicon.png';
+        $default_image = 'https://qatsol.com/wp-content/uploads/2026/02/favicon-1.svg';
         $og_image = get_the_post_thumbnail_url($post->ID, 'full') ? get_the_post_thumbnail_url($post->ID, 'full') : $default_image;
         echo '<meta property="og:image" content="' . esc_url($og_image) . '"/>';
     }

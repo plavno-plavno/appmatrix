@@ -1,10 +1,17 @@
 <?php
+/**
+ * Configuration file for [vc_wp_custommenu] shortcode of 'WP Custom Menu' element.
+ *
+ * @see https://kb.wpbakery.com/docs/inner-api/vc_map/ for more detailed information about element attributes.
+ */
+
 if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
 }
 
 $custom_menus = array();
 if ( 'vc_edit_form' === vc_post_param( 'action' ) && vc_verify_admin_nonce() ) {
+	// phpcs:ignore
 	$menus = get_terms( 'nav_menu', array( 'hide_empty' => false ) );
 	if ( is_array( $menus ) && ! empty( $menus ) ) {
 		foreach ( $menus as $single_menu ) {

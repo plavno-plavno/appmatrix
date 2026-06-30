@@ -1,4 +1,10 @@
 <?php
+/**
+ * Backward compatibility gutenberg native wp editor.
+ *
+ * @since 4.4 vendors initialization moved to hooks in autoload/vendors.
+ */
+
 if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
 }

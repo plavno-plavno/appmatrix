@@ -46,7 +46,7 @@ function &ideothemo_tab_counter($add = 0){
     static $styles_array = array();
     
     if($add){
-        $counter += $add;
+        $counter += (int) $add;
     }
     if($add == 'reset'){
         $counter = 0;

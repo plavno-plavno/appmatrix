@@ -1,21 +1,27 @@
 <?php
+/**
+ * Configuration file for [vc_btn] shortcode of 'Button' element.
+ *
+ * @see https://kb.wpbakery.com/docs/inner-api/vc_map/ for more detailed information about element attributes.
+ */
+
 if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
 }
 
+/**
+ * Shortcode attributes
+ *
+ * @return array
+ */
 function vc_btn_element_params() {
-	/**
-	 * New button implementation
-	 * array_merge is needed due to merging other shortcode data into params.
-	 * @since 4.5
-	 */
 
 	$pixel_icons = vc_pixel_icons();
 	require_once vc_path_dir( 'CONFIG_DIR', 'content/vc-icon-element.php' );
 
 	$icons_params = vc_map_integrate_shortcode( vc_icon_element_params(), 'i_', '', array(
 		'include_only_regex' => '/^(type|icon_\w*)/',
-	// we need only type, icon_fontawesome, icon_blabla..., NOT color and etc
+	// we need only type, icon_fontawesome, icon_blabla..., NOT color and etc.
 	), array(
 		'element' => 'add_icon',
 		'value' => 'true',
@@ -25,33 +31,34 @@ function vc_btn_element_params() {
 		foreach ( $icons_params as $key => $param ) {
 			if ( is_array( $param ) && ! empty( $param ) ) {
 				if ( 'i_type' === $param['param_name'] ) {
-					// append pixelicons to dropdown
+					// append pixelicons to dropdown.
 					$icons_params[ $key ]['value'][ esc_html__( 'Pixel', 'js_composer' ) ] = 'pixelicons';
 				}
 				if ( isset( $param['admin_label'] ) ) {
-					// remove admin label
+					// remove admin label.
 					unset( $icons_params[ $key ]['admin_label'] );
 				}
 			}
 		}
 	}
+	// array_merge is needed due to merging other shortcode data into params.
 	$color_value = array_merge( array(
-		// Btn1 Colors
-			esc_html__( 'Classic Grey', 'js_composer' ) => 'default',
+		// Btn1 Colors.
+		esc_html__( 'Classic Grey', 'js_composer' ) => 'default',
 		esc_html__( 'Classic Blue', 'js_composer' ) => 'primary',
 		esc_html__( 'Classic Turquoise', 'js_composer' ) => 'info',
 		esc_html__( 'Classic Green', 'js_composer' ) => 'success',
 		esc_html__( 'Classic Orange', 'js_composer' ) => 'warning',
 		esc_html__( 'Classic Red', 'js_composer' ) => 'danger',
 		esc_html__( 'Classic Black', 'js_composer' ) => 'inverse',
-	// + Btn2 Colors (default color set)
+	// + Btn2 Colors (default color set).
 	), vc_get_shared( 'colors-dashed' ) );
 	$params = array_merge( array(
 		array(
 			'type' => 'textfield',
 			'heading' => esc_html__( 'Text', 'js_composer' ),
 			'param_name' => 'title',
-			// fully compatible to btn1 and btn2
+			// fully compatible to btn1 and btn2.
 			'value' => esc_html__( 'Text on the button', 'js_composer' ),
 		),
 		array(
@@ -59,14 +66,14 @@ function vc_btn_element_params() {
 			'heading' => esc_html__( 'URL (Link)', 'js_composer' ),
 			'param_name' => 'link',
 			'description' => esc_html__( 'Add link to button.', 'js_composer' ),
-		// compatible with btn2 and converted from href{btn1}
+		// compatible with btn2 and converted from href{btn1}.
 		),
 		array(
 			'type' => 'dropdown',
 			'heading' => esc_html__( 'Style', 'js_composer' ),
 			'description' => esc_html__( 'Select button display style.', 'js_composer' ),
 			'param_name' => 'style',
-			// partly compatible with btn2, need to be converted shape+style from btn2 and btn1
+			// partly compatible with btn2, need to be converted shape+style from btn2 and btn1.
 			'value' => array(
 				esc_html__( 'Modern', 'js_composer' ) => 'modern',
 				esc_html__( 'Classic', 'js_composer' ) => 'classic',
@@ -101,7 +108,7 @@ function vc_btn_element_params() {
 			'param_holder_class' => 'vc_colored-dropdown vc_btn3-colored-dropdown',
 			'value' => vc_get_shared( 'colors-dashed' ),
 			'std' => 'blue',
-			// must have default color grey
+			// must have default color grey.
 			'dependency' => array(
 				'element' => 'style',
 				'value' => array( 'gradient' ),
@@ -141,7 +148,7 @@ function vc_btn_element_params() {
 			'description' => esc_html__( 'Select button text color.', 'js_composer' ),
 			'param_holder_class' => 'vc_colored-dropdown vc_btn3-colored-dropdown',
 			'value' => '#ffffff',
-			// must have default color grey
+			// must have default color grey.
 			'dependency' => array(
 				'element' => 'style',
 				'value' => array( 'gradient-custom' ),
@@ -213,7 +220,7 @@ function vc_btn_element_params() {
 			'heading' => esc_html__( 'Shape', 'js_composer' ),
 			'description' => esc_html__( 'Select button shape.', 'js_composer' ),
 			'param_name' => 'shape',
-			// need to be converted
+			// need to be converted.
 			'value' => array(
 				esc_html__( 'Rounded', 'js_composer' ) => 'rounded',
 				esc_html__( 'Square', 'js_composer' ) => 'square',
@@ -225,11 +232,11 @@ function vc_btn_element_params() {
 			'heading' => esc_html__( 'Color', 'js_composer' ),
 			'param_name' => 'color',
 			'description' => esc_html__( 'Select button color.', 'js_composer' ),
-			// compatible with btn2, need to be converted from btn1
+			// compatible with btn2, need to be converted from btn1.
 			'param_holder_class' => 'vc_colored-dropdown vc_btn3-colored-dropdown',
 			'value' => $color_value,
 			'std' => 'grey',
-			// must have default color grey
+			// must have default color grey.
 			'dependency' => array(
 				'element' => 'style',
 				'value_not_equal_to' => array(
@@ -245,7 +252,7 @@ function vc_btn_element_params() {
 			'heading' => esc_html__( 'Size', 'js_composer' ),
 			'param_name' => 'size',
 			'description' => esc_html__( 'Select button display size.', 'js_composer' ),
-			// compatible with btn2, default md, but need to be converted from btn1 to btn2
+			// compatible with btn2, default md, but need to be converted from btn1 to btn2.
 			'std' => 'md',
 			'value' => vc_get_shared( 'sizes' ),
 		),
@@ -254,12 +261,12 @@ function vc_btn_element_params() {
 			'heading' => esc_html__( 'Alignment', 'js_composer' ),
 			'param_name' => 'align',
 			'description' => esc_html__( 'Select button alignment.', 'js_composer' ),
-			// compatible with btn2, default left to be compatible with btn1
+			// compatible with btn2, default left to be compatible with btn1.
 			'value' => array(
 				esc_html__( 'Inline', 'js_composer' ) => 'inline',
-				// default as well
+				// default as well.
 				esc_html__( 'Left', 'js_composer' ) => 'left',
-				// default as well
+				// default as well.
 				esc_html__( 'Right', 'js_composer' ) => 'right',
 				esc_html__( 'Center', 'js_composer' ) => 'center',
 			),
@@ -285,7 +292,7 @@ function vc_btn_element_params() {
 			'param_name' => 'i_align',
 			'value' => array(
 				esc_html__( 'Left', 'js_composer' ) => 'left',
-				// default as well
+				// default as well.
 				esc_html__( 'Right', 'js_composer' ) => 'right',
 			),
 			'dependency' => array(
@@ -301,7 +308,7 @@ function vc_btn_element_params() {
 			'value' => 'vc_pixel_icon vc_pixel_icon-alert',
 			'settings' => array(
 				'emptyIcon' => false,
-				// default true, display an "EMPTY" icon?
+				// default true, display an "EMPTY" icon.
 				'type' => 'pixelicons',
 				'source' => $pixel_icons,
 			),
@@ -352,9 +359,7 @@ function vc_btn_element_params() {
 		),
 	) );
 
-	/**
-	 * @class WPBakeryShortCode_Vc_Btn
-	 */
+	// class WPBakeryShortCode_Vc_Btn.
 	return array(
 		'name' => esc_html__( 'Button', 'js_composer' ),
 		'base' => 'vc_btn',

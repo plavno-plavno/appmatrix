@@ -1,4 +1,10 @@
 <?php
+/**
+ * Configuration file for [vc_tta_toggle_section] shortcode of 'Section' element.
+ *
+ * @see https://kb.wpbakery.com/docs/inner-api/vc_map/ for more detailed information about element attributes.
+ */
+
 if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
 }
@@ -25,7 +31,7 @@ $params = array(
 		'param_name' => 'el_class',
 		'description' => esc_html__( 'If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.', 'js_composer' ),
 	),
-	// we use it to find which one title to switch
+	// we use it to find which one title to switch.
 	array(
 		'type' => 'hidden',
 		'param_name' => 'section_index',

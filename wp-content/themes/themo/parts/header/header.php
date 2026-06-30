@@ -254,14 +254,14 @@ function custom_mobile_menu_template($theme_location) {
 ?>
 
 <header id="header-navbar" class="header padding-block">
-    <div class="top-banner-add">
+<div class="top-banner-add">
     Now accepting projects for Q1 2026 model training cycles. 
     <a href="/contact-us/" class="top-banner-link">Reserve</a> technical discovery slot.
 </div>
     <div class="container-block">
         <a href="/" class="header-logo">
             <picture>
-                <img loading="lazy" src="https://qatsol.com/wp-content/uploads/2024/06/Qatsol-mobile.svg" alt="AI Chat">
+                <img loading="lazy" src="https://qatsol.com/wp-content/uploads/2026/02/Logo.svg" alt="AI Chat">
             </picture>
         </a>
         <div class="nav-cta-block">

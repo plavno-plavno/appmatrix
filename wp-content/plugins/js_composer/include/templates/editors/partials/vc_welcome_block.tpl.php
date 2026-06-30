@@ -7,8 +7,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $total_templates = wpbakery()->templatesPanelEditor()->loadDefaultTemplates();
 $templates_total_count = count( $total_templates );
+if ( vc_modules_manager()->is_module_on( 'vc-post-custom-layout' ) ) {
+	$custom_layout = vc_modules_manager()->get_module( 'vc-post-custom-layout' );
+	if ( $custom_layout->get_custom_layout_name() ) {
+		$template_class = ' vc_post-custom-layout-selected';
+	} else {
+		$template_class = '';
+	}
+} else {
+	$template_class = ' vc_post-custom-layout-selected';
+}
 ?>
-<div id="vc_no-content-helper" class="vc_welcome vc_ui-font-open-sans <?php echo wpb_get_name_post_custom_layout() ? 'vc_post-custom-layout-selected' : ''; ?>">
+<div id="vc_no-content-helper" class="vc_welcome vc_ui-font-open-sans <?php echo esc_attr( $template_class ); ?>">
 	<?php
 	if ( vc_user_access()->part( 'shortcodes' )->checkStateAny( true, 'custom', null )->get() && vc_user_access_check_shortcode_all( 'vc_row' ) && vc_user_access_check_shortcode_all( 'vc_column' ) ) :
 		vc_include_template(
@@ -21,17 +31,19 @@ $templates_total_count = count( $total_templates );
 			vc_include_template(
 				'editors/partials/start-select-layout-title.tpl.php'
 			);
-			vc_include_template(
-				'editors/partials/vc_post_custom_layout.tpl.php',
-				[ 'location' => 'welcome' ]
-			);
+
+			if ( vc_modules_manager()->is_module_on( 'vc-post-custom-layout' ) ) {
+				vc_include_template(
+					'editors/partials/vc_post_custom_layout.tpl.php',
+					[ 'location' => 'welcome' ]
+				);
+			}
 		}
 		?>
 
 		<div class="vc_ui-btn-group vc_welcome-visible-e vc_selected-post-custom-layout-visible-e">
 			<?php
-			if ( vc_user_access()->part( 'shortcodes' )->checkStateAny( true, 'custom', null )
-					->get() && vc_user_access_check_shortcode_all( 'vc_row' ) && vc_user_access_check_shortcode_all( 'vc_column' ) ) :
+			if ( vc_user_access()->part( 'shortcodes' )->checkStateAny( true, 'custom', null )->get() && vc_user_access_check_shortcode_all( 'vc_row' ) && vc_user_access_check_shortcode_all( 'vc_column' ) ) :
 				?>
 				<a id="vc_no-content-add-element"
 					class="vc_general vc_ui-button vc_ui-button-shape-rounded vc_ui-button-info vc_welcome-visible-e"
@@ -62,8 +74,7 @@ $templates_total_count = count( $total_templates );
 			<?php endif; ?>
 		</div>
 		<?php
-		if ( vc_user_access()->part( 'shortcodes' )->checkStateAny( true, 'custom', null )
-				->get() && vc_user_access_check_shortcode_all( 'vc_row' ) && vc_user_access_check_shortcode_all( 'vc_column' ) ) :
+		if ( vc_user_access()->part( 'shortcodes' )->checkStateAny( true, 'custom', null )->get() && vc_user_access_check_shortcode_all( 'vc_row' ) && vc_user_access_check_shortcode_all( 'vc_column' ) ) :
 			?>
 			<div class="vc_welcome-visible-ne">
 				<a id="vc_not-empty-add-element" class="vc_add-element-not-empty-button"

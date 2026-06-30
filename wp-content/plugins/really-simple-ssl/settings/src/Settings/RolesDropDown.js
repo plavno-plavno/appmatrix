@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from '@wordpress/element';
 import Select from 'react-select';
 import useFields from "./FieldsData";
 import useRolesData from './TwoFA/RolesStore';
@@ -69,7 +69,12 @@ const RolesDropDown = ({ field }) => {
                 color: 'initial',
                 opacity: '1',
             },
-        })
+        }),
+        menuList: (provided) => ({
+            ...provided,
+            height: '125px',
+            zIndex: 999
+        }),
     };
 
     return (

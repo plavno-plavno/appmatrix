@@ -12,6 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				'controls' => array( 'close' ),
 				'header_css_class' => 'vc_ui-post-settings-header-container',
 				'content_template' => '',
+				'is_ai_token_usage' => true,
 			));
 			?>
 			<div class="vc_ui-helper-modal-ai-placeholder vc_ui-helper-modal-ai-promo vc_ui-helper-popup-promo vc_ui-hidden">
@@ -46,3 +47,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</div>
 	</div>
 </div>
+
+<?php
+// Add HTML after Form
+do_action( 'wpb_add_after_settings_form' );

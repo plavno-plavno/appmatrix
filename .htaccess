@@ -1,26 +1,28 @@
 # Block the include-only files.
 <IfModule mod_rewrite.c>
-RewriteEngine On
-RewriteBase /
-RewriteRule ^wp-admin/includes/ - [F,L]
-RewriteRule !^wp-includes/ - [S=3]
-RewriteRule ^wp-includes/[^/]+\.php$ - [F,L]
-RewriteRule ^wp-includes/js/tinymce/langs/.+\.php - [F,L]
-RewriteRule ^wp-includes/theme-compat/ - [F,L]
+	RewriteEngine On
+	RewriteBase /
+	RewriteRule ^wp-admin/includes/ - [F,L]
+	RewriteRule !^wp-includes/ - [S=3]
+	RewriteRule ^wp-includes/[^/]+\.php$ - [F,L]
+	RewriteRule ^wp-includes/js/tinymce/langs/.+\.php - [F,L]
+	RewriteRule ^wp-includes/theme-compat/ - [F,L]
 </IfModule>
 <Files wp-config.php>
-<IfModule !mod_authz_core.c>
-order allow,deny
-deny from all
-</IfModule>
-<IfModule mod_authz_core.c>
-require all denied
-</IfModule>
+	<IfModule !mod_authz_core.c>
+		order allow,deny
+		deny from all
+	</IfModule>
+	<IfModule mod_authz_core.c>
+		require all denied
+	</IfModule>
 </Files>
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule ^\.git - [F,L]
+RewriteRule (^|/)\.git(/|$) - [F,L]
+</IfModule>
 
-#Begin Really Simple Security
-Options -Indexes
-#End Really Simple Security
 # BEGIN WordPress
 # The directives (lines) between "BEGIN WordPress" and "END WordPress" are
 # dynamically generated, and should only be modified via WordPress filters.
@@ -36,3 +38,44 @@ RewriteRule . /index.php [L]
 </IfModule>
 
 # END WordPress
+
+# BEGIN WP-Optimize Browser Cache
+<IfModule mod_expires.c>
+	ExpiresActive On
+	ExpiresByType text/css "access 28 days"
+	ExpiresByType text/html "access 28 days"
+	ExpiresByType image/gif "access 28 days"
+	ExpiresByType image/png "access 28 days"
+	ExpiresByType image/jpg "access 28 days"
+	ExpiresByType image/jpeg "access 28 days"
+	ExpiresByType image/webp "access 28 days"
+	ExpiresByType image/x-icon "access 28 days"
+	ExpiresByType application/pdf "access 28 days"
+	ExpiresByType application/javascript "access 28 days"
+	ExpiresByType text/x-javascript "access 28 days"
+	ExpiresByType application/x-shockwave-flash "access 28 days"
+	ExpiresDefault "access 28 days"
+</IfModule>
+
+<IfModule mod_headers.c>
+	<filesMatch "\.(ico|jpe?g|png|gif|webp|swf)$">
+		Header set Cache-Control "public"
+	</filesMatch>
+	<filesMatch "\.(css)$">
+		Header set Cache-Control "public"
+	</filesMatch>
+	<filesMatch "\.(js)$">
+		Header set Cache-Control "private"
+	</filesMatch>
+	<filesMatch "\.(x?html?|php)$">
+		Header set Cache-Control "private, must-revalidate"
+	</filesMatch>
+</IfModule>
+
+#Disable ETag
+FileETag None
+# END WP-Optimize Browser Cache
+
+#RewriteEngine on
+#RewriteCond %{ENV:GEOIP_COUNTRY_CODE} ^BY$
+#RewriteRule ^ - [F,L]

@@ -1,4 +1,10 @@
 <?php
+/**
+ * Configuration file for [vc_tta_accordion] shortcode of 'Accordion' element.
+ *
+ * @see https://kb.wpbakery.com/docs/inner-api/vc_map/ for more detailed information about element attributes.
+ */
+
 if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
 }
@@ -170,7 +176,7 @@ return array(
 			'heading' => esc_html__( 'Allow collapse all?', 'js_composer' ),
 			'description' => esc_html__( 'Allow collapse all accordion sections.', 'js_composer' ),
 		),
-		// Control Icons
+		// Control Icons.
 		array(
 			'type' => 'dropdown',
 			'param_name' => 'c_icon',
@@ -199,7 +205,7 @@ return array(
 			'heading' => esc_html__( 'Position', 'js_composer' ),
 			'description' => esc_html__( 'Select accordion navigation icon position.', 'js_composer' ),
 		),
-		// Control Icons END
+		// Control Icons END.
 		array(
 			'type' => 'textfield',
 			'param_name' => 'active_section',

@@ -1,12 +1,16 @@
 <?php
+/**
+ * Configuration file for [vc_cta] shortcode of 'Call to Action' element.
+ *
+ * @see https://kb.wpbakery.com/docs/inner-api/vc_map/ for more detailed information about element attributes.
+ *
+ * @since 4.5
+ */
+
 if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
 }
 
-/**
- * Call to action
- * @since 4.5
- */
 require_once vc_path_dir( 'CONFIG_DIR', 'content/vc-custom-heading-element.php' );
 $h2_custom_heading = vc_map_integrate_shortcode( vc_custom_heading_element_params(), 'h2_', esc_html__( 'Heading', 'js_composer' ), array(
 	'exclude' => array(
@@ -85,7 +89,7 @@ $params = array_merge( array(
 		'heading' => esc_html__( 'Text alignment', 'js_composer' ),
 		'param_name' => 'txt_align',
 		'value' => vc_get_shared( 'text align' ),
-		// default left
+		// default left.
 		'description' => esc_html__( 'Select text alignment in "Call to Action" block.', 'js_composer' ),
 	),
 	array(
@@ -221,7 +225,7 @@ $params = array_merge( array(
 	'element' => 'add_icon',
 	'not_empty' => true,
 ) ), array(
-	// cta3
+	// cta3.
 	vc_map_add_css_animation(),
 	array(
 		'type' => 'el_id',

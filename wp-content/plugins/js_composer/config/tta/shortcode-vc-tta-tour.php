@@ -1,4 +1,10 @@
 <?php
+/**
+ * Configuration file for [vc_tta_tour] shortcode of 'Tour' element.
+ *
+ * @see https://kb.wpbakery.com/docs/inner-api/vc_map/ for more detailed information about element attributes.
+ */
+
 if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
 }
@@ -246,7 +252,7 @@ return array(
 	'custom_markup' => '
 <div class="vc_tta-container" data-vc-action="collapse">
 	<div class="vc_general vc_tta vc_tta-tabs vc_tta-color-backend-tabs-white vc_tta-style-flat vc_tta-shape-rounded vc_tta-spacing-1 vc_tta-tabs-position-left vc_tta-controls-align-left">
-		<div class="vc_tta-tabs-container">' . '<ul class="vc_tta-tabs-list">' . '<li class="vc_tta-tab" data-vc-tab data-vc-target-model-id="{{ model_id }}"><a href="javascript:;" data-vc-container=".vc_tta" data-vc-target="[data-model-id=\'{{ model_id }}\']" data-vc-target-model-id="{{ model_id }}" data-vc-tabs>{{ section_title }}</a></li>' . '</ul>
+		<div class="vc_tta-tabs-container"><ul class="vc_tta-tabs-list"><li class="vc_tta-tab" data-vc-tab data-vc-target-model-id="{{ model_id }}"><a href="javascript:;" data-vc-container=".vc_tta" data-vc-target="[data-model-id=\'{{ model_id }}\']" data-vc-target-model-id="{{ model_id }}" data-vc-tabs>{{ section_title }}</a></li>' . '</ul>
 		</div>
 		<div class="vc_tta-panels {{container-class}}">
 		  {{ content }}
@@ -258,6 +264,6 @@ return array(
 [vc_tta_section title="' . sprintf( '%s %d', esc_html__( 'Section', 'js_composer' ), 2 ) . '"][/vc_tta_section]
 	',
 	'admin_enqueue_js' => array(
-		vc_asset_url( 'lib/vc_tabs/vc-tabs.min.js' ),
+		vc_asset_url( 'lib/vc/vc_tabs/vc-tabs.min.js' ),
 	),
 );

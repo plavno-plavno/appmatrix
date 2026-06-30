@@ -114,6 +114,7 @@ function rsssl_plugin_admin_scripts()
 			true
 		);
 		wp_set_script_translations($handle, 'really-simple-ssl');
+
 		wp_localize_script(
 			'rsssl-settings',
 			'rsssl_settings',
@@ -128,18 +129,19 @@ function rsssl_plugin_admin_scripts()
 						'type' => 'errors',
 						'action' => 'rsssl_rest_api_fallback'
 					),
-					admin_url('admin-ajax.php')),
-				'dashboard_url' => add_query_arg(['page' => 'really-simple-security'], rsssl_admin_url()),
+					admin_url('admin-ajax.php') ),
+				'dashboard_url' => rsssl_admin_url(),
 				'letsencrypt_url' => rsssl_letsencrypt_wizard_url(),
 				'le_generated_by_rsssl' => rsssl_generated_by_rsssl(),
-				'upgrade_link' => is_multisite() ? 'https://really-simple-ssl.com/pro/?mtm_campaign=fallback&mtm_source=free&mtm_content=upgrade' : 'https://really-simple-ssl.com/pro/?mtm_campaign=fallback&mtm_source=free&mtm_content=upgrade',
+				'upgrade_link' => rsssl_link('pro', 'upgrade' ),
+				'ref' => rsssl_get_url_ref(),
 				'plugin_url' => rsssl_url,
 				'network_link' => network_site_url('plugins.php'),
 				'pro_plugin_active' => defined('rsssl_pro'),
 				'networkwide_active' => !is_multisite() || rsssl_is_networkwide_active(),//true for single sites and network wide activated
 				'nonce' => wp_create_nonce('wp_rest'),//to authenticate the logged-in user
 				'rsssl_nonce' => wp_create_nonce('rsssl_nonce'),
-				'wpconfig_fix_required' => RSSSL()->admin->do_wpconfig_loadbalancer_fix() && !RSSSL()->admin->wpconfig_has_fixes(),
+				'wpconfig_fix_required' => RSSSL()->admin->do_wpconfig_loadbalancer_fix() && ! RSSSL()->admin->wpconfig_has_fixes() && ! RSSSL()->admin->uses_bitnami(),
 				'cloudflare' => rsssl_uses_cloudflare(),
 			])
 		);
@@ -353,7 +355,6 @@ function rsssl_do_action($request, $ajax_data = false)
 	if (!wp_verify_nonce($nonce, 'rsssl_nonce')) {
 		return;
 	}
-
 	switch ($action) {
 		case 'ssltest_get':
 			$response = ['data' => get_option('rsssl_ssl_labs_data')];
@@ -378,6 +379,9 @@ function rsssl_do_action($request, $ajax_data = false)
 		case 'clear_cache':
 			$response = rsssl_clear_test_caches($data);
 			break;
+		case 'fix':
+			$response = rsssl_fix($data);
+			break;
 		case 'otherpluginsdata':
 			$response = rsssl_other_plugins_data();
 			break;
@@ -387,11 +391,13 @@ function rsssl_do_action($request, $ajax_data = false)
 			$response['roles'] = $roles;
 			break;
 		case 'get_hosts':
+			$response = [];
 			if ( !class_exists('rsssl_le_hosts')) {
 				require_once( rsssl_path . 'lets-encrypt/config/class-hosts.php');
-			}
-			$response = [];
-			$response['hosts'] = ( new rsssl_le_hosts() )->hosts;
+				$response['hosts'] = ( new rsssl_le_hosts() )->hosts;
+			} else {
+				$response['hosts'] = RSSSL_LE()->hosts->hosts;
+            }
 			break;
 		default:
 			$response = apply_filters("rsssl_do_action", [], $action, $data);
@@ -419,6 +425,23 @@ function rsssl_clear_test_caches($data)
 
 	do_action('rsssl_clear_test_caches', $data);
 	return [];
+}
+
+/**
+ * @param array $data
+ *
+ * @return array
+ */
+function rsssl_fix($data)
+{
+	if (!rsssl_user_can_manage()) {
+		return [];
+	}
+
+	$fix_id = sanitize_title($data['fix_id']);
+    $output = [];
+	$output = apply_filters('rsssl_run_fix', $output, $fix_id);
+	return $output;
 }
 
 /**
@@ -597,6 +620,8 @@ function rsssl_sanitize_field_type($type)
 		'postdropdown',
 		'two_fa_roles',
 		'roles_dropdown',
+		'captcha',
+		'captcha_key',
 //        'two_fa_table',
 //        'verify_email',
 	];
@@ -635,7 +660,6 @@ function rsssl_rest_api_fields_set(WP_REST_Request $request, $ajax_data = false)
 	$config_fields = rsssl_fields(false);
 	$config_ids = array_column($config_fields, 'id');
 	foreach ($fields as $index => $field) {
-
 		$config_field_index = array_search($field['id'], $config_ids);
 		$config_field = $config_fields[$config_field_index];
 		if ($config_field_index === false) {
@@ -764,7 +788,6 @@ function rsssl_rest_api_fields_get()
 		return [];
 	}
 
-//	rsssl_update_option('vulnerabilities_intro_shown', false);
 	$output = array();
 	$fields = rsssl_fields();
 	foreach ($fields as $index => $field) {
@@ -816,17 +839,18 @@ function rsssl_sanitize_field($value, string $type, string $id)
 		case 'select':
 		case 'host':
 		case 'text':
-		case 'textarea':
 		case 'license':
+		case 'password':
+		case 'captcha_key':
 		case 'postdropdown':
 			return sanitize_text_field($value);
+		case 'textarea':
+    		return wp_kses($value, array());
 		case 'multicheckbox':
 			if (!is_array($value)) {
 				$value = array($value);
 			}
 			return array_map('sanitize_text_field', $value);
-		case 'password':
-			return rsssl_encode_password($value);
 		case 'email':
 			return sanitize_email($value);
 		case 'url':
@@ -850,41 +874,6 @@ function rsssl_sanitize_field($value, string $type, string $id)
 		default:
 			return sanitize_text_field($value);
 	}
-}
-
-/**
- * Sanitize and encode a password
- *
- * @param $password
- *
- * @return mixed|string
- */
-function rsssl_encode_password($password)
-{
-	if (!rsssl_user_can_manage()) {
-		return $password;
-	}
-	if (strlen(trim($password)) === 0) {
-		return $password;
-	}
-
-	$password = sanitize_text_field($password);
-	if (strpos($password, 'rsssl_') !== FALSE) {
-		return $password;
-	}
-
-	$key = get_site_option('rsssl_key');
-	if (!$key) {
-		update_site_option('rsssl_key', time());
-		$key = get_site_option('rsssl_key');
-	}
-
-	$ivlength = openssl_cipher_iv_length('aes-256-cbc');
-	$iv = openssl_random_pseudo_bytes($ivlength);
-	$ciphertext_raw = openssl_encrypt($password, 'aes-256-cbc', $key, 0, $iv);
-	$key = base64_encode($iv . $ciphertext_raw);
-
-	return 'rsssl_' . $key;
 }
 
 /**

@@ -23,7 +23,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	</button>
 </div>
 <div class="vc_col-xs-12 wpb_el_type_textarea vc_wrapper-param-type-textarea vc_shortcode-param vc_column">
-	<div class="wpb_element_label"><?php esc_html_e( 'Output', 'js_composer' ); ?></div>
+	<div class="wpb-param-heading">
+		<div class="wpb_element_label"><?php esc_html_e( 'Output', 'js_composer' ); ?></div>
+		<?php
+			$icon = vc_get_template( 'editors/partials/copy-output.tpl.php', [] );
+			echo wp_kses_post( $icon );
+		?>
+	</div>
 	<div class="edit_form_line">
 		<textarea name="text" class="wpb_vc_param_value wpb-textarea text textarea wpb_ai-generated-content" rows="10" disabled></textarea>
 		<span class="vc_description vc_clearfix"><?php printf( esc_html__( 'WPBakery AI generated content will appear here.', 'js_composer' ) ); ?></span>

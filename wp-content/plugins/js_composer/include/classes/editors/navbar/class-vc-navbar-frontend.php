@@ -19,7 +19,6 @@ class Vc_Navbar_Frontend extends Vc_Navbar {
 		'save_update',
 		'screen_size',
 		'custom_css',
-		'seo',
 	);
 	/**
 	 * @var string
@@ -102,7 +101,15 @@ class Vc_Navbar_Frontend extends Vc_Navbar {
 				</a>
 				<ul class="vc_dropdown-list">
 					<li class="vc_dropdown-list-item">
-						<a href="<?php echo get_edit_post_link( $post ) . '&wpb-backend-editor'; ?>"><?php esc_html_e( 'Backend Editor', 'js_composer' ); ?></a>
+						<?php
+						if ( vc_user_access()->part( 'backend_editor' )->can()->get() ) {
+							?>
+							<a href="<?php echo get_edit_post_link( $post ) . '&wpb-backend-editor'; ?>">
+								<?php esc_html_e( 'Backend Editor', 'js_composer' ); ?>
+							</a>
+							<?php
+						}
+						?>
 					</li>
 					<li class="vc_dropdown-list-item">
 						<a href="<?php echo get_permalink( $post ); ?>"><?php esc_html_e( 'View Page', 'js_composer' ); ?></a>
@@ -154,12 +161,5 @@ class Vc_Navbar_Frontend extends Vc_Navbar {
 	 */
 	public function getControlViewPost() {
 		return '<li class="vc_pull-right">' . '<a href="' . esc_url( get_permalink( $this->post() ) ) . '" class="vc_icon-btn vc_back-button"' . ' title="' . esc_attr__( 'Exit WPBakery Page Builder edit mode', 'js_composer' ) . '"><i class="vc-composer-icon vc-c-icon-close"></i></a>' . '</li>';
-	}
-
-	/**
-	 * @return string
-	 */
-	public function getControlSeo() {
-		return '<li class="vc_pull-right"><a href="javascript:;" class="vc_icon-btn vc_seo-button" id="vc_seo-button" title="' . esc_attr__( 'WPBakery SEO', 'js_composer' ) . '"><i class="vc-composer-icon vc-c-icon-seo"></i></a></li>';
 	}
 }

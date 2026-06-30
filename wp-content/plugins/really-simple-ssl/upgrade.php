@@ -181,6 +181,37 @@ function rsssl_upgrade() {
 		do_action( 'rsssl_update_rules' );
 	}
 
+	// Update the config to auto prepend
+	if ( $prev_version && version_compare( $prev_version, '8.0', '<' ) ) {
+		RSSSL_SECURITY()->firewall_manager->update_wp_config_rule();
+	}
+	//free
+	if ( $prev_version && version_compare( $prev_version, '8.1.2', '<' ) ) {
+		do_action('rsssl_update_rules');
+	}
+
+	if ( $prev_version && version_compare( $prev_version, '8.3.0', '<' ) ) {
+		wp_clear_scheduled_hook('rsssl_pro_every_hour_hook');
+		wp_clear_scheduled_hook('rsssl_pro_every_day_hook');
+		wp_clear_scheduled_hook('rsssl_pro_five_minutes_hook');
+		wp_clear_scheduled_hook('rsssl_le_every_week_hook');
+		wp_clear_scheduled_hook('rsssl_le_every_day_hook');
+
+		//split rsssl_key in two options so we can upgrade separately
+		$key = get_option( 'rsssl_key');
+		$site_key = get_site_option( 'rsssl_key');
+		if ( $key ) {
+			update_option( 'rsssl_license_key', $key, false );
+		}
+		if ( $site_key ) {
+			update_site_option( 'rsssl_le_key', $site_key );
+		}
+
+		delete_site_option('rsssl_key');
+		delete_option('rsssl_key');
+		update_option('rsssl_upgrade_le_key', true, false);
+	}
+
 	//don't clear on each update.
 	//RSSSL()->admin->clear_admin_notices_cache();
 

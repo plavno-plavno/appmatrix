@@ -1,4 +1,10 @@
 <?php
+/**
+ * Configuration file for [vc_tta_section] shortcode of 'Section' element.
+ *
+ * @see https://kb.wpbakery.com/docs/inner-api/vc_map/ for more detailed information about element attributes.
+ */
+
 if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
 }
@@ -31,7 +37,7 @@ if ( $include_icon_params ) {
 		),
 	);
 	$icon_params = array_merge( $icon_params, (array) vc_map_integrate_shortcode( vc_icon_element_params(), 'i_', '', array(
-		// we need only type, icon_fontawesome, icon_.., NOT color and etc
+		// we need only type, icon_fontawesome, icon_.., NOT color and etc.
 		'include_only_regex' => '/^(type|icon_\w*)/',
 	), array(
 		'element' => 'add_icon',

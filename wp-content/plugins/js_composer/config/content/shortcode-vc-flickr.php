@@ -1,4 +1,10 @@
 <?php
+/**
+ * Configuration file for [vc_flickr] shortcode of 'Flickr Widget' element.
+ *
+ * @see https://kb.wpbakery.com/docs/inner-api/vc_map/ for more detailed information about element attributes.
+ */
+
 if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
 }
@@ -51,7 +57,7 @@ return array(
 				2,
 				1,
 			),
-			'std' => 9, // bc
+			'std' => 9, // bc.
 			'description' => esc_html__( 'Select number of photos to display.', 'js_composer' ),
 		),
 		array(

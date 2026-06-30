@@ -1,4 +1,11 @@
 <?php
+/**
+ * Autoload notice controller.
+ *
+ * @note we require our autoload files everytime and everywhere after plugin load.
+ * @since 7.0
+ */
+
 if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
 }
@@ -14,6 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 class Vc_Notice_Controller {
 	/**
 	 * Notification API URL.
+	 *
 	 * @version 7.0
 	 * @var string
 	 */
@@ -114,6 +122,7 @@ class Vc_Notice_Controller {
 			return false;
 		}
 
+        // phpcs:ignore
 		if ( ! $this->is_notice_date_valid( $notice, current_time( 'timestamp' ) ) ) {
 			return false;
 		}
@@ -197,8 +206,8 @@ class Vc_Notice_Controller {
 		}
 
 		$is_date_inside_diapason =
-			($current_time >= strtotime( $notice['date_from'] ) ) &&
-			($current_time <= strtotime( $notice['date_to'] ) );
+			( $current_time >= strtotime( $notice['date_from'] ) ) &&
+			( $current_time <= strtotime( $notice['date_to'] ) );
 
 		if ( $is_date_inside_diapason ) {
 			$result = true;
@@ -211,16 +220,16 @@ class Vc_Notice_Controller {
 	 * Check if notice has content that we can show to user.
 	 *
 	 * @since 7.0
-	 * @param $notice
+	 * @param array $notice
 	 * @return bool
 	 */
 	public function is_notice_content_valid( $notice ) {
-		// notice always should have id
+		// notice always should have id.
 		if ( empty( $notice['id'] ) ) {
 			return false;
 		}
 
-		// notice should have at least one element to show
+		// notice should have at least one element to show.
 		$is_notice_content_empty =
 			empty( $notice['title'] ) &&
 			empty( $notice['description'] ) &&
@@ -269,6 +278,8 @@ class Vc_Notice_Controller {
 
 	/**
 	 * Check if api response is empty.
+	 *
+	 * @param mixed $notice_list
 	 */
 	public function is_api_response_empty( $notice_list ) {
 		return is_array( $notice_list ) && isset( $notice_list['empty_api_response'] );
@@ -281,8 +292,8 @@ class Vc_Notice_Controller {
 	 */
 	public function save_notice_list_to_transient( $notice_list ) {
 		if ( ! $this->is_notice_list_valid( $notice_list ) ) {
-			// in case if we have invalid notice list we save false value
-			// to transient to prevent requests to our API more than 12 hours
+			// in case if we have invalid notice list we save false value.
+			// to transient to prevent requests to our API more than 12 hours.
 			$empty = [ 'empty_api_response' => true ];
 			set_transient( $this->transient_notice_list, $empty, 12 * HOUR_IN_SECONDS );
 			return;
@@ -313,6 +324,7 @@ class Vc_Notice_Controller {
 
 	/**
 	 * Get notices from notice API.
+	 *
 	 * @note we fire up request to our API once per 12 hours.
 	 *
 	 * @since 7.0
@@ -365,7 +377,7 @@ class Vc_Notice_Controller {
 	/**
 	 * Save notice to close list.
 	 *
-	 * @param $notice_id
+	 * @param int $notice_id
 	 * @return int|bool
 	 */
 	public function save_notice_to_close_list( $notice_id ) {

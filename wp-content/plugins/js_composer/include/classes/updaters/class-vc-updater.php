@@ -126,7 +126,7 @@ class Vc_Updater {
 	public function preUpgradeFilter( $reply, $package, $updater ) {
 		$condition1 = isset( $updater->skin->plugin ) && vc_plugin_name() === $updater->skin->plugin;
 		// Must use I18N otherwise France or other languages will not work
-		$condition2 = isset( $updater->skin->plugin_info ) && __( 'WPBakery Page Builder', 'js_composer' ) === $updater->skin->plugin_info['Name'];
+		$condition2 = isset( $updater->skin->plugin_info['Name'] ) && __( 'WPBakery Page Builder', 'js_composer' ) === $updater->skin->plugin_info['Name'];
 		if ( ! $condition1 && ! $condition2 ) {
 			return $reply;
 		}
@@ -171,6 +171,7 @@ class Vc_Updater {
 		// WP will use same name for plugin directory as archive name, so we have to rename it
 		if ( basename( $downloaded_archive, '.zip' ) !== $plugin_directory_name ) {
 			$new_archive_name = dirname( $downloaded_archive ) . '/' . $plugin_directory_name . time() . '.zip';
+			// phpcs:ignore
 			if ( rename( $downloaded_archive, $new_archive_name ) ) {
 				$downloaded_archive = $new_archive_name;
 			}

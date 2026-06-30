@@ -1,4 +1,10 @@
 <?php
+/**
+ * Configuration file for [vc_single_image] shortcode of 'Single Image' element.
+ *
+ * @see https://kb.wpbakery.com/docs/inner-api/vc_map/ for more detailed information about element attributes.
+ */
+
 if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
 }
@@ -234,7 +240,7 @@ return array(
 				'margin-bottom' => '35px',
 			),
 		),
-		// backward compatibility. since 4.6
+		// backward compatibility. since 4.6.
 		array(
 			'type' => 'hidden',
 			'param_name' => 'img_link_large',

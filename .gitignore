@@ -1,26 +1,29 @@
-.idea
-
-/wp-admin/
-/wp-content/index.php
-/wp-content/languages
-/wp-content/plugins/index.php
- /wp-content/plugins/safe-svg/
-/wp-content/themes/index.php
-/wp-includes/
-/index.php
-/license.txt
-/readme.html
-/wp-*.php
-/xmlrpc.php
+.idea/
+.qodo/
+.agents/
+_extract_test/
+_qatsol_unpack/
 
 # Configuration
 wp-config.php
+wp-config-local.php
 
 # Uploads
 /wp-content/uploads/
 
+# Generated caches and runtime data
+/wp-content/cache/
+/wp-content/boost-cache/
+/wp-content/wpo-cache/
+/wp-content/updraft/
+/wp-content/elm-error-logs/
+
+# Local archives and temp files
+/*.tgz
+/*.tar
+/*.tar.gz
+/tmp_pdf_pages/
+/PROJECT_MAP.md
+
 # Log files
 *.log
-
-# htaccess
-/.htaccess

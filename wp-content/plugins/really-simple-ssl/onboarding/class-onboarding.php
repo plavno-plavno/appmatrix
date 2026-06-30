@@ -1,9 +1,15 @@
 <?php
 defined('ABSPATH') or die();
+
+require_once rsssl_path . 'lib/admin/class-encryption.php';
 require_once(rsssl_path . 'class-installer.php');
+
+use RSSSL\lib\admin\Encryption;
 
 class rsssl_onboarding {
 	private static $_this;
+
+	use Encryption;
 	function __construct() {
 		if ( isset( self::$_this ) ) {
 			wp_die( sprintf( __( '%s is a singleton class and you cannot create a second instance.', 'really-simple-ssl' ), get_class( $this ) ) );
@@ -134,7 +140,7 @@ class rsssl_onboarding {
 		$license_key = '';
 		if ( defined('rsssl_pro') ) {
 			$license_key = RSSSL()->licensing->license_key();
-			$license_key = RSSSL()->licensing->maybe_decode( $license_key );
+			$license_key = $this->decrypt_if_prefixed( $license_key, 'really_simple_ssl_' );
 		}
 
 		$api_params = array(
@@ -167,7 +173,7 @@ class rsssl_onboarding {
 		}
 
 		if( !defined('rsssl_pro')) {
-			$info = __('You can also let the automatic scan of the pro version handle this for you, and get premium support, increased security with HSTS and more!', 'really-simple-ssl'). " " . sprintf('<a target="_blank" rel="noopener noreferrer" href="%s">%s</a>', RSSSL()->admin->pro_url, __("Check out Really Simple SSL Pro", "really-simple-ssl"));;
+			$info = __('You can also let the automatic scan of the pro version handle this for you, and get premium support, increased security with HSTS and more!', 'really-simple-ssl'). " " . sprintf('<a target="_blank" rel="noopener noreferrer" href="%s">%s</a>',rsssl_link(), __("Check out Really Simple SSL Pro", "really-simple-ssl"));;
 		}
 
 		$steps = [
@@ -201,7 +207,7 @@ class rsssl_onboarding {
 			[
 				"id" => 'pro',
 				"title" => __("Really Simple Security Pro", "really-simple-ssl"),
-				"subtitle" => __("Heavyweight security features, in a lightweight performant plugin from Really Simple Plugins. Get started with below features and get the latest and greatest updates for a peace of mind!", "really-simple-ssl"),
+				"subtitle" => __("Heavyweight security features, in a lightweight performant plugin from Really Simple Plugins. Get started with below features and get the latest and greatest updates for peace of mind!", "really-simple-ssl"),
 				"items" => $this->pro_features(),
 				"button" => __("Install", "really-simple-ssl"),
 			],
@@ -246,7 +252,7 @@ class rsssl_onboarding {
 			];
 		} else if ( RSSSL()->certificate->detection_failed() ) {
 			$items[] = [
-				"title" => __("Could not test certificate.", "really-simple-ssl") . " " . __("Automatic certificate detection is not possible on your server.", "really-simple-ssl"),
+				"title" => __("Could not test certificate", "really-simple-ssl") . " " . __("Automatic certificate detection is not possible on your server.", "really-simple-ssl"),
 				"status" => "error",
 				"id" => "certificate",
 			];
@@ -280,7 +286,7 @@ class rsssl_onboarding {
 				"slug" => "complianz-terms-conditions",
 				'constant_premium' => false,
 				"title" => "Complianz Terms & Conditions",
-				"description" => __("Terms & Conditions.", "really-simple-ssl"),
+				"description" => __("Terms & Conditions", "really-simple-ssl"),
 			]
 		];
 		foreach ($plugins_to_install as $plugin_info) {
@@ -396,7 +402,14 @@ class rsssl_onboarding {
 				"title" => __("Advanced Security Headers", "really-simple-ssl"),
 				"id" => "advanced_headers",
 				"premium" => true,
-				"options" => [],
+				"options" => [  'upgrade_insecure_requests',
+								'x_content_type_options',
+								['x_xss_protection' => 'zero'],
+								'x_content_type_options',
+								['x_frame_options' => 'SAMEORIGIN'],
+								['referrer_policy' => 'strict-origin-when-cross-origin'],
+								['csp_frame_ancestors' => 'self'],
+							 ],
 				"activated" => true,
 			],
 			[
@@ -438,7 +451,7 @@ class rsssl_onboarding {
 		if ( get_transient('rsssl_redirect_to_settings_page' ) ) {
 			delete_transient('rsssl_redirect_to_settings_page' );
 			if ( !RSSSL()->admin->is_settings_page() ) {
-				wp_redirect( add_query_arg(array('page' => 'really-simple-security'), rsssl_admin_url() ) );
+				wp_redirect( rsssl_admin_url() );
 				exit;
 			}
 		}

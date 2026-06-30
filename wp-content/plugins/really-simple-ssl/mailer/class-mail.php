@@ -66,7 +66,7 @@ if ( ! class_exists( 'rsssl_mailer' ) ) {
 				[
 					'title'   => __( "About notifications", "really-simple-ssl" ),
 					'message' => __( "Email notifications are only sent for important updates, security notices or when certain features are enabled.", "really-simple-ssl" ),
-					'url'     => 'https://really-simple-ssl.com/email-notifications/',
+					'url'     => rsssl_link('email-notifications/'),
 				]
 			];
 
@@ -108,7 +108,7 @@ if ( ! class_exists( 'rsssl_mailer' ) ) {
 					'rsssl_nonce'             => wp_create_nonce( 'rsssl_email_verification_' . $user_id ),
 					'rsssl_verification_code' => $verification_code,
 				),
-				rsssl_admin_url() . '#settings/general'
+				rsssl_admin_url([], '#settings/general')
 			);
 
 			$this->subject          = __( "Really Simple SSL - Verify your email address", "really-simple-ssl" );
@@ -164,7 +164,9 @@ if ( ! class_exists( 'rsssl_mailer' ) ) {
 				}
 			}
 			$username  = rsssl_get_option( 'new_admin_user_login' );
-			$login_url = wp_login_url();
+			$login_url = ! empty( rsssl_get_option( 'change_login_url' ) )
+				? trailingslashit( site_url() ) . rsssl_get_option( 'change_login_url' )
+				: wp_login_url();
 			$body      = str_replace(
 				[
 					'{title}',

@@ -1,4 +1,10 @@
 <?php
+/**
+ * Autoload hooks related plugin initial pointers in backend editor.
+ *
+ * @note we require our autoload files everytime and everywhere after plugin load.
+ */
+
 if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
 }
@@ -17,7 +23,9 @@ function vc_add_admin_pointer() {
 add_action( 'admin_init', 'vc_add_admin_pointer' );
 
 /**
- * @param $pointers
+ * Register pointers for backend editor.
+ *
+ * @param array $pointers
  * @return mixed
  */
 function vc_backend_editor_register_pointer( $pointers ) {

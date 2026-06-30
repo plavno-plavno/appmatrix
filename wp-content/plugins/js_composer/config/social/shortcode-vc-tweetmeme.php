@@ -1,4 +1,10 @@
 <?php
+/**
+ * Configuration file for [vc_tweetmeme] shortcode of 'Tweetmeme Button' element.
+ *
+ * @see https://kb.wpbakery.com/docs/inner-api/vc_map/ for more detailed information about element attributes.
+ */
+
 if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
 }
@@ -23,7 +29,7 @@ return array(
 			),
 			'description' => esc_html__( 'Select type of Twitter button.', 'js_composer' ),
 		),
-		// share type
+		// share type.
 		array(
 			'type' => 'checkbox',
 			'heading' => esc_html__( 'Share url: page URL', 'js_composer' ),
@@ -107,7 +113,7 @@ return array(
 			),
 			'description' => esc_html__( 'Add a comma-separated list of hashtags to a Tweet using the hashtags parameter.', 'js_composer' ),
 		),
-		// follow type
+		// follow type.
 		array(
 			'type' => 'textfield',
 			'heading' => esc_html__( 'User @', 'js_composer' ),
@@ -144,7 +150,7 @@ return array(
 			),
 			'description' => esc_html__( 'Do you want to displat the follower count in button?', 'js_composer' ),
 		),
-		// hashtag type
+		// hashtag type.
 		array(
 			'type' => 'textfield',
 			'heading' => esc_html__( 'Hashtag #', 'js_composer' ),
@@ -228,7 +234,7 @@ return array(
 			),
 			'description' => esc_html__( 'Enter custom url to be used in the tweet.', 'js_composer' ),
 		),
-		// mention type
+		// mention type.
 		array(
 			'type' => 'textfield',
 			'heading' => esc_html__( 'Tweet to @', 'js_composer' ),
@@ -287,7 +293,7 @@ return array(
 			),
 			'description' => esc_html__( 'Enter username to recommend.', 'js_composer' ),
 		),
-		// general
+		// general.
 		array(
 			'type' => 'checkbox',
 			'heading' => esc_html__( 'Use large button', 'js_composer' ),

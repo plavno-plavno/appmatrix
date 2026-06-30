@@ -1,4 +1,10 @@
 <?php
+/**
+ * Configuration file for [vc_row] shortcode of 'Row' element.
+ *
+ * @see https://kb.wpbakery.com/docs/inner-api/vc_map/ for more detailed information about element attributes.
+ */
+
 if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
 }
@@ -44,6 +50,12 @@ return array(
 			),
 			'std' => '0',
 			'description' => esc_html__( 'Select gap between columns in row.', 'js_composer' ),
+		),
+		array(
+			'type' => 'textfield',
+			'heading' => esc_html__( 'Minimum height', 'js_composer' ),
+			'param_name' => 'min_height',
+			'description' => sprintf( esc_html__( 'Set minimum height for the container.', 'js_composer' ) ),
 		),
 		array(
 			'type' => 'checkbox',
@@ -106,7 +118,7 @@ return array(
 			'heading' => esc_html__( 'YouTube link', 'js_composer' ),
 			'param_name' => 'video_bg_url',
 			'value' => 'https://www.youtube.com/watch?v=lMJXxhRFO1k',
-			// default video url
+			// default video url.
 			'description' => esc_html__( 'Add YouTube link.', 'js_composer' ),
 			'dependency' => array(
 				'element' => 'video_bg',

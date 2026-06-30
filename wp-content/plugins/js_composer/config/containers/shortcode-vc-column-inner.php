@@ -1,11 +1,14 @@
 <?php
+/**
+ * Configuration file for [vc_column_inner] shortcode of 'Inner Column' element.
+ *
+ * @see https://kb.wpbakery.com/docs/inner-api/vc_map/ for more detailed information about element attributes.
+ */
+
 if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
 }
 
-/**
- * @var $tag - shortcode tag;
- */
 return array(
 	'name' => __( 'Inner Column', 'js_composer' ),
 	'base' => 'vc_column_inner',

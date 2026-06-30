@@ -1,5 +1,63 @@
 *** WPBakery Page Builder changelog ***
 
+2024-08-21 - version 7.9
+  - New: Ability to copy AI-generated content anywhere
+  - New: The element window features the most used elements
+  - New: A new color picker has been added to replace the existing one
+  - New: Ability to define the preset color for the color picker in the WPBakery settings
+  - New: Ability to disable "scroll-to-element" after adding in the Module manager
+  - New: Define the height value for the row and section elements
+  - Fix: ACF element works properly in templates
+  - Fix: AI-generated code is being inserted properly without any additional spaces
+  - Fix: Slug adjustment works properly
+  - Fix: Post grids are working properly in the layout with videos
+  - Fix: Image gallery elements work properly and do not trigger errors
+  - Fix: Element window timeout has been decreased
+  - Fix: Grid Builder works properly with "scroll-to-element"
+  - Fix: Grid Builder works properly with user roles
+
+2024-07-22 - version 7.8
+  - New: WPBakery AI credit usage data is available in the Settings and the AI window
+  - New: Script loading is optimized based on the usage
+  - Update: The editor access buttons are located properly
+  - Update: The error handling is updated with more information available
+  - Fix: Content publishing and reloading redirects work properly
+  - Fix: Security update for additional control over the user role access rights
+  - Fix: Element edit window reacts to user actions (clicks) properly
+  - Fix: The image carousel element has a correct placeholder image
+  - Fix: The FAQ element toggles work properly
+  - Fix: The editor works properly with PHP 8.2
+  - Fix: Auto-update works properly with the TinyMCE text mode
+  - Fix: WPBakery AI-generated code is added properly
+  - Fix: Height mode in custom grid templates is working properly
+  - Fix: The notification badge for the Settings works properly
+  - Fix: Call to action element has proper margin-top
+  - Fix: The AI icon is positioned properly
+  - Fix: The notification popup works properly for all user roles
+  - Fix: The editor works properly with product variations
+
+2024-06-19 - version 7.7.2
+  - Fix: Element save works properly on all environments
+
+2024-06-12 - version 7.7.1
+  - Fix: Column alignment works properly
+
+2024-06-10 - version 7.7
+  - New: WPBakery AI is available in the WordPress Classic editor
+  - New: Module control added to disable module loading and improve the performance
+  - New: Helper icons added to remove descriptions and improve the user interface
+  - New: Element edit window caching added to improve the performance
+  - Fix: Shortcode Mapper works properly
+  - Fix: Editor works properly in Safari
+  - Fix: WPBakery works properly with Ninja Forms
+  - Fix: Grid popups in the Frontend editor work properly
+  - Fix: Background video for rows can be removed
+  - Fix: Nested elements have proper control colors in the user interface
+  - Fix: No title does not create extra space
+  - Fix: Color box controls work properly
+  - Fix: Styles from the design options are being applied properly
+  - Fix: WPBakery improved against XSS vulnerabilities
+
 2024-04-10 - version 7.6
   - New: Design Option displayed default values as placeholders for better UX
   - New: Element edit happens automatically without saving and can be reverted with Undo

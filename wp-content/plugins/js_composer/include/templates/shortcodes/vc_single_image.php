@@ -105,7 +105,9 @@ switch ( $source ) {
 }
 
 if ( ! $img ) {
-	$img['thumbnail'] = '<img class="vc_img-placeholder vc_single_image-img" src="' . esc_url( $default_src ) . '" />';
+	$img = [
+		'thumbnail' => '<img class="vc_img-placeholder vc_single_image-img" src="' . esc_url( $default_src ) . '" />',
+	];
 }
 
 $el_class = $this->getExtraClass( $el_class );
@@ -190,7 +192,7 @@ if ( vc_has_class( 'prettyphoto', $el_class ) ) {
 $wrapperClass = 'vc_single_image-wrapper ' . esc_attr( $style ) . ' ' . esc_attr( $border_color );
 
 if ( $link ) {
-	$a_attrs['href'] = $link;
+	$a_attrs['href'] = esc_url( $link );
 	$a_attrs['target'] = $img_link_target;
 	if ( ! empty( $a_attrs['class'] ) ) {
 		$wrapperClass .= ' ' . $a_attrs['class'];

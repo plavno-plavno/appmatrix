@@ -134,6 +134,7 @@ class Vc_License {
 		// unique
 		$errors = array_unique( array_column( $errors, 'message' ) );
 		foreach ( $errors as $error ) {
+			$error = esc_html__( 'WPBakery License Error: ', 'js_composer' ) . $error;
 			$this->outputNotice( $error, false );
 		}
 	}
@@ -404,8 +405,7 @@ class Vc_License {
 	 * Start deactivation process and output redirect URL as JSON
 	 */
 	public function startDeactivationResponse() {
-		vc_user_access()->checkAdminNonce()->validateDie( 'Failed nonce check' )->wpAny( 'manage_options' )->validateDie( 'Failed access check' )->part( 'settings' )->can( 'vc-updater-tab' )
-			->validateDie( 'Failed access check #2' );
+		vc_user_access()->checkAdminNonce()->validateDie( 'Failed nonce check' )->wpAny( 'manage_options' )->validateDie( 'Failed access check' )->part( 'settings' )->can( 'vc-updater-tab' )->validateDie( 'Failed access check #2' );
 
 		$response = array(
 			'status' => true,
@@ -601,6 +601,7 @@ class Vc_License {
 	 * @return string
 	 */
 	public function generateLicenseKeyToken() {
+        // phpcs:ignore
 		$token = current_time( 'timestamp' ) . '|' . vc_random_string( 20 );
 
 		return $token;
@@ -636,6 +637,7 @@ class Vc_License {
 
 		$chunks = explode( '|', $token );
 
+        // phpcs:ignore
 		if ( intval( $chunks[0] ) < ( current_time( 'timestamp' ) - $ttl_in_seconds ) ) {
 			return false;
 		}

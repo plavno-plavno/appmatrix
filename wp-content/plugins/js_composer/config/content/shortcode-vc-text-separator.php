@@ -1,4 +1,10 @@
 <?php
+/**
+ * Configuration file for [vc_text_separator] shortcode of 'Separator with Text' element.
+ *
+ * @see https://kb.wpbakery.com/docs/inner-api/vc_map/ for more detailed information about element attributes.
+ */
+
 if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
 }
@@ -15,7 +21,7 @@ $icons_params = vc_map_integrate_shortcode( $icon_params, 'i_', esc_html__( 'Ico
 		'link',
 		'css_animation',
 	),
-	// we need only type, icon_fontawesome, icon_blabla..., NOT color and etc
+	// we need only type, icon_fontawesome, icon_blabla..., NOT color and etc.
 ), array(
 	'element' => 'add_icon',
 	'value' => 'true',
@@ -26,7 +32,7 @@ if ( is_array( $icons_params ) && ! empty( $icons_params ) ) {
 	foreach ( $icons_params as $key => $param ) {
 		if ( is_array( $param ) && ! empty( $param ) ) {
 			if ( isset( $param['admin_label'] ) ) {
-				// remove admin label
+				// remove admin label.
 				unset( $icons_params[ $key ]['admin_label'] );
 			}
 		}

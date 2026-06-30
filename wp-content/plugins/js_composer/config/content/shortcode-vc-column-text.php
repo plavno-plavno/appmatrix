@@ -1,4 +1,10 @@
 <?php
+/**
+ * Configuration file for [vc_column_text] shortcode of 'Text Block' element.
+ *
+ * @see https://kb.wpbakery.com/docs/inner-api/vc_map/ for more detailed information about element attributes.
+ */
+
 if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
 }

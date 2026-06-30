@@ -2,9 +2,10 @@
 Contributors: wpchefgadget
 Donate link: https://www.paypal.com/donate?hosted_button_id=FKD4MYFCMNVQQ
 Tags: brute force, login, security, firewall, protection
+License: GPLv2 or later
 Requires at least: 3.0
-Tested up to: 6.4
-Stable tag: 2.26.8
+Tested up to: 6.6
+Stable tag: 2.26.13
 
 Block excessive login attempts and protect your site against brute force attacks. Simple, yet powerful tools to improve site performance.
 
@@ -16,7 +17,7 @@ The plugin functions by automatically preventing further attempts from a particu
 
 By default, WordPress permits an unlimited number of login attempts, posing a vulnerability where passwords can be easily deciphered through brute force methods.
 
-**Limit Login Attempts Reloaded Premium (Try For 7 Days)**
+**Limit Login Attempts Reloaded Premium (Try Free with <a href="https://www.limitloginattempts.com/premium-security-zero-cost-discover-the-benefits-of-micro-cloud/">Micro Cloud</a>)**
 Upgrade to <a href="https://www.limitloginattempts.com/plans/">Limit Login Attempts Reloaded Premium</a> to extend cloud-based protection to the Limit Login Attempts Reloaded plugin, thereby enhancing your login security. The premium version includes a range of highly beneficial features, including <a href="https://www.limitloginattempts.com/features/ip-intelligence/">IP intelligence</a> to **detect, counter and deny malicious login attempts**. Your <a href="https://www.limitloginattempts.com/failed-login-attempts-in-wordpress/">failed login attempts</a> will be safely neutralized in the cloud so your website can function at its optimal performance during an attack. 
 
 https://www.youtube.com/watch?v=JfkvIiQft14
@@ -31,11 +32,13 @@ https://www.youtube.com/watch?v=JfkvIiQft14
 * **Sucuri** compatibility.
 * **Wordfence** compatibility.
 * **Ultimate Member** compatibility.
+* **WPS Hide Login** compatibility.
 * **XMLRPC** gateway protection.
 * **Woocommerce** login page protection.
 * **Multi-site compatibility** with extra MU settings.
 * **GDPR** compliant.
 * **Custom IP origins support** (Cloudflare, Sucuri, etc.).
+* **llar_admin** own capability.
 
 = Features (Premium Version): =
 * **Performance Optimizer** - Offload the burden of excessive failed logins from your server to protect your server resources, resulting in improved speed and efficiency of your website.
@@ -47,7 +50,8 @@ https://www.youtube.com/watch?v=JfkvIiQft14
 * **Synchronized Lockouts** -  Lockout IP data can be shared between multiple domains for enhanced protection in your network.
 * **Synchronized Safelist/Denylist** - Safelist/Denylist IP and username data can be shared between multiple domains.
 * **Premium Support** - Email support with a security tech.  
-* **Auto Backups of All IP Data** - Store your active IP data in the cloud. 
+* **Auto Backups of All IP Data** - Store your active IP data in the cloud.
+* **Successful Logins Log** - Store successful logins in the cloud including IP info, city, state and lat/long. 
 * **Enhanced lockout logs** - Gain valuable insights into the origins of IPs that are attempting logins.
 * **CSV Download of IP Data** - Download IP data direclty from the cloud. 
 * **Supports IPV6 Ranges For Safelist/Denylist** 
@@ -134,6 +138,32 @@ The settings are explained within the plugin in great detail. If you are unsure,
 By default, you will need to copy and paste the lists to each site manually. For the <a href="https://www.limitloginattempts.com/plans/?from=wp-details">premium service</a>, sites are grouped within the same private cloud account. Each site within that group can be configured if it shares its lockouts and access lists with other group members. The setting is located in the plugin's interface. The default options are recommended.
 
 == Changelog ==
+
+= 2.26.13 =
+* New "llar_admin" capability added to let other roles access the plugin.
+* CSS fixes.
+* Sticky headers added to the log tables.
+* Small interface changes.
+
+= 2.26.12 =
+* Better displaying IPv6 in successful login attempts block.
+* Possible intersections in tabs with other plugins fixed.
+* PHP 8, 9 compatibility updates.
+* Refactoring.
+
+= 2.26.11 =
+* Fixed possible style conflicts related to tables.
+* Fixed possible PHP warnings.
+* Fixed some I18N issues, thanks to alexclassroom!
+* Better displaying multiple roles in login logs.
+
+= 2.26.10 =
+* Log of successful login attempts implemented for Micro Cloud (Free) and Premium users.
+* Checklist of recommended actions implemented.
+* Settings page reorganized.
+
+= 2.26.9 =
+* Chart library updated.
 
 = 2.26.8 =
 * Fixed possible WooCommerce conflict.

@@ -220,7 +220,9 @@ if (!class_exists('TG_update_plugin')) {
 		* @modified 2.1.0
 		*/
 		public function update_state( $transient ) {
-			
+			if (!$transient) {
+				return $transient;
+			} 			
 			$plugin = $this->plugin;
 
 			if (isset($plugin) && !empty($plugin) && isset($plugin['version']) && version_compare($plugin['version'], TG_VERSION) >  0) {

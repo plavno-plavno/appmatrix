@@ -1,4 +1,10 @@
 <?php
+/**
+ * Configuration file for [vc_message] shortcode of 'Message Box' element.
+ *
+ * @see https://kb.wpbakery.com/docs/inner-api/vc_map/ for more detailed information about element attributes.
+ */
+
 if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
 }
@@ -27,7 +33,7 @@ return array(
 			'type' => 'params_preset',
 			'heading' => esc_html__( 'Message Box Presets', 'js_composer' ),
 			'param_name' => 'color',
-			// due to backward compatibility, really it is message_box_type
+			// due to backward compatibility, really it is message_box_type.
 			'value' => '',
 			'options' => array(
 				array(
@@ -74,7 +80,7 @@ return array(
 				array(
 					'label' => esc_html__( 'Informational Classic', 'js_composer' ),
 					'value' => 'alert-info',
-					// due to backward compatibility
+					// due to backward compatibility.
 					'params' => array(
 						'message_box_color' => 'alert-info',
 						'icon_type' => 'pixelicons',
@@ -84,7 +90,7 @@ return array(
 				array(
 					'label' => esc_html__( 'Warning Classic', 'js_composer' ),
 					'value' => 'alert-warning',
-					// due to backward compatibility
+					// due to backward compatibility.
 					'params' => array(
 						'message_box_color' => 'alert-warning',
 						'icon_type' => 'pixelicons',
@@ -94,7 +100,7 @@ return array(
 				array(
 					'label' => esc_html__( 'Success Classic', 'js_composer' ),
 					'value' => 'alert-success',
-					// due to backward compatibility
+					// due to backward compatibility.
 					'params' => array(
 						'message_box_color' => 'alert-success',
 						'icon_type' => 'pixelicons',
@@ -104,7 +110,7 @@ return array(
 				array(
 					'label' => esc_html__( 'Error Classic', 'js_composer' ),
 					'value' => 'alert-danger',
-					// due to backward compatibility
+					// due to backward compatibility.
 					'params' => array(
 						'message_box_color' => 'alert-danger',
 						'icon_type' => 'pixelicons',
@@ -126,7 +132,7 @@ return array(
 			'type' => 'dropdown',
 			'heading' => esc_html__( 'Shape', 'js_composer' ),
 			'param_name' => 'style',
-			// due to backward compatibility message_box_shape
+			// due to backward compatibility message_box_shape.
 			'std' => 'rounded',
 			'value' => array(
 				esc_html__( 'Square', 'js_composer' ) => 'square',
@@ -165,9 +171,9 @@ return array(
 			'value' => 'fas fa-info-circle',
 			'settings' => array(
 				'emptyIcon' => false,
-				// default true, display an "EMPTY" icon?
+				// default true, display an "EMPTY" icon.
 				'iconsPerPage' => 500,
-				// default 100, how many icons per/page to display
+				// default 100, how many icons per/page to display.
 			),
 			'dependency' => array(
 				'element' => 'icon_type',
@@ -181,10 +187,10 @@ return array(
 			'param_name' => 'icon_openiconic',
 			'settings' => array(
 				'emptyIcon' => false,
-				// default true, display an "EMPTY" icon?
+				// default true, display an "EMPTY" icon.
 				'type' => 'openiconic',
 				'iconsPerPage' => 4000,
-				// default 100, how many icons per/page to display
+				// default 100, how many icons per/page to display.
 			),
 			'dependency' => array(
 				'element' => 'icon_type',
@@ -198,10 +204,10 @@ return array(
 			'param_name' => 'icon_typicons',
 			'settings' => array(
 				'emptyIcon' => false,
-				// default true, display an "EMPTY" icon?
+				// default true, display an "EMPTY" icon.
 				'type' => 'typicons',
 				'iconsPerPage' => 4000,
-				// default 100, how many icons per/page to display
+				// default 100, how many icons per/page to display.
 			),
 			'dependency' => array(
 				'element' => 'icon_type',
@@ -215,10 +221,10 @@ return array(
 			'param_name' => 'icon_entypo',
 			'settings' => array(
 				'emptyIcon' => false,
-				// default true, display an "EMPTY" icon?
+				// default true, display an "EMPTY" icon.
 				'type' => 'entypo',
 				'iconsPerPage' => 4000,
-				// default 100, how many icons per/page to display
+				// default 100, how many icons per/page to display.
 			),
 			'dependency' => array(
 				'element' => 'icon_type',
@@ -231,10 +237,10 @@ return array(
 			'param_name' => 'icon_linecons',
 			'settings' => array(
 				'emptyIcon' => false,
-				// default true, display an "EMPTY" icon?
+				// default true, display an "EMPTY" icon.
 				'type' => 'linecons',
 				'iconsPerPage' => 4000,
-				// default 100, how many icons per/page to display
+				// default 100, how many icons per/page to display.
 			),
 			'dependency' => array(
 				'element' => 'icon_type',
@@ -248,7 +254,7 @@ return array(
 			'param_name' => 'icon_pixelicons',
 			'settings' => array(
 				'emptyIcon' => false,
-				// default true, display an "EMPTY" icon?
+				// default true, display an "EMPTY" icon.
 				'type' => 'pixelicons',
 				'source' => $pixel_icons,
 			),
@@ -263,13 +269,13 @@ return array(
 			'heading' => esc_html__( 'Icon', 'js_composer' ),
 			'param_name' => 'icon_monosocial',
 			'value' => 'vc-mono vc-mono-fivehundredpx',
-			// default value to backend editor admin_label
+			// default value to backend editor admin_label.
 			'settings' => array(
 				'emptyIcon' => false,
-				// default true, display an "EMPTY" icon?
+				// default true, display an "EMPTY" icon.
 				'type' => 'monosocial',
 				'iconsPerPage' => 4000,
-				// default 100, how many icons per/page to display
+				// default 100, how many icons per/page to display.
 			),
 			'dependency' => array(
 				'element' => 'icon_type',

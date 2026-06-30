@@ -1,29 +1,63 @@
 <?php
-// WP SUPER CACHE 1.2
-function wpcache_broken_message() {
-	global $wp_cache_config_file;
-	if ( isset( $wp_cache_config_file ) == false ) {
-		return '';
-	}
 
-	$doing_ajax     = defined( 'DOING_AJAX' ) && DOING_AJAX;
-	$xmlrpc_request = defined( 'XMLRPC_REQUEST' ) && XMLRPC_REQUEST;
-	$rest_request   = defined( 'REST_REQUEST' ) && REST_REQUEST;
-	$robots_request = strpos( $_SERVER['REQUEST_URI'], 'robots.txt' ) != false;
+if (!defined('ABSPATH')) die('No direct access allowed');
 
-	$skip_output = ( $doing_ajax || $xmlrpc_request || $rest_request || $robots_request );
-	if ( false == strpos( $_SERVER['REQUEST_URI'], 'wp-admin' ) && ! $skip_output ) {
-		echo '<!-- WP Super Cache is installed but broken. The constant WPCACHEHOME must be set in the file wp-config.php and point at the WP Super Cache plugin directory. -->';
-	}
-}
+// WP-Optimize advanced-cache.php (written by version: 3.5.0) (homeurl: https://qatsol.com/) (abspath: /var/www/vhosts/kmnyyrla.host286.checkdomain.de/qatsol.dev/) (do not change this line, it is used for correctness checks)
 
-if ( false == defined( 'WPCACHEHOME' ) ) {
-	define( 'ADVANCEDCACHEPROBLEM', 1 );
-} elseif ( ! include_once WPCACHEHOME . 'wp-cache-phase1.php' ) {
-	if ( ! @is_file( WPCACHEHOME . 'wp-cache-phase1.php' ) ) {
-		define( 'ADVANCEDCACHEPROBLEM', 1 );
+if (!defined('WPO_ADVANCED_CACHE')) define('WPO_ADVANCED_CACHE', true);
+
+$possible_plugin_locations = array(
+	defined('WP_PLUGIN_DIR') ? WP_PLUGIN_DIR.'/wp-optimize/cache' : false,
+	defined('WP_CONTENT_DIR') ? WP_CONTENT_DIR.'/plugins/wp-optimize/cache' : false,
+	dirname(__FILE__).'/plugins/wp-optimize/cache',
+	'/var/www/vhosts/kmnyyrla.host286.checkdomain.de/qatsol.dev/wp-content/plugins/wp-optimize/cache',
+);
+
+$plugin_location = false;
+
+foreach ($possible_plugin_locations as $possible_location) {
+	if (false !== $possible_location && @file_exists($possible_location.'/file-based-page-cache.php')) {
+		$plugin_location = $possible_location;
+		break;
 	}
 }
-if ( defined( 'ADVANCEDCACHEPROBLEM' ) ) {
-	register_shutdown_function( 'wpcache_broken_message' );
+
+if (false === $plugin_location) {
+	if (!defined('WPO_PLUGIN_LOCATION_NOT_FOUND')) define('WPO_PLUGIN_LOCATION_NOT_FOUND', true);
+	$protocol = $_SERVER['REQUEST_SCHEME'];
+	$host = $_SERVER['HTTP_HOST'];
+	$request_uri = $_SERVER['REQUEST_URI'];
+	if (strcasecmp('https://qatsol.com/', $protocol . '://' . $host . $request_uri) === 0) {
+		error_log('WP-Optimize: No caching took place, because the plugin location could not be found');
+	}
+} else {
+	if (!defined('WPO_PLUGIN_LOCATION_NOT_FOUND')) define('WPO_PLUGIN_LOCATION_NOT_FOUND', false);
 }
+
+if (is_admin()) { return; }
+
+if (!defined('WPO_CACHE_DIR')) define('WPO_CACHE_DIR', WP_CONTENT_DIR.'/wpo-cache');
+if (!defined('WPO_CACHE_CONFIG_DIR')) define('WPO_CACHE_CONFIG_DIR', WPO_CACHE_DIR.'/config');
+if (!defined('WPO_CACHE_FILES_DIR')) define('WPO_CACHE_FILES_DIR', WP_CONTENT_DIR.'/cache/wpo-cache');
+if (false !== $plugin_location) {
+	if (!defined('WPO_CACHE_EXT_DIR')) define('WPO_CACHE_EXT_DIR', $plugin_location.'/extensions');
+} else {
+	if (!defined('WPO_CACHE_EXT_DIR')) define('WPO_CACHE_EXT_DIR', '/var/www/vhosts/kmnyyrla.host286.checkdomain.de/qatsol.dev/wp-content/plugins/wp-optimize/cache/extensions');
+}
+
+if (!@file_exists(WPO_CACHE_CONFIG_DIR . '/config-qatsol.com.php')) { return; }
+
+$GLOBALS['wpo_cache_config'] = @json_decode(file_get_contents(WPO_CACHE_CONFIG_DIR . '/config-qatsol.com.php'), true);
+
+if (empty($GLOBALS['wpo_cache_config'])) {
+	include_once(WPO_CACHE_CONFIG_DIR . '/config-qatsol.com.php');
+}
+
+if (empty($GLOBALS['wpo_cache_config'])) {
+	error_log('WP-Optimize: Caching failed because the configuration data could not be loaded from the config file.');
+	return;
+}
+
+if (empty($GLOBALS['wpo_cache_config']['enable_page_caching'])) { return; }
+
+if (false !== $plugin_location) { include_once($plugin_location.'/file-based-page-cache.php'); }

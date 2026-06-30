@@ -1,4 +1,10 @@
 <?php
+/**
+ * Autoload hooks related plugin initial pointers in frontend editor.
+ *
+ * @note we require our autoload files everytime and everywhere after plugin load.
+ */
+
 if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
 }
@@ -13,7 +19,9 @@ function vc_frontend_editor_pointer() {
 add_action( 'admin_init', 'vc_frontend_editor_pointer' );
 
 /**
- * @param $pointers
+ * Register pointer.
+ *
+ * @param array $pointers
  * @return mixed
  */
 function vc_frontend_editor_register_pointer( $pointers ) {
@@ -78,6 +86,9 @@ function vc_frontend_editor_register_pointer( $pointers ) {
 	return $pointers;
 }
 
+/**
+ * Enqueue pointer scripts.
+ */
 function vc_page_editable_enqueue_pointer_scripts() {
 	if ( vc_is_page_editable() ) {
 		wp_enqueue_style( 'wp-pointer' );

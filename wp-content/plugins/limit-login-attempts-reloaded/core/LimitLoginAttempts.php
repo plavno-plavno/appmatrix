@@ -41,6 +41,21 @@ class LimitLoginAttempts
 
     private $info_data = array();
 
+	/**
+     * Class instance accessible in other classes
+     *
+	 * @var LimitLoginAttempts
+	 */
+	public static $instance;
+
+	/**
+     * Capabilities to work with a plugin
+     *
+	 * @var string
+	 */
+	public static $capabilities = 'llar_admin';
+	public $has_capability = false;
+
     private $plans = array(
         'default'       => array(
             'name'          => 'Free',
@@ -70,6 +85,8 @@ class LimitLoginAttempts
 
 	public function __construct()
     {
+		self::$instance = $this;
+
 	    Config::init();
 		Http::init();
 
@@ -143,9 +160,9 @@ class LimitLoginAttempts
 		}
 	}
 
-	public function register_dashboard_widgets()
-    {
-	    if ( ! current_user_can( 'manage_options' ) ) return;
+	public function register_dashboard_widgets() {
+
+	    if ( ! $this->has_capability ) return;
 
 		wp_add_dashboard_widget(
             'llar_stats_widget',
@@ -213,9 +230,11 @@ class LimitLoginAttempts
 
 		add_action( 'wp_login_failed', array( $this, 'limit_login_failed' ) );
 		add_filter( 'wp_authenticate_user', array( $this, 'wp_authenticate_user' ), 99999, 2 );
+	    add_action( 'wp_login', array( $this, 'limit_login_success' ), 10, 2 );
 
 		add_filter( 'shake_error_codes', array( $this, 'failure_shake' ) );
 		add_action( 'login_errors', array( $this, 'fixup_error_messages' ) );
+
 
 		if ( Helpers::is_network_mode() ) {
 			add_action( 'network_admin_menu', array( $this, 'network_admin_menu' ) );
@@ -256,7 +275,18 @@ class LimitLoginAttempts
 
 		add_filter( 'plugin_action_links_' . LLA_PLUGIN_BASENAME, array( $this, 'add_action_links' ) );
 
+
+		$role = get_role( 'administrator' );
+
+		if ( $role && ! $role->has_cap( self::$capabilities ) ) {
+
+			$role->add_cap( self::$capabilities );
+		}
+
+		$this->has_capability = ( current_user_can('manage_options' ) || current_user_can( self::$capabilities ) );
+
 	}
+
 
 	public function login_page_gdpr_message()
     {
@@ -534,12 +564,21 @@ class LimitLoginAttempts
 					remove_filter( 'login_errors', array( $this, 'fixup_error_messages' ) );
 
 				} elseif ( self::$cloud_app && self::$cloud_app->last_response_code === 403 ) {
-					self::$cloud_app = null;
+					add_action('wp_login', array( $this, 'cloud_app_null' ), 999);
 				}
             }
 		}
 
 		return $user;
+	}
+
+
+	/**
+	 * Delete the CloudApp object
+	 */
+	public function cloud_app_null()
+    {
+	    self::$cloud_app = null;
 	}
 
 	/**
@@ -565,6 +604,7 @@ class LimitLoginAttempts
 					$this->other_login_errors[] = $user->get_error_message( 'wfls_captcha_verify' );
 				}
             }
+
 		}
 		return $user;
 	}
@@ -609,6 +649,7 @@ class LimitLoginAttempts
             $auto_update                = wp_create_nonce( 'llar-toggle-auto-update' );
             $app_setup                  = wp_create_nonce( 'llar-app-setup' );
             $account_policies           = wp_create_nonce( 'llar-strong-account-policies' );
+            $block_country              = wp_create_nonce( 'llar-block_by_country' );
             $onboarding_reset           = wp_create_nonce( 'llar-action-onboarding-reset' );
             $dismiss_onboarding_popup   = wp_create_nonce( 'llar-dismiss-onboarding-popup' );
             $activate_micro_cloud       = wp_create_nonce( 'llar-activate-micro-cloud' );
@@ -619,6 +660,7 @@ class LimitLoginAttempts
                 'nonce_auto_update'               => $auto_update,
                 'nonce_app_setup'                 => $app_setup,
                 'nonce_account_policies'          => $account_policies,
+                'nonce_block_by_country'          => $block_country,
                 'nonce_onboarding_reset'          => $onboarding_reset,
                 'nonce_dismiss_onboarding_popup'  => $dismiss_onboarding_popup,
                 'nonce_activate_micro_cloud'      => $activate_micro_cloud,
@@ -646,7 +688,15 @@ class LimitLoginAttempts
 	*/
 	public function network_admin_menu()
 	{
-		add_submenu_page( 'settings.php', 'Limit Login Attempts', 'Limit Login Attempts' . $this->menu_alert_icon(), 'manage_options', $this->_options_page_slug, array( $this, 'options_page' ) );
+		if ( ! $this->has_capability ) return;
+
+		add_submenu_page(
+            'settings.php',
+            'Limit Login Attempts',
+            'Limit Login Attempts' . $this->menu_alert_icon(),
+            self::$capabilities,
+            $this->_options_page_slug,
+            array( $this, 'options_page' ) );
 	}
 
 	private function get_submenu_items()
@@ -707,7 +757,9 @@ class LimitLoginAttempts
 	}
 
 	public function admin_menu()
-    {
+	{
+		if ( ! $this->has_capability ) return;
+
 		global $submenu;
 
 		if ( Config::get( 'show_top_level_menu_item' ) ) {
@@ -715,7 +767,7 @@ class LimitLoginAttempts
 			add_menu_page(
                 'Limit Login Attempts',
                 'Limit Login Attempts' . $this->menu_alert_icon(),
-                'manage_options',
+                self::$capabilities,
                 $this->_options_page_slug,
                 array( $this, 'options_page' ),
 				'data:image/svg+xml;base64,' . base64_encode( $this->get_svg_logo_content() ),
@@ -731,12 +783,12 @@ class LimitLoginAttempts
 					$this->_options_page_slug,
 					$item['name'],
 					$item['name'],
-					'manage_options',
+					self::$capabilities,
 					$this->_options_page_slug . $item['url'],
 					array( $this, 'options_page' )
 				);
 
-				if ( ! empty( $_GET['tab'] ) && $_GET['tab'] === $item['id'] ) {
+				if ( ! empty ( $_GET['page'] ) && $_GET['page'] === $this->_options_page_slug && ! empty( $_GET['tab'] ) && $_GET['tab'] === $item['id'] ) {
 					$submenu[$this->_options_page_slug][$index][4] = 'current';
 				}
 				$index++;
@@ -757,7 +809,7 @@ class LimitLoginAttempts
 			add_options_page(
 			        'Limit Login Attempts',
                     'Limit Login Attempts' . $this->menu_alert_icon(),
-                    'manage_options',
+					self::$capabilities,
                     $this->_options_page_slug,
                     array( $this, 'options_page' )
             );
@@ -765,7 +817,10 @@ class LimitLoginAttempts
 	}
 
 	public function admin_bar_menu( $admin_bar )
-    {
+	{
+
+		if ( ! $this->has_capability ) return;
+
 	    $root_item_id = 'llar-root';
 	    $href = $this->get_options_page_uri();
 
@@ -867,6 +922,49 @@ class LimitLoginAttempts
 
 		return $uri;
 	}
+
+
+	/**
+	 * Fires after successful login
+	 *
+	 * @param $username
+	 * @param $user
+	 *
+	 */
+	public function limit_login_success( $username, $user ) {
+
+		if ( ! self::$cloud_app ) {
+		    return;
+		}
+
+		if ( ! empty( $username ) ) {
+
+			$clean_url = '';
+			if ( isset( $_SERVER['HTTP_REFERER'] ) ) {
+
+				$referer_url = $_SERVER['HTTP_REFERER'];
+				$referer_parsed = parse_url( $referer_url );
+
+				$clean_url = isset( $referer_parsed['path']) ? $referer_parsed['path'] : '';
+				$clean_url = trim( $clean_url, '/' );
+			}
+
+			$user = get_user_by('login', $username);
+
+			$data = array(
+				'ip'        => Helpers::get_all_ips(),
+				'login'     => $username,
+				'user_id'   => $user->ID,
+				'gateway'   => Helpers::detect_gateway(),
+				'roles'     => $user->roles,
+				'agent'     => $_SERVER['HTTP_USER_AGENT'],
+			    'url'       => $clean_url,
+			);
+
+			self::$cloud_app->request( 'login', 'post', $data );
+        }
+	}
+
 
 	/**
 	* Check if it is ok to login
@@ -1463,7 +1561,7 @@ class LimitLoginAttempts
 
 	public function fixup_error_messages_wc( \WP_Error $error )
     {
-		$error->add( 1, __( 'WC Error' ) );
+		$error->add( 1, __( 'WC Error', 'limit-login-attempts-reloaded' ) );
 	}
 
 	/**
@@ -1885,10 +1983,7 @@ class LimitLoginAttempts
 			$this->info_data = $this->info();
 		}
 
-		return ( ! empty( $this->info_data )
-            && ! empty( $this->info_data['requests'] )
-            && isset( $this->info_data['requests']['exhausted'] )
-            && $this->info_data['requests']['exhausted'] === true );
+		return isset( $this->info_data['requests']['exhausted'] ) ? filter_var( $this->info_data['requests']['exhausted'], FILTER_VALIDATE_BOOLEAN, FILTER_NULL_ON_FAILURE ) : false;
 	}
 
 
@@ -1949,7 +2044,7 @@ class LimitLoginAttempts
 		}
 
         if (
-                ! current_user_can('manage_options' )
+                ! $this->has_capability
                 || Config::get( 'review_notice_shown' )
                 || ! in_array( $screen->base, array( 'dashboard', 'plugins', 'toplevel_page_limit-login-attempts' ) )
         ) {
@@ -2033,7 +2128,7 @@ class LimitLoginAttempts
         if (
                 $active_app !== 'local'
                 || in_array( 'email', $notify_methods )
-                || ! current_user_can('manage_options')
+                || ! $this->has_capability
                 || Config::get('enable_notify_notice_shown')
                 || $screen->parent_base === 'edit'
         ) {

@@ -1,12 +1,14 @@
 <?php
+/**
+ * Configuration file for [vc_pricing_table] shortcode of 'Pricing Table' element.
+ *
+ * @see https://kb.wpbakery.com/docs/inner-api/vc_map/ for more detailed information about element attributes.
+ * @since 7.0
+ */
+
 if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
 }
-
-/**
- * Pricing table
- * @since 7.0
- */
 
 require_once vc_path_dir( 'CONFIG_DIR', 'content/vc-custom-heading-element.php' );
 $heading_list = array(
@@ -48,7 +50,7 @@ foreach ( $heading_list as $heading_name => $heading_title ) {
 require_once vc_path_dir( 'CONFIG_DIR', 'content/vc-btn-element.php' );
 $vc_btn_element_params = vc_btn_element_params();
 
-// we change some predefined values
+// we change some predefined values.
 $change_param_list = array(
 	'title' => array( 'value' => __( 'Get now', 'js_composer' ) ),
 	'color' => array( 'std' => 'primary' ),
